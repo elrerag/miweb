@@ -1,0 +1,1092 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.6">
+    
+    
+      
+        <title>Mod4 uni002l3 - Java Full Stack Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.4b9ffd7b.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#proyecto-4-mvc" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../../.." title="Java Full Stack Docs" class="md-header-nav__button md-logo" aria-label="Java Full Stack Docs">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Java Full Stack Docs
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Mod4 uni002l3
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Java Full Stack Docs" class="md-nav__button md-logo" aria-label="Java Full Stack Docs">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Java Full Stack Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../ejercicios/repaso/teoria/poo/herencia/" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#requerimientos" class="md-nav__link">
+    Requerimientos:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagramas-a-implementar" class="md-nav__link">
+    Diagramas a implementar:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#antes-de-continuar" class="md-nav__link">
+    Antes de continuar.👀
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <hr />
+<h1 id="proyecto-4-mvc">Proyecto 4: MVC</h1>
+<hr />
+<h2 id="requerimientos">Requerimientos:</h2>
+<p>Se necesita un sistema que sea capaz de registrar la inscripción de un usuario a un curso.
+Para esto necesitamos una ventana de inscripción y otra que muestre los resultados de la inscripción.</p>
+<p>Por ahora, solamente será posible revisar si la información ha sido correctamente ingresada, mediante la consulta en la base de datos.</p>
+<h2 id="diagramas-a-implementar">Diagramas a implementar:</h2>
+<p>Lo primero es reconocer las entidades. Las que serán las siguientes:</p>
+<p><img src="https://github.com/elrerag/pintamiweb/blob/master/jfst/m4u2/007.png?raw=true" alt="m4u2007.png"></p>
+
+<p>Daos que realizarán la comunicación.
+<p><img src="https://github.com/elrerag/pintamiweb/blob/master/jfst/m4u2/008.png?raw=true" alt="m4u2008.png"></p></p>
+<p>Fachada de comunicación:</p>
+<p><img src="https://github.com/elrerag/pintamiweb/blob/master/jfst/m4u2/009.png?raw=true" alt="m4u2009.png"></p>
+
+<p>Servlets</p>
+<p><img src="https://github.com/elrerag/pintamiweb/blob/master/jfst/m4u2/010.png?raw=true" alt="m4u2010.png"></p>
+
+<p>Finalmente, debemos implementar dos vistas:</p>
+<pre><code>inscripcion.jsp : Contendrá el formulario de inscripción.
+inscripcion.jsp : Confirmará al usuario que la inscripción se ha realizado.
+</code></pre>
+
+<h2 id="antes-de-continuar">Antes de continuar.👀</h2>
+<ul>
+<li>
+<p>Debemos tener un contenedor de servlets. Se encuentra disponible en el siguiente <a href="">enlace</a></p>
+</li>
+<li>
+<p>Debemos incluir el driver para conectar la base de datos con Java. (Oracle 11g). Se encuentra disponible en el siguiente <a href="https://github.com/elrerag/pintamiweb/blob/master/jfst/m4u2/apache-tomcat-9.0.31.zip">enlace</a></p>
+</li>
+</ul>
+<hr />
+<h1 id="implementacion">Implementación.🥋</h1>
+<hr />
+<p>Comenzamos entonces con la implementación de la solución.</p>
+<hr />
+<h2 id="estructura">Estructura</h2>
+<pre><code>├── WebContent
+│   ├── META-INF
+│   │   └── MANIFEST.MF
+│   ├── WEB-INF
+│   │   └── lib
+│   ├── confirmacion.jsp
+│   └── inscripcion.jsp
+└── src
+    └── cl
+        └── lherrera
+            ├── daos
+            │   ├── CursoDao.java
+            │   ├── FormaDePagoDao.java
+            │   └── InscripcionDAO.java
+            ├── entidades
+            │   ├── CursoDTO.java
+            │   ├── FormaDePagoDTO.java
+            │   └── InscripcionDTO.java
+            ├── facades
+            │   └── Facade.java
+            ├── main
+            │   └── Principal.java
+            ├── servlets
+            │   ├── PosInscripcion.java
+            │   ├── PreConfirmacion.java
+            │   └── PreInscripcion.java
+            └── utils
+                └── AccesoBaseDatos.java
+</code></pre>
+
+<hr />
+<h2 id="entidades">Entidades</h2>
+<p><code>/src/cl/lherrera/entidades/CursoDTO.java</code></p>
+<pre><code class="java">package cl.lherrera.entidades;
+
+public class CursoDTO {
+    private int idCurso;
+    private String descripcion;
+    private double precio;
+
+    public int getIdCurso() {
+        return idCurso;
+    }
+
+    public void setIdCurso(int idCurso) {
+        this.idCurso = idCurso;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
+}
+</code></pre>
+
+<p><code>/src/cl/lherrera/entidades/FormaDePagoDTO.java</code></p>
+<pre><code class="java">package cl.lherrera.entidades;
+
+public class FormaDePagoDTO {
+
+    private int idFormaDePago;
+    private String descripcion;
+    private double recargo;
+
+    public int getIdFormaDePago() {
+        return idFormaDePago;
+    }
+
+    public void setIdFormaDePago(int idFormaDePago) {
+        this.idFormaDePago = idFormaDePago;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public double getRecargo() {
+        return recargo;
+    }
+
+    public void setRecargo(double recargo) {
+        this.recargo = recargo;
+    }
+
+}
+
+</code></pre>
+
+<p><code>/pruebaMvc/src/cl/lherrera/entidades/InscripcionDTO.java</code></p>
+<pre><code class="java">package cl.lherrera.entidades;
+
+public class InscripcionDTO {
+
+    private int idInsc;
+    private String nombre;
+    private String celular;
+    private int idCurso;
+    private int idFormaDePago;
+
+    public int getIdInsc() {
+        return idInsc;
+    }
+
+    public void setIdInsc(int idInsc) {
+        this.idInsc = idInsc;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getCelular() {
+        return celular;
+    }
+
+    public void setCelular(String celular) {
+        this.celular = celular;
+    }
+
+    public int getIdCurso() {
+        return idCurso;
+    }
+
+    public void setIdCurso(int idCurso) {
+        this.idCurso = idCurso;
+    }
+
+    public int getIdFormaDePago() {
+        return idFormaDePago;
+    }
+
+    public void setIdFormaDePago(int idFormaDePago) {
+        this.idFormaDePago = idFormaDePago;
+    }
+}
+</code></pre>
+
+<hr />
+<h2 id="conexion-oracle-11g-driver-patron-singleton">Conexión (Oracle 11g Driver) - Patrón Singleton</h2>
+<p><code>/pruebaMvc/src/cl/lherrera/utils/AccesoBaseDatos.java</code></p>
+<pre><code class="java">package cl.lherrera.utils;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+import oracle.jdbc.driver.OracleDriver;
+
+public class AccesoBaseDatos {
+
+    private static final String DB_HOST = &quot;jdbc:oracle:thin:@localhost:1521:XE&quot;;
+    private static final String DB_USER_NAME = &quot;mod4u2&quot;;
+    private static final String DB_USER_PASS = &quot;1234&quot;;
+
+    // variable estática. Única instancia permitida.
+    private static AccesoBaseDatos acceso;
+
+    // variables de instancia
+    private Connection conexion;
+
+    // constructor privado para evitar instancias desde fuera.
+    private AccesoBaseDatos() {}
+
+    // única forma de obtener una instancia desde fuera.
+    public static AccesoBaseDatos obtenerInstancia() {
+        if(acceso == null) {
+            acceso = new AccesoBaseDatos();
+        }
+
+        return acceso;
+    }
+
+    /**
+     * Obtiene una conexión a la base de datos. La cuál es única para la 
+     * instancia de la aplicación.
+     * @return
+     */
+    public Connection obtenerConexion() {
+        try {
+            // registramos el driver: uso en lugar de Class.forname.
+            DriverManager.registerDriver(new OracleDriver());
+            conexion = DriverManager.getConnection(DB_HOST, DB_USER_NAME, DB_USER_PASS);
+
+        }catch(SQLException e) {
+            e.printStackTrace();
+        }
+        return conexion;
+    }
+}
+</code></pre>
+
+<hr />
+<h2 id="daos">DAOS</h2>
+<p><code>/pruebaMvc/src/cl/lherrera/daos/CursoDao.java</code></p>
+<pre><code class="java">package cl.lherrera.daos;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import cl.lherrera.entidades.CursoDTO;
+import cl.lherrera.utils.AccesoBaseDatos;
+
+public class CursoDao {
+    AccesoBaseDatos acceso = AccesoBaseDatos.obtenerInstancia();
+    Connection conexion = acceso.obtenerConexion();
+
+    public List&lt;CursoDTO&gt; obtenerCursos() {
+
+        List&lt;CursoDTO&gt; listaDeCursos = new ArrayList&lt;&gt;();
+        String sqlTxt = (&quot;select id_curso, descripcion, precio from mod4u2.curso&quot;);
+
+        try(
+            PreparedStatement sentencia = conexion.prepareStatement(sqlTxt);
+            ResultSet cursos = sentencia.executeQuery();
+        ){
+            while (cursos.next()) {
+                CursoDTO nuevoCurso = new CursoDTO();
+                nuevoCurso.setIdCurso(cursos.getInt(&quot;id_curso&quot;));
+                nuevoCurso.setDescripcion(cursos.getString(&quot;descripcion&quot;));
+                nuevoCurso.setPrecio(cursos.getDouble(&quot;precio&quot;));
+
+                listaDeCursos.add(nuevoCurso);
+            }
+
+        } catch (SQLException e) {
+            e.getStackTrace();
+        }
+
+        return listaDeCursos;
+
+    }
+}
+
+</code></pre>
+
+<p><code>/pruebaMvc/src/cl/lherrera/daos/FormaDePagoDao.java</code></p>
+<pre><code class="java">package cl.lherrera.daos;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import cl.lherrera.entidades.FormaDePagoDTO;
+import cl.lherrera.utils.AccesoBaseDatos;
+
+public class FormaDePagoDao {
+    // obtener la conexión.
+    Connection conexion = (AccesoBaseDatos.obtenerInstancia()).obtenerConexion();
+
+    public List&lt;FormaDePagoDTO&gt; obtieneFormasDePago() {
+        // lista para retornar
+        List&lt;FormaDePagoDTO&gt; formasDePago = new ArrayList&lt;&gt;();
+
+        // construir la consulta
+        String sqlTxt = &quot;select * from mod4u2.forma_pago&quot;; 
+
+        try(
+            // preparar consulta
+            PreparedStatement ps = conexion.prepareStatement(sqlTxt);
+            ResultSet formasDePagoSets = ps.executeQuery();
+        ){
+            while(formasDePagoSets.next()) {
+                FormaDePagoDTO formaPago = new FormaDePagoDTO();
+                formaPago.setIdFormaDePago(formasDePagoSets.getInt(&quot;id_forma_pago&quot;));
+                formaPago.setDescripcion(formasDePagoSets.getString(&quot;descripcion&quot;));
+                formaPago.setRecargo(formasDePagoSets.getDouble(&quot;recarga&quot;));
+
+                formasDePago.add(formaPago);
+            }
+        }catch(SQLException e) {
+            e.printStackTrace();
+        }
+
+        return formasDePago;
+    }
+
+}
+
+</code></pre>
+
+<p><code>/pruebaMvc/src/cl/lherrera/daos/InscripcionDAO.java</code></p>
+<pre><code class="java">package cl.lherrera.daos;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import cl.lherrera.entidades.InscripcionDTO;
+import cl.lherrera.utils.AccesoBaseDatos;
+
+public class InscripcionDAO {
+    // obtener la conexión.
+    Connection conexion = (AccesoBaseDatos.obtenerInstancia()).obtenerConexion();
+
+    public int insertarInscripcion(InscripcionDTO dto) {
+        int max = getMaxId();
+
+        String sqlTxt = &quot;insert into mod4u2.inscripcion values(?, ?, ?, ?, ?)&quot;;
+
+        try(
+            // preparar consulta
+            PreparedStatement ps = conexion.prepareStatement(sqlTxt);
+        ){
+            ps.setInt(1, max);
+            ps.setString(2, dto.getNombre());
+            ps.setString(3, dto.getCelular());
+            ps.setInt(4, dto.getIdCurso());
+            ps.setInt(5, dto.getIdFormaDePago());
+
+            if(ps.executeUpdate() != 1) {
+                System.out.println(&quot;Error al insertar&quot;);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return max;
+    }
+
+    private int getMaxId() {
+        int maxId = 0;
+        String sqlTxt = &quot;select max(id_inscripcion) + 1 maxId from mod4u2.inscripcion&quot;;
+
+        try (
+            // preparar consulta
+            PreparedStatement ps = conexion.prepareStatement(sqlTxt);
+            ResultSet filas = ps.executeQuery();
+        ) {
+            if(filas.next())
+                maxId = filas.getInt(&quot;maxId&quot;);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return maxId;
+    }
+}
+
+</code></pre>
+
+<p><code>/pruebaMvc/src/cl/lherrera/facades/Facade.java</code></p>
+<pre><code class="java">package cl.lherrera.facades;
+
+import java.util.List;
+
+import cl.lherrera.daos.CursoDao;
+import cl.lherrera.daos.FormaDePagoDao;
+import cl.lherrera.daos.InscripcionDAO;
+import cl.lherrera.entidades.CursoDTO;
+import cl.lherrera.entidades.FormaDePagoDTO;
+import cl.lherrera.entidades.InscripcionDTO;
+
+public class Facade {
+
+    public int registrarInscripcion(InscripcionDTO dto) {
+        InscripcionDAO dao = new InscripcionDAO();
+        return dao.insertarInscripcion(dto);
+    }
+
+    public List&lt;CursoDTO&gt; obtenerCursos(){
+        CursoDao dao = new CursoDao();
+        return dao.obtenerCursos();
+    }
+
+    public List&lt;FormaDePagoDTO&gt; obtenerFormasDePago(){
+        FormaDePagoDao dao = new FormaDePagoDao();
+        return dao.obtieneFormasDePago();
+    }
+
+}
+
+</code></pre>
+
+<hr />
+<h2 id="servlets">Servlets</h2>
+<p><code>/pruebaMvc/src/cl/lherrera/servlets/PosInscripcion.java</code></p>
+<pre><code class="java">package cl.lherrera.servlets;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import cl.lherrera.entidades.InscripcionDTO;
+import cl.lherrera.facades.Facade;
+
+@WebServlet(&quot;/postInscripcion&quot;)
+public class PosInscripcion extends HttpServlet{
+
+    private static final long serialVersionUID = -2533943119391365490L;
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
+        // inicializar facade
+        Facade facade = new Facade();
+        // obtener los valores del formulario
+        String nombre = req.getParameter(&quot;nombre&quot;);
+        String celular = req.getParameter(&quot;celular&quot;);
+        int idCurso = Integer.parseInt(req.getParameter(&quot;idCurso&quot;));
+        int idFormaDePago = Integer.parseInt(req.getParameter(&quot;idFormaDePago&quot;));
+        // llenado del DTO
+        InscripcionDTO inscripcionDto = new InscripcionDTO();
+        inscripcionDto.setNombre(nombre);
+        inscripcionDto.setCelular(celular);
+        inscripcionDto.setIdCurso(idCurso);
+        inscripcionDto.setIdFormaDePago(idFormaDePago);
+
+        // id insertado
+        int idInsc = facade.registrarInscripcion(inscripcionDto);
+
+        // agregamos el id de la respuesta al request.
+        req.setAttribute(&quot;idInsc&quot;, idInsc);
+
+        // redireccionamos los objetos de comunicación cargados con datos, hacia otro servlet.
+        try {
+            req.getRequestDispatcher(&quot;/preConfirmacion&quot;).forward(req, resp);
+        } catch (ServletException | IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+</code></pre>
+
+<p><code>/pruebaMvc/src/cl/lherrera/servlets/PreConfirmacion.java</code></p>
+<pre><code class="java">package cl.lherrera.servlets;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet(&quot;/preConfirmacion&quot;)
+public class PreConfirmacion extends HttpServlet{
+
+    private static final long serialVersionUID = 6848290957695901051L;
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
+        try {
+            req.getRequestDispatcher(&quot;confirmacion.jsp&quot;).forward(req, resp);
+        } catch (ServletException | IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+</code></pre>
+
+<p><code>/pruebaMvc/src/cl/lherrera/servlets/PreInscripcion.java</code></p>
+<pre><code class="java">package cl.lherrera.servlets;
+
+import java.io.IOException;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import cl.lherrera.entidades.CursoDTO;
+import cl.lherrera.entidades.FormaDePagoDTO;
+import cl.lherrera.facades.Facade;
+
+@WebServlet(&quot;/preInscripcion&quot;)
+public class PreInscripcion extends HttpServlet{
+
+    private static final long serialVersionUID = -707784703567339582L;
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
+
+        Facade fachada = new Facade();
+        List&lt;CursoDTO&gt; cursos = fachada.obtenerCursos();
+        List&lt;FormaDePagoDTO&gt; formasDePago = fachada.obtenerFormasDePago();
+
+        req.setAttribute(&quot;cursos&quot;, cursos);
+        req.setAttribute(&quot;formasDePago&quot;, formasDePago);
+
+        try {
+            req.getRequestDispatcher(&quot;inscripcion.jsp&quot;).forward(req, resp);
+          }
+          catch (ServletException | IOException e) {
+              e.printStackTrace();
+          }
+    }
+}
+
+</code></pre>
+
+<hr />
+<h2 id="pequeno-main-para-realizar-pruebas">Pequeño main para realizar pruebas</h2>
+<p><code>/pruebaMvc/src/cl/lherrera/main/Principal.java</code></p>
+<pre><code class="java">package cl.lherrera.main;
+
+import java.util.List;
+
+import cl.lherrera.daos.CursoDao;
+import cl.lherrera.daos.FormaDePagoDao;
+import cl.lherrera.entidades.CursoDTO;
+import cl.lherrera.entidades.FormaDePagoDTO;
+import cl.lherrera.entidades.InscripcionDTO;
+import cl.lherrera.facades.Facade;
+import cl.lherrera.daos.InscripcionDAO;
+
+public class Principal {
+    public static void main(String[] args) {
+        probarFacade();
+        System.out.println(&quot;tareas finalizadas&quot;);
+
+    }
+
+    public static void probarFacade() {
+        Facade facade = new Facade();
+
+        List &lt;CursoDTO&gt; listaDeCursos = facade.obtenerCursos();
+        listaDeCursos.forEach(curso -&gt; System.out.println(curso.getDescripcion()));
+    }
+
+    public static void probarInsertarInscripción() {
+        InscripcionDAO inscripcionDao = new InscripcionDAO();
+        InscripcionDTO dto = new InscripcionDTO();
+        dto.setNombre(&quot;Hugo&quot;);
+        dto.setCelular(&quot;554556398&quot;);
+        dto.setIdCurso(1);
+        dto.setIdFormaDePago(1);
+
+        int resultado = inscripcionDao.insertarInscripcion(dto);
+        System.out.println(&quot;acción terminada&quot;);
+        System.out.println(&quot;resultado: &quot; + resultado);
+    }
+
+    public static void probarFormaPago() {
+        FormaDePagoDao formaPagoDao = new FormaDePagoDao();
+        List &lt;FormaDePagoDTO&gt; listaDeFormaPago = formaPagoDao.obtieneFormasDePago();
+
+        listaDeFormaPago.forEach(formaPago -&gt; System.out.println(formaPago.getDescripcion()));
+        System.out.println(&quot;Acción terminada&quot;);
+    }
+
+    public static void probarCursoDao() {
+        CursoDao cursoDao = new CursoDao();
+        List &lt;CursoDTO&gt; listaDeCursos = cursoDao.obtenerCursos();
+        listaDeCursos.stream()
+        .forEach(curso -&gt; System.out.println(curso.getDescripcion()));
+
+    }
+}
+</code></pre>
+
+<hr />
+<h2 id="jsps">JSPs</h2>
+<p><code>/pruebaMvc/WebContent/inscripcion.jsp</code></p>
+<pre><code class="html">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot; pageEncoding=&quot;UTF-8&quot;%&gt;
+&lt;%@ page import=&quot;cl.lherrera.entidades.CursoDTO&quot;%&gt;
+&lt;%@ page import=&quot;cl.lherrera.entidades.FormaDePagoDTO&quot;%&gt;
+&lt;%@ page import=&quot;java.util.*&quot;%&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Formulario de inscripción&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;%
+    List&lt;CursoDTO&gt; cursos = (List&lt;CursoDTO&gt;) request.getAttribute(&quot;cursos&quot;);
+    List&lt;FormaDePagoDTO&gt; formasDePago = (List&lt;FormaDePagoDTO&gt;) request.getAttribute(&quot;formasDePago&quot;);
+%&gt;
+
+&lt;form action=&quot;postInscripcion&quot;&gt;
+    Nombre: &lt;input type=&quot;text&quot; name=&quot;nombre&quot;&gt; &lt;br /&gt;
+    Celular: &lt;input type=&quot;text&quot; name=&quot;celular&quot;&gt; &lt;br /&gt;
+
+    Cursos: 
+    &lt;select name=&quot;idCurso&quot;&gt;
+    &lt;% for(CursoDTO dto: cursos) { %&gt;
+        &lt;option value=&quot;&lt;%=dto.getIdCurso()%&gt;&quot;&gt; &lt;%=dto.getDescripcion()%&gt; &lt;/option&gt;
+    &lt;% } %&gt;
+    &lt;/select&gt;&lt;br /&gt;
+
+    Formas de pago: 
+    &lt;select name=&quot;idFormaDePago&quot;&gt;
+    &lt;% for(FormaDePagoDTO dto: formasDePago) { %&gt;
+        &lt;option value=&quot;&lt;%=dto.getIdFormaDePago()%&gt;&quot;&gt; &lt;%=dto.getDescripcion()%&gt; &lt;/option&gt;
+    &lt;% } %&gt;
+    &lt;/select&gt;&lt;br /&gt;
+
+    &lt;input type=&quot;submit&quot; value=&quot;Enviar&quot; /&gt;
+
+
+
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p><code>/pruebaMvc/WebContent/confirmacion.jsp</code></p>
+<pre><code class="html">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;
+    pageEncoding=&quot;UTF-8&quot;%&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;title&gt;Confirmacion&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;% int idInsc = (Integer) request.getAttribute(&quot;idInsc&quot;); %&gt;
+
+  &lt;h1&gt;Solicitud generada correctamente&lt;/h1&gt;
+  Su código de inscripción es: &lt;%=idInsc%&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+
+<hr />
+<h2 id="sqls-ddl">SQLs - DDL</h2>
+<p><code>Tabla: Curso</code></p>
+<pre><code class="sql">--------------------------------------------------------
+-- Archivo creado  - lunes-marzo-16-2020   
+--------------------------------------------------------
+--------------------------------------------------------
+--  DDL for Table CURSO
+--------------------------------------------------------
+
+  CREATE TABLE &quot;MOD4U2&quot;.&quot;CURSO&quot; 
+   (    &quot;ID_CURSO&quot; NUMBER(*,0), 
+    &quot;DESCRIPCION&quot; VARCHAR2(20 BYTE), 
+    &quot;PRECIO&quot; NUMBER
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE &quot;SYSTEM&quot; ;
+REM INSERTING into MOD4U2.CURSO
+SET DEFINE OFF;
+Insert into MOD4U2.CURSO (ID_CURSO,DESCRIPCION,PRECIO) values ('1','Java','1000000');
+Insert into MOD4U2.CURSO (ID_CURSO,DESCRIPCION,PRECIO) values ('2','HTML5-CSS3','500000');
+Insert into MOD4U2.CURSO (ID_CURSO,DESCRIPCION,PRECIO) values ('3','Javascript','900000');
+--------------------------------------------------------
+--  DDL for Index CURSO_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX &quot;MOD4U2&quot;.&quot;CURSO_PK&quot; ON &quot;MOD4U2&quot;.&quot;CURSO&quot; (&quot;ID_CURSO&quot;) 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE &quot;SYSTEM&quot; ;
+--------------------------------------------------------
+--  Constraints for Table CURSO
+--------------------------------------------------------
+
+  ALTER TABLE &quot;MOD4U2&quot;.&quot;CURSO&quot; ADD CONSTRAINT &quot;CURSO_PK&quot; PRIMARY KEY (&quot;ID_CURSO&quot;)
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE &quot;SYSTEM&quot;  ENABLE;
+  ALTER TABLE &quot;MOD4U2&quot;.&quot;CURSO&quot; MODIFY (&quot;ID_CURSO&quot; NOT NULL ENABLE);
+</code></pre>
+
+<p><code>Tabla: FORMA_PAGO</code></p>
+<pre><code class="sql">--------------------------------------------------------
+-- Archivo creado  - lunes-marzo-16-2020   
+--------------------------------------------------------
+--------------------------------------------------------
+--  DDL for Table FORMA_PAGO
+--------------------------------------------------------
+
+  CREATE TABLE &quot;MOD4U2&quot;.&quot;FORMA_PAGO&quot; 
+   (    &quot;ID_FORMA_PAGO&quot; NUMBER(*,0), 
+    &quot;DESCRIPCION&quot; VARCHAR2(200 BYTE), 
+    &quot;RECARGA&quot; NUMBER
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE &quot;SYSTEM&quot; ;
+REM INSERTING into MOD4U2.FORMA_PAGO
+SET DEFINE OFF;
+Insert into MOD4U2.FORMA_PAGO (ID_FORMA_PAGO,DESCRIPCION,RECARGA) values ('1','tarjeta crédito','200,5');
+Insert into MOD4U2.FORMA_PAGO (ID_FORMA_PAGO,DESCRIPCION,RECARGA) values ('2','tarjeta débito','5000000');
+--------------------------------------------------------
+--  DDL for Index FORMA_PAGO_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX &quot;MOD4U2&quot;.&quot;FORMA_PAGO_PK&quot; ON &quot;MOD4U2&quot;.&quot;FORMA_PAGO&quot; (&quot;ID_FORMA_PAGO&quot;) 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE &quot;SYSTEM&quot; ;
+--------------------------------------------------------
+--  Constraints for Table FORMA_PAGO
+--------------------------------------------------------
+
+  ALTER TABLE &quot;MOD4U2&quot;.&quot;FORMA_PAGO&quot; ADD CONSTRAINT &quot;FORMA_PAGO_PK&quot; PRIMARY KEY (&quot;ID_FORMA_PAGO&quot;)
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE &quot;SYSTEM&quot;  ENABLE;
+  ALTER TABLE &quot;MOD4U2&quot;.&quot;FORMA_PAGO&quot; MODIFY (&quot;ID_FORMA_PAGO&quot; NOT NULL ENABLE);
+
+</code></pre>
+
+<p><code>Tabla: INSCRIPCION</code></p>
+<pre><code class="sql">--------------------------------------------------------
+-- Archivo creado  - lunes-marzo-16-2020   
+--------------------------------------------------------
+--------------------------------------------------------
+--  DDL for Table INSCRIPCION
+--------------------------------------------------------
+
+  CREATE TABLE &quot;MOD4U2&quot;.&quot;INSCRIPCION&quot; 
+   (    &quot;ID_INSCRIPCION&quot; NUMBER(*,0), 
+    &quot;NOMBRE&quot; VARCHAR2(200 BYTE), 
+    &quot;CELULAR&quot; VARCHAR2(20 BYTE), 
+    &quot;ID_CURSO&quot; NUMBER(*,0), 
+    &quot;ID_FORMA_PAGO&quot; NUMBER(*,0)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE &quot;SYSTEM&quot; ;
+REM INSERTING into MOD4U2.INSCRIPCION
+SET DEFINE OFF;
+--------------------------------------------------------
+--  DDL for Index INSCRIPCION_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX &quot;MOD4U2&quot;.&quot;INSCRIPCION_PK&quot; ON &quot;MOD4U2&quot;.&quot;INSCRIPCION&quot; (&quot;ID_INSCRIPCION&quot;) 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE &quot;SYSTEM&quot; ;
+--------------------------------------------------------
+--  Constraints for Table INSCRIPCION
+--------------------------------------------------------
+
+  ALTER TABLE &quot;MOD4U2&quot;.&quot;INSCRIPCION&quot; ADD CONSTRAINT &quot;INSCRIPCION_PK&quot; PRIMARY KEY (&quot;ID_INSCRIPCION&quot;)
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE &quot;SYSTEM&quot;  ENABLE;
+  ALTER TABLE &quot;MOD4U2&quot;.&quot;INSCRIPCION&quot; MODIFY (&quot;ID_INSCRIPCION&quot; NOT NULL ENABLE);
+
+</code></pre>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../assets/javascripts/vendor.a0c4167b.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.fb26dd1d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../../assets/javascripts/worker/search.37585f48.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

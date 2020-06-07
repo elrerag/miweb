@@ -1,0 +1,2059 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.6">
+    
+    
+      
+        <title>Backend - Java Full Stack Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.4b9ffd7b.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-mantenedor-de-usuarios-backend" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../../../.." title="Java Full Stack Docs" class="md-header-nav__button md-logo" aria-label="Java Full Stack Docs">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Java Full Stack Docs
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Backend
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Java Full Stack Docs" class="md-nav__button md-logo" aria-label="Java Full Stack Docs">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Java Full Stack Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../repaso/teoria/poo/herencia/" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11-servicios" class="md-nav__link">
+    1.1 Servicios
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1 Servicios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#registro-de-usuario" class="md-nav__link">
+    Registro de Usuario
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iniciar-sesion" class="md-nav__link">
+    Iniciar sesión
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listar-usuarios" class="md-nav__link">
+    Listar usuarios
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#encontrar-usuario-por-nombre" class="md-nav__link">
+    Encontrar Usuario por nombre
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-estructura-de-archivos" class="md-nav__link">
+    1.2 Estructura de archivos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-implementacion" class="md-nav__link">
+    1.3 Implementación
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3 Implementación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jwtappsrcmainjava" class="md-nav__link">
+    /jwtapp/src/main/java/
+  </a>
+  
+    <nav class="md-nav" aria-label="/jwtapp/src/main/java/">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cllherrerajwtapp" class="md-nav__link">
+    cl.lherrera.jwtapp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cllherrerajwtappapiexception" class="md-nav__link">
+    cl.lherrera.jwtapp.apiexception
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cllherrerajwtappconfig" class="md-nav__link">
+    cl.lherrera.jwtapp.config
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cllherrerajwtappcontroller" class="md-nav__link">
+    cl.lherrera.jwtapp.controller
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cllherrerajwtappdao" class="md-nav__link">
+    cl.lherrera.jwtapp.dao
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cllherrerajwtappdto" class="md-nav__link">
+    cl.lherrera.jwtapp.dto
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cllherrerajwtappmapper" class="md-nav__link">
+    cl.lherrera.jwtapp.mapper
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cllherrerajwtappmodel" class="md-nav__link">
+    cl.lherrera.jwtapp.model
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cllherrerajwtappsecurity" class="md-nav__link">
+    cl.lherrera.jwtapp.security
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cllherrerajwtappservice" class="md-nav__link">
+    cl.lherrera.jwtapp.service
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jwtappsrcmainresources" class="md-nav__link">
+    /jwtapp/src/main/resources
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jwtapppomxml" class="md-nav__link">
+    /jwtapp/pom.xml
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#todo" class="md-nav__link">
+    TODO
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <blockquote>
+<h1 id="1-mantenedor-de-usuarios-backend">1 Mantenedor de Usuarios - <code>BackEnd</code></h1>
+<blockquote>
+<ul>
+<li>Es una continuación del proyecto anterior.</li>
+<li>Es la implementación de los servicios que consumirá la aplicación en <code>html, javascript y css</code>.</li>
+<li>Esta aplicación posee implementaciones pendientes, como el tipo de retorno del registro, o la re dirección de los usuarios al login, que no se presenta en las demás opciones; pero lo que se tiene implementado es suficiente ejemplo para poder entender la implementación de las soluciones que siguen el patrón <code>Backend for FrontEnd - BFF</code>. A diferencia de <code>Spring Mvc</code>; acá no utilizaremos <code>JSP, JSTL o THYMELEAF</code>, si no que, la implementación queda abierta a cualquier tecnología de <code>FrontEnd</code>.</li>
+<li>Una particularidad de este ejemplo, es que utilizamos un DTO, que posee un nombre, que se ingresa con son apellido, todo junto, el servicio se encargará de ingresar estos datos en campos diferentes.</li>
+<li>Se asume la configuración que viene en el proyecto, por ejemplo el puerto <code>9090</code>.</li>
+</ul>
+</blockquote>
+</blockquote>
+<hr />
+<p><br /></p>
+<blockquote>
+<h2 id="11-servicios"><strong>1.1 Servicios</strong></h2>
+</blockquote>
+<h3 id="registro-de-usuario"><strong>Registro de Usuario</strong></h3>
+<ul>
+<li>Se encarga de registrar un usuario en el sistema, para que este pueda tener acceso. Luego este podrá iniciar sesión.</li>
+</ul>
+<pre><code>Post: http://localhost:9090/api/v1/registrar
+
+Body:
+{
+    &quot;nombre&quot;: &quot;Luis Herrera&quot;,
+    &quot;email&quot;: &quot;l.herrera.garnica@gmail.com&quot;,
+    &quot;password&quot;: &quot;1234&quot;,
+    &quot;roles&quot;: [&quot;ROLE_ADMINISTRADOR&quot;]
+}
+
+Headers:
+
+{
+    &quot;Content-Type&quot;:&quot;application/json&quot;
+}
+
+Response: (Esto debe cambiar a un retorno tipo Json)
+
+eyJhbGciOiJIUzI1NiJ...resto del token.
+
+</code></pre>
+
+<h3 id="iniciar-sesion"><strong>Iniciar sesión</strong></h3>
+<ul>
+<li>Este servicio es el que utilizando las credenciales, que en este caso son <code>correo</code> y <code>contraseña</code>, se creará el <code>token</code>, el que finalmente será entregado.</li>
+<li>No se crea una sesión en el servidor, en vez de eso, se crea una variable en el <code>storage</code> del navegador del cliente.</li>
+<li>Toda la información debería entregarse con la estructura <code>json</code>, y no una cadena.</li>
+</ul>
+<pre><code>Post: http://localhost:9090/api/v1/iniciarsesion?correo=l.herrera.garnica@gmail.com&amp;password=1234
+
+Response:
+
+{
+    &quot;status&quot;: 200,
+    &quot;data&quot;: &quot;eyJhbGciOiJIUzI1NiJ...resto del token.&quot;
+}
+</code></pre>
+
+<h3 id="listar-usuarios"><strong>Listar usuarios</strong></h3>
+<ul>
+<li>Este servicio, se encarga de obtener la lista de usuarios que existen en el sistema.</li>
+<li>Debería ser <code>Authoritation</code> pero en Java esto fue modificado por <code>Autorizacion</code>, para poder ver que este tipo de parámetro es completamente personalizable.</li>
+</ul>
+<pre><code>Get: http://localhost:9090/api/v1/usuarios/
+
+Headers:
+
+{
+    &quot;Autorizacion&quot;:&quot;Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkb3NAZ21haWwuY29tIiwiYXV0aCI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTklTVFJBRE9SIn0seyJhdXRob3JpdHkiOiJST0xFX1VTVUFSSU8ifV0sImlhdCI6MTU5MDM3ODc2MywiZXhwIjoxNTkwMzgyMzYzfQ.tmbUOOmfVyaMFDNM-u7YBeNGH3CWq5XuFrZEyFhYsBM&quot;
+}
+
+Response:
+
+{
+    &quot;status&quot;: 200,
+    &quot;data&quot;: [
+        {
+            &quot;nombre&quot;: &quot;Luis Herrera&quot;,
+            &quot;email&quot;: &quot;l.herrera.garnica@gmail.com&quot;,
+            &quot;password&quot;: null,
+            &quot;roles&quot;: [
+                &quot;ROLE_ADMINISTRADOR&quot;
+            ]
+        },
+        {
+            &quot;nombre&quot;: &quot;Luis Herrera2&quot;,
+            &quot;email&quot;: &quot;dos@gmail.com&quot;,
+            &quot;password&quot;: null,
+            &quot;roles&quot;: [
+                &quot;ROLE_ADMINISTRADOR&quot;,
+                &quot;ROLE_USUARIO&quot;
+            ]
+        }
+    ]
+}
+</code></pre>
+
+<h3 id="encontrar-usuario-por-nombre"><strong>Encontrar Usuario por nombre</strong></h3>
+<ul>
+<li>Este servicio se preocupa de obtener un usuario por su nombre de usuario que en este caso es el <code>correo</code>.</li>
+<li>No será visible directamente mediante una vista, pero este servicio, se utilizará para imprimir el nombre de usuario en la ventana principal.</li>
+</ul>
+<pre><code>Post: http://localhost:9090/api/v1/usuarios?correo=l.herrera.garnica@gmail.com
+
+Headers:
+
+{
+    &quot;Autorizacion&quot;:&quot;Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkb3NAZ21haWwuY29tIiwiYXV0aCI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTklTVFJBRE9SIn0seyJhdXRob3JpdHkiOiJST0xFX1VTVUFSSU8ifV0sImlhdCI6MTU5MDM3ODc2MywiZXhwIjoxNTkwMzgyMzYzfQ.tmbUOOmfVyaMFDNM-u7YBeNGH3CWq5XuFrZEyFhYsBM&quot;
+}
+
+Response:
+
+{
+    &quot;status&quot;: 200,
+    &quot;data&quot;: {
+        &quot;nombre&quot;: &quot;Luis Herrera&quot;,
+        &quot;email&quot;: &quot;l.herrera.garnica@gmail.com&quot;,
+        &quot;password&quot;: null,
+        &quot;roles&quot;: [
+            &quot;ROLE_ADMINISTRADOR&quot;
+        ]
+    }
+}
+
+</code></pre>
+
+<hr />
+<p><br /></p>
+<blockquote>
+<h2 id="12-estructura-de-archivos"><strong>1.2 Estructura de archivos</strong></h2>
+</blockquote>
+<pre><code>./
+├── HELP.md
+├── mvnw
+├── mvnw.cmd
+├── pom.xml
+├── src
+│   ├── main
+│   │   ├── java
+│   │   │   ├── META-INF
+│   │   │   │   └── additional-spring-configuration-metadata.json
+│   │   │   └── cl
+│   │   │       └── lherrera
+│   │   │           └── jwtapp
+│   │   │               ├── JwtappApplication.java
+│   │   │               ├── apiexception
+│   │   │               │   └── RestServiceException.java
+│   │   │               ├── config
+│   │   │               │   ├── AppConfig.java
+│   │   │               │   └── SQLiteDialect.java
+│   │   │               ├── controller
+│   │   │               │   ├── ControladorAplicacion.java
+│   │   │               │   ├── ControladorIngreso.java
+│   │   │               │   ├── ControladorRegistro.java
+│   │   │               │   └── ControladorUsuario.java
+│   │   │               ├── dao
+│   │   │               │   └── UsuarioDao.java
+│   │   │               ├── dto
+│   │   │               │   ├── RespuestaDTO.java
+│   │   │               │   └── UsuarioDTO.java
+│   │   │               ├── mapper
+│   │   │               │   └── UsuarioMapper.java
+│   │   │               ├── model
+│   │   │               │   ├── Rol.java
+│   │   │               │   └── Usuario.java
+│   │   │               ├── security
+│   │   │               │   ├── JwtTokenFilter.java
+│   │   │               │   ├── JwtTokenFilterConfigurer.java
+│   │   │               │   ├── JwtTokenProvider.java
+│   │   │               │   └── WebSecurityConfig.java
+│   │   │               └── service
+│   │   │                   ├── ServicioUsuario.java
+│   │   │                   └── ServicioUsuarioImpl.java
+│   │   └── resources
+│   │       ├── application.properties
+│   │       ├── database.properties
+│   │       ├── static
+│   │       └── templates
+│   └── test
+│       └── java
+│           └── cl
+│               └── lherrera
+│                   └── jwtapp
+│                       └── JwtappApplicationTests.java
+└── target
+    ├── classes
+    │   ├── META-INF
+    │   │   ├── MANIFEST.MF
+    │   │   └── maven
+    │   │       └── cl.lherrera
+    │   │           └── jwtapp
+    │   │               ├── pom.properties
+    │   │               └── pom.xml
+    │   ├── application.properties
+    │   └── database.properties
+    └── test-classes
+
+31 directories, 34 files
+
+</code></pre>
+
+<p><br /></p>
+<blockquote>
+<h2 id="13-implementacion"><strong>1.3 Implementación</strong></h2>
+</blockquote>
+<h3 id="jwtappsrcmainjava"><strong><code>/jwtapp/src/main/java/</code></strong></h3>
+<h4 id="cllherrerajwtapp"><strong><code>cl.lherrera.jwtapp</code></strong></h4>
+<p><strong><code>JwtappApplication.java</code></strong></p>
+<p>Sin modificaciones, quizás se recomienda ingresar a un usuario por acá y restringir el acceso al registro de usuarios.</p>
+<pre><code class="java">package cl.lherrera.jwtapp;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class JwtappApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(JwtappApplication.class, args);
+    }
+
+}
+
+</code></pre>
+
+<h4 id="cllherrerajwtappapiexception"><strong><code>cl.lherrera.jwtapp.apiexception</code></strong></h4>
+<p><strong><code>RestServiceException.java</code></strong></p>
+<pre><code class="java">package cl.lherrera.jwtapp.apiexception;
+
+import org.springframework.http.HttpStatus;
+
+public class RestServiceException extends RuntimeException {
+
+    private static final long serialVersionUID = 5037553749745142029L;
+
+    private final String message;
+    private final HttpStatus httpStatus;
+
+    public RestServiceException(String message, HttpStatus httpStatus) {
+        super();
+        this.message = message;
+        this.httpStatus = httpStatus;
+    }
+
+    /**
+     * se sobrescribe para poder incluír el status en el mensaje de la excepción.
+     */
+    @Override
+    public String getMessage() {
+        return message;
+    }
+
+    public HttpStatus getHttpStatus() {
+        return httpStatus;
+    }
+}
+
+</code></pre>
+
+<h4 id="cllherrerajwtappconfig"><strong><code>cl.lherrera.jwtapp.config</code></strong></h4>
+<p><strong><code>AppConfig.java</code></strong></p>
+<pre><code class="java">package cl.lherrera.jwtapp.config;
+
+import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.core.env.Environment;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
+
+@Configuration
+@ComponentScan(&quot;cl.lherrera.jwtapp&quot;) // escaneo de componentes, desde el paquete base.
+@PropertySource(&quot;classpath:database.properties&quot;) // archvo que utilizará en la case para usar `environment.getProperty`
+public class AppConfig {
+
+    @Autowired
+    Environment environment;
+
+    @Bean
+    DataSource dataSource() {
+        DriverManagerDataSource driverManagerDataSource = new DriverManagerDataSource();
+        driverManagerDataSource.setUrl(environment.getProperty(&quot;url&quot;));
+        driverManagerDataSource.setUsername(environment.getProperty(&quot;username&quot;));
+        driverManagerDataSource.setPassword(environment.getProperty(&quot;dbpassword&quot;));
+        driverManagerDataSource.setDriverClassName(environment.getProperty(&quot;driverClassName&quot;));
+        return driverManagerDataSource;
+    }
+}
+
+</code></pre>
+
+<p><strong><code>SQLiteDialect.java</code></strong></p>
+<pre><code class="java">package cl.lherrera.jwtapp.config;
+
+import java.sql.Types;
+
+import org.hibernate.dialect.Dialect;
+import org.hibernate.dialect.function.StandardSQLFunction;
+import org.hibernate.dialect.function.SQLFunctionTemplate;
+import org.hibernate.dialect.function.VarArgsSQLFunction;
+import org.hibernate.type.StandardBasicTypes;
+
+/**
+ * Necesario para utilizar SQLite, se aplica en AppConfig.
+ * @author luisherrera
+ *
+ */
+public class SQLiteDialect extends Dialect {
+    public SQLiteDialect() {
+        super();
+        registerColumnType(Types.BIT, &quot;integer&quot;);
+        registerColumnType(Types.TINYINT, &quot;tinyint&quot;);
+        registerColumnType(Types.SMALLINT, &quot;smallint&quot;);
+        registerColumnType(Types.INTEGER, &quot;integer&quot;);
+        registerColumnType(Types.BIGINT, &quot;bigint&quot;);
+        registerColumnType(Types.FLOAT, &quot;float&quot;);
+        registerColumnType(Types.REAL, &quot;real&quot;);
+        registerColumnType(Types.DOUBLE, &quot;double&quot;);
+        registerColumnType(Types.NUMERIC, &quot;numeric&quot;);
+        registerColumnType(Types.DECIMAL, &quot;decimal&quot;);
+        registerColumnType(Types.CHAR, &quot;char&quot;);
+        registerColumnType(Types.VARCHAR, &quot;varchar&quot;);
+        registerColumnType(Types.LONGVARCHAR, &quot;longvarchar&quot;);
+        registerColumnType(Types.DATE, &quot;date&quot;);
+        registerColumnType(Types.TIME, &quot;time&quot;);
+        registerColumnType(Types.TIMESTAMP, &quot;timestamp&quot;);
+        registerColumnType(Types.BINARY, &quot;blob&quot;);
+        registerColumnType(Types.VARBINARY, &quot;blob&quot;);
+        registerColumnType(Types.LONGVARBINARY, &quot;blob&quot;);
+        // registerColumnType(Types.NULL, &quot;null&quot;);
+        registerColumnType(Types.BLOB, &quot;blob&quot;);
+        registerColumnType(Types.CLOB, &quot;clob&quot;);
+        registerColumnType(Types.BOOLEAN, &quot;integer&quot;);
+
+        registerFunction(&quot;concat&quot;, new VarArgsSQLFunction(StandardBasicTypes.STRING, &quot;&quot;, &quot;||&quot;, &quot;&quot;));
+        registerFunction(&quot;mod&quot;, new SQLFunctionTemplate(StandardBasicTypes.INTEGER, &quot;?1 % ?2&quot;));
+        registerFunction(&quot;substr&quot;, new StandardSQLFunction(&quot;substr&quot;, StandardBasicTypes.STRING));
+        registerFunction(&quot;substring&quot;, new StandardSQLFunction(&quot;substr&quot;, StandardBasicTypes.STRING));
+    }
+
+    public boolean supportsIdentityColumns() {
+        return true;
+    }
+
+    public boolean hasDataTypeInIdentityColumn() {
+        return false; // As specify in NHibernate dialect
+    }
+
+    public String getIdentityColumnString() {
+        // return &quot;integer primary key autoincrement&quot;;
+        return &quot;integer&quot;;
+    }
+
+    public String getIdentitySelectString() {
+        return &quot;select last_insert_rowid()&quot;;
+    }
+
+    public boolean supportsLimit() {
+        return true;
+    }
+
+    public String getLimitString(String query, boolean hasOffset) {
+        return new StringBuffer(query.length() + 20).append(query).append(hasOffset ? &quot; limit ? offset ?&quot; : &quot; limit ?&quot;)
+                .toString();
+    }
+
+    public boolean bindLimitParametersInReverseOrder() {
+        return true;
+    }
+
+    public boolean supportsTemporaryTables() {
+        return true;
+    }
+
+    public String getCreateTemporaryTableString() {
+        return &quot;create temporary table if not exists&quot;;
+    }
+
+    public boolean dropTemporaryTableAfterUse() {
+        return false;
+    }
+
+    public boolean supportsCurrentTimestampSelection() {
+        return true;
+    }
+
+    public boolean isCurrentTimestampSelectStringCallable() {
+        return false;
+    }
+
+    public String getCurrentTimestampSelectString() {
+        return &quot;select current_timestamp&quot;;
+    }
+
+    public boolean supportsUnionAll() {
+        return true;
+    }
+
+    public boolean hasAlterTable() {
+        return false; // As specify in NHibernate dialect
+    }
+
+    public boolean dropConstraints() {
+        return false;
+    }
+
+    public String getAddColumnString() {
+        return &quot;add column&quot;;
+    }
+
+    public String getForUpdateString() {
+        return &quot;&quot;;
+    }
+
+    public boolean supportsOuterJoinForUpdate() {
+        return false;
+    }
+
+    public String getDropForeignKeyString() {
+        throw new UnsupportedOperationException(&quot;No drop foreign key syntax supported by SQLiteDialect&quot;);
+    }
+
+    public String getAddForeignKeyConstraintString(String constraintName, String[] foreignKey, String referencedTable,
+            String[] primaryKey, boolean referencesPrimaryKey) {
+        throw new UnsupportedOperationException(&quot;No add foreign key syntax supported by SQLiteDialect&quot;);
+    }
+
+    public String getAddPrimaryKeyConstraintString(String constraintName) {
+        throw new UnsupportedOperationException(&quot;No add primary key syntax supported by SQLiteDialect&quot;);
+    }
+
+    public boolean supportsIfExistsBeforeTableName() {
+        return true;
+    }
+
+    public boolean supportsCascadeDelete() {
+        return false;
+    }
+}
+
+</code></pre>
+
+<h4 id="cllherrerajwtappcontroller"><strong><code>cl.lherrera.jwtapp.controller</code></strong></h4>
+<p><strong><code>ControladorAplicacion.java</code></strong></p>
+<pre><code class="java">package cl.lherrera.jwtapp.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+/**
+ * Método para comprobar si la api está disponible Es utilizado por monitores,
+ * que ejecutan una petición a este endpoint, para poder verificar que esté
+ * disponible o no.
+ * 
+ * @author luisherrera
+ *
+ */
+@RestController
+@RequestMapping(value = &quot;/api/v1/isAlive&quot;)
+public class ControladorAplicacion {
+
+    @GetMapping(path = { &quot;&quot;, &quot;/&quot; })
+    public String isAlive() {
+        return &quot;200&quot;;
+    }
+}
+
+</code></pre>
+
+<p><strong><code>ControladorIngreso.java</code></strong></p>
+<pre><code class="java">package cl.lherrera.jwtapp.controller;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import cl.lherrera.jwtapp.dto.RespuestaDTO;
+import cl.lherrera.jwtapp.service.ServicioUsuario;
+
+@RestController
+@RequestMapping(path = &quot;/api/v1/iniciarsesion&quot;)
+public class ControladorIngreso {
+    private Logger logger = LoggerFactory.getLogger(ControladorIngreso.class);
+
+    @Autowired
+    private ServicioUsuario servicioUsuario;
+
+    @PostMapping(path = { &quot;&quot;, &quot;/&quot; })
+    public RespuestaDTO&lt;String&gt; iniciarSesion(@RequestParam String correo, @RequestParam String password) {
+        logger.debug(&quot;Ejecutado: /api/v1/iniciarsesion, parámetros : &quot; + &quot; &quot; + correo + &quot; &quot; + password);
+        RespuestaDTO&lt;String&gt; respuesta = new RespuestaDTO&lt;&gt;();
+        String data = servicioUsuario.iniciarSesion(correo, password);
+        respuesta.setStatus(200);
+        respuesta.setData(data);
+
+        return respuesta;
+    }
+}
+
+</code></pre>
+
+<p><strong><code>ControladorRegistro.java</code></strong></p>
+<pre><code class="java">/**
+ * Servicio que registra a un usuario. Se pide que además retorne el token.
+ * No es bueno que un método realice dos tareas principales. Pero en esta ocación
+ * lo hacemos para obtener el token y no tener que hacer el login. En un sistema
+ * productivo, debería solo registrar. Luego, deberíamos iniciar sesión de manera manual
+ * 
+ * Headers:
+ *  Content-Type:application/json
+ * POST:
+ *  http://localhost:8080/api/v1/registrar
+ * BODY-EXAMPLE
+ * 
+ * &lt;code&gt;
+{
+    &quot;nombre&quot;: &quot;Luis Herrera&quot;,
+    &quot;email&quot;: &quot;l.herrera.garnica@gmail.com&quot;,
+    &quot;password&quot;: &quot;1234&quot;,
+    &quot;roles&quot;: [&quot;ROLE_ADMINISTRADOR&quot;]
+}
+&lt;code&gt;
+ */
+package cl.lherrera.jwtapp.controller;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import cl.lherrera.jwtapp.dto.UsuarioDTO;
+import cl.lherrera.jwtapp.service.ServicioUsuario;
+
+// para que no retorne vistas.
+@RestController
+@RequestMapping(path = &quot;/api/v1/registrar&quot;)
+public class ControladorRegistro {
+    private Logger logger = LoggerFactory.getLogger(ControladorRegistro.class);
+
+    @Autowired
+    ServicioUsuario servicioUsuario;
+
+    /**
+     *  Este método, debe ser refactorizado, si se va a utilizar
+     *  productivamente, no debería responder una cadena, si no
+     *  que un json, con la cadena en el atributo data.
+     *  
+     *   Esto queda demostrado en el inicio de sesión, aunque este
+     *   servicio solamente debería retornar el estado de creado.
+     */
+    @PostMapping(path = { &quot;&quot;, &quot;/&quot; })
+    public String registrarUsuaio(@RequestBody UsuarioDTO usuarioDTO) {
+        logger.debug(&quot;Registrando al usuario: &quot; + usuarioDTO.toString());
+        return servicioUsuario.registraNuevoUsuario(usuarioDTO);
+    }
+
+}
+
+</code></pre>
+
+<p><strong><code>ControladorUsuario.java</code></strong></p>
+<pre><code class="java">package cl.lherrera.jwtapp.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import cl.lherrera.jwtapp.dto.RespuestaDTO;
+import cl.lherrera.jwtapp.dto.UsuarioDTO;
+import cl.lherrera.jwtapp.service.ServicioUsuario;
+
+@RestController
+@RequestMapping(&quot;/api/v1/usuarios&quot;)
+public class ControladorUsuario {
+
+    @Autowired
+    private ServicioUsuario servicioUsuario;
+
+    @GetMapping(path = { &quot;&quot;, &quot;/&quot; })
+    public RespuestaDTO&lt;List&lt;UsuarioDTO&gt;&gt; listar() {
+        RespuestaDTO&lt;List&lt;UsuarioDTO&gt;&gt; respuesta = new RespuestaDTO&lt;&gt;();
+        List&lt;UsuarioDTO&gt; usuarios = servicioUsuario.listaDeUsuarios();
+
+        respuesta.setStatus(200);
+        respuesta.setData(usuarios);
+
+        return respuesta;
+    }
+
+    @PostMapping(path = { &quot;&quot;, &quot;/&quot; })
+    public RespuestaDTO&lt;UsuarioDTO&gt; encontrarPorNombreDeUsuario(@RequestParam String correo) {
+        UsuarioDTO usuario = servicioUsuario.obtenerPorCorreo(correo);
+        RespuestaDTO&lt;UsuarioDTO&gt; respuesta = new RespuestaDTO&lt;&gt;();
+        respuesta.setStatus(200);
+        respuesta.setData(usuario);
+
+        return respuesta;
+    }
+
+}
+
+</code></pre>
+
+<h4 id="cllherrerajwtappdao"><strong><code>cl.lherrera.jwtapp.dao</code></strong></h4>
+<p><strong><code>UsuarioDao.java</code></strong></p>
+<pre><code class="java">package cl.lherrera.jwtapp.dao;
+
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import cl.lherrera.jwtapp.model.Usuario;
+
+@Repository
+public interface UsuarioDao extends JpaRepository&lt;Usuario, Integer&gt; {
+    boolean existsByUsername(String username);
+
+    /**
+     * Ya que mediante el token tenemos la información del nombre de usuario,
+     * utilizamos esta información, para poder obtener al usuario mediante esta
+     * información
+     */
+    Optional&lt;Usuario&gt; findByUsername(String username);
+}
+
+</code></pre>
+
+<h4 id="cllherrerajwtappdto"><strong><code>cl.lherrera.jwtapp.dto</code></strong></h4>
+<p><strong><code>RespuestaDTO.java</code></strong></p>
+<pre><code class="java">package cl.lherrera.jwtapp.dto;
+
+/**
+ * Esta clase fue diseñada para poder manejar los diferentes tipos de
+ * respuestas, por ejemplo en el caso de token, es una cadena, para el caso del
+ * usuario es un Usuario, por lo tanto, estos tipos de retornos se traducen a
+ * distintos tipos en java, aunque sean todos json, poseen estructuras distintas
+ * que deben ser manejadas con las técnicas que existen en java, antes de
+ * finalmente ser transformadas en cadenas o json, son objetos, es por ello que
+ * la respuesta es un tipo &lt;T&gt;, por que el campo data, es lo que se busca por
+ * estandar como el campo que contiene la información, es por eso que la
+ * respuesta debe ser multipo, por que puede contender cualquuier tipo de
+ * respuesta. Recordar que no puede ser con polimorfismo puro, como lo sería con
+ * un tipo padre como tipo de respuesta, ya que este, debería contener todos los
+ * métodos de cualquier tipo de variable, lo que es impensable. La ventaja de
+ * &lt;T&gt; es que si le pasamos el tipo que sea, asume todos sus métodos, a
+ * diferencia del polimorfismo que solamente asume los métodos del padre y para
+ * ejecutar alguno que no posea, se debe hacer un cast. Usando &lt;T&gt; no tenemos
+ * este problema.
+ * 
+ * @author luisherrera
+ *
+ * @param &lt;T&gt;
+ */
+public class RespuestaDTO&lt;T&gt; {
+
+    private Integer status;
+    private T data;
+
+    public RespuestaDTO() {
+    }
+
+    public RespuestaDTO(Integer status, T data) {
+        super();
+        this.status = status;
+        this.data = data;
+    }
+
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
+    }
+
+    public T getData() {
+        return data;
+    }
+
+    public void setData(T data) {
+        this.data = data;
+    }
+
+}
+
+</code></pre>
+
+<p><strong><code>UsuarioDTO.java</code></strong></p>
+<pre><code class="java">package cl.lherrera.jwtapp.dto;
+
+import java.util.List;
+
+import cl.lherrera.jwtapp.model.Rol;
+
+/**
+ * Clase de transporte de datos, que contiene la estructura del objeto json
+ * esperado en el frontEnd. En este caso, para el front, este elemento según la
+ * técnica de puntos función sería un (EIF: External Interface File)
+ * 
+ * @author luisherrera
+ *
+ */
+public class UsuarioDTO {
+
+    private String nombre;
+    private String email;
+    private String password;
+    private List&lt;Rol&gt; roles;
+
+    public UsuarioDTO() {
+    }
+
+    public UsuarioDTO(String nombre, String email, String password, List&lt;Rol&gt; roles) {
+        super();
+        this.nombre = nombre;
+        this.email = email;
+        this.password = password;
+        this.roles = roles;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public List&lt;Rol&gt; getRoles() {
+        return roles;
+    }
+
+    public void setRoles(List&lt;Rol&gt; roles) {
+        this.roles = roles;
+    }
+
+    @Override
+    public String toString() {
+        return &quot;UsuarioDTO [nombre=&quot; + nombre + &quot;, email=&quot; + email + &quot;, password=&quot; + password + &quot;, roles=&quot; + roles
+                + &quot;]&quot;;
+    }
+
+}
+
+</code></pre>
+
+<h4 id="cllherrerajwtappmapper"><strong><code>cl.lherrera.jwtapp.mapper</code></strong></h4>
+<p><strong><code>UsuarioMapper.java</code></strong></p>
+<pre><code class="java">package cl.lherrera.jwtapp.mapper;
+
+import java.util.Arrays;
+import java.util.List;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import cl.lherrera.jwtapp.dto.UsuarioDTO;
+import cl.lherrera.jwtapp.model.Usuario;
+
+/**
+ * contiene toda la lógica necesaria para que las entidades sean transformadas en
+ * los objetos que son requeridos para el servicio.
+ * 
+ * @author luisherrera
+ *
+ */
+public class UsuarioMapper {
+    private static Logger logger = LoggerFactory.getLogger(UsuarioMapper.class);
+
+    private UsuarioMapper() {
+    }
+
+    /**
+     * Transforma un Usuario a un UsuarioDTO
+     */
+    public static UsuarioDTO usuarioADto(Usuario usuario) {
+        logger.debug(&quot;Usuario: &quot; + usuario.toString());
+        UsuarioDTO dtoUsuario = new UsuarioDTO();
+        dtoUsuario.setNombre(usuario.getNombre() + &quot; &quot; + usuario.getApellido());
+        dtoUsuario.setEmail(usuario.getUsername());
+        dtoUsuario.setRoles(usuario.getRoles());
+        dtoUsuario.setPassword(null);
+
+        logger.debug(&quot;Transformado a DTO : &quot; + dtoUsuario.toString());
+        return dtoUsuario;
+    }
+
+    /**
+     * método privado para separar el nombre y el apellido que viene en un solo
+     * campo desde el front se separa si viene con espacio no es muy elegante pero
+     * es una solución rápida.
+     */
+    private static List&lt;String&gt; getNombres(UsuarioDTO dtoUsuario) {
+        return Arrays.asList(dtoUsuario.getNombre().split(&quot; &quot;));
+    }
+
+    /**
+     * Transforma un UsuarioDTO a un Usuario
+     */
+    public static Usuario dtoAUsuario(UsuarioDTO dtoUsuario) {
+        logger.debug(&quot;UsuarioDTO: &quot; + dtoUsuario.toString());
+        List&lt;String&gt; nombres = getNombres(dtoUsuario);
+        String apellido = &quot;&quot;;
+
+        String nombre = (nombres.size() &gt; 0) ? nombres.get(0) : null;
+        if (nombres.size() &gt; 1)
+            apellido = (nombres.size() &gt; 0) ? nombres.get(1) : null;
+
+        Usuario usuario = new Usuario();
+        usuario.setNombre(nombre);
+        usuario.setApellido(apellido);
+        usuario.setUsername(dtoUsuario.getEmail());
+        usuario.setPassword(dtoUsuario.getPassword());
+        usuario.setRoles(dtoUsuario.getRoles());
+
+        logger.debug(&quot;Transformado a Usuario: &quot; + usuario.toString());
+        return usuario;
+    }
+}
+
+</code></pre>
+
+<h4 id="cllherrerajwtappmodel"><strong><code>cl.lherrera.jwtapp.model</code></strong></h4>
+<p><strong><code>Rol.java</code></strong></p>
+<p>Ya hemos mencionado que el truco está en implementar <code>GrantedAuthority</code>.</p>
+<pre><code class="java">package cl.lherrera.jwtapp.model;
+
+import org.springframework.security.core.GrantedAuthority;
+
+public enum Rol implements GrantedAuthority {
+    ROLE_ADMINISTRADOR, ROLE_USUARIO;
+
+    @Override
+    public String getAuthority() {
+        return name();
+    }
+}
+
+</code></pre>
+
+<p><strong><code>Usuario.java</code></strong></p>
+<pre><code class="java">package cl.lherrera.jwtapp.model;
+
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.ElementCollection;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+
+/**
+ * No se utilizará el campo tipo único, ya que el Dialecto falla, no se ha
+ * probado con otro motor, de todas formas este contrrol se maneja mediante el
+ * método `findByUser`, a nivel de seguriidad.
+ * 
+ * @author luisherrera
+ *
+ */
+@Entity
+public class Usuario {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    Integer id;
+    String nombre;
+    String apellido;
+    @Column(name = &quot;correo&quot;)
+    String username;
+    @Column(name = &quot;contrasenia&quot;)
+    String password;
+
+    @ElementCollection(fetch = FetchType.EAGER)
+    List&lt;Rol&gt; roles;
+
+    public Usuario() {
+    }
+
+    public Usuario(Integer id, String nombre, String apellido, String username, String password, List&lt;Rol&gt; roles) {
+        super();
+        this.id = id;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.username = username;
+        this.password = password;
+        this.roles = roles;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public List&lt;Rol&gt; getRoles() {
+        return roles;
+    }
+
+    public void setRoles(List&lt;Rol&gt; roles) {
+        this.roles = roles;
+    }
+
+    @Override
+    public String toString() {
+        return &quot;Usuario [id=&quot; + id + &quot;, nombre=&quot; + nombre + &quot;, apellido=&quot; + apellido + &quot;, username=&quot; + username
+                + &quot;, password=&quot; + password + &quot;, roles=&quot; + roles + &quot;]&quot;;
+    }
+
+}
+
+</code></pre>
+
+<h4 id="cllherrerajwtappsecurity"><strong><code>cl.lherrera.jwtapp.security</code></strong></h4>
+<ul>
+<li>En el proyecto anterior, se puede ver un mayor detalle a nivel de configuraciones de este paquete y su funcionamiento, en esta versión, se puede ver que las páginas que podían ser accedidas han sido modificadas, para poder actualizar los accesos de inicio de sesión y registro que cambiaron de controlador respecto al proyecto anterior (básico).</li>
+</ul>
+<p><strong><code>JwtTokenFilter.java</code></strong></p>
+<pre><code class="java">package cl.lherrera.jwtapp.security;
+
+import java.io.IOException;
+
+import javax.servlet.FilterChain;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.web.filter.OncePerRequestFilter;
+
+import cl.lherrera.jwtapp.apiexception.RestServiceException;
+
+
+public class JwtTokenFilter extends OncePerRequestFilter {
+    private JwtTokenProvider jwtTokenProvider;
+
+    public JwtTokenFilter(JwtTokenProvider jwtTokenProvider) {
+        this.jwtTokenProvider = jwtTokenProvider;
+    }
+
+    @Override
+    protected void doFilterInternal(
+            HttpServletRequest request, 
+            HttpServletResponse respose, 
+            FilterChain filterChain)
+            throws ServletException, IOException {
+
+        // extraemos el token del request, este debe ir en el header
+        // con el nombre Authentication y en el valor
+        String token = jwtTokenProvider.resolveToken(request);
+
+        try {
+            // si el token no es nulo y si es válido...
+            if (token != null &amp;&amp; jwtTokenProvider.validateToken(token)) {
+                // creamos un objeto (new UsernamePasswordAuthenticationToken)
+                // ya las credenciales no están disponibles, solamente `userDetails``
+                Authentication auth = jwtTokenProvider.getAuthentication(token);
+                SecurityContextHolder.getContext().setAuthentication(auth);
+            }
+        } catch (RestServiceException ex) {
+
+            SecurityContextHolder.clearContext();
+            respose.sendError(ex.getHttpStatus().value(), ex.getMessage());
+            return;
+
+        }
+        filterChain.doFilter(request, respose);
+    }
+}
+
+</code></pre>
+
+<p><strong><code>JwtTokenFilterConfigurer.java</code></strong></p>
+<pre><code class="java">package cl.lherrera.jwtapp.security;
+
+import org.springframework.security.config.annotation.SecurityConfigurerAdapter;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.web.DefaultSecurityFilterChain;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+
+public class JwtTokenFilterConfigurer extends SecurityConfigurerAdapter&lt;DefaultSecurityFilterChain, HttpSecurity&gt; {
+    private JwtTokenProvider jwtTokenProvider;
+
+    public JwtTokenFilterConfigurer(JwtTokenProvider jwtTokenProvider) {
+        this.jwtTokenProvider = jwtTokenProvider;
+    }
+
+    @Override
+    public void configure(HttpSecurity http) throws Exception {
+        JwtTokenFilter customFilter = new JwtTokenFilter(jwtTokenProvider);
+        http.addFilterBefore(customFilter, UsernamePasswordAuthenticationFilter.class);
+    }
+}
+
+</code></pre>
+
+<p><strong><code>JwtTokenProvider.java</code></strong></p>
+<pre><code class="java">package cl.lherrera.jwtapp.security;
+
+import java.util.Base64;
+import java.util.Date;
+import java.util.List;
+import java.util.Objects;
+import java.util.stream.Collectors;
+
+import javax.annotation.PostConstruct;
+import javax.servlet.http.HttpServletRequest;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpStatus;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.stereotype.Component;
+
+import cl.lherrera.jwtapp.apiexception.RestServiceException;
+import cl.lherrera.jwtapp.model.Rol;
+import cl.lherrera.jwtapp.service.ServicioUsuario;
+
+// dependencia jjwt
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.JwtException;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm;
+
+@Component
+public class JwtTokenProvider {
+    private Logger logger = LoggerFactory.getLogger(JwtTokenProvider.class);
+
+    private final static String HEADER_AUTHORIZATION_KEY = &quot;Autorizacion&quot;;
+    private final static String TOKEN_BEARER_VALUE = &quot;Bearer &quot;;
+
+    // propiedad
+    @Value(&quot;${security.jwt.token.secret-key}&quot;)
+    private String secretKey;
+
+    // propiedad
+    @Value(&quot;${security.jwt.token.expire-length}&quot;)
+    private long validityInMilliseconds;
+
+    // servicio Implementado
+    @Autowired
+    private ServicioUsuario servicioUsuario;
+
+    /**
+     * Spring calls methods annotated with @PostConstruct
+     * only once, just after the initialization 
+     * of bean properties.
+     * https://www.baeldung.com/spring-postconstruct-predestroy
+     * 
+     * Asigna el valor de la clave secreta
+     */
+    @PostConstruct
+    protected void init() {
+        secretKey = Base64.getEncoder().encodeToString(secretKey.getBytes());
+        logger.debug(&quot;LLave inicializada: &quot; + secretKey);
+    }
+
+    public String createToken(String username, List&lt;Rol&gt; roles) {
+        Claims claims = Jwts.claims().setSubject(username);
+
+        List&lt;SimpleGrantedAuthority&gt; grats = roles.stream()
+                .map(rol -&gt; new SimpleGrantedAuthority(rol.getAuthority()) )
+                .filter(Objects::nonNull)
+                .collect(Collectors.toList());
+
+        claims.put(&quot;auth&quot;, grats);
+
+        // expiración del token
+        Date now = new Date();
+        Date validity = new Date(now.getTime() + validityInMilliseconds);
+
+        // creación del token
+        String token = Jwts.builder()
+            .setClaims(claims)
+            .setIssuedAt(now)
+            .setExpiration(validity)
+            .signWith(SignatureAlgorithm.HS256, secretKey)
+            .compact(); 
+
+        return token;
+    }
+
+    /**
+     * A partir del token se obtiene el nombre de usuario y luego, 
+     * se obtiene un `UserDetails`, que ya sabemos que es la 
+     * entidad que maneja como ususuario de sesión.
+     */
+    public Authentication getAuthentication(String token) {
+        UserDetails userDetails = servicioUsuario.loadUserByUsername(getUsername(token));
+        UsernamePasswordAuthenticationToken autenticacion;
+        autenticacion = new UsernamePasswordAuthenticationToken(
+                userDetails, 
+                &quot;&quot;, 
+                userDetails.getAuthorities()
+        );
+
+        return autenticacion;
+    }
+
+    /**
+     * En la configuración de seguridad
+     * lo que sabe Spring es que el nombre
+     * de usuario es el correo. 
+     */
+    private String getUsername(String token) {
+        String userName = Jwts.parser()
+                .setSigningKey(secretKey)
+                .parseClaimsJws(token)
+                .getBody()
+                .getSubject();
+
+    return userName;
+
+    }
+
+    /**
+     * Quitamos &quot;Bearer &quot; del principio del token
+     */
+    public String resolveToken(HttpServletRequest req) {
+        String tokenReal = null;
+        String bearerToken = req.getHeader(HEADER_AUTHORIZATION_KEY);
+        logger.debug(&quot;Bearer token: &quot; + bearerToken);
+        boolean inicioOk = (bearerToken != null &amp;&amp; bearerToken.startsWith(TOKEN_BEARER_VALUE));
+        if (inicioOk) {
+            tokenReal = bearerToken.substring(TOKEN_BEARER_VALUE.length());
+        }
+        return tokenReal;
+    }
+
+    /**
+     * Si el token logra ser parseado, entonces se asume que es un
+     * Token válido. `parseClaimsJws` analiza la llave (no un 
+     * token que exista hipoteticamente, la comparación se 
+     * realiza entre el token que está en el request
+     * y la clave cifrada de esta clase. cifrada
+     * justo después de construirse este
+     * objeto `INIT`).
+     */
+    public boolean validateToken(String token) {
+        try {
+            Jwts.parser().setSigningKey(secretKey).parseClaimsJws(token);
+            return true;
+        } catch (JwtException | IllegalArgumentException e) {
+
+            throw new RestServiceException(
+                &quot;Expired or invalid JWT token&quot;, 
+                HttpStatus.INTERNAL_SERVER_ERROR
+            );
+        }
+    }
+}
+s
+</code></pre>
+
+<p><strong><code>WebSecurityConfig.java</code></strong></p>
+<pre><code class="java">package cl.lherrera.jwtapp.security;
+
+import java.util.Arrays;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.CorsConfigurationSource;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+
+
+@Configuration
+@EnableWebSecurity
+@EnableGlobalMethodSecurity(prePostEnabled = true)
+public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+
+    @Autowired
+    private JwtTokenProvider jwtTokenProvider;
+
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        // sin verificación csrf, inseguro. (Laravel)
+        http.csrf().disable();
+
+        /**
+         * Esta configuración, permite hacer pruebas desde un frontend, ubicado en la
+         * misma máquina.
+         */
+        http.cors().configurationSource(corsConfigurationSource());
+
+        // sesión sin estado.
+        http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+
+        // Autorización de peticiones.
+        http.authorizeRequests()
+            // servicios públicos.
+            .antMatchers(
+                    &quot;/api/v1/isAlive&quot;,
+                    &quot;/api/v1/iniciarsesion&quot;,
+                    &quot;/api/v1/registrar&quot;).permitAll()
+            // todos los demás. servicios, solamente para usuarios autenticados.
+            .anyRequest().authenticated();
+
+        // Applies a {@link SecurityConfigurer} to this {@link SecurityBuilder} overriding any
+        // {@link SecurityConfigurer} of the exact same class. Note that object hierarchies
+        // are not considered.
+        // 
+        // El filtro personaliizado que creamos en JwtTokenFilterConfigurer, donde
+        // validamos el token, y si es válido crea el Authenticate, se aplica acá
+        // es un filtro que se concatena a los que ya hemos puesto en este mismo
+        // método, se aplica antes que a todos por que JwtTokenFilterConfigurer
+        // HttpSecurity.addFilterBefore(customFilter, UsernamePasswordAuthenticationFilter.class);
+        // le decimos que el filtro lo realice antes que se ejecute la autenticación con
+        // user y password.
+        http.apply(new JwtTokenFilterConfigurer(jwtTokenProvider) );
+    }
+
+    @Bean
+    @Override
+    public AuthenticationManager authenticationManagerBean() throws Exception {
+        return super.authenticationManagerBean();
+    }
+
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        // fuerza = 12 (entre 4 y 31)
+        return new BCryptPasswordEncoder(12);
+    }
+
+    /**
+     * Esta configuración, permite hacer pruebas desde
+     * un frontend, ubicado en la misma máquina. 
+     */
+    @Bean
+    CorsConfigurationSource corsConfigurationSource() {
+        CorsConfiguration configuration = new CorsConfiguration();
+        configuration.setAllowedOrigins(Arrays.asList(&quot;*&quot;));
+        configuration.setAllowedMethods(Arrays.asList(&quot;GET&quot;, &quot;POST&quot;));
+        configuration.setAllowCredentials(true);
+        // the below three lines will add the relevant CORS response headers
+        configuration.addAllowedOrigin(&quot;*&quot;);
+        configuration.addAllowedHeader(&quot;*&quot;);
+        configuration.addAllowedMethod(&quot;*&quot;);
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        source.registerCorsConfiguration(&quot;/**&quot;, configuration);
+        return source;
+    }
+}
+</code></pre>
+
+<h4 id="cllherrerajwtappservice"><strong><code>cl.lherrera.jwtapp.service</code></strong></h4>
+<ul>
+<li>Modificaciones realizadas para poder inferir de mejor forma, que la implementación de <code>loadUserByUsername</code>, es obligatoria para poder realizar el uso de credenciales con <code>JWT</code>. Es por eso que se cambia la herencia que lleva la implementación del servicio de usuarios directamente a la interfaz, ya que podría llevar a confusiones el que no se sepa realmente cual es la interfaz que tiene <code>loadUserByUsername</code>y esta es <code>UserDetailsService</code>.</li>
+</ul>
+<p><strong><code>ServicioUsuario.java</code></strong></p>
+<pre><code class="java">package cl.lherrera.jwtapp.service;
+
+import java.util.List;
+
+import org.springframework.security.core.userdetails.UserDetailsService;
+
+import cl.lherrera.jwtapp.dto.UsuarioDTO;
+
+/**
+ * Al extender UserDetailsService, traemos el método loadUserByUsername, que
+ * sobre escribimos en la implementación, podremos ver que a veces se implementa
+ * un implements UserDetailsService, pero esto causa confusiones ya que a veces
+ * los desarrolladores que no conocen que este método está en
+ * UserDetailsService, lo ponen igual acá, en this. y lo sobre escriben en la
+ * implementación, funcionando de todas formas por que Spring asume sobre
+ * escrito el loadUserByUsername que le pertenece a UserDetailsService y no
+ * ServicioUsuario.
+ *
+ */
+public interface ServicioUsuario extends UserDetailsService {
+
+    String iniciarSesion(String correo, String contrasenia);
+
+    List&lt;UsuarioDTO&gt; listaDeUsuarios();
+
+    /**
+     * Servicio encargado de registrar un usuario hay que tener en cuenta varias
+     * cosas como el dar una buena encriptación a la base de datos.
+     */
+    String registraNuevoUsuario(UsuarioDTO usuarioDTO);
+
+    /**
+     * A diferencia del método loadUserByUsername, este no retorna
+     * un UserDetails, si no que retorna un DTO para efectos
+     * de poder mostrar más detalles del usuario que se consulte.
+     */
+    UsuarioDTO obtenerPorCorreo(String correo);
+
+}
+
+</code></pre>
+
+<p><strong><code>ServicioUsuarioImpl.java</code></strong></p>
+<pre><code class="java">package cl.lherrera.jwtapp.service;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
+
+import cl.lherrera.jwtapp.apiexception.RestServiceException;
+import cl.lherrera.jwtapp.dao.UsuarioDao;
+import cl.lherrera.jwtapp.dto.UsuarioDTO;
+import cl.lherrera.jwtapp.mapper.UsuarioMapper;
+import cl.lherrera.jwtapp.model.Usuario;
+import cl.lherrera.jwtapp.security.JwtTokenProvider;
+
+@Service
+public class ServicioUsuarioImpl implements ServicioUsuario {
+    private Logger logger = LoggerFactory.getLogger(ServicioUsuarioImpl.class);
+
+    @Autowired
+    UsuarioDao daoUsuario;
+
+    @Autowired
+    private AuthenticationManager authenticationManager;
+
+    @Autowired
+    private JwtTokenProvider jwtTokenProvider;
+
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
+    @Override
+    public String iniciarSesion(String correo, String contrasenia) {
+        String token = &quot;&quot;;
+        logger.debug(&quot;Inicio de la sesión: correo: &quot; + correo + &quot;contraseña: &quot; + contrasenia);
+        try {
+            // intenta crear la autenticación.
+            // si no puede, se envía un AuthenticationException.
+            Authentication objetoAutentificacion = new UsernamePasswordAuthenticationToken(correo, contrasenia);
+            authenticationManager.authenticate(objetoAutentificacion);
+            Usuario usuarioAutenticado = daoUsuario.findByUsername(correo).orElse(null);
+            if (usuarioAutenticado != null)
+                token = generaToken(usuarioAutenticado);
+
+        } catch (AuthenticationException e) {
+            throw new RestServiceException(&quot;username o password invalido&quot;, HttpStatus.UNPROCESSABLE_ENTITY);
+        }
+
+        return token;
+    }
+
+    private String generaToken(Usuario usuario) {
+        String token = jwtTokenProvider.createToken(usuario.getUsername(), usuario.getRoles());
+        logger.debug(&quot;Token generado: ...&quot; + token.substring(token.length() - 5));
+
+        return token;
+    }
+
+    @Override
+    public List&lt;UsuarioDTO&gt; listaDeUsuarios() {
+
+        List&lt;UsuarioDTO&gt; usuarios = daoUsuario.findAll().stream()
+                // cada uno de los usuarios pasando a un DTO
+                .map(usuario -&gt; UsuarioMapper.usuarioADto(usuario)).collect(Collectors.toList());
+
+        logger.debug(&quot;Lista de usuarioDTO: &quot; + usuarios.toString());
+        return usuarios;
+    }
+
+    @Override
+    public String registraNuevoUsuario(UsuarioDTO dtoUsuario) {
+        String token = null;
+        // verificar si el usuario existe para no ingresarlo otra vez
+        Usuario usuario = daoUsuario.findByUsername(dtoUsuario.getEmail()).orElse(null);
+
+        if (usuario == null) {
+            String constraseniaEnDuro = dtoUsuario.getPassword();
+            String constraseniaEncriptada = passwordEncoder.encode(constraseniaEnDuro);
+            dtoUsuario.setPassword(constraseniaEncriptada);
+            // guardamos el usuario convertido desde un DTO
+            usuario = UsuarioMapper.dtoAUsuario(dtoUsuario);
+
+            logger.debug(&quot;Registrando nuevo usuario: &quot; + usuario.toString());
+            daoUsuario.save(usuario);
+
+            logger.debug(&quot;Usuario nuevo registrado: &quot; + usuario.toString());
+            logger.debug(&quot;Generando token... &quot;);
+
+            token = this.generaToken(usuario);
+        }
+
+        return token;
+    }
+
+    /**
+     * Se implementa desde UserDetailsService, interface que extiende
+     * ServicioUsuario.
+     * 
+     * Se supone que se debe cargar el nombre de usuario y en este caso es correo,
+     * es por que se exige un valor de nombre de usuario, que puede ser por ejemplo:
+     * rut, correo, nombre de usuario, tag name, etc. El cómo se maneje dependerá de
+     * nuestra implementación.
+     * 
+     * Construye un `UserDetails` estático, con la información que se le
+     * proporcione. En este caso, el nombre de usuario que venía como argumento y la
+     * contraseña que está en la base de datos. Este proceso es implementado ya que
+     * este único método, posee acceso a la contraseña del usuario. La técnica usada
+     * es que cada método retorna un `UserBuilder`, hasta llegar a `build()`, es
+     * cuando finalmente es convertido en un `UserDetail`.
+     * 
+     **/
+    @Override
+    public UserDetails loadUserByUsername(String correo) throws UsernameNotFoundException {
+        final Usuario user = daoUsuario.findByUsername(correo).orElse(null);
+        if (user == null) {
+            throw new UsernameNotFoundException(&quot;Usuario '&quot; + correo + &quot;' no encontrado&quot;);
+        }
+        return org.springframework.security.core.userdetails.User//
+                .withUsername(correo).password(user.getPassword()).authorities(user.getRoles()).accountExpired(false)
+                .accountLocked(false).credentialsExpired(false).disabled(false).build();
+    }
+
+    @Override
+    public UsuarioDTO obtenerPorCorreo(String correo) {
+        Usuario usuario = daoUsuario.findByUsername(correo).orElse(new Usuario());
+
+        return UsuarioMapper.usuarioADto(usuario);
+    }
+
+}
+
+</code></pre>
+
+<h3 id="jwtappsrcmainresources"><strong><code>/jwtapp/src/main/resources</code></strong></h3>
+<p><strong><code>application.properties</code></strong></p>
+<pre><code class="conf">spring.jpa.generate-ddl=true
+spring.jpa.database-platform=cl.lherrera.jwtapp.config.SQLiteDialect
+spring.jpa.show-sql=true
+spring.jpa.hibernate.ddl-auto=create-drop
+spring.jpa.properties.hibernate.format_sql=true
+
+# Configuración para el token.
+security.jwt.token.secret-key=DLatam-SecretKey
+security.jwt.token.expire-length=3600000
+
+# Para mostrar el log de debug
+# esto no se mostraría en producción
+logging.level.org.springframework.web=DEBUG
+#logging.level.root=DEBU
+logging.level.cl.lherrera.jwtapp=DEBUG
+logging.file.name=logs
+#Cambiamos el puerto para poder probar con el servidor de vscode
+server.port=9090
+server.address=0.0.0.0
+# loggingRequestDetails
+spring.http.log-request-details=true
+</code></pre>
+
+<p><strong><code>database.properties</code></strong></p>
+<pre><code class="java">driverClassName=org.sqlite.JDBC
+url=jdbc:sqlite:baseDeDatos.db
+username=jpaspring
+password=sa
+
+</code></pre>
+
+<h3 id="jwtapppomxml"><strong><code>/jwtapp/pom.xml</code></strong></h3>
+<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+    xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+    &lt;parent&gt;
+        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;
+        &lt;version&gt;2.2.7.RELEASE&lt;/version&gt;
+        &lt;relativePath/&gt; &lt;!-- lookup parent from repository --&gt;
+    &lt;/parent&gt;
+    &lt;groupId&gt;cl.lherrera&lt;/groupId&gt;
+    &lt;artifactId&gt;jwtapp&lt;/artifactId&gt;
+    &lt;version&gt;20.0.0&lt;/version&gt;
+    &lt;name&gt;jwtapp&lt;/name&gt;
+    &lt;description&gt;aplicación básica de JWT&lt;/description&gt;
+
+    &lt;properties&gt;
+        &lt;java.version&gt;1.8&lt;/java.version&gt;
+    &lt;/properties&gt;
+
+    &lt;dependencies&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-data-jpa&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-security&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-devtools&lt;/artifactId&gt;
+            &lt;scope&gt;runtime&lt;/scope&gt;
+            &lt;optional&gt;true&lt;/optional&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;
+            &lt;scope&gt;test&lt;/scope&gt;
+            &lt;exclusions&gt;
+                &lt;exclusion&gt;
+                    &lt;groupId&gt;org.junit.vintage&lt;/groupId&gt;
+                    &lt;artifactId&gt;junit-vintage-engine&lt;/artifactId&gt;
+                &lt;/exclusion&gt;
+            &lt;/exclusions&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.security&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-security-test&lt;/artifactId&gt;
+            &lt;scope&gt;test&lt;/scope&gt;
+        &lt;/dependency&gt;
+        &lt;!-- JWT - SUPPORT --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;io.jsonwebtoken&lt;/groupId&gt;
+            &lt;artifactId&gt;jjwt&lt;/artifactId&gt;
+            &lt;version&gt;0.9.1&lt;/version&gt;
+        &lt;/dependency&gt;
+        &lt;!-- JWT - SUPPORT # --&gt;
+        &lt;!-- SQLITE - SUPPORT --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.xerial&lt;/groupId&gt;
+            &lt;artifactId&gt;sqlite-jdbc&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;!-- SQLITE - SUPPORT #--&gt;
+    &lt;/dependencies&gt;
+
+    &lt;build&gt;
+        &lt;plugins&gt;
+            &lt;plugin&gt;
+                &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+                &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;
+            &lt;/plugin&gt;
+        &lt;/plugins&gt;
+    &lt;/build&gt;
+
+&lt;/project&gt;
+
+</code></pre>
+
+<p><br /></p>
+<blockquote>
+<h2 id="todo"><strong><code>TODO</code></strong></h2>
+</blockquote>
+<ul>
+<li>Agregar los <code>@Transactional</code>, que no están.</li>
+<li>Reparar formatos de salida a <code>json</code>, por ejemplo en el registro de usuarios.</li>
+<li>Agregar la capacidad de actualizar y eliminar usuarios.</li>
+</ul>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../../assets/javascripts/vendor.a0c4167b.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.fb26dd1d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../../../assets/javascripts/worker/search.37585f48.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

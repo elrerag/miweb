@@ -1,0 +1,1147 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.6">
+    
+    
+      
+        <title>JSTL - Tags - Java Full Stack Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.4b9ffd7b.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#jstl-tags" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../.." title="Java Full Stack Docs" class="md-header-nav__button md-logo" aria-label="Java Full Stack Docs">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Java Full Stack Docs
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              JSTL - Tags
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Java Full Stack Docs" class="md-nav__button md-logo" aria-label="Java Full Stack Docs">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Java Full Stack Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../ejercicios/repaso/teoria/poo/herencia/" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core-tags" class="md-nav__link">
+    Core Tags
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Tags">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scopes" class="md-nav__link">
+    Scopes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cout" class="md-nav__link">
+    c:out
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cimport" class="md-nav__link">
+    c:import
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cset" class="md-nav__link">
+    c:set
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cremove" class="md-nav__link">
+    c:remove
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cif" class="md-nav__link">
+    c:if
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ccatch" class="md-nav__link">
+    c:catch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cchoose-cwhen-y-cotherwise-elige-cuando-de-otra-forma" class="md-nav__link">
+    c:choose, c:when y c:otherwise (Elige, cuando, de otra forma).
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cforeach" class="md-nav__link">
+    c:forEach
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cfortokens" class="md-nav__link">
+    c:forTokens
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#curl" class="md-nav__link">
+    c:url
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cparam" class="md-nav__link">
+    c:param
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#credirect" class="md-nav__link">
+    c:redirect
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-tags" class="md-nav__link">
+    Function Tags
+  </a>
+  
+    <nav class="md-nav" aria-label="Function Tags">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fncontains" class="md-nav__link">
+    fn:contains()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fncontainsignorecase" class="md-nav__link">
+    fn:containsIgnoreCase()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fnstartswith" class="md-nav__link">
+    fn:startsWith()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fnendswith" class="md-nav__link">
+    fn:endsWith()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fnescapexml" class="md-nav__link">
+    fn:escapeXml()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fnindexof" class="md-nav__link">
+    fn:indexOf()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fntrim" class="md-nav__link">
+    fn:trim()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fnsplit" class="md-nav__link">
+    fn:split()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fnjoin" class="md-nav__link">
+    fn:join()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fntolowercase-fntouppercase" class="md-nav__link">
+    fn:toLowerCase(), fn:toUpperCase()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fnsubstring" class="md-nav__link">
+    fn:substring()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fnsubstringafter" class="md-nav__link">
+    fn:substringAfter()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fnfnsubstringbefore" class="md-nav__link">
+    fn:fn:substringBefore()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fnlength" class="md-nav__link">
+    fn:length()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fnreplace" class="md-nav__link">
+    fn:replace()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formatting-tags" class="md-nav__link">
+    Formatting tags
+  </a>
+  
+    <nav class="md-nav" aria-label="Formatting tags">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#patrones-para-el-formato" class="md-nav__link">
+    Patrones para el formáto
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fmtsetlocale" class="md-nav__link">
+    fmt:setLocale
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fmtparsenumber" class="md-nav__link">
+    fmt:parseNumber
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fmtformatnumber" class="md-nav__link">
+    fmt:formatNumber
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fmttimezone" class="md-nav__link">
+    fmt:timeZone
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fmtparsedate" class="md-nav__link">
+    fmt:parseDate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fmtformatdate" class="md-nav__link">
+    fmt:formatDate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fmtbundle" class="md-nav__link">
+    fmt:bundle
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="jstl-tags">JSTL - Tags</h1>
+<hr />
+<h2 id="core-tags">Core Tags</h2>
+<hr />
+<p>Llamado: <code>&lt;%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %&gt;</code></p>
+<h3 id="scopes">Scopes</h3>
+<p>Se definen los alcances ya que los tags poseen un alcance por defecto llamado <code>page</code>, pero los scopes son:
++ <code>page</code>
++ <code>request</code>
++ <code>session</code>
++ <code>aplicaton</code></p>
+<p>Cada uno de estos scopes, poseen el alcance de lo que dure cada uno de los expuestos scopes. El scope por defecto es <code>page</code>, este dura lo que dura la página.</p>
+<h3 id="cout">c:out</h3>
+<p>Muestra el resultado de una expresión (HTML), similar a la forma en que funciona la etiqueta <code>&lt;% = ...%&gt;</code>.</p>
+<pre><code>&lt;%@ taglib uri=&quot;http://java.sun.com/jsp/jstl/core&quot; prefix=&quot;c&quot; %&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+  &lt;title&gt;Tag Example&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;c:out value=&quot;${'Hola mundo'}&quot; /&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+
+</code></pre>
+
+<h3 id="cimport">c:import</h3>
+<p>Importa código html desde una URL o una ruta relativa. Se puede traer el text HTML o los objetos del dom, aunque esta última forma es la más útil.</p>
+<p>Se llama de la siguiente forma, el atributo <code>var</code> es el nombre de la variable, que contendrá esta llamada, el atributo <code>url</code> contiene</p>
+<pre><code>&lt;c:import var=&quot;staticData&quot; url=&quot;/static.html&quot;/&gt;
+</code></pre>
+
+<p>Una vez que ya tenemos la variable con el contenido estático, podemos imprimirlo, el atributo <code>escapeXml="false"</code> indica que no queremos el texto, que lo que realmente queremos es el Dom que forma ese texto. </p>
+<pre><code>&lt;c:out value=&quot;${staticData}&quot; escapeXml=&quot;false&quot;/&gt;
+&lt;c:out value=&quot;${datastaticData&quot; escapeXml=&quot;false&quot;/&gt;
+</code></pre>
+
+<p>Podemos llamar a un Servlet, así tenemos lógica de negocio antes de un contenido estático.</p>
+<pre><code>&lt;c:import var=&quot;data&quot; url=&quot;/select&quot;/&gt;  
+&lt;c:out value=&quot;${data}&quot; escapeXml=&quot;false&quot;/&gt;
+</code></pre>
+
+<p>Se puede llamat a una web completa mientas esta última lo permita.</p>
+<pre><code>&lt;c:import var=&quot;data&quot; url=&quot;https://jsonplaceholder.typicode.com/users/1&quot;/&gt;  
+&lt;c:out value=&quot;${data}&quot; escapeXml=&quot;false&quot;/&gt;
+</code></pre>
+
+<p>Podemos traer contenido estático</p>
+<pre><code>&lt;c:import var=&quot;data&quot; url=&quot;web.html&quot;/&gt;  
+&lt;c:out value=&quot;${data}&quot; escapeXml=&quot;false&quot;/&gt;
+</code></pre>
+
+<p>Podemos obtener el contenido de un JSP</p>
+<pre><code>&lt;c:import var=&quot;data&quot; url=&quot;web.jsp&quot;/&gt;  
+&lt;c:out value=&quot;${data}&quot; escapeXml=&quot;false&quot;/&gt;
+</code></pre>
+
+<p>Estos ejemplos son con direcciones relativas, directamente bajo <code>WebContent</code>.</p>
+<h3 id="cset">c:set</h3>
+<p>Asignamos una variable a un valor, como se haría en un diccionario, donde <code>var</code> es la clave y <code>value</code> es el valor.
+Se le suele dar un <code>scope</code> de session, para que estas variables duren lo que dura la sesión.</p>
+<pre><code class="html">&lt;c:set var=&quot;valor&quot; scope=&quot;session&quot; value=&quot;${5*4}&quot;/&gt;  
+&lt;c:out value=&quot;${valor}&quot;/&gt;  
+</code></pre>
+
+<h3 id="cremove">c:remove</h3>
+<p>Quita alguna variable seteada en algún scope.</p>
+<pre><code class="html">&lt;!-- seteo de variable --&gt;
+&lt;c:set var=&quot;income&quot; scope=&quot;session&quot; value=&quot;${4000*4}&quot;/&gt;  
+&lt;p&gt;Valor antes de remover: &lt;c:out value=&quot;${income}&quot;/&gt;&lt;/p&gt;  
+
+&lt;!-- acá se remueve la variable seteada --&gt;
+&lt;c:remove var=&quot;income&quot;/&gt;  
+&lt;p&gt;Después de remover es: &lt;c:out value=&quot;${income}&quot;/&gt;&lt;/p&gt;  
+</code></pre>
+
+<h3 id="cif">c:if</h3>
+<p>Funciona igual que cualquier <code>if</code> imperativo; pero la evaluación de verdad, se especifica con el atributo <code>test</code>. </p>
+<pre><code class="html">
+&lt;!-- seteamos un valor a una variable --&gt;
+&lt;c:set var=&quot;income&quot; scope=&quot;session&quot; value=&quot;${4000*4}&quot;/&gt;  
+
+&lt;!-- evalúa una condición --&gt;
+&lt;c:if test=&quot;${income &gt; 8000}&quot;&gt;  
+   &lt;p&gt;El valor es: &lt;c:out value=&quot;${income}&quot;/&gt;&lt;p&gt;  
+&lt;/c:if&gt; 
+</code></pre>
+
+<h3 id="ccatch">c:catch</h3>
+<p>Usada para atrapar <code>exceptions</code>. Usada generalmente, cuando se necesita manejar algún error y que la vista haga algo si esto ocurre.</p>
+<p>En el siguiente ejemplo si la variable que captura la excepción, no es nula, se muestra algo en la vista.</p>
+<pre><code class="html">&lt;c:catch var =&quot;catchtheException&quot;&gt;  
+   &lt;% int x = 2/0;%&gt;  
+&lt;/c:catch&gt;  
+
+&lt;c:if test = &quot;${catchtheException != null}&quot;&gt;  
+   &lt;p&gt;Hay una excepción : ${catchtheException} &lt;br /&gt;  
+   y esta es: ${catchtheException.message}&lt;/p&gt;  
+&lt;/c:if&gt;  
+</code></pre>
+
+<h3 id="cchoose-cwhen-y-cotherwise-elige-cuando-de-otra-forma">c:choose, c:when y c:otherwise (Elige, cuando, de otra forma).</h3>
+<p>En reemplazo de un <code>if -&gt; else</code>, llegan estas etiquetas que si las comparamos específicamente con la programación imperativa de Java, se podría parecer más a un <code>switch</code>.</p>
+<pre><code class="html">&lt;%@ taglib uri=&quot;http://java.sun.com/jsp/jstl/core&quot; prefix=&quot;c&quot; %&gt;  
+&lt;html&gt;  
+&lt;head&gt;  
+&lt;title&gt;Ejemplo JSLT:core&lt;/title&gt;  
+&lt;/head&gt;  
+&lt;body&gt;  
+&lt;c:set var=&quot;ingresos&quot; scope=&quot;session&quot; value=&quot;${100000}&quot;/&gt;  
+&lt;p&gt;Sus ingresos son : &lt;c:out value=&quot;${ingresos}&quot;/&gt;&lt;/p&gt;  
+&lt;c:choose&gt;  
+    &lt;c:when test=&quot;${ingresos &lt;= 1000}&quot;&gt;  
+       No muy buenos ingresos.  
+    &lt;/c:when&gt;  
+    &lt;c:when test=&quot;${ingresos &gt; 10000}&quot;&gt;  
+        ingresos muy buenos.  
+    &lt;/c:when&gt;  
+    &lt;c:otherwise&gt;  
+       ingresos indeterminados  
+    &lt;/c:otherwise&gt;  
+&lt;/c:choose&gt;  
+&lt;/body&gt;  
+&lt;/html&gt;  
+</code></pre>
+
+<h3 id="cforeach">c:forEach</h3>
+<pre><code class="html">&lt;!-- cuando queramos que un ciclo se repita n veces. --&gt;
+&lt;c:forEach var=&quot;j&quot; begin=&quot;1&quot; end=&quot;3&quot;&gt;  
+   Item &lt;c:out value=&quot;${j}&quot;/&gt;&lt;p&gt;  
+&lt;/c:forEach&gt;  
+
+&lt;!-- cuando queramos que una colección sea recorrida. (como el caso de llenar una tabla) --&gt;
+&lt;c:set var=&quot;nombres&quot; value='&lt;%=new String[] { &quot;Hugo&quot;, &quot;Paco&quot;, &quot;Luis&quot; }%&gt;' scope=&quot;session&quot; /&gt;
+
+&lt;ul&gt;
+  &lt;c:forEach var=&quot;nombre&quot; items=&quot;${nombres}&quot;&gt;
+    &lt;li&gt;
+      &lt;c:out value=&quot;${nombre}&quot; /&gt;
+    &lt;/li&gt;
+  &lt;/c:forEach&gt;
+&lt;/ul&gt;
+
+&lt;!-- Usando FN... ya hablaremos de ello --&gt;
+    &lt;c:set var=&quot;nombres&quot; value=&quot;${fn:split('Hugo, Paco, Luis', ',')}&quot; scope=&quot;application&quot; /&gt;
+
+    &lt;ul&gt;
+        &lt;c:forEach var=&quot;nombre&quot; items=&quot;${nombres}&quot;&gt;
+            &lt;li&gt;&lt;c:out value=&quot;${nombre}&quot; /&gt;&lt;/li&gt;
+        &lt;/c:forEach&gt;
+    &lt;/ul&gt;
+</code></pre>
+
+<h3 id="cfortokens">c:forTokens</h3>
+<p>Proporciona una especie de <code>split</code>, con el que podemos transformar un string en un arreglo y recorrer sus elementos.</p>
+<pre><code class="html">&lt;ul&gt;
+    &lt;c:forTokens var='nombre' items='${&quot;Hugo,Paco,Luis&quot;}' delims=','&gt;
+        &lt;li&gt;&lt;c:out value=&quot;${nombre}&quot; /&gt;&lt;/li&gt;
+    &lt;/c:forTokens&gt;
+&lt;/ul&gt;
+</code></pre>
+
+<h3 id="curl">c:url</h3>
+<p>Nos ayuda a completar nuestra URL, añadiendo la URI completa, enfocando la atención solamente en el servicio o el archivo final, como lo sería un recurso interno como un archivo JS, o CSS.</p>
+<pre><code class="html">
+&lt;!-- URL: http://localhost:8080/pruebaWar/ --&gt;
+&lt;c:url value=&quot;/&quot;/&gt;
+&lt;!-- Salida: /pruebaWar/ --&gt;
+</code></pre>
+
+<h3 id="cparam">c:param</h3>
+<p>Agrega el <code>query string</code>, a la URL. De esta forma no hay que preocuparse por el formáto que esta deba llevar.</p>
+<pre><code class="html">&lt;!-- URL: http://localhost:8080/pruebaWar/index.jsp --&gt;
+&lt;c:url value=&quot;/index1.jsp&quot; var=&quot;completeURL&quot;&gt;
+    &lt;c:param name=&quot;trackingId&quot; value=&quot;786&quot; /&gt;
+    &lt;c:param name=&quot;user&quot; value=&quot;Nakul&quot; /&gt;
+&lt;/c:url&gt;
+
+&lt;!-- Salida: /pruebaWar/index1.jsp?trackingId=786&amp;user=Nakul --&gt;
+&lt;c:out value=&quot;${completeURL}&quot; /&gt;
+</code></pre>
+
+<h3 id="credirect">c:redirect</h3>
+<p>Redirecciona; pero <strong>no</strong> es como una etiqueta <code>&lt;a href...&gt;</code>, si esta etiqueta se carga, rirecciona inmediatamete. Usualmente va en condicionales.</p>
+<pre><code>&lt;c:redirect url=&quot;http://google.com&quot;/&gt;  
+</code></pre>
+
+<hr />
+<h2 id="function-tags">Function Tags</h2>
+<hr />
+<p>Transformar cadenas en listas, preguntar por si una cadena comienza con algún carácter. Como la clase utilitaria de cadenas, estas etiquetas nos ayudan a manipular cadenas.</p>
+<p>Llamado: <code>&lt;%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %&gt;</code>
+</p>
+<h3 id="fncontains">fn:contains()</h3>
+<ul>
+<li>Método contenedor: <code>boolean contains(java.lang.String, java.lang.String)</code></li>
+</ul>
+<p>Retorna verdadero o falso, si la cadena en el primer argumento, contiene la cadena entregada en el segundo argumento.</p>
+<pre><code class="html">&lt;!-- true --&gt;
+&lt;c:out value='${fn:contains(&quot;hola mundo&quot;,&quot;mundo&quot;) }'&gt;&lt;/c:out&gt;
+
+</code></pre>
+
+<h3 id="fncontainsignorecase">fn:containsIgnoreCase()</h3>
+<ul>
+<li>Método contenedor: <code>boolean containsIgnoreCase(java.lang.String, java.lang.String)</code></li>
+</ul>
+<p>Retorna verdadero o falso, si la cadena en el primer argumento, contiene la cadena entregada en el segundo argumento, ignorando si son mayúsculas o minúsculas.</p>
+<pre><code class="html">&lt;!-- true --&gt;
+&lt;c:out value='${fn:containsIgnoreCase(&quot;hola mundo&quot;,&quot;MuNdo&quot;) }'&gt;&lt;/c:out&gt;
+</code></pre>
+
+<h3 id="fnstartswith">fn:startsWith()</h3>
+<ul>
+<li>Método contenedordor: <code>boolean startsWith(java.lang.String, java.lang.String)</code></li>
+</ul>
+<p>Retorna verdadero o falso, si la cadena en el primer argumento, comienza con la cadena entregada en el segundo argumento (Case sensintive).</p>
+<pre><code class="html">&lt;!-- true --&gt;
+&lt;c:out value='${fn:startsWith(&quot;hola mundo&quot;,&quot;mundo&quot;) }'&gt;&lt;/c:out&gt;
+</code></pre>
+
+<h3 id="fnendswith">fn:endsWith()</h3>
+<ul>
+<li>Método contenedordor: <code>boolean endsWith(java.lang.String, java.lang.String)</code></li>
+</ul>
+<p>Retorna verdadero o falso, si la cadena en el primer argumento, termina con la cadena entregada en el segundo argumento (Case sensintive).</p>
+<pre><code class="html">&lt;!-- true --&gt;
+&lt;c:out value='${fn:endsWith(&quot;hola mundo&quot;,&quot;mundo&quot;) }'&gt;&lt;/c:out&gt;
+</code></pre>
+
+<h3 id="fnescapexml">fn:escapeXml()</h3>
+<ul>
+<li>Método contenedor: <code>java.lang.String escapeXml(java.lang.String)</code></li>
+</ul>
+<p>Escapa todos los carácteres especiales de etiquetado, para ser interpretado como objetos del documento HTML. Se puede ver que <code>&lt;c:out&gt;</code> posee un atributo <code>escapeXml="true"</code> por defecto que escapa al menos una vez. Es por esto que lo que está en su atributo <code>value</code> escapa al menos una vez.</p>
+<pre><code class="html">Escapado: ${fn:escapeXml(&quot;&lt;strong&gt;Hola mundo&lt;/strong&gt;&quot;)}&lt;br /&gt;
+Mismo efecto-c:out : &lt;c:out value='${fn:escapeXml(&quot;&lt;strong&gt;Hola mundo&lt;/strong&gt;&quot;)}' escapeXml=&quot;false&quot;&gt;&lt;/c:out&gt;&lt;br /&gt;
+&lt;hr /&gt;
+No escapado: ${&quot;&lt;strong&gt;Hola mundo&lt;/strong&gt;&quot;}&lt;br /&gt;
+Mismo efecto-c:out: &lt;c:out value='&lt;strong&gt;Hola mundo&lt;/strong&gt;' escapeXml=&quot;false&quot;&gt;&lt;/c:out&gt;&lt;br /&gt;
+&lt;hr /&gt;
+Raro c:out: &lt;c:out value='${fn:escapeXml(&quot;&lt;strong&gt;Hola mundo&lt;/strong&gt;&quot;)}' escapeXml=&quot;true&quot;&gt;&lt;/c:out&gt;&lt;br /&gt;
+Raro Mismo efecto-c:out: &lt;c:out value='${fn:escapeXml(&quot;&lt;strong&gt;Hola mundo&lt;/strong&gt;&quot;)}' &gt;&lt;/c:out&gt;&lt;br /&gt;
+</code></pre>
+
+<h3 id="fnindexof">fn:indexOf()</h3>
+<ul>
+<li>Método contenedor: <code>int indexOf(java.lang.String, java.lang.String)</code></li>
+</ul>
+<p>Retorna el índice donde comienza la cadena. Comenzando en cero.</p>
+<pre><code class="html">&lt;!-- 0 --&gt;
+&lt;c:out value='${fn:indexOf(&quot;hola mundo&quot;, &quot;hola&quot;) }'&gt;&lt;/c:out&gt;
+&lt;!-- 1 --&gt;
+&lt;c:out value='${fn:indexOf(&quot;hola mundo&quot;, &quot;ola&quot;) }'&gt;&lt;/c:out&gt;
+</code></pre>
+
+<h3 id="fntrim">fn:trim()</h3>
+<ul>
+<li>Método contenedor: <code>java.lang.String trim(java.lang.String)</code></li>
+</ul>
+<p>Remueve los espacios que existan al principio y al final de la cadena argumentada.</p>
+<pre><code class="html">&lt;!-- :::hola mundo::: --&gt;
+&lt;c:out value='${&quot;:::&quot;}${fn:trim(&quot; hola mundo   &quot;)}${&quot;:::&quot;}'&gt;&lt;/c:out&gt;
+</code></pre>
+
+<h3 id="fnsplit">fn:split()</h3>
+<ul>
+<li>Método contenedor: <code>java.lang.String[] split(java.lang.String, java.lang.String)</code></li>
+</ul>
+<p>Transforma una cadena de carácteres en un arreglo de caracteres. Se utiliza un patrón de separación. Para este ejemplo será una coma.</p>
+<pre><code class="html">
+&lt;c:set var=&quot;nombres&quot; value=&quot;${fn:split('Hugo, Paco, Luis', ',')}&quot; scope=&quot;application&quot; /&gt;
+
+&lt;ul&gt;
+    &lt;c:forEach var=&quot;nombre&quot; items=&quot;${nombres}&quot;&gt;
+        &lt;li&gt;&lt;c:out value=&quot;${nombre}&quot; /&gt;&lt;/li&gt;
+    &lt;/c:forEach&gt;
+&lt;/ul&gt;
+</code></pre>
+
+<h3 id="fnjoin">fn:join()</h3>
+<ul>
+<li>Método contenedor: <code>java.lang.String[] join(java.lang.String, java.lang.String)</code></li>
+</ul>
+<p>Transforma un arreglo de caracteres en una cadena de carácteres . Se utiliza un patrón de unión. Para este ejemplo será una coma.</p>
+<pre><code class="html">&lt;c:set var=&quot;nombres&quot; value=&quot;${fn:split('Hugo,Paco,Luis', ',')}&quot; scope=&quot;application&quot; /&gt;
+&lt;c:set var=&quot;unidos&quot; value=&quot;${fn:join(nombres, ',')}&quot; scope=&quot;application&quot; /&gt;
+
+&lt;c:out value=&quot;${unidos}&quot; /&gt;
+</code></pre>
+
+<h3 id="fntolowercase-fntouppercase">fn:toLowerCase(), fn:toUpperCase()</h3>
+<ul>
+<li>Método contenedor: <code>String fn:toLowerCase(String  input), String fn:toUpperCase(String input)</code></li>
+</ul>
+<p>Transforman una cadena de caracteres en minúsculas o mayúsculas respectivamente.</p>
+<pre><code class="html">&lt;c:out value='${fn:toLowerCase(&quot;MAYÚSCULA&quot;)}' /&gt;
+&lt;hr /&gt;
+&lt;c:out value='${fn:toUpperCase(&quot;minúscula&quot;)}' /&gt;
+</code></pre>
+
+<h3 id="fnsubstring">fn:substring()</h3>
+<ul>
+<li>Método contenedor: <code>String fn:substring(String inputstring, int start, int end)</code></li>
+</ul>
+<p>Obtiene una sub cadena, determinado por el segundo y tercer argumento, marcados como inicio y el largo.</p>
+<pre><code class="html">&lt;!-- ABC --&gt;
+&lt;c:out value='${fn:substring(&quot;ABCDEF&quot;, 0, 3)}' /&gt;
+</code></pre>
+
+<h3 id="fnsubstringafter">fn:substringAfter()</h3>
+<ul>
+<li>Método contenedor: <code>String fn:substringAfter(String input, String afterstring)</code></li>
+</ul>
+<p>Siguiendo un patrón de caracteres, retorna el resto de la cadena que venga luego de este patrón</p>
+<pre><code class="html">&lt;!-- EF --&gt;
+&lt;c:out value='${fn:substringAfter(&quot;ABCDEF&quot;, &quot;CD&quot;)}' /&gt;
+</code></pre>
+
+<h3 id="fnfnsubstringbefore">fn:fn:substringBefore()</h3>
+<ul>
+<li>Método contenedor: <code>String fn:fn:substringBefore(String input, String afterstring)</code></li>
+</ul>
+<p>Siguiendo un patrón de caracteres, retorna el resto de la cadena que venga luego de este patrón</p>
+<pre><code class="html">&lt;!-- AB --&gt;
+&lt;c:out value='${fn:substringBefore(&quot;ABCDEF&quot;, &quot;AB&quot;)}' /&gt;
+</code></pre>
+
+<h3 id="fnlength">fn:length()</h3>
+<ul>
+<li>Método contenedor: <code>int length(java.lang.Object)</code></li>
+</ul>
+<p>Determina el largo de una cadena.</p>
+<pre><code class="html">&lt;!-- 6 --&gt;
+&lt;c:out value='${fn:length(&quot;ABCDEF&quot;)}' /&gt;
+
+</code></pre>
+
+<h3 id="fnreplace">fn:replace()</h3>
+<ul>
+<li>Método contenedor: <code>String fn:replace(String input, String search_for, String replace_with)</code></li>
+</ul>
+<p>Con sus tres argumentos, esta funcion, tomará la primera cadena y buscará el patrón entregado en el segundo argumento y lo reemplazará por la tercera cadena.</p>
+<pre><code class="html">&lt;!-- AB-EF --&gt;
+&lt;c:out value='${fn:replace(&quot;ABCDEF&quot;, &quot;CD&quot;, &quot;-&quot;)}' /&gt;
+
+</code></pre>
+
+<hr />
+<h2 id="formatting-tags">Formatting tags</h2>
+<hr />
+<p>Llamado: <code>&lt;%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"  %&gt;</code></p>
+<p>Otra utilería que nos evitaremos programar gracias a JSTL. Acá encontraremos herramientas que harán nuestra tarea de por ejemplo, formatear una fecha, o una moneda antes de presentarla en pantalla, sean menos dolorosas. 🎰</p>
+<hr />
+<h3 id="patrones-para-el-formato">Patrones para el formáto</h3>
+<p>Cuando tengamos disponible el atributo <code>pattern</code>, podemos indicar un patrón que nos porporciona la capacidad de indicar como queremos que un determinado valor sea mostrado. Los siguientes simbolos nos servirán de consulta para cuando los necesitemos
++ 0: representa dígitos.
++ #: Representa un dígito.
++ E: Representa la forma exponencial.
++ .: Representa un separador de decimales.
++ ,: Representa un marcador de posición para un separador de grupos. 
++ ;: Representa un separador de formátos
++ -: Representa un prefijo negativo.
++ %: Multiplica por 100 y muestra el %.
++ ?: Múltiples por 1000 muestra por millas.
++ X: Indica que cualquier otro caracter puede ser usado como prefijo o sufijo.
++ ': Usado como caracter especial en un prefijo o sufijo.</p>
+<hr />
+<h3 id="fmtsetlocale">fmt:setLocale</h3>
+<p>Se indica este valor para indicar la configuración local. si no se hace, se toma el que esté seteado en el computador servidor.</p>
+<p>Para poder revisar los códigos, se puede ir a la siguiente web: <a href="https://www.oracle.com/java/technologies/javase/jdk8-jre8-suported-locales.html">https://www.oracle.com/java/technologies/javase/jdk8-jre8-suported-locales.html</a></p>
+<pre><code class="html">Para indicar que el local es español chile.
+&lt;fmt:setLocale value=&quot;es-CL&quot;/&gt;
+</code></pre>
+
+<hr />
+<h3 id="fmtparsenumber">fmt:parseNumber</h3>
+<p>Sintaxis: <code>&lt;fmt:parseNumber attributes&gt; body content &lt;/fmt:parseNumber&gt;</code></p>
+<p>Este tag, si bien, este tag nos permite parcear monedas, numeros y porcentajes, lo usaremos para parsear números, para las otras transformaciones, usaremos otro <code>fmt</code>.</p>
+<pre><code>&lt;fmt:parseNumber var=&quot;numero&quot; integerOnly=&quot;true&quot; type=&quot;number&quot; value='${&quot;3000,55&quot;}' /&gt;
+&lt;c:out value=&quot;${numero}&quot;&gt;&lt;/c:out&gt; 
+</code></pre>
+
+<hr />
+<h3 id="fmtformatnumber">fmt:formatNumber</h3>
+<p>Sintaxis: <code>&lt;fmt:formatNumber attributes&gt; body content &lt;/fmt:formatNumber&gt;</code></p>
+<pre><code class="html">&lt;fmt:setLocale value=&quot;es-CL&quot;/&gt;
+
+&lt;c:set var=&quot;cantidad&quot; value=&quot;9850.14115&quot; /&gt;
+
+&lt;hr/&gt;
+&lt;fmt:formatNumber var=&quot;moneda&quot; value=&quot;${cantidad}&quot; type=&quot;currency&quot; /&gt;
+Formáto moneda: &lt;c:out value=&quot;${moneda}&quot;&gt;&lt;/c:out&gt;
+&lt;br /&gt;
+&lt;fmt:formatNumber var=&quot;moneda&quot; pattern=&quot;$ ###,###,###.##&quot; value=&quot;${cantidad}&quot; type=&quot;currency&quot; /&gt;
+Formáto moneda (patrón): &lt;c:out value=&quot;${moneda}&quot;&gt;&lt;/c:out&gt;
+
+&lt;br /&gt;
+&lt;fmt:formatNumber var=&quot;moneda&quot; currencyCode=&quot;CLP&quot; value=&quot;${cantidad}&quot; type=&quot;currency&quot; /&gt;
+Formáto moneda (currencyCode) (patrón): &lt;c:out value=&quot;${moneda}&quot;&gt;&lt;/c:out&gt;
+
+&lt;hr/&gt;
+&lt;fmt:formatNumber var=&quot;valor&quot; value='${&quot;0.7&quot;}' type=&quot;percent&quot; /&gt;
+Formáto porcentaje: &lt;c:out value=&quot;${valor}&quot;&gt;&lt;/c:out&gt;
+
+&lt;hr/&gt;
+&lt;fmt:formatNumber var=&quot;valor&quot; value='${cantidad}' type=&quot;number&quot; /&gt;
+Formáto numérico: &lt;c:out value=&quot;${valor}&quot;&gt;&lt;/c:out&gt;
+&lt;br /&gt;
+&lt;fmt:formatNumber var=&quot;valor&quot; value='${cantidad}' type=&quot;number&quot; maxIntegerDigits=&quot;2&quot; /&gt;
+Formáto numérico: &lt;c:out value=&quot;${valor}&quot;&gt;&lt;/c:out&gt;
+</code></pre>
+
+<hr />
+<h3 id="fmttimezone">fmt:timeZone</h3>
+<p>Sintaxis: <code>&lt;fmt:timeZone attributes&gt; body content &lt;/fmt:timeZone&gt;</code></p>
+<p>Asigna una zona horaria a una fecha que se imprima en pantalla. Esta fecha debe estar en el cuerpo de <code>timeZone</code>.</p>
+<pre><code class="html">&lt;c:set var=&quot;fecha&quot; value=&quot;&lt;%=new java.util.Date()%&gt;&quot; /&gt;
+
+Hora en Chicago:
+&lt;fmt:timeZone value='America/Chicago' &gt;
+    &lt;fmt:formatDate type='both' value=&quot;${fecha}&quot; /&gt;     
+&lt;/fmt:timeZone&gt;
+
+&lt;hr /&gt;
+Hora en Santiago:
+&lt;fmt:timeZone value='America/Santiago' &gt;
+    &lt;fmt:formatDate type='both' value=&quot;${fecha}&quot; /&gt;     
+&lt;/fmt:timeZone&gt;
+</code></pre>
+
+<hr />
+<h3 id="fmtparsedate">fmt:parseDate</h3>
+<p>Sintaxis: <code>&lt;fmt:parseDate attributes/&gt;</code></p>
+<p>Utilizado para transformar cadenas de texto a fechas.</p>
+<pre><code class="html">&lt;c:set var=&quot;fecha&quot; value=&quot;01-01-2020&quot; /&gt;
+
+&lt;fmt:parseDate value=&quot;${fecha}&quot; var=&quot;parsedDate&quot;  pattern=&quot;dd-MM-yyyy&quot; /&gt;  
+&lt;!-- Wed Jan 01 00:00:00 CLST 2020 --&gt;
+&lt;p&gt;&lt;c:out value=&quot;${parsedDate}&quot; /&gt;&lt;/p&gt;  
+</code></pre>
+
+<p>Más ejemplos:</p>
+<pre><code class="html">&lt;h3&gt;Date será parseada desde un formato de cadena 'MM/dd/yyyy'&lt;/h3&gt;
+&lt;c:set var=&quot;current_time_1&quot; value=&quot;12/27/2018&quot; /&gt;
+&lt;br&gt;
+Date (Como la hora no ha sido definida, se toma por defecto '00:00:00') - &lt;br&gt;
+&lt;fmt:parseDate value=&quot;${current_time_1}&quot; type=&quot;date&quot; pattern=&quot;MM/dd/yyyy&quot; /&gt;
+</code></pre>
+
+<pre><code class="html">&lt;h3&gt;Date será parseada desde un formato de cadena: 'dd/mm/yyyy HH:mm:ss'&lt;/h3&gt;
+&lt;c:set var=&quot;current_time_2&quot; value=&quot;27/12/2018 11:20:50&quot; /&gt;
+Date and time -
+&lt;br&gt;
+&lt;fmt:parseDate value=&quot;${current_time_2}&quot; type=&quot;both&quot; pattern=&quot;dd/mm/yyyy HH:mm:ss&quot; /&gt;
+</code></pre>
+
+<pre><code class="html">&lt;h3&gt;Time será parseado con el formáto 'HH:mm:ss'&lt;/h3&gt;
+&lt;c:set var=&quot;current_time_3&quot; value=&quot;11:20:50&quot; /&gt;
+
+Time (La fecha no ha sido definida, por eso se toma - 'Jan 01 1970' como valor por defecto ) -
+&lt;br&gt;
+&lt;fmt:parseDate value=&quot;${current_time_3}&quot; type=&quot;time&quot; pattern=&quot;HH:mm:ss&quot; /&gt;
+</code></pre>
+
+<pre><code class="html">&lt;h3&gt;Date and Time serán parseadas con un estilo dateStyle=&quot;long&quot; y timeStyle=&quot;long&quot; string format/ or&lt;/h3&gt;
+&lt;c:set var=&quot;current_time_4&quot; value=&quot;27/12/2018 11:20:50&quot; /&gt;
+Date and time -
+&lt;br&gt;
+&lt;fmt:parseDate value=&quot;${current_time_4}&quot; type=&quot;both&quot; pattern=&quot;dd/mm/yyyy HH:mm:ss&quot; dateStyle=&quot;long&quot; timeStyle=&quot;long&quot; /&gt;
+</code></pre>
+
+<hr />
+<h3 id="fmtformatdate">fmt:formatDate</h3>
+<p>Sintaxis: <code>&lt;fmt:formatDate attributes/&gt;</code></p>
+<p>Utilizado para transformar objetos tipo Date a la representación de una fecha en una cadena.</p>
+<pre><code class="html">&lt;!-- Formatted Time : 15:54:18 --&gt;
+&lt;c:set var=&quot;Date&quot; value=&quot;&lt;%=new java.util.Date()%&gt;&quot; /&gt;
+&lt;p&gt;
+    Formatted Time :
+    &lt;!-- 16:07:27 --&gt;
+    &lt;fmt:formatDate type=&quot;time&quot; value=&quot;${Date}&quot; /&gt;
+&lt;/p&gt;
+</code></pre>
+
+<pre><code class="html">&lt;c:set var=&quot;Date&quot; value=&quot;&lt;%=new java.util.Date()%&gt;&quot; /&gt;
+&lt;p&gt;  
+    &lt;!-- Formatted Date : 11-mar-2020 --&gt;
+    Formatted Date :  
+    &lt;fmt:formatDate type=&quot;date&quot; value=&quot;${Date}&quot; setLocale=&quot;es_ES&quot; dateStyle=&quot;long&quot; /&gt;  
+&lt;/p&gt;
+&lt;p&gt;
+    Formatted Date :  
+    &lt;!-- 16:06:39 --&gt;
+    &lt;fmt:formatDate type=&quot;time&quot; value=&quot;${Date}&quot; dateStyle=&quot;long&quot; /&gt; 
+&lt;/p&gt;  
+&lt;p&gt;
+    Formatted Date :  
+    &lt;!-- 11 de marzo de 2020 16:03:28 --&gt;
+    &lt;fmt:formatDate type=&quot;both&quot; value=&quot;${Date}&quot; dateStyle=&quot;long&quot; /&gt; 
+&lt;/p&gt; 
+&lt;p&gt;
+    Formatted Date :  
+    &lt;!-- 11/03/2020 --&gt;
+    &lt;fmt:formatDate type=&quot;date&quot; value=&quot;${Date}&quot; pattern=&quot;dd/MM/yyyy&quot; /&gt; 
+&lt;/p&gt;  
+
+</code></pre>
+
+<hr />
+<h3 id="fmtbundle">fmt:bundle</h3>
+<p>Sintaxis: <code>&lt;fmt:bundle basename="Resource Bundle Name" prefix="msg"&gt; body content &lt;/fmt:bundle&gt;</code></p>
+<p>Su utilidad se basa en que nos permite, desde la vista, acceder a un arreglo de arrego de objetos, declarado en una clase especial. Esta clase poseerá elementos estáticos, por lo tanto solamente almacenan información como una pequeña base de datos. Si a primera vista, no le encontramos utilidad, solamente pensemos que debemos internacionalizar la aplicación, y debe, según el idioma seleccionado, cargar un mensaje en inglés o en español. El traductor de google sería una solución, pero por ejemplo, un tutorial complejo, no basta con traducir robóticamente. La traducción debe ser precisa. Entonces, con el siguiente ejemplo, quizás se nos ocurre una solución para este problema.</p>
+<p>Debemos crear una unidad de compilación que contenga una clase que herede de <code>ListResourceBundle</code>.</p>
+<p>La clase debe sobrescribir el método <code>getContents</code>, este será en encargado de retornar los valores.(arreglo de arreglos), con la información. </p>
+<pre><code class="java">package cl.lherrera.bundles;
+
+import java.util.ListResourceBundle;
+
+public class Mensaje extends ListResourceBundle{
+    protected static final Object[][] contenido =  {
+            {&quot;saludo.uno&quot;, &quot;Saludo-mensaje 1&quot;},
+            {&quot;saludo.dos&quot;, &quot;Saludo-mensaje 2&quot;},
+            {&quot;saludo.tres&quot;, &quot;Saludo-mensaje 3&quot;},
+            {&quot;despedida.uno&quot;, &quot;Despedida-mensaje 1&quot;},
+            {&quot;despedida.dos&quot;, &quot;Despedida-mensaje 2&quot;},
+            {&quot;despedida.tres&quot;, &quot;Despedida-mensaje 3&quot;},
+        };
+
+    @Override
+    protected Object[][] getContents() {
+        return contenido;
+    }
+
+}
+
+</code></pre>
+
+<p>Luego lo llamamos desde la vista de la siguiente manera</p>
+<pre><code class="html">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;
+    pageEncoding=&quot;UTF-8&quot;%&gt;
+&lt;%@ taglib uri=&quot;http://java.sun.com/jsp/jstl/core&quot; prefix=&quot;c&quot;%&gt;
+&lt;%@ taglib uri=&quot;http://java.sun.com/jsp/jstl/functions&quot; prefix=&quot;fn&quot;%&gt;
+&lt;%@ taglib uri=&quot;http://java.sun.com/jsp/jstl/fmt&quot; prefix=&quot;fmt&quot;%&gt;
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Mi web&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Mensaje de saludos&lt;/h1&gt;
+&lt;fmt:bundle basename=&quot;cl.lherrera.bundles.Mensaje&quot; prefix=&quot;saludo.&quot;&gt;  
+   &lt;fmt:message key=&quot;uno&quot;/&gt;&lt;br/&gt;
+   &lt;fmt:message key=&quot;dos&quot;/&gt;&lt;br/&gt; 
+   &lt;fmt:message key=&quot;tres&quot;/&gt;&lt;br/&gt;
+&lt;/fmt:bundle&gt; 
+
+&lt;h1&gt;Mensaje de despedida&lt;/h1&gt;
+&lt;fmt:bundle basename=&quot;cl.lherrera.bundles.Mensaje&quot; prefix=&quot;despedida.&quot;&gt;  
+   &lt;fmt:message key=&quot;uno&quot;/&gt;&lt;br/&gt;
+   &lt;fmt:message key=&quot;dos&quot;/&gt;&lt;br/&gt; 
+   &lt;fmt:message key=&quot;tres&quot;/&gt;&lt;br/&gt;
+&lt;/fmt:bundle&gt;
+
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>Puede ser también así</p>
+<pre><code class="html">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;
+    pageEncoding=&quot;UTF-8&quot;%&gt;
+&lt;%@ taglib uri=&quot;http://java.sun.com/jsp/jstl/core&quot; prefix=&quot;c&quot;%&gt;
+&lt;%@ taglib uri=&quot;http://java.sun.com/jsp/jstl/functions&quot; prefix=&quot;fn&quot;%&gt;
+&lt;%@ taglib uri=&quot;http://java.sun.com/jsp/jstl/fmt&quot; prefix=&quot;fmt&quot;%&gt;
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Mi web&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;fmt:setBundle basename=&quot;cl.lherrera.bundles.Mensaje&quot; var=&quot;mensaje&quot;/&gt; 
+&lt;h1&gt;Mensaje de saludos&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;fmt:message key=&quot;saludo.uno&quot; bundle=&quot;${mensaje}&quot;/&gt;&lt;br/&gt; &lt;/li&gt;
+  &lt;li&gt;&lt;fmt:message key=&quot;saludo.dos&quot; bundle=&quot;${mensaje}&quot;/&gt;&lt;br/&gt; &lt;/li&gt;
+  &lt;li&gt;&lt;fmt:message key=&quot;saludo.dos&quot; bundle=&quot;${mensaje}&quot;/&gt;&lt;br/&gt; &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1&gt;Mensaje de despedida&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;fmt:message key=&quot;despedida.uno&quot; bundle=&quot;${mensaje}&quot;/&gt;&lt;br/&gt; &lt;/li&gt;
+  &lt;li&gt;&lt;fmt:message key=&quot;despedida.dos&quot; bundle=&quot;${mensaje}&quot;/&gt;&lt;br/&gt; &lt;/li&gt;
+  &lt;li&gt;&lt;fmt:message key=&quot;despedida.dos&quot; bundle=&quot;${mensaje}&quot;/&gt;&lt;br/&gt; &lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>Se puede ver que desde la vista, utilizando <code>prefix=</code>, podemos indicar el tipo de mensaje que se mostrará. ¿Quizás con un <code>if</code>, podríamos elegir de forma más dinámica.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/vendor.a0c4167b.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.fb26dd1d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../assets/javascripts/worker/search.37585f48.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,525 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.6">
+    
+    
+      
+        <title>` thymeleaf` - Java Full Stack Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.4b9ffd7b.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#thymeleaf" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../.." title="Java Full Stack Docs" class="md-header-nav__button md-logo" aria-label="Java Full Stack Docs">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Java Full Stack Docs
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              `thymeleaf`
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Java Full Stack Docs" class="md-nav__button md-logo" aria-label="Java Full Stack Docs">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Java Full Stack Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../ejercicios/repaso/teoria/poo/herencia/" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#notas" class="md-nav__link">
+    Notas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thtext" class="md-nav__link">
+    th:text
+  </a>
+  
+    <nav class="md-nav" aria-label="th:text">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#controlador" class="md-nav__link">
+    Controlador
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#template" class="md-nav__link">
+    Template
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#salida" class="md-nav__link">
+    Salida
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="thymeleaf"><code>thymeleaf</code></h1>
+<p>---</p>
+<h2 id="notas">Notas</h2>
+<hr />
+<ul>
+<li>
+<p>En las propiedades del proyecto: <code>spring.thymeleaf.cache: false</code>, con esto evitamos el cache en nuestro desarrollo.</p>
+</li>
+<li>
+<p>Se debe al menos tener las dependencias <code>Spring Web</code> y <code>Thymeleaf</code>.</p>
+</li>
+<li>
+<p>Una gran utilidad es que el modelo <code>model</code> de la vista, puede ser capturado por <code>javascript</code>. A diferencia de <code>jsp</code> que es capturado por un <code>servlet</code> de Java.</p>
+</li>
+<li>
+<p><code>th:</code> es la forma en que se declaran atributos especiales en <code>thymeleaf</code>. No se debe confundir con el <code>th</code>de la etiqueta <code>table</code>.</p>
+</li>
+</ul>
+<p>En en siguiente ejemplo:</p>
+<pre><code class="html">&lt;input type=&quot;text&quot; name=&quot;userName&quot; value=&quot;James Carrot&quot; th:value=&quot;${user.name}&quot; /&gt;
+</code></pre>
+
+<p>vemos que la etiqueta para poder asignar un valor en un campo de texto de un formulario es <code>value</code>, entonces el valor usado para obtener una variable del modelo es con el mismo nombre del atributo <code>value</code>. pero <code>th:value="${user.name}"</code>, quedando <code>value="James Carrot"</code>, quedando este, como valor por defecto.</p>
+<hr />
+<h2 id="thtext"><code>th:text</code></h2>
+<hr />
+<p>Reemplaza el contenido textual de lo que esté en las etiquetas:</p>
+<h3 id="controlador">Controlador</h3>
+<p><code>/thymeleaftTest/src/main/java/cl/lherrera/arriendopelis/controller/HomeController.java</code></p>
+<pre><code class="java">package cl.lherrera.arriendopelis.controller;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+
+@Controller
+@RequestMapping(path = &quot;th&quot;)
+public class HomeController {
+
+    @GetMapping(path = { &quot;&quot;, &quot;/&quot; })
+    public String home(Model modelo) {
+        modelo.addAttribute(&quot;nombre&quot;, &quot;Luis Herrera&quot;);
+
+        return &quot;index&quot;;
+    }
+// ... otras funcionalidades.
+
+</code></pre>
+
+<h3 id="template">Template</h3>
+<p><code>/thymeleaftTest/src/main/resources/templates/index.html</code></p>
+<pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xmlns:th=&quot;http://www.thymeleaf.org&quot;&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Insert title here&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;Prueba texto simple&lt;/h1&gt;
+    &lt;h3 th:text=&quot;${nombre}&quot;&gt;Texto se reemplaza&lt;/h3&gt;
+    &lt;p&gt;Reemplazo literal: &lt;span th:text=&quot;${nombre}&quot;&gt;literal reemplazo&lt;/span&gt;.&lt;/p&gt;
+    &lt;p th:text=&quot;|Reemplazo literal: ${nombre}.|&quot;&gt;literal reemplazo&lt;/p&gt;
+    &lt;hr /&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+
+<h3 id="salida">Salida</h3>
+<pre><code class="html">&lt;!DOCTYPE html&gt;&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;html&gt;&lt;head&gt; &lt;meta charset=&quot;UTF-8&quot;&gt; &lt;title&gt;Insert title here&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;Prueba texto simple&lt;/h1&gt;&lt;h3&gt;Luis Herrera&lt;/h3&gt;&lt;p&gt;Reemplazo literal: &lt;span&gt;Luis Herrera&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;Reemplazo literal: Luis Herrera.&lt;/p&gt;&lt;hr/&gt;&lt;/body&gt;&lt;/html&gt;
+</code></pre>
+
+<hr />
+<h1 id="theach"><code>th:each</code></h1>
+<hr />
+<p><a href="https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#iteration">https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#iteration</a></p>
+<h3 id="controlador_1">Controlador</h3>
+<pre><code class="java">@GetMapping(path = &quot;/lista&quot;)
+public String lista(Model modelo) {
+    List&lt;Persona&gt; personas = new ArrayList&lt;&gt;();
+    personas.add(new Persona(&quot;Ana&quot;, new Date()));
+    personas.add(new Persona(&quot;Juana&quot;, new Date()));
+    personas.add(new Persona(&quot;Gabriel&quot;, new Date()));
+
+
+    modelo.addAttribute(&quot;personas&quot;, personas);
+    return &quot;lista&quot;;
+}
+</code></pre>
+
+<h3 id="vista">Vista</h3>
+<pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xmlns:th=&quot;http://www.thymeleaf.org&quot;&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Insert title here&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;Lista de personas&lt;/h1&gt;
+    &lt;ul&gt;
+        &lt;li th:each=&quot;persona : ${personas}&quot;&gt;
+            &lt;span th:text=&quot;${persona.nombre}&quot;&gt;Sin personas&lt;/span&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+
+<pre><code class="html">&lt;!DOCTYPE html&gt;&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;head&gt; &lt;meta charset=&quot;UTF-8&quot;&gt; &lt;title&gt;Insert title here&lt;/title&gt;&lt;/head&gt;&lt;body&gt; &lt;h1&gt;Lista de personas&lt;/h1&gt; &lt;ul&gt; &lt;li&gt; &lt;span&gt;Ana&lt;/span&gt; &lt;/li&gt;&lt;li&gt; &lt;span&gt;Juana&lt;/span&gt; &lt;/li&gt;&lt;li&gt; &lt;span&gt;Gabriel&lt;/span&gt; &lt;/li&gt;&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;
+</code></pre>
+
+<hr />
+<h1 id="template-layout"><code>Template Layout</code></h1>
+<hr />
+<p><a href="https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#template-layout">https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#template-layout</a></p>
+<h2 id="thfragment"><code>th:fragment</code></h2>
+<ul>
+<li><code>th:replace</code>: La etiqueta que contenga este atributo, será completamente reemplazado por el que venga por parámetro.</li>
+</ul>
+<p>Su funcionamiento es similar a como funciona un método estático. Primero se define:</p>
+<pre><code class="html">    &lt;!-- +++++++++++++++++++++++++++++++++ --&gt;
+    &lt;!-- DECLARACIÓN DE UN MÉTODO ESTÁTICO --&gt;
+    &lt;!-- +++++++++++++++++++++++++++++++++ --&gt;
+    &lt;head th:fragment=&quot;common_header(A, B)&quot;&gt;
+        &lt;!-- 
+            esta sección será completamete reemplazada 
+            por el argumento dado por A 
+        --&gt;
+        &lt;title th:replace=&quot;${A}&quot;&gt;Principal&lt;/title&gt;
+        &lt;!-- 
+            Esta seccion se mantiiene por que no hay un th:replace=&quot;${A}&quot;
+        --&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;miEstilo&quot; &gt;
+        &lt;!-- 
+            La idea de que se reemplace esta sección, es que cuando
+            una págiina la cargue, entregue todo el contenido
+            que indique su selector.
+        --&gt;
+        &lt;th:block th:replace=&quot;${B}&quot; /&gt;
+
+    &lt;/head&gt;
+    &lt;!-- +++++++++++++++++++++++++++++++++ --&gt;
+</code></pre>
+
+<ul>
+<li>Es un método estático, como lo sería una función.</li>
+<li>Tiene dos parámetros el primero es A y el segundo es B.</li>
+<li>El nombre que pueden llevar los parámetros es variable como lo sería en un método real.</li>
+<li>Cualquier etiqueta que lleve <code>th:replace="${A}"</code>, será reemplazado por lo que llegue como A. Lo mismo para el caso de B.</li>
+<li>Este es un <code>Snipped</code> común, ya que permite hacer que el título sea variable, además de fijar el <code>css</code> oficial, ya que no posee etiquetas <code>thymeleaf</code>, entonces su contenido es estático, por lo tanto no es reemplazado con lo que venga por parámetros, es decir que tiene su existencia asegurada. Luego viene la parte en que B, reemplazará algún <code>css</code> especial que requiera alguna página que use esta plantilla.</li>
+</ul>
+<p>Luego esta debería ser llamada desde otro archivo de la siguiente forma:</p>
+<pre><code class="html">&lt;head th:replace=&quot;utils :: common_header(~{::link},~{::title})&quot;&gt;
+
+    &lt;title&gt;-1-&lt;/title&gt;
+    &lt;title&gt;-2-&lt;/title&gt;
+    &lt;title&gt;-3-&lt;/title&gt;
+    &lt;title&gt;-4-&lt;/title&gt;
+
+    &lt;link rel=&quot;stylesheet&quot; th:href=&quot;uno.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; th:href=&quot;dos.css&quot;&gt;
+
+&lt;/head&gt;
+</code></pre>
+
+<p><code>~{::link}</code>, donde <code>::link</code> es el<a href="https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#appendix-c-markup-selector-syntax">selector</a>. En este caso, de forma premeditada, se cambia el orden de los argumentos, para demostrar que:</p>
+<ul>
+<li>
+<p>Todo lo que en el <code>fragment</code> tenga <code>th:replace="${A}"</code>, será reemplazado por <code>::link</code>, es decir, por todas las etiquetas <code>link</code>, ya que este argumento toma el lugar del parámetro <code>A</code>.</p>
+</li>
+<li>
+<p><code>&lt;head th:replace="utils :: common_header...</code>, quiere decir que el archivo <code>utils.html</code> ubicado en la raíz del proyecto posee dentro de su <code>body</code> una etiqueta llamada <code>common_header</code>. Si <code>utils.html</code> se encuentra dentro de un directorio <code>/foo</code>, se llama <code>&lt;head th:replace="foo/utils ::</code>, siempre tomando el directorio raíz no importa desde donde lo llamemos, es decir que no usamos <code>&lt;head th:replace="../utils ::</code>, si no que aunque el archivo que llame el <code>fragment</code> se encuentre </p>
+</li>
+</ul>
+<p>Quedando el siguiente resultado.</p>
+<pre><code class="html">&lt;head&gt;
+
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;uno.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;dos.css&quot;&gt;
+
+    &lt;!-- bootstrap - 4.4.1 --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css&quot;
+        integrity=&quot;sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh&quot; crossorigin=&quot;anonymous&quot;&gt;
+
+    &lt;!-- para los demás enlaces --&gt;
+    &lt;title&gt;-1-&lt;/title&gt;
+    &lt;title&gt;-2-&lt;/title&gt;
+    &lt;title&gt;-3-&lt;/title&gt;
+    &lt;title&gt;-4-&lt;/title&gt;
+
+&lt;/head&gt;
+</code></pre>
+
+<p>Como se puede ver, lo usual es <code>common_header(~{::title},~{::link})</code>, para que el selector seleccione primero el titulo y luegoo los links, pero en esta ocación se realizó de esta manera para poner en evidencia el contenido de los argumentos y el lugar de los parámetros. <code>common_header(~{::link},~{::title})</code>.</p>
+<hr />
+<h1 id="template-snippet">template - snippet</h1>
+<hr />
+<pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html th:fragment=&quot;layout (title, content)&quot; xmlns:th=&quot;http://www.thymeleaf.org&quot;&gt;
+&lt;head&gt;
+    &lt;title th:replace=&quot;${title}&quot;&gt;Layout Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Layout H1&lt;/h1&gt;
+    &lt;div th:replace=&quot;${content}&quot;&gt;
+        &lt;p&gt;Layout content&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;footer&gt;
+        Layout footer
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html th:replace=&quot;~{layoutFile :: layout(~{::title}, ~{::section})}&quot;&gt;
+&lt;head&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;section&gt;
+    &lt;p&gt;Page content&lt;/p&gt;
+    &lt;div&gt;Included on page&lt;/div&gt;
+&lt;/section&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/vendor.a0c4167b.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.fb26dd1d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../assets/javascripts/worker/search.37585f48.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

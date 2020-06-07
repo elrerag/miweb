@@ -1,0 +1,1177 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.6">
+    
+    
+      
+        <title>Arraylist - Java Full Stack Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.4b9ffd7b.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#arraylistltobjectgt" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../../.." title="Java Full Stack Docs" class="md-header-nav__button md-logo" aria-label="Java Full Stack Docs">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Java Full Stack Docs
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Arraylist
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Java Full Stack Docs" class="md-nav__button md-logo" aria-label="Java Full Stack Docs">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Java Full Stack Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../poo/herencia/" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#primitivos-como-objetos-wrappers" class="md-nav__link">
+    Primitivos como objetos Wrappers.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#principales-metodos-usados-en-un-arraylist" class="md-nav__link">
+    Principales métodos usados en un ArrayList.
+  </a>
+  
+    <nav class="md-nav" aria-label="Principales métodos usados en un ArrayList.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#listaaddobject-obj" class="md-nav__link">
+    lista.add(Object obj)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listaaddindex-object-obj" class="md-nav__link">
+    lista.add(index, Object obj)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listasize" class="md-nav__link">
+    lista.size()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listagetn" class="md-nav__link">
+    lista.get(n)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listacontainsobject-obj" class="md-nav__link">
+    lista.contains(Object obj)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listaindexofobject-obj" class="md-nav__link">
+    lista.indexOf(Object obj)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listaremoveint-n" class="md-nav__link">
+    lista.remove(int n)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listaremoveobject-obj" class="md-nav__link">
+    lista.remove(Object obj)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listaclear" class="md-nav__link">
+    lista.clear()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listaisempty" class="md-nav__link">
+    lista.isEmpty()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listaisempty_1" class="md-nav__link">
+    lista.isEmpty()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iterador" class="md-nav__link">
+    Iterador
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clase-collections-y-sus-metodos-estaticos" class="md-nav__link">
+    Clase Collections y sus métodos estáticos.
+  </a>
+  
+    <nav class="md-nav" aria-label="Clase Collections y sus métodos estáticos.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#collectionssortcoleccion" class="md-nav__link">
+    Collections.sort(colección);
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collectionsreversecoleccion" class="md-nav__link">
+    Collections.reverse(colección);
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collectionsminnumeros-collectionsmaxnumeros" class="md-nav__link">
+    Collections.min(numeros), Collections.max(numeros)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collectionsfrequencycolecion-elemento" class="md-nav__link">
+    Collections.frequency(coleción, elemento)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collectionsshufflenumeros" class="md-nav__link">
+    Collections.shuffle(numeros);
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arraysaslist" class="md-nav__link">
+    Arrays.asList()
+  </a>
+  
+    <nav class="md-nav" aria-label="Arrays.asList()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-transformar-los-datos-de-un-arreglo" class="md-nav__link">
+    Ejemplo: Transformar los datos de un arreglo.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-aumentar-elementos" class="md-nav__link">
+    Ejemplo: Aumentar elementos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-todo-un-poco-en-una-lista-map-filter" class="md-nav__link">
+    Ejemplo: De todo un poco en una lista. (map, filter)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-sumatoria-reduce" class="md-nav__link">
+    Ejemplo: Sumatoria (reduce).
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <blockquote>
+<h1 id="arraylistltobjectgt"><code>ArrayList&lt;Object&gt;</code></h1>
+<blockquote>
+<ul>
+<li>Un arrayList es una clase incluida en el paquete <code>java.util</code>, es una estructura de almacenamiento <code>dinámico</code>, a diferencia de un arreglo nativo, esta estructura <strong>puede variar el tamaño de su largo</strong>.</li>
+<li>Se muestra <code>ArrayList</code>, independientemente de <code>Collections</code>, para poder identificar las funciones más comunes que se utilizan para poder trabajar con arreglos de datos, ya que este tipo de listas, son dinámicas, nos permiten recibir <code>n</code> cantidad de datos. Lo que no pasa cuando usamos arreglos nativos, ya que el largo, se decide al momento de iniciar el arreglo.</li>
+<li>Un <code>ArrayList</code> en java, no almacena valores contiguos en la memoria principal como lo hace un <code>array[]</code>, en vez de eso, guarda las <code>referencias de los objetos que la componen</code>.</li>
+<li>Si anteriormente vimos que los arreglos nativos, están compuestos por elementos que podían ser, primitivos o no primitivos, para el caso de los <code>ArrayList</code>, estos <strong>solo se componen de Objetos.</strong></li>
+<li>Cuando un objeto es creado, se le asigna una cantidad de memoria, pero esta memoria no se carga al <code>ArrayList</code>, esto se debe a que el <code>ArrayList</code>, solo guarda la referencia a ese objeto.</li>
+<li>Como no se trabaja con objetos reales, <code>ArrayLists</code> contiene matrices de referencias a objetos almacenados en otro lugar (un lugar en la memoria llamado <code>heap</code>, redunda lo anterior, mencionar en caso de ser absolutamente necesario.</li>
+<li>El Heap (Montículo) almacena objetos y sus variables de instancia. Es un espacio de memoria dinámica que se crea al inicio de la máquina virtual y es único.(no tiene que ver con <code>ArrayList</code>, si no que con uno de los lugares de almacenamiento que posee <code>Java</code>).</li>
+</ul>
+</blockquote>
+</blockquote>
+<ul>
+<li>Cuando usemos lo métodos estáticos, de la clase <code>Collections</code>, la colección entregada como argumento, cambiará. Si necesitamos preservar la colección original, debemos crear una copia de ella, así la respaldamos. (Siempre un new es algo nuevo, que bueno es ser un lenguaje que lo entienda)</li>
+</ul>
+<pre><code>// así lo respaldamos
+ArrayList&lt;Integer&gt; numerosCopia = new ArrayList&lt;Integer&gt;(numeros);
+// también puede ser de esta forma (polimorfismo)
+List&lt;Integer&gt; numerosCopia = new ArrayList&lt;Integer&gt;(numeros);
+</code></pre>
+
+<hr />
+<h2 id="primitivos-como-objetos-wrappers"><strong>Primitivos como objetos <code>Wrappers</code>.</strong></h2>
+<ul>
+<li>Apoyo solamente en el caso que no estén claros los objetos del tipo envolvedor.</li>
+</ul>
+<pre><code class="java">//byte numero_1 = -128;
+Byte numero_1 = -128;
+
+//short numero_2 = -32768;
+Short numero_2 = -32768;
+
+//int numero_3 = 2147483647;
+Integer numero_3 = 2147483647;
+
+//long numero_4 = -9223372036854775808L;
+Long numero_4 = -9223372036854775808L;
+
+//float numero_5 = 3.4028235E38f;
+Float numero_5 = 3.4028235E38f;
+
+//double numero_6 = 1.7976931348623157E+308d;
+Double numero_6 = 1.7976931348623157E+308d;
+
+//char caracter = 'Đ';
+Character caracter = 'Đ';
+
+//boolean proposicion = true;
+Boolean proposicion = true;
+</code></pre>
+
+<h2 id="principales-metodos-usados-en-un-arraylist"><strong>Principales métodos usados en un <code>ArrayList</code>.</strong></h2>
+<h3 id="listaaddobject-obj"><strong><code>lista.add(Object obj)</code></strong></h3>
+<ul>
+<li>Añade un elemento.</li>
+</ul>
+<pre><code class="java">ArrayList&lt;String&gt; array_list = new ArrayList&lt;&gt;();
+
+array_list.add(&quot;Elemento agreado&quot;);
+
+System.out.println(array_list);
+
+// &gt;sout: [Elemento agreado]
+</code></pre>
+
+<p>ADD(N, "ELEMENTO 2")</p>
+<h3 id="listaaddindex-object-obj"><strong><code>lista.add(index, Object obj)</code></strong></h3>
+<ul>
+<li>Añade el elemento al ArrayList en la posición 'index'</li>
+</ul>
+<pre><code class="java">ArrayList&lt;String&gt; array_list = new ArrayList&lt;&gt;();
+
+array_list.add(&quot;Elemento agreado_1&quot;);
+array_list.add(&quot;Elemento agreado_2&quot;);
+array_list.add(0, &quot;Elemento agreado_3&quot;);
+
+System.out.println(array_list);
+
+// &gt;sout: [Elemento agreado_3, Elemento agreado_1, Elemento agreado_2]
+</code></pre>
+
+<h3 id="listasize"><strong><code>lista.size()</code></strong></h3>
+<ul>
+<li>Devuelve el numero de elementos del ArrayList</li>
+</ul>
+<pre><code class="java">ArrayList&lt;String&gt; array_list = new ArrayList&lt;&gt;();
+
+array_list.add(&quot;Elemento agreado_1&quot;);
+array_list.add(&quot;Elemento agreado_2&quot;);
+array_list.add(0, &quot;Elemento agreado_3&quot;);
+
+System.out.println(array_list.size());
+
+// &gt;sout: 3
+</code></pre>
+
+<h3 id="listagetn"><strong><code>lista.get(n)</code></strong></h3>
+<ul>
+<li>Devuelve el elemento que esta en la posición 'n' de la lista.</li>
+<li>Es el símil de <code>arreglo[n]</code>.</li>
+</ul>
+<pre><code class="java">ArrayList&lt;String&gt; array_list = new ArrayList&lt;&gt;();
+
+array_list.add(&quot;Elemento agreado_1&quot;);
+array_list.add(&quot;Elemento agreado_2&quot;);
+array_list.add(0, &quot;Elemento agreado_3&quot;);
+
+System.out.println(array_list.get(2));
+
+// &gt;sout: Elemento agreado_2
+</code></pre>
+
+<h3 id="listacontainsobject-obj"><strong><code>lista.contains(Object obj)</code></strong></h3>
+<ul>
+<li>Comprueba la existencia del elemento indicado en el </li>
+</ul>
+<pre><code class="java">ArrayList&lt;String&gt; array_list = new ArrayList&lt;&gt;();
+
+array_list.add(&quot;Elemento agreado_1&quot;);
+array_list.add(&quot;Elemento agreado_2&quot;);
+array_list.add(0, &quot;Elemento agreado_3&quot;);
+
+System.out.println(array_list.contains(&quot;Elemento agreado_1&quot;));
+
+//&gt;sout: true
+</code></pre>
+
+<h3 id="listaindexofobject-obj"><strong><code>lista.indexOf(Object obj)</code></strong></h3>
+<ul>
+<li>Devuelve la posición de la primera ocurrencia ('Elemento') en el ArrayList.</li>
+</ul>
+<pre><code class="java">ArrayList&lt;String&gt; array_list = new ArrayList&lt;&gt;();
+
+array_list.add(&quot;Elemento agreado_1&quot;);
+array_list.add(&quot;Elemento agreado_2&quot;);
+array_list.add(0, &quot;Elemento agreado_3&quot;);
+
+System.out.println(array_list.indexOf(&quot;Elemento agreado_3&quot;));
+
+//&gt;sout: 0
+</code></pre>
+
+<h3 id="listaremoveint-n"><strong><code>lista.remove(int n)</code></strong></h3>
+<ul>
+<li>Borra el elemento de la posición <code>n</code> del <code>ArrayList</code>.</li>
+</ul>
+<pre><code class="java">ArrayList&lt;String&gt; array_list = new ArrayList&lt;&gt;();
+
+array_list.add(&quot;Elemento agreado_1&quot;);
+array_list.add(&quot;Elemento agreado_1&quot;);
+array_list.add(&quot;Elemento agreado_2&quot;);
+array_list.add(0, &quot;Elemento agreado_3&quot;);
+
+array_list.remove(2);
+System.out.println(array_list);
+
+// &gt;sout: [Elemento agreado_3, Elemento agreado_1, Elemento agreado_2]
+</code></pre>
+
+<h3 id="listaremoveobject-obj"><strong><code>lista.remove(Object obj)</code></strong></h3>
+<ul>
+<li>Borra la primera ocurrencia del 'Elemento' que se le pasa como argumento.</li>
+</ul>
+<pre><code class="java">ArrayList&lt;String&gt; array_list = new ArrayList&lt;&gt;();
+
+array_list.add(&quot;Elemento agreado_1&quot;);
+array_list.add(&quot;Elemento agreado_1&quot;);
+array_list.add(&quot;Elemento agreado_2&quot;);
+array_list.add(0, &quot;Elemento agreado_3&quot;);
+
+array_list.remove(&quot;Elemento agreado_1&quot;);
+System.out.println(array_list);
+
+// &gt;sout: [Elemento agreado_3, Elemento agreado_1, Elemento agreado_2]
+</code></pre>
+
+<h3 id="listaclear"><strong><code>lista.clear()</code></strong></h3>
+<ul>
+<li>Borra todos los elementos de ArrayList.</li>
+</ul>
+<pre><code class="java">ArrayList&lt;String&gt; array_list = new ArrayList&lt;&gt;();
+
+array_list.add(&quot;Elemento agreado_1&quot;);
+array_list.add(&quot;Elemento agreado_1&quot;);
+array_list.add(&quot;Elemento agreado_2&quot;);
+array_list.add(0, &quot;Elemento agreado_3&quot;);
+
+array_list.clear();
+System.out.println(array_list);
+
+// &gt;sout: []
+</code></pre>
+
+<h3 id="listaisempty"><strong><code>lista.isEmpty()</code></strong></h3>
+<ul>
+<li>Devuelve True si el ArrayList esta vacío. Sino Devuelve <code>false</code>.</li>
+</ul>
+<pre><code class="java">ArrayList&lt;String&gt; array_list = new ArrayList&lt;&gt;();
+
+array_list.add(&quot;Elemento agreado_1&quot;);
+array_list.add(&quot;Elemento agreado_1&quot;);
+array_list.add(&quot;Elemento agreado_2&quot;);
+array_list.add(0, &quot;Elemento agreado_3&quot;);
+
+array_list.clear();
+System.out.println(array_list);
+
+// &gt;sout: []
+</code></pre>
+
+<h3 id="listaisempty_1"><strong><code>lista.isEmpty()</code></strong></h3>
+<ul>
+<li>Transforma una lista a un arreglo primitivo.</li>
+</ul>
+<pre><code class="java">ArrayList&lt;String&gt; array_list = new ArrayList&lt;&gt;();
+
+array_list.add(&quot;Elemento agreado_1&quot;);
+array_list.add(&quot;Elemento agreado_1&quot;);
+array_list.add(&quot;Elemento agreado_2&quot;);
+array_list.add(0, &quot;Elemento agreado_3&quot;);
+
+Object[] elementos = array_list.toArray(); 
+
+System.out.println(elementos.length);
+
+// &gt;sout: 4
+</code></pre>
+
+<h3 id="iterador"><strong>Iterador</strong></h3>
+<ul>
+<li>Sirve para poder recorrer de mejor forma un ArrayList</li>
+<li>Los Iteradores tienen tres métodos que son el <code>hasNext()</code> para comprobar que siguen quedando elementos en el iterador, el <code>next()</code> para que nos de el siguiente elemento del iterador; y el <code>remove()</code> que sirve para eliminar el elemento del Iterador.</li>
+</ul>
+<pre><code class="java">ArrayList&lt;String&gt; array_list = new ArrayList&lt;&gt;();
+
+array_list.add(&quot;Elemento agreado_1&quot;);
+array_list.add(&quot;Elemento agreado_1&quot;);
+array_list.add(&quot;Elemento agreado_2&quot;);
+array_list.add(0, &quot;Elemento agreado_3&quot;);
+
+// Declaramos el Iterador e imprimimos los Elementos del ArrayList
+Iterator&lt;string&gt; nombreIterator = array_list.iterator();
+while(nombreIterator.hasNext()){
+        String elemento = nombreIterator.next();
+        System.out.print(elemento + &quot; / &quot;);
+}
+
+// &gt;sout: Elemento agreado_3 / Elemento agreado_1 / Elemento agreado_1 / Elemento agreado_2 /
+</code></pre>
+
+<h2 id="clase-collections-y-sus-metodos-estaticos"><strong>Clase <code>Collections</code> y sus métodos estáticos.</strong></h2>
+<ul>
+<li>Hay que tener cuidado al realizar estas operaciones, ya que se modifica el arreglo, no crea una copia para retornar.</li>
+<li>Esta clase posee métodos especiales, que trabajan sobre listas.</li>
+<li>Aunque parezca que es <code>Collections</code> quien posee la implementación de <code>Sort</code> es el mismo <code>ArrayList</code>, lo que hace <code>Collection</code> es ejecutar <code>list.sort()</code>, donde <code>list</code> es el argumento entregado a `Collections.sort(ACÁ). Entonces se concluye lo siguiente:<ul>
+<li><code>ArrayList</code> debe implementar el método <code>sort()</code>, es decir que <code>ArrayList</code>, implementa los métodos que componen la interfaz de <code>List</code>, lo que sabemos que es verdad, es decir que <code>ArrayList</code>, es un tipo <code>List</code>.</li>
+</ul>
+</li>
+<li>Se ejemplifica esto con el el método <code>Sort()</code>. Pero aplica a otros, se muestra como una anécdota de las implementaciones más utilizadas en el mundo, utilizando la técnica del polimorfismo. Como lo sería la <code>api collections</code></li>
+</ul>
+<pre><code class="java">package cl.lherrera.java004;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class Principal {
+
+    public static void main(String[] args) {
+        ArrayList&lt;String&gt; nombres = new ArrayList&lt;&gt;();
+        nombres.add(&quot;Hugo&quot;);
+        nombres.add(&quot;Paco&quot;);
+        nombres.add(&quot;Luis&quot;);
+
+        //nombres.sort(null); // esto es lo que se ejecuta realmente
+        // en este caso podemos hacerlo directo, pero es más seguro
+        // hacerlo por Collections, ya que este método es el diseñado para
+        // ejecutar lo que se deba para realizar la operación que se ordene.
+        Collections.sort(nombres);
+
+        System.out.print(nombres); 
+    }
+}
+
+</code></pre>
+
+<h3 id="collectionssortcoleccion"><strong><code>Collections.sort(colección);</code></strong></h3>
+<ul>
+<li>El método sort() , nos permite ordenar la lista de manera ascendente. En el caso de los Strings, los
+ordena comparando carácter a carácter.</li>
+</ul>
+<pre><code class="java">ArrayList&lt;String&gt; paises = new ArrayList&lt;String&gt;();
+paises.add(&quot;Chile&quot;);
+paises.add(&quot;Argentina&quot;);
+paises.add(&quot;Colombia&quot;);
+paises.add(&quot;Perú&quot;);
+paises.add(&quot;Venezuela&quot;);
+Collections.sort(paises);
+System.out.println(paises); //[Argentina, Chile, Colombia, Perú, Venezuela]
+</code></pre>
+
+<ul>
+<li>Si no queremos que ordenen en diferentes grupos las mayúsculas y las minúsculas, debemos agregar un parámetro extra.</li>
+</ul>
+<pre><code class="java">Collections.sort(paises,String.CASE_INSENSITIVE_ORDER);
+</code></pre>
+
+<h3 id="collectionsreversecoleccion"><strong><code>Collections.reverse(colección);</code></strong></h3>
+<ul>
+<li>Invierte el orden de los elementos de una colección.</li>
+</ul>
+<pre><code class="java">ArrayList&lt;String&gt; paises = new ArrayList&lt;String&gt;();
+paises.add(&quot;Chile&quot;);
+paises.add(&quot;Argentina&quot;);
+paises.add(&quot;Colombia&quot;);
+paises.add(&quot;Perú&quot;);
+paises.add(&quot;Venezuela&quot;);
+Collections.reverse(paises);
+System.out.println(paises);
+
+// [Venezuela, Perú, Colombia, chile, Chile, Argentina] 
+</code></pre>
+
+<h3 id="collectionsminnumeros-collectionsmaxnumeros"><strong><code>Collections.min(numeros)</code>, <code>Collections.max(numeros)</code></strong></h3>
+<ul>
+<li>Determina el mínimo y máximo de una colección.</li>
+</ul>
+<pre><code class="java">ArrayList&lt;Integer&gt; numeros = new ArrayList&lt;Integer&gt;(); numeros.add(5); 
+numeros.add(1); 
+numeros.add(4); 
+numeros.add(1); 
+numeros.add(2); 
+numeros.add(6); 
+System.out.println(Collections.min(numeros)); //1 
+System.out.println(Collections.max(numeros)); //6
+</code></pre>
+
+<h3 id="collectionsfrequencycolecion-elemento"><strong><code>Collections.frequency(coleción, elemento)</code></strong></h3>
+<ul>
+<li>Si queremos saber cuántas veces existe la ocurrencia de un elemento en el ArrayList, podemos usar el método <code>frequency()</code> .</li>
+</ul>
+<pre><code class="java">ArrayList&lt;Integer&gt; numeros = new ArrayList&lt;Integer&gt;(); numeros.add(5); 
+numeros.add(1); 
+numeros.add(4); 
+numeros.add(1); 
+numeros.add(2); 
+numeros.add(6); 
+System.out.println(Collections.frequency(numeros, 1)); //2
+// el elemento 1 se repite dos veces.
+</code></pre>
+
+<h3 id="collectionsshufflenumeros"><strong><code>Collections.shuffle(numeros);</code></strong></h3>
+<ul>
+<li>Intercambia "aleatoreamente" las posiciones de los elementos de una colección.</li>
+</ul>
+<pre><code class="java">ArrayList&lt;Integer&gt; numeros = new ArrayList&lt;Integer&gt;(); numeros.add(5); 
+numeros.add(1); 
+numeros.add(4); 
+numeros.add(1); 
+numeros.add(2); 
+numeros.add(6); 
+Collections.shuffle(numeros);
+// [6, 5, 1, 4, 1, 2] // este resultado puede cambiar por que es aleatoreo.
+</code></pre>
+
+<h2 id="arraysaslist"><code>Arrays.asList()</code></h2>
+<ul>
+<li>Retorna, una lista, de tamaño fijo, apoyada en un arreglo nativo dado.(Cambiando a una <code>List</code> retornada). Es decir, que la clase <code>Arrays</code>, posee un método:</li>
+</ul>
+<pre><code>public static &lt;T&gt; List&lt;T&gt; asList(T... a) {
+    return new ArrayList&lt;&gt;(a);
+}
+</code></pre>
+
+<p>Retorna un <code>new ArrayList&lt;&gt;(a);</code> pero uno interno, no nuestro <code>ArrayList</code>, Es por asuntos de optimización. Finalmente retorna la interfaz, que es una lista que será tratada como un <code>ArrayList</code> de los nuestros. Es por este motivo que no se puede hacer:</p>
+<pre><code>ArrayList&lt;&gt; lista = new ArrayList(Arrays.asList(...))
+
+// y no 
+
+ArrayList&lt;&gt; lista = (ArrayList) Arrays.asList(...)
+
+// en realidad no es un ArratList de .util es de Collections...
+</code></pre>
+
+<p>Ejemplo</p>
+<pre><code class="java">package cl.lherrera.java004;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class Principal {
+
+    public static void main(String[] args) {
+
+        // no usar el primitivo, para trabajar con listas de Collections
+        // al momento de hacerlo entonces el asLis falla.
+//      int[] numeros = {1, 2, 3, 4};
+        Integer[] numeros = {1, 2, 3, 4};
+
+        ArrayList&lt;Integer&gt; ejemplo = new ArrayList&lt;&gt;(Arrays.asList(numeros)); 
+        System.out.println(ejemplo);
+    }
+}
+
+</code></pre>
+
+<p>Y bueno, la idea que retorne una lista es que la usemos, lo que hace que que sea una implementación más abstracta; pero más limpia y clara.</p>
+<pre><code class="java">package cl.lherrera.java004;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class Principal {
+
+    public static void main(String[] args) {
+        Integer[] numeros = {1, 2, 3, 4};
+
+        List&lt;Integer&gt; ejemplo = Arrays.asList(numeros); 
+        System.out.println(ejemplo);
+    }
+}
+
+</code></pre>
+
+<h4 id="ejemplo-transformar-los-datos-de-un-arreglo"><strong>Ejemplo: Transformar los datos de un arreglo.</strong></h4>
+<ul>
+<li>Simulando un ingreso de un usuario en una cadena, debemos pasar todos sus elementos a enteros para poder trabajarlo de mejor forma.</li>
+</ul>
+<pre><code class="java">package cl.lherrera.java004;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class Principal {
+
+    public static void main(String[] args) {
+        String[] numeros = {&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;};
+
+        List&lt;String&gt; cadenas = Arrays.asList(numeros);
+
+        List&lt;Integer&gt; enteros = new ArrayList&lt;&gt;();
+
+
+        for(String cadena: cadenas) {
+            enteros.add(Integer.parseInt(cadena));
+        }
+
+        System.out.println(enteros);
+    }
+}
+
+</code></pre>
+
+<ul>
+<li>Un poco más funcional</li>
+</ul>
+<pre><code class="java">package cl.lherrera.java004;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class Principal {
+
+    public static void main(String[] args) {
+        String[] numeros = {&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;};
+
+        List&lt;String&gt; cadenas = Arrays.asList(numeros);
+
+        List&lt;Integer&gt; enteros = cadenas.stream()
+            .map(Integer::parseInt)
+            .collect(Collectors.toList()); 
+
+        System.out.println(enteros);
+    }
+}
+</code></pre>
+
+<h4 id="ejemplo-aumentar-elementos"><strong>Ejemplo: Aumentar elementos</strong></h4>
+<ul>
+<li>Implementar un método en <code>Java</code>, que reciba un arreglo de enteros y retorne un arreglo con los elementos aumentados al doble.</li>
+</ul>
+<p>Solución</p>
+<pre><code class="java">package cl.lherrera.java004;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+
+public class Principal {
+
+    public static void main(String[] args) {
+        String[] numeros = {&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;};
+
+        List&lt;String&gt; cadenas = Arrays.asList(numeros);
+
+        System.out.println(&quot;Entrada: &quot; + cadenas);
+
+        List&lt;Integer&gt; enteros = new ArrayList&lt;&gt;();
+
+        for(String cadena: cadenas)
+            enteros.add(Integer.parseInt(cadena) * 2);
+
+        System.out.println(&quot;Salida: &quot; + enteros);
+    }
+}
+</code></pre>
+
+<p><code>Output</code></p>
+<pre><code>Entrada: [1, 2, 3, 4]
+Salida: [2, 4, 6, 8]
+</code></pre>
+
+<p>Usando <code>.map()</code>.</p>
+<pre><code class="java">package cl.lherrera.java004;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
+
+public class Principal {
+
+    public static void main(String[] args) {
+        String[] numeros = {&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;};
+
+        List&lt;String&gt; cadenas = Arrays.asList(numeros);
+
+        System.out.println(&quot;Entrada: &quot; + cadenas);
+
+        List&lt;Integer&gt; enteros =  cadenas.stream()
+            .map(cadena -&gt; (Integer.parseInt(cadena) * 2))
+            .collect(Collectors.toList());
+
+        System.out.println(&quot;Salida: &quot; + enteros);
+    }
+}
+</code></pre>
+
+<h3 id="ejemplo-de-todo-un-poco-en-una-lista-map-filter"><strong>Ejemplo: De todo un poco en una lista. (<code>map, filter</code>)</strong></h3>
+<p>Transformar al doble, filtrar e imprimir cada elemento de un arreglo dado.</p>
+<p>Solución</p>
+<pre><code class="java">package cl.lherrera.java004;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class Principal {
+
+    public static void main(String[] args) {
+        String[] numeros = { &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot; };
+
+        List&lt;String&gt; cadenas = Arrays.asList(numeros);
+
+        System.out.println(&quot;Entrada: &quot; + cadenas);
+
+        // Pasando las cadenas a enteros
+        List&lt;Integer&gt; enteros = new ArrayList&lt;&gt;();
+        for (String cadena : cadenas)
+            enteros.add(Integer.parseInt(cadena));
+
+        // Aumentando cada elemento al doble
+        List&lt;Integer&gt; enterosDobles = new ArrayList&lt;&gt;();
+        for (Integer entero : enteros)
+            enterosDobles.add(entero * 2);
+
+        // filtrando los mayores a 3
+        List&lt;Integer&gt; enterosDoblesMayoresATres = new ArrayList&lt;&gt;();
+        for (Integer enteroDoble : enterosDobles) {
+            if (enteroDoble &gt; 3)
+                enterosDoblesMayoresATres.add(enteroDoble);
+        }
+
+        for (Integer resultado : enterosDoblesMayoresATres)
+            System.out.println(resultado);
+
+    }
+}
+
+</code></pre>
+
+<p>Output</p>
+<pre><code>Entrada: [1, 2, 3, 4]
+4
+6
+8
+</code></pre>
+
+<ul>
+<li>Usando programación funcional, la razón por que Java 1.8, es suficiente hasta ahora.</li>
+<li>Se puede observar una mayor limpieza en el código.</li>
+</ul>
+<pre><code class="java">package cl.lherrera.java004;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class Principal {
+
+    public static void main(String[] args) {
+        String[] numeros = {&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;};
+
+        List&lt;String&gt; cadenas = Arrays.asList(numeros);
+
+        System.out.println(&quot;Entrada: &quot; + cadenas);
+
+        cadenas.stream()
+            .map(Integer::parseInt)
+            .map(entero -&gt; entero * 2)
+            .filter(entero -&gt; entero &gt; 3)
+            .forEach(System.out::println);
+
+    }
+}
+</code></pre>
+
+<h3 id="ejemplo-sumatoria-reduce"><strong><em>Ejemplo: Sumatoria (<code>reduce</code>).</em></strong></h3>
+<ul>
+<li>Cuando trabajamos con una colección de datos, que son la base de la comunicación existente en la web, tenemos que, transformar, filtrar y ademas, en ocaciones, obtener resultados, como formar una palabra o la suma de todos los elementos.</li>
+<li>Tomemos el ejemplo anterior y obtengamos el resultado de la suma de todos sus elementos.</li>
+</ul>
+<p>Solución</p>
+<pre><code class="java">package cl.lherrera.java004;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class Principal {
+
+    public static void main(String[] args) {
+        String[] numeros = { &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot; };
+
+        List&lt;String&gt; cadenas = Arrays.asList(numeros);
+
+        System.out.println(&quot;Entrada: &quot; + cadenas);
+
+        // Pasando las cadenas a enteros
+        List&lt;Integer&gt; enteros = new ArrayList&lt;&gt;();
+        for (String cadena : cadenas)
+            enteros.add(Integer.parseInt(cadena));
+
+        // Aumentando cada elemento al doble
+        List&lt;Integer&gt; enterosDobles = new ArrayList&lt;&gt;();
+        for (Integer entero : enteros)
+            enterosDobles.add(entero * 2);
+
+        // filtrando los mayores a 3
+        List&lt;Integer&gt; enterosDoblesMayoresATres = new ArrayList&lt;&gt;();
+        for (Integer enteroDoble : enterosDobles) {
+            if (enteroDoble &gt; 3)
+                enterosDoblesMayoresATres.add(enteroDoble);
+        }
+
+        int suma = 0;
+
+        for (Integer resultado : enterosDoblesMayoresATres)
+            suma += resultado;
+
+        System.out.println(&quot;Salida: &quot; + enterosDoblesMayoresATres);
+        System.out.println(suma);
+
+    }
+}
+
+</code></pre>
+
+<ul>
+<li>Funcionalmente, utilizando <code>Streams().reduce((a, b) -&gt; proceso, valorInicialAcumulador)</code></li>
+</ul>
+<pre><code class="java">package cl.lherrera.java004;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class Principal {
+
+    public static void main(String[] args) {
+        String[] numeros = {&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;};
+
+        List&lt;String&gt; cadenas = Arrays.asList(numeros);
+
+        System.out.println(&quot;Entrada: &quot; + cadenas);
+
+        cadenas.stream()
+            .map(Integer::parseInt)
+            .map(entero -&gt; entero * 2)
+            .filter(entero -&gt; entero &gt; 3)
+            .reduce((a, b) -&gt; a + b)
+            .ifPresent(System.out::println);
+    }
+}
+
+</code></pre>
+
+<ul>
+<li>
+<p>Si le damos un valor inicial al acumulador, entonces el retorno ya no será un <code>Optional</code> si no que será del tipo del valor inicial, ya que si nada le llega, al menos tendrá el valor inicial; pero esto implica no poder ejecutar el <code>isPresent</code> ya que para el caso del ejemplo <code>Integer</code> no implementa este método; pero <code>Optional</code> si.</p>
+</li>
+<li>
+<p>Veamos como sería con un valor <code>incializado</code>.</p>
+</li>
+</ul>
+<pre><code class="java">package cl.lherrera.java004;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class Principal {
+
+    public static void main(String[] args) {
+        String[] numeros = {&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;};
+
+        List&lt;String&gt; cadenas = Arrays.asList(numeros);
+
+        System.out.println(&quot;Entrada: &quot; + cadenas);
+
+        Integer suma = cadenas.stream()
+            .map(Integer::parseInt)
+            .map(entero -&gt; entero * 2)
+            .filter(entero -&gt; entero &gt; 3)
+            .reduce(0, (a, b) -&gt; a + b);
+
+        System.out.println(&quot;suma total: &quot; + suma);
+
+    }
+}
+
+</code></pre>
+
+<p>Output</p>
+<pre><code>Entrada: [1, 2, 3, 4]
+suma total: 18
+</code></pre>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../assets/javascripts/vendor.a0c4167b.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.fb26dd1d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../../assets/javascripts/worker/search.37585f48.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

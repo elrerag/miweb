@@ -1,0 +1,1183 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.6">
+    
+    
+      
+        <title>Lectura002 004 - Java Full Stack Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.4b9ffd7b.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#unidad-324-modelo" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../../.." title="Java Full Stack Docs" class="md-header-nav__button md-logo" aria-label="Java Full Stack Docs">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Java Full Stack Docs
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Lectura002 004
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Java Full Stack Docs" class="md-nav__button md-logo" aria-label="Java Full Stack Docs">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Java Full Stack Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../ejercicios/repaso/teoria/poo/herencia/" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#3241-creando-resultados-paginados" class="md-nav__link">
+    3.2.4.1 Creando resultados paginados
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2.4.1 Creando resultados paginados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#archivos-modificados" class="md-nav__link">
+    Archivos modificados
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pomxml" class="md-nav__link">
+    pom.xml
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#srcmainjavacllherrerajpaspring" class="md-nav__link">
+    src/main/java/cl/lherrera/jpaspring/
+  </a>
+  
+    <nav class="md-nav" aria-label="src/main/java/cl/lherrera/jpaspring/">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#controllers" class="md-nav__link">
+    /controllers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dtos" class="md-nav__link">
+    /dtos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entities" class="md-nav__link">
+    /entities
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repositories" class="md-nav__link">
+    /repositories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#services" class="md-nav__link">
+    /services
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#srcmainresources" class="md-nav__link">
+    src/main/resources
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#srcmainwebappweb-infpagespersonas" class="md-nav__link">
+    src/main/webapp/WEB-INF/pages/personas
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <blockquote>
+<h1 id="unidad-324-modelo"><strong>Unidad 3.2.4 - Modelo</strong></h1>
+<blockquote>
+<ul>
+<li>La siguiente aplicación será finalmente un mantenedor de personas, con un control de acceso de usuarios.</li>
+<li>La aplicación contendrá 5 Hitos.</li>
+<li>Hito 4: Aprendiendo a paginar los resultados.</li>
+</ul>
+</blockquote>
+</blockquote>
+<hr />
+<p><br /></p>
+<blockquote>
+<h2 id="3241-creando-resultados-paginados"><strong>3.2.4.1 Creando resultados paginados</strong></h2>
+</blockquote>
+<p>En diferentes ocaciones, podremos usar algún componente como <code>datatable</code> de <code>javascript</code> para poder crear tablas de resultados, pero vamos a aprender a diseñarla personalizadamente con <code>Java y Spring</code>.</p>
+<h3 id="archivos-modificados"><strong>Archivos modificados</strong></h3>
+<pre><code>basedatos.db
+pom.xml
+src/main/java/cl/lherrera/jpaspring/JpaspringApplication.java
+src/main/java/cl/lherrera/jpaspring/SQLiteDialect.java
+src/main/java/cl/lherrera/jpaspring/controllers/PersonaController.java
+src/main/java/cl/lherrera/jpaspring/dtos/PersonaDTO.java
+src/main/java/cl/lherrera/jpaspring/entities/Persona.java
+src/main/java/cl/lherrera/jpaspring/repositories/PersonaRepo.java
+src/main/java/cl/lherrera/jpaspring/services/PersonaService.java
+src/main/java/cl/lherrera/jpaspring/services/PersonaServiceImpl.java
+src/main/resources/application.properties
+src/main/webapp/WEB-INF/pages/personas/personas.jsp
+</code></pre>
+
+<h3 id="pomxml"><strong><code>pom.xml</code></strong></h3>
+<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;
+    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+    xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+    &lt;parent&gt;
+        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;
+        &lt;version&gt;2.2.6.RELEASE&lt;/version&gt;
+        &lt;relativePath /&gt; &lt;!-- lookup parent from repository --&gt;
+    &lt;/parent&gt;
+    &lt;groupId&gt;cl.lherrera.jpaspring&lt;/groupId&gt;
+    &lt;artifactId&gt;jpaspring&lt;/artifactId&gt;
+    &lt;version&gt;20.0.0&lt;/version&gt;
+    &lt;packaging&gt;war&lt;/packaging&gt;
+    &lt;name&gt;jpaspring&lt;/name&gt;
+    &lt;description&gt;proyecto JPA SQLITE&lt;/description&gt;
+
+    &lt;properties&gt;
+        &lt;java.version&gt;1.8&lt;/java.version&gt;
+    &lt;/properties&gt;
+
+    &lt;dependencies&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-data-jpa&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-tomcat&lt;/artifactId&gt;
+            &lt;scope&gt;provided&lt;/scope&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;
+            &lt;scope&gt;test&lt;/scope&gt;
+            &lt;exclusions&gt;
+                &lt;exclusion&gt;
+                    &lt;groupId&gt;org.junit.vintage&lt;/groupId&gt;
+                    &lt;artifactId&gt;junit-vintage-engine&lt;/artifactId&gt;
+                &lt;/exclusion&gt;
+            &lt;/exclusions&gt;
+        &lt;/dependency&gt;
+        &lt;!-- SOPORTE ARCHIVOS JSP --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.apache.tomcat.embed&lt;/groupId&gt;
+            &lt;artifactId&gt;tomcat-embed-jasper&lt;/artifactId&gt;
+            &lt;scope&gt;provided&lt;/scope&gt;
+        &lt;/dependency&gt;
+        &lt;!-- SOPORTE ARCHIVOS JSP # --&gt;
+
+        &lt;!-- JSTL --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;javax.servlet&lt;/groupId&gt;
+            &lt;artifactId&gt;jstl&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;javax.servlet&lt;/groupId&gt;
+            &lt;artifactId&gt;javax.servlet-api&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;!-- JSTL # --&gt;
+
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.xerial&lt;/groupId&gt;
+            &lt;artifactId&gt;sqlite-jdbc&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+
+    &lt;/dependencies&gt;
+
+    &lt;build&gt;
+        &lt;plugins&gt;
+            &lt;plugin&gt;
+                &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+                &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;
+            &lt;/plugin&gt;
+        &lt;/plugins&gt;
+    &lt;/build&gt;
+
+&lt;/project&gt;
+
+</code></pre>
+
+<h3 id="srcmainjavacllherrerajpaspring"><code>src/main/java/cl/lherrera/jpaspring/</code></h3>
+<p><code>JpaspringApplication.java</code></p>
+<p>Sin modificaciones, la comentada es para ejecutar operaciones antes que se ejecute la aplicación.</p>
+<pre><code class="java">package cl.lherrera.jpaspring;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.boot.CommandLineRunner;
+
+
+
+@SpringBootApplication
+public class JpaspringApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(JpaspringApplication.class, args);
+    }
+
+//  @Bean
+//  public CommandLineRunner demo(PersonaServiceImpl servicio) {
+//      return (args) -&gt; {
+//           servicio.obtenerPersonasPaginadas(0, 3);
+//      };
+//  }
+
+}
+
+</code></pre>
+
+<p><code>/SQLiteDialect.java</code></p>
+<p>Esto ya estaba solucionado, pero <code>prosaicos</code> lo pongo.</p>
+<pre><code class="java">package cl.lherrera.jpaspring;
+
+import java.sql.Types;
+
+import org.hibernate.dialect.Dialect;
+import org.hibernate.dialect.function.StandardSQLFunction;
+import org.hibernate.dialect.function.SQLFunctionTemplate;
+import org.hibernate.dialect.function.VarArgsSQLFunction;
+import org.hibernate.type.StandardBasicTypes;
+import org.hibernate.Hibernate;
+
+public class SQLiteDialect extends Dialect {
+  public SQLiteDialect() {
+    super();
+    registerColumnType(Types.BIT, &quot;integer&quot;);
+    registerColumnType(Types.TINYINT, &quot;tinyint&quot;);
+    registerColumnType(Types.SMALLINT, &quot;smallint&quot;);
+    registerColumnType(Types.INTEGER, &quot;integer&quot;);
+    registerColumnType(Types.BIGINT, &quot;bigint&quot;);
+    registerColumnType(Types.FLOAT, &quot;float&quot;);
+    registerColumnType(Types.REAL, &quot;real&quot;);
+    registerColumnType(Types.DOUBLE, &quot;double&quot;);
+    registerColumnType(Types.NUMERIC, &quot;numeric&quot;);
+    registerColumnType(Types.DECIMAL, &quot;decimal&quot;);
+    registerColumnType(Types.CHAR, &quot;char&quot;);
+    registerColumnType(Types.VARCHAR, &quot;varchar&quot;);
+    registerColumnType(Types.LONGVARCHAR, &quot;longvarchar&quot;);
+    registerColumnType(Types.DATE, &quot;date&quot;);
+    registerColumnType(Types.TIME, &quot;time&quot;);
+    registerColumnType(Types.TIMESTAMP, &quot;timestamp&quot;);
+    registerColumnType(Types.BINARY, &quot;blob&quot;);
+    registerColumnType(Types.VARBINARY, &quot;blob&quot;);
+    registerColumnType(Types.LONGVARBINARY, &quot;blob&quot;);
+    // registerColumnType(Types.NULL, &quot;null&quot;);
+    registerColumnType(Types.BLOB, &quot;blob&quot;);
+    registerColumnType(Types.CLOB, &quot;clob&quot;);
+    registerColumnType(Types.BOOLEAN, &quot;integer&quot;);
+
+    registerFunction(&quot;concat&quot;, new VarArgsSQLFunction(StandardBasicTypes.STRING, &quot;&quot;,
+        &quot;||&quot;, &quot;&quot;));
+    registerFunction(&quot;mod&quot;, new SQLFunctionTemplate(StandardBasicTypes.INTEGER,
+        &quot;?1 % ?2&quot;));
+    registerFunction(&quot;substr&quot;, new StandardSQLFunction(&quot;substr&quot;,
+            StandardBasicTypes.STRING));
+    registerFunction(&quot;substring&quot;, new StandardSQLFunction(&quot;substr&quot;,
+            StandardBasicTypes.STRING));
+  }
+
+  public boolean supportsIdentityColumns() {
+    return true;
+  }
+
+  public boolean hasDataTypeInIdentityColumn() {
+    return false; // As specify in NHibernate dialect
+  }
+
+  public String getIdentityColumnString() {
+    // return &quot;integer primary key autoincrement&quot;;
+    return &quot;integer&quot;;
+  }
+
+  public String getIdentitySelectString() {
+    return &quot;select last_insert_rowid()&quot;;
+  }
+
+  public boolean supportsLimit() {
+    return true;
+  }
+
+  public String getLimitString(String query, boolean hasOffset) {
+    return new StringBuffer(query.length() + 20).append(query).append(
+        hasOffset ? &quot; limit ? offset ?&quot; : &quot; limit ?&quot;).toString();
+  }
+
+  public boolean bindLimitParametersInReverseOrder() {
+    return true;
+  }
+
+  public boolean supportsTemporaryTables() {
+    return true;
+  }
+
+  public String getCreateTemporaryTableString() {
+    return &quot;create temporary table if not exists&quot;;
+  }
+
+  public boolean dropTemporaryTableAfterUse() {
+    return false;
+  }
+
+  public boolean supportsCurrentTimestampSelection() {
+    return true;
+  }
+
+  public boolean isCurrentTimestampSelectStringCallable() {
+    return false;
+  }
+
+  public String getCurrentTimestampSelectString() {
+    return &quot;select current_timestamp&quot;;
+  }
+
+  public boolean supportsUnionAll() {
+    return true;
+  }
+
+  public boolean hasAlterTable() {
+    return false; // As specify in NHibernate dialect
+  }
+
+  public boolean dropConstraints() {
+    return false;
+  }
+
+  public String getAddColumnString() {
+    return &quot;add column&quot;;
+  }
+
+  public String getForUpdateString() {
+    return &quot;&quot;;
+  }
+
+  public boolean supportsOuterJoinForUpdate() {
+    return false;
+  }
+
+  public String getDropForeignKeyString() {
+    throw new UnsupportedOperationException(
+        &quot;No drop foreign key syntax supported by SQLiteDialect&quot;);
+  }
+
+  public String getAddForeignKeyConstraintString(String constraintName,
+      String[] foreignKey, String referencedTable, String[] primaryKey,
+      boolean referencesPrimaryKey) {
+    throw new UnsupportedOperationException(
+        &quot;No add foreign key syntax supported by SQLiteDialect&quot;);
+  }
+
+  public String getAddPrimaryKeyConstraintString(String constraintName) {
+    throw new UnsupportedOperationException(
+        &quot;No add primary key syntax supported by SQLiteDialect&quot;);
+  }
+
+  public boolean supportsIfExistsBeforeTableName() {
+    return true;
+  }
+
+  public boolean supportsCascadeDelete() {
+    return false;
+  }
+}
+</code></pre>
+
+<h4 id="controllers"><code>/controllers</code></h4>
+<p><code>/PersonaController.java</code></p>
+<pre><code class="java">package cl.lherrera.jpaspring.controllers;
+
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import cl.lherrera.jpaspring.dtos.PersonaDTO;
+import cl.lherrera.jpaspring.entities.Persona;
+import cl.lherrera.jpaspring.services.PersonaService;
+
+@Controller
+@RequestMapping(&quot;/personas&quot;)
+public class PersonaController {
+    private static final Logger logger = LoggerFactory.getLogger(PersonaController.class);
+    private static final Integer FILAS_POR_PAGINA = 3;
+
+    @Autowired
+    PersonaService servicio;
+
+    @GetMapping(&quot;/ingresar&quot;)
+    @ResponseStatus(code = HttpStatus.OK)
+    public String inicio(
+            Model modelo, 
+            @RequestParam(required = false) Integer pagina) {
+
+        logger.info(&quot;Petición: /personas/ingresar&quot;);
+        // si no viene la página, se simula la primera, el método PageRequest.of(pagina
+        // pide que la primera sea cero; pero esto es manejado por el servicio
+        // en el controlador sabemos que la primera página es la 1, si esto no es
+        // así, el servicio lo debe manejar
+        if(pagina == null)
+            pagina = 1;
+
+        PersonaDTO dtoPersona = servicio.obtenerPersonasPaginadas(pagina, FILAS_POR_PAGINA);
+
+        modelo.addAttribute(&quot;dtoPersona&quot;, dtoPersona);
+        // si no hay más de una página, no es necesario paginar
+        modelo.addAttribute(&quot;paginar&quot;, dtoPersona.getPaginas().size() &gt; 1);
+        return &quot;personas/personas&quot;;
+    }
+
+//  @ResponseStatus(code = HttpStatus.CREATED) // con esto no funciona el redirect
+    @PostMapping(&quot;/ingresar&quot;)
+    public String ingresar(
+            @ModelAttribute(&quot;foo&quot;) Persona persona,
+            @RequestParam String nombre, 
+            RedirectAttributes attributes) {
+        logger.info(&quot;Petición post /ingresar&quot;);
+
+        // sin usar el retorno aún
+        Persona respuesta = servicio.IngresarPersona(persona);
+
+        if(persona == null) 
+            logger.error(&quot;error en ingreso de persona&quot;);
+
+
+        return &quot;redirect:ingresar&quot;;
+    }
+
+    @GetMapping(&quot;/actualizar&quot;)
+    public String actualizar(
+            Model modelo, 
+            @RequestParam String id) {
+        logger.info(&quot;Petición-GET: /actualizar&quot;);
+
+        Persona persona = servicio.encontrarPersona(Integer.parseInt(id));
+        modelo.addAttribute(&quot;persona&quot;, persona);
+
+        return &quot;personas/actualizar&quot;;
+    }
+
+    // el formulario debe estar completo con los names, para que lo
+    // reconozca como la misma entidad y no una nueva
+    @PostMapping(&quot;/actualizar&quot;)
+    public String doActualizar(@ModelAttribute(&quot;foo&quot;) Persona persona) {
+        logger.info(&quot;Petición-POST: /actualizar&quot;);
+        servicio.actualizarPersona(persona);
+        return &quot;redirect:ingresar&quot;;
+    }
+
+    @GetMapping(&quot;/eliminar&quot;)
+    public String eliminar(
+            Model modelo, 
+            @RequestParam String id) {
+        logger.info(&quot;Petición-GET: /eliminar&quot;);
+        Persona persona = servicio.encontrarPersona(Integer.parseInt(id));
+        modelo.addAttribute(&quot;persona&quot;, persona);
+
+        return &quot;personas/eliminar&quot;;
+    }
+
+    @PostMapping(&quot;/eliminar&quot;)
+    public String doEliminar(
+            @ModelAttribute(&quot;foo&quot;) Persona persona,
+            @RequestParam String id) {
+        logger.info(&quot;Petición-POST: /eliminar&quot;);
+        Persona respuesta = servicio.eliminarPersona(persona);
+        if(respuesta == null)
+            logger.info(&quot;Petición-POST: /eliminar&quot;);    
+
+        return &quot;redirect:ingresar&quot;;
+    }
+
+}
+
+</code></pre>
+
+<h4 id="dtos"><code>/dtos</code></h4>
+<p><code>PersonaDTO.java</code></p>
+<pre><code class="java">package cl.lherrera.jpaspring.dtos;
+
+import java.util.List;
+
+import cl.lherrera.jpaspring.entities.Persona;
+
+public class PersonaDTO {
+
+    private List&lt;Persona&gt; personas;
+    private List&lt;Integer&gt; paginas;
+    private Integer paginaActual;
+
+    public List&lt;Persona&gt; getPersonas() {
+        return personas;
+    }
+
+    public void setPersonas(List&lt;Persona&gt; personas) {
+        this.personas = personas;
+    }
+
+    public List&lt;Integer&gt; getPaginas() {
+        return paginas;
+    }
+
+    public void setPaginas(List&lt;Integer&gt; paginas) {
+        this.paginas = paginas;
+    }
+
+    public Integer getPaginaActual() {
+        return paginaActual;
+    }
+
+    public void setPaginaActual(Integer paginaActual) {
+        this.paginaActual = paginaActual;
+    }
+
+    @Override
+    public String toString() {
+        return &quot;PersonaDTO [personas=&quot; + personas + &quot;, paginas=&quot; + paginas + &quot;, paginaActual=&quot; + paginaActual + &quot;]&quot;;
+    }
+
+}
+
+</code></pre>
+
+<h4 id="entities"><code>/entities</code></h4>
+<p><code>/Persona.java</code></p>
+<pre><code class="java">package cl.lherrera.jpaspring.entities;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Persona {
+
+    @Id
+    @GeneratedValue(strategy=GenerationType.AUTO) // https://www.objectdb.com/java/jpa/entity/generated
+    private Integer id;
+    private String nombre;
+
+    public Persona() {}
+
+    public Persona(Integer id, String nombre) {
+        this.id = id;
+        this.nombre = nombre;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    @Override
+    public String toString() {
+        return &quot;Persona [id=&quot; + id + &quot;, nombre=&quot; + nombre + &quot;]&quot;;
+    }
+
+}
+
+</code></pre>
+
+<h4 id="repositories"><code>/repositories</code></h4>
+<p><code>/PersonaRepo.java</code></p>
+<pre><code class="java">package cl.lherrera.jpaspring.repositories;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.PagingAndSortingRepository;
+
+import cl.lherrera.jpaspring.entities.Persona;
+
+public interface PersonaRepo 
+    extends JpaRepository&lt;Persona, Integer&gt;,
+        PagingAndSortingRepository&lt;Persona, Integer&gt; {
+
+    /**
+     * Se puede parecer mucho a una consulta en la base de datos pero es una
+     * consulta al modelo, la respuesta es un @Entity. por eso la &quot;tabla&quot; está en
+     * mayúsculas.
+     * 
+     * Eso es debido a que no renemos un PersonaRepoImpl que maneje la
+     * personalización de esta consulta y como la original delete, retorna void no
+     * es muy buena para hacer test ya que no tenemos contra qué validar si
+     * simulamos la base de datos. 
+     * 
+     * En el fondo es solamente un deleteById(), pero se expone para su ejemplo
+     * Que podemos aplicar queries a las entidades.
+     * 
+     */
+    @Modifying
+    @Query(&quot;DELETE FROM Persona WHERE id = ?1&quot;)
+    Integer myDeleteById(Integer id);
+
+    // no posee un nombre personalizado, cumple con la nomenclatura find
+    // debe ir aunque siga la nomenclatura
+    List&lt;Persona&gt; findAllByNombre(String nombre);
+}
+
+</code></pre>
+
+<h4 id="services"><code>/services</code></h4>
+<p><code>/PersonaService.java</code></p>
+<pre><code class="java">package cl.lherrera.jpaspring.services;
+
+import java.util.List;
+
+import cl.lherrera.jpaspring.dtos.PersonaDTO;
+import cl.lherrera.jpaspring.entities.Persona;
+
+
+public interface PersonaService {
+
+    PersonaDTO obtenerPersonasPaginadas(Integer pagina, Integer cantidad);
+    List&lt;Persona&gt; obtenerPersonas();
+    List&lt;Persona&gt; obtenerPersonasPorNombre(String nombre);
+    Persona IngresarPersona(Persona persona);
+    Persona encontrarPersona(Integer id);
+    Persona eliminarPersona(Persona persona);
+    Persona actualizarPersona(Persona persona);
+}
+
+</code></pre>
+
+<p><code>/PersonaServiceImpl.java</code></p>
+<pre><code class="java">package cl.lherrera.jpaspring.services;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.criteria.Order;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import cl.lherrera.jpaspring.dtos.PersonaDTO;
+import cl.lherrera.jpaspring.entities.Persona;
+import cl.lherrera.jpaspring.repositories.PersonaRepo;
+
+@Service
+public class PersonaServiceImpl implements PersonaService{
+    private static final Logger logger = LoggerFactory.getLogger(PersonaServiceImpl.class.getName());
+
+    @Autowired
+    PersonaRepo repo;
+
+
+    @Override
+    @Transactional(readOnly = true)
+    public List&lt;Persona&gt; obtenerPersonas() {
+        return (List&lt;Persona&gt;) repo.findAll();
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public List&lt;Persona&gt; obtenerPersonasPorNombre(String nombre) {
+
+        return repo.findAllByNombre(nombre);
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public Persona encontrarPersona(Integer id) {
+        // así nos evitamos un null pointer exception
+        return repo.findById(id).orElse(new Persona());
+    }
+
+    @Override
+    @Transactional
+    public Persona eliminarPersona(Persona persona) {
+        int numeroQueAunNoSeOcupa = repo.myDeleteById(persona.getId());
+        return persona;
+    }
+
+    @Override
+    @Transactional
+    public Persona actualizarPersona(Persona persona) {
+        return repo.save(persona);
+    }
+
+    @Override
+    @Transactional
+    public Persona IngresarPersona(Persona persona) {       
+        return repo.save(persona);
+    }
+
+    @Override
+    public PersonaDTO obtenerPersonasPaginadas(Integer pagina, Integer cantidad) {
+        logger.info(&quot;Num Pagina: &quot; + pagina);
+        PersonaDTO personaDTO = new PersonaDTO();
+        // comienza en cero, para que con la página 1
+        // busque en la página 0 y lo retorne como página 1.
+
+
+        Pageable paginado = PageRequest.of(pagina - 1, 2, Sort.by(&quot;id&quot;).ascending());
+        // consulta a la base
+        Page&lt;Persona&gt; personaPaginas = repo.findAll(paginado);
+
+        logger.info(personaPaginas.getContent().toString());
+
+        // ingreso de personas al DTO
+        personaDTO.setPersonas(personaPaginas.getContent());
+        // ingresamos el número de página actual
+        // el getNumber nos entrega un cero en caso de ser la primera página
+        // el argumento pagina, viene desde el front con el click
+        // que se hace y llegará fielmente el verdadero número a buscar
+        // el único aproblemado con esto es el PageRequest.of(pagina... ya que
+        // él busca por el número consultado menos uno.
+        personaDTO.setPaginaActual(pagina);
+        // llenamos la lista de números del paginador
+        List&lt;Integer&gt; paginas = new ArrayList&lt;&gt;();
+        for(int i = 0; i &lt; personaPaginas.getTotalPages(); i ++)
+            paginas.add(i + 1);
+
+        personaDTO.setPaginas(paginas);
+        logger.info(&quot;personaDTO: &quot; + personaDTO.toString());
+        return personaDTO;
+    }
+
+
+}
+
+</code></pre>
+
+<h3 id="srcmainresources"><code>src/main/resources</code></h3>
+<p><code>/application.properties</code></p>
+<p>Solucionado pero igual... </p>
+<pre><code class="conf"># Configuración para la vista. (http://localhost:8080/) no es (http://localhost:8080/jpaspring/)
+# Eso es para un servlet
+spring.mvc.view.prefix=/WEB-INF/pages/
+spring.mvc.view.suffix=.jsp
+# Permiso para clear el ddl de las entidades
+spring.jpa.generate-ddl=true
+# Ejecuta la configuración de la clase que mapea los tipos de datos.
+spring.jpa.database-platform=cl.lherrera.jpaspring.SQLiteDialect
+# Crea la base si no está y cuando finaliza la ejecución la borra.
+spring.jpa.hibernate.ddl-auto=create-drop
+# Muestra las consultas realizadas por el framework y las imprime en el log
+spring.jpa.show-sql=true
+# Le da un formáto legible por un humano para una mejor depuración en el log.
+spring.jpa.properties.hibernate.format_sql=true
+
+#Pruebas
+#logging.level.org.hibernate.SQL=debug
+#logging.level.org.hibernate.type.descriptor.sql=trace
+
+
+</code></pre>
+
+<h3 id="srcmainwebappweb-infpagespersonas"><code>src/main/webapp/WEB-INF/pages/personas</code></h3>
+<p><code>/personas.jsp</code></p>
+<pre><code class="html">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;
+    pageEncoding=&quot;UTF-8&quot;%&gt;
+&lt;%@taglib uri=&quot;http://www.springframework.org/tags/form&quot; prefix=&quot;form&quot;%&gt;
+&lt;%@taglib uri=&quot;http://java.sun.com/jsp/jstl/core&quot; prefix=&quot;c&quot;%&gt;
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;jsp:include page=&quot;../htmlTemplates/headTemplate.jsp&quot;&gt;&lt;/jsp:include&gt;
+&lt;body&gt;
+    &lt;jsp:include page=&quot;../htmlTemplates/navTemplate.jsp&quot;&gt;&lt;/jsp:include&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;div class=&quot;row&quot;&gt;
+            &lt;div class=&quot;col&quot;&gt;
+
+                &lt;form:form class=&quot;form-horizontal&quot; method=&quot;post&quot;
+                    action=&quot;/personas/ingresar&quot; modelAttribute=&quot;Persona&quot;&gt;
+
+                    &lt;div class=&quot;form-group&quot;&gt;
+                        &lt;label for=&quot;nombre&quot;&gt;Nombre&lt;/label&gt; &lt;input type=&quot;text&quot;
+                            class=&quot;form-control&quot; id=&quot;nombre&quot; name=&quot;nombre&quot;
+                            placeholder=&quot;Ingrese el nombre&quot;&gt;
+
+                    &lt;/div&gt;
+
+                    &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary mb-2&quot;&gt;Ingresar&lt;/button&gt;
+
+                &lt;/form:form&gt;
+
+                &lt;div class=&quot;table-responsive&quot;&gt;
+                    &lt;table class=&quot;table table-hover table-striped table-bordered&quot;&gt;
+                        &lt;tr&gt;
+                            &lt;th&gt;Id&lt;/th&gt;
+                            &lt;th&gt;Nombre&lt;/th&gt;
+                            &lt;th&gt;Acción&lt;/th&gt;
+                        &lt;/tr&gt;
+                        &lt;c:choose&gt;
+                            &lt;c:when test=&quot;${dtoPersona.getPersonas().size() &gt; 0}&quot;&gt;  
+                                &lt;c:forEach items=&quot;${dtoPersona.getPersonas()}&quot; var=&quot;persona&quot;&gt;
+                                    &lt;tr&gt;
+                                        &lt;td&gt;${persona.getId()}&lt;/td&gt;
+                                        &lt;td&gt;${persona.getNombre()}&lt;/td&gt;
+                                        &lt;td&gt;&lt;a href=&quot;/personas/actualizar?id=${persona.getId()}&quot;&gt;Actualizar&lt;/a&gt;
+                                            | &lt;a href=&quot;/personas/eliminar?id=${persona.getId()}&quot;&gt;Elimininar&lt;/a&gt;
+                                        &lt;/td&gt;
+                                    &lt;/tr&gt;
+                                &lt;/c:forEach&gt;
+                            &lt;/c:when&gt;
+                            &lt;c:otherwise&gt;
+                                &lt;tr&gt;
+                                    &lt;td colspan=&quot;3&quot;&gt;${&quot;Sin registros...&quot;}&lt;/td&gt;
+
+                                &lt;/tr&gt;
+                            &lt;/c:otherwise&gt;
+                        &lt;/c:choose&gt;
+                    &lt;/table&gt;
+
+                    &lt;!-- PAGINACIÖN --&gt;
+                    &lt;c:choose&gt;
+                        &lt;c:when test=&quot;${paginar}&quot;&gt;
+
+                            &lt;nav aria-label=&quot;Ejemplo de paginación&quot;&gt;
+                                &lt;ul class=&quot;pagination&quot;&gt;
+                                    &lt;c:choose&gt;
+                                        &lt;c:when test=&quot;${dtoPersona.getPersonas().size() &gt; 0}&quot;&gt;
+                                            &lt;!-- lógica para mostrar el anterior --&gt;
+                                            &lt;c:choose&gt;
+                                                &lt;c:when test=&quot;${dtoPersona.getPaginaActual() &gt; 1}&quot;&gt;
+                                                    &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot;
+                                                        href=&quot;/personas/ingresar?pagina=${dtoPersona.getPaginaActual() - 1}&quot;&gt;Anterior&lt;/a&gt;&lt;/li&gt;
+                                                &lt;/c:when&gt;
+                                                &lt;c:otherwise&gt;
+                                                    &lt;li class=&quot;page-item disabled&quot;&gt;&lt;a class=&quot;page-link&quot;
+                                                        href=&quot;#&quot;&gt;Anterior&lt;/a&gt;&lt;/li&gt;
+                                                &lt;/c:otherwise&gt;
+                                            &lt;/c:choose&gt;
+                                            &lt;!-- lógica para mostrar el anterior #--&gt;
+
+                                            &lt;!-- Lógica de llenado de números --&gt;
+                                            &lt;c:forEach items=&quot;${dtoPersona.getPaginas()}&quot; var=&quot;pagina&quot;&gt;
+
+                                                &lt;!-- Lógica para seleccionar el número de página --&gt;
+                                                &lt;c:choose&gt;
+                                                    &lt;c:when test=&quot;${dtoPersona.getPaginaActual() == pagina}&quot;&gt;
+                                                        &lt;li class=&quot;page-item active&quot;&gt;&lt;a class=&quot;page-link&quot;
+                                                            href=&quot;/personas/ingresar?pagina=${pagina}&quot;&gt;${pagina}&lt;/a&gt;&lt;/li&gt;
+                                                    &lt;/c:when&gt;
+                                                    &lt;c:otherwise&gt;
+                                                        &lt;li class=&quot;page-item &quot;&gt;&lt;a class=&quot;page-link&quot;
+                                                            href=&quot;/personas/ingresar?pagina=${pagina}&quot;&gt;${pagina}&lt;/a&gt;&lt;/li&gt;
+                                                    &lt;/c:otherwise&gt;
+                                                &lt;/c:choose&gt;
+                                                &lt;!-- Lógica para seleccionar el número de página #--&gt;
+
+                                            &lt;/c:forEach&gt;
+                                            &lt;!-- Lógica de llenado de números #--&gt;
+
+                                            &lt;!-- lógica para habilitar el siguiente --&gt;
+                                            &lt;c:choose&gt;
+                                                &lt;c:when
+                                                    test=&quot;${dtoPersona.getPaginas().size() &gt; dtoPersona.getPaginaActual() }&quot;&gt;
+                                                    &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot;
+                                                        href=&quot;/personas/ingresar?pagina=${dtoPersona.getPaginaActual() + 1}&quot;&gt;Siguiente&lt;/a&gt;&lt;/li&gt;
+                                                &lt;/c:when&gt;
+                                                &lt;c:otherwise&gt;
+                                                    &lt;li class=&quot;page-item disabled&quot;&gt;&lt;a class=&quot;page-link&quot;
+                                                        href=&quot;#&quot;&gt;Siguiente&lt;/a&gt;&lt;/li&gt;
+                                                &lt;/c:otherwise&gt;
+                                            &lt;/c:choose&gt;
+                                            &lt;!-- lógica para habilitar el siguiente ##--&gt;
+
+                                        &lt;/c:when&gt;
+                                    &lt;/c:choose&gt;
+                                &lt;/ul&gt;
+                            &lt;/nav&gt;
+                        &lt;/c:when&gt;
+                    &lt;/c:choose&gt;
+                    &lt;!-- PAGINACIÖN #--&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+    &lt;jsp:include page=&quot;../htmlTemplates/footerTemplate.jsp&quot;&gt;&lt;/jsp:include&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../assets/javascripts/vendor.a0c4167b.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.fb26dd1d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../../assets/javascripts/worker/search.37585f48.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

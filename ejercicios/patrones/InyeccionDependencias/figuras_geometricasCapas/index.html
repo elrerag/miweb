@@ -1,0 +1,562 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.6">
+    
+    
+      
+        <title>Separando capas en ejemplo anterior. - Java Full Stack Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.4b9ffd7b.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#separando-capas-en-ejemplo-anterior" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../../.." title="Java Full Stack Docs" class="md-header-nav__button md-logo" aria-label="Java Full Stack Docs">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Java Full Stack Docs
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Separando capas en ejemplo anterior.
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Java Full Stack Docs" class="md-nav__button md-logo" aria-label="Java Full Stack Docs">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Java Full Stack Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../repaso/teoria/poo/herencia/" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#estructura" class="md-nav__link">
+    Estructura:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo" class="md-nav__link">
+    Modelo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dao" class="md-nav__link">
+    DAO
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#servicio" class="md-nav__link">
+    Servicio
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#todo" class="md-nav__link">
+    TODO
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="separando-capas-en-ejemplo-anterior">Separando capas en ejemplo anterior.</h1>
+<p>Vimos que en el ejemplo anterior, utilizamos la inyección de dependencias para poder separar la responsabilidad de un servicio.</p>
+<p>El servicio es como nuestro empleado, es esta entidad la encargada de hacer lo que nuestro negocio requiere y nuestro negocio trata de obtener las áreas de nuestras figuras geométricas. De esto se trata su negocio y es este el rol que el servicio debe cumplir.</p>
+<p>La capa de acceso a datos estamos acostumbrados a verla en implementaciones que resuelven la recolección de datos de una base de datos; pero en esta ocasión los tatos no vienen de una base de datos si no que vienen de el ingreso de información del usuario. Esto no importa, ya que el DAO, no está restringido a la recolección de datos de una base de datos, si no que la implementación la designamos nosotros. Es por esto que en el ejemplo incluiremos esta capa y demostramos su funcionamiento.</p>
+<p>La capa modelo es la que usaremos para guardar los datos del modelo del problema. Necesitamos calcular áreas de figuras, es por esto que cada figura será un modelo.</p>
+<p>Separar las capas, nos permite entre otras cosas, poder depurar de una manera eficiente, ya que al estar separadas las responsabilidades, ante un error, sabemos qué archivo tocar, sin temor a realizar algún otro cambio.</p>
+<h2 id="estructura">Estructura:</h2>
+<pre><code>idcapas
+├── dao
+│   ├── CirculoDao.java
+│   ├── CuadradoDao.java
+│   └── TrianguloDao.java
+├── main
+│   └── Principal.java
+├── modelo
+│   ├── Circulo.java
+│   ├── Cuadrado.java
+│   └── Triangulo.java
+└── servicio
+    ├── ServicioCalculo.java
+    ├── ServicioCirculo.java
+    ├── ServicioCuadrado.java
+    ├── ServicioFigura.java
+    └── ServicioTriangulo.java
+</code></pre>
+
+<h2 id="modelo">Modelo</h2>
+<pre><code>modelo
+├── Circulo.java
+├── Cuadrado.java
+└── Triangulo.java
+</code></pre>
+
+<pre><code class="java">package cl.lherrera.idcapas.modelo;
+
+public class Circulo {
+
+    private double radio;
+
+    public Circulo(double radio) {
+        this.radio = radio;
+    }
+
+    public double getRadio() {
+        return radio;
+    }
+
+    public void setRadio(double radio) {
+        this.radio = radio;
+    }
+}
+
+</code></pre>
+
+<pre><code class="java">package cl.lherrera.idcapas.modelo;
+
+public class Cuadrado {
+
+    private double lado;
+
+    public Cuadrado() {}
+
+    public Cuadrado(double lado) {
+        super();
+        this.lado = lado;
+    }
+
+    public double getLado() {
+        return lado;
+    }
+
+    public void setLado(double lado) {
+        this.lado = lado;
+    }
+
+}
+</code></pre>
+
+<pre><code class="java">package cl.lherrera.idcapas.modelo;
+
+public class Triangulo {
+    private double base;
+    private double altura;
+
+    public Triangulo() {}
+
+    public Triangulo(double base, double altura) {
+        this.base = base;
+        this.altura = altura;
+    }
+
+    public double getBase() {
+        return base;
+    }
+
+    public void setBase(double base) {
+        this.base = base;
+    }
+
+    public double getAltura() {
+        return altura;
+    }
+
+    public void setAltura(double altura) {
+        this.altura = altura;
+    }
+}
+</code></pre>
+
+<h2 id="dao">DAO</h2>
+<pre><code>dao
+├── CirculoDao.java
+├── CuadradoDao.java
+└── TrianguloDao.java
+</code></pre>
+
+<pre><code class="java">package cl.lherrera.idcapas.dao;
+
+import java.util.Scanner;
+
+import cl.lherrera.idcapas.modelo.Circulo;
+
+public class CirculoDao {
+    private static Scanner sc = new Scanner(System.in);
+
+    private CirculoDao() {}
+
+    public static Circulo obtenerCirculo() {
+        System.out.println(&quot;Ingrese el radio del círculo&quot;);
+        double radio = sc.nextDouble();
+
+        return new Circulo(radio);
+    }
+}
+</code></pre>
+
+<pre><code class="java">package cl.lherrera.idcapas.dao;
+
+import java.util.Scanner;
+
+import cl.lherrera.idcapas.modelo.Cuadrado;
+
+public class CuadradoDao {
+    private static Scanner sc = new Scanner(System.in);
+
+    private CuadradoDao() {}
+
+    public static Cuadrado obtenerCuadrado() {
+        System.out.println(&quot;Ingrese el valor del lado...&quot;);
+        double lado = sc.nextDouble();
+        return new Cuadrado(lado);
+    }
+}
+</code></pre>
+
+<pre><code class="java">package cl.lherrera.idcapas.dao;
+
+import java.util.Scanner;
+
+import cl.lherrera.idcapas.modelo.Triangulo;
+
+public class TrianguloDao {
+    private static Scanner sc = new Scanner(System.in);
+
+    private TrianguloDao() {}
+
+    public static Triangulo obtenerTriangulo() {
+        System.out.println(&quot;Ingrese la base...&quot;);
+        double base = sc.nextDouble();
+        System.out.println(&quot;Ingrese la altura...&quot;);
+        double altura = sc.nextDouble();
+
+        return new Triangulo(base, altura);
+    }
+}
+</code></pre>
+
+<h2 id="servicio">Servicio</h2>
+<p>Tenemos un servicio principal por el que pasan todos los servicios que implementan uno solo y este servicio es inyectado desde fuera.</p>
+<pre><code>servicio
+    ├── ServicioCalculo.java
+    ├── ServicioCirculo.java
+    ├── ServicioCuadrado.java
+    ├── ServicioFigura.java
+    └── ServicioTriangulo.java
+</code></pre>
+
+<pre><code class="java">package cl.lherrera.idcapas.servicio;
+
+public class ServicioCalculo {
+    ServicioFigura servicio;
+
+    public ServicioCalculo(ServicioFigura servicio) {
+        this.servicio = servicio;
+    }
+
+    // así se le llama en el negocio
+    public void calcularElArea() {
+        servicio.imprimirArea();
+    }
+}
+</code></pre>
+
+<pre><code class="java">package cl.lherrera.idcapas.servicio;
+
+import cl.lherrera.idcapas.dao.CirculoDao;
+import cl.lherrera.idcapas.modelo.Circulo;
+
+public class ServicioCirculo implements ServicioFigura{
+
+    public void imprimirArea() {
+        Circulo circulo = CirculoDao.obtenerCirculo();
+        double area = obtenerArea(circulo);
+        System.err.println(&quot;El área del círculo es: &quot; + area + &quot;\n&quot;);
+    }
+
+    private double obtenerArea(Circulo circulo) {
+        double radio = circulo.getRadio();
+        return Math.PI * radio * radio;
+    }
+}
+</code></pre>
+
+<pre><code class="java">package cl.lherrera.idcapas.servicio;
+
+import cl.lherrera.idcapas.dao.CuadradoDao;
+import cl.lherrera.idcapas.modelo.Cuadrado;
+
+
+public class ServicioCuadrado implements ServicioFigura{
+
+    public void imprimirArea() {
+        Cuadrado cuadrado = CuadradoDao.obtenerCuadrado();
+        double area = obtenerArea(cuadrado);
+        System.err.println(&quot;El área del cuadrado es: &quot; + area + &quot;\n&quot;);
+    }
+
+    private double obtenerArea(Cuadrado cuadrado) {
+        double lado = cuadrado.getLado();
+        return lado * lado;
+    }
+}
+</code></pre>
+
+<pre><code class="java">package cl.lherrera.idcapas.servicio;
+
+public interface ServicioFigura {
+
+    public void imprimirArea();
+}
+</code></pre>
+
+<pre><code class="java">package cl.lherrera.idcapas.servicio;
+
+import cl.lherrera.idcapas.dao.TrianguloDao;
+import cl.lherrera.idcapas.modelo.Triangulo;
+
+public class ServicioTriangulo implements ServicioFigura {
+
+    public void imprimirArea() {
+        Triangulo triangulo = TrianguloDao.obtenerTriangulo();
+
+        double area = obtenerArea(triangulo);
+
+        System.err.println(&quot;El área del triángulo es: &quot; + area + &quot;\n&quot;);
+
+    }
+
+    public double obtenerArea(Triangulo triangulo) {
+        double base = triangulo.getBase();
+        double altura = triangulo.getAltura();
+
+        return base * altura / 2;
+    }
+}
+</code></pre>
+
+<h2 id="todo">TODO</h2>
+<p>Ya vimos como separar nuestro problema en capas, y es con esto que podemos inferir que a pesar del esfuerzo extra que resultó hacer esto, nos permite llevar una organización reconocible de la abstracción de un problema.</p>
+<p>La aplicación de estas técnicas permiten tener un marco de trabajo que permita transformar el escenario de la necesidad a una solución explicada al compilador en Java.</p>
+<p>Ahora podemos agregar más figuras... todas las que quieras. Mientras esto pasa, al igual que cuando se comienza un software, en su proceso de vida, vamos agregando funcionalidades y depende de la arquitectura que vayamos adoptando es lo productivo que seremos en el futuro. Por ejemplo ahora no es un problema el tamaño del <code>swtich</code> del menú, pero esto no será muy legible cuando se tengan más figuras, entonces este y otros tipos de problemas nos ocurrirán hagamos lo que hagamos para evitar todos los problemas de abstracciones que existen; pero al intentar usar la mejor arquitectura posible dentro del tiempo y esfuerzo, permitirá que la aplicación pueda integrar nuevas funcionalidades de manera más sencilla que si no se aplican estas mejoras continuas, teniendo en cuenta, en todo momento que no debemos abusar, hay que dedicar el esfuerzo justo según sea el contexto (tiempo, dinero, calidad) prioritario.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../assets/javascripts/vendor.a0c4167b.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.fb26dd1d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../../assets/javascripts/worker/search.37585f48.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

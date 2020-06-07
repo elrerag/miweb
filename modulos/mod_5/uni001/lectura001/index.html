@@ -1,0 +1,1020 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.6">
+    
+    
+      
+        <title>Lectura 1: Spring - Java Full Stack Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.4b9ffd7b.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#lectura-1-spring" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../../.." title="Java Full Stack Docs" class="md-header-nav__button md-logo" aria-label="Java Full Stack Docs">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Java Full Stack Docs
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Lectura 1: Spring
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Java Full Stack Docs" class="md-nav__button md-logo" aria-label="Java Full Stack Docs">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Java Full Stack Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../ejercicios/repaso/teoria/poo/herencia/" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="lectura-1-spring">Lectura 1: Spring</h1>
+<hr />
+<h1 id="inyeccion-de-dependencias">Inyección de dependencias.</h1>
+<hr />
+<p>Tenemos ejemplos en el sitio. 👀</p>
+<h2 id="ejemplo-001-di-servicio-de-correo-parte-1">Ejemplo 001: DI servicio de correo parte 1.</h2>
+<p>Se necesita un programa que registre y envíe un correo.</p>
+<ul>
+<li>El proceso de registrar será un mensaje por consola que diga "Registrar correo".</li>
+<li>El proceso de envío de correo será un mensaje por consola que diga "Enviar correo".</li>
+</ul>
+<h3 id="solucion">Solución:</h3>
+<p>Estructura:</p>
+<pre><code>── di
+   ├── App.java
+   └── servicios
+       └── ServicioCorreo.java
+</code></pre>
+
+<p><strong>Servicio de correo</strong></p>
+<pre><code>└── servicios
+    └── ServicioCorreo.java
+</code></pre>
+
+<pre><code class="java">package cl.lherrera.di.servicios;
+
+public class ServicioCorreo {
+
+    public void enviar() {
+        System.out.println(&quot;Registrar correo&quot;);
+        System.out.println(&quot;Enviar correo&quot;);
+    }
+}
+</code></pre>
+
+<p><strong>Principal</strong></p>
+<pre><code>── di
+   ├── App.java
+</code></pre>
+
+<pre><code class="java">package cl.lherrera.di;
+
+import cl.lherrera.di.servicios.ServicioCorreo;
+
+public class App 
+{
+    public static void main( String[] args )
+    {
+        ServicioCorreo servicio= new ServicioCorreo(); servicio.enviar();
+    }
+}
+</code></pre>
+
+<h2 id="ejemplo-001-di-servicio-de-correo-parte-2">Ejemplo 001: DI servicio de correo parte 2.</h2>
+<p>Ahora el servicio se divide en tres servicios, en el que el <code>ServicioCorreo</code> se compone de los otros servicios, los que pasan su ciclo de vida dentro de esta clase.</p>
+<pre><code>── di
+   ├── App.java
+   └── servicios
+       ├── ServicioCorreo.java
+       ├── ServicioEnvioCorreo.java
+       └── ServicioRegistroCorreo.java
+</code></pre>
+
+<p><code>── ServicioRegistroCorreo.java</code></p>
+<pre><code class="java">package cl.lherrera.di.servicios;
+
+public class ServicioRegistroCorreo {
+    public void registrarCorreo() {
+        System.out.println(&quot;Registrar correo&quot;);
+    }
+}
+</code></pre>
+
+<p><code>── ServicioEnvioCorreo.java</code></p>
+<pre><code class="java">package cl.lherrera.di.servicios;
+
+public class ServicioEnvioCorreo {
+    public void enviarCorreo() {
+        System.out.println(&quot;Enviar Correo&quot;);
+    }
+}
+</code></pre>
+
+<p><code>── ServicioCorreo.java</code></p>
+<pre><code class="java">package cl.lherrera.di;
+
+import cl.lherrera.di.servicios.ServicioCorreo;
+
+public class App 
+{
+    public static void main( String[] args )
+    {
+        ServicioCorreo servicio= new ServicioCorreo(); servicio.enviar();
+    }
+}
+</code></pre>
+
+<p>El resultado es el mismo; pero ya tenemos un servicio intermedio que separa la lógica de estos dos servicios, que en el ejemplo pueden parecer simples; pero en un ejemplo real, el registrar o enviar no sea tan simple como escribirlo en una consola.</p>
+<h2 id="ejemplo-001-di-servicio-de-correo-parte-3">Ejemplo 001: DI servicio de correo parte 3.</h2>
+<p>A lo desarrollado hasta el momento se solicita que dependiendo de una opción (en este caso será <code>hard-code</code> podría ser por scanner), el envío de correo deberá antes de enviar, analizar el correo.</p>
+<p>Para esto basta solamente con cambiar el contenido del siguiente archivo:</p>
+<p><code>/di/src/main/java/cl/lherrera/di/servicios/ServicioCorreo.java</code></p>
+<pre><code class="java">package cl.lherrera.di.servicios;
+
+public class ServicioCorreo {
+
+    private ServicioRegistroCorreo servicioRegistro;
+    private ServicioEnvioCorreo servicioEnvio;
+
+    public ServicioCorreo() {
+        this.servicioRegistro = new ServicioRegistroCorreo();
+        this.servicioEnvio = new ServicioEnvioCorreo();
+    }
+
+    public void enviar() {
+        // hard-code inicio
+        boolean debeAnalizar = true;
+        // hard-code fin
+
+        servicioRegistro.registrarCorreo();
+
+        if(debeAnalizar) {
+            System.out.println(&quot;Analizar - correo&quot;);
+            servicioEnvio.enviarCorreo();
+        }else {
+            servicioEnvio.enviarCorreo();   
+        }
+    }
+}
+</code></pre>
+
+<p>Probamos y no deberían existir cambios a menos que queramos que se analice el correo antes de enviar. </p>
+<p>Si tomamos en cuenta que analizar un correo, no es una tarea de pocas líneas de código. Es por esta razón que debemos separar la lógica de análisis a otro servicio dedicado.</p>
+<p>Se agrega un nuevo servicio:</p>
+<p><code>/di/src/main/java/cl/lherrera/di/servicios/ServicioEnvioAnalizoCorreo.java</code></p>
+<pre><code class="java">package cl.lherrera.di.servicios;
+
+public class ServicioEnvioAnalizoCorreo {
+
+    public void analizarCorreo() {
+        System.out.println(&quot;Analizar - correo&quot;);
+    }
+}
+</code></pre>
+
+<p>Quedando...</p>
+<p><code>/di/src/main/java/cl/lherrera/di/servicios/ServicioCorreo.java</code></p>
+<pre><code class="java">package cl.lherrera.di.servicios;
+
+public class ServicioCorreo {
+
+    private ServicioRegistroCorreo servicioRegistro;
+    private ServicioEnvioCorreo servicioEnvio;
+    private ServicioEnvioAnalizoCorreo servicioEnvioAnalizoCorreo;
+
+    public ServicioCorreo() {
+        this.servicioRegistro = new ServicioRegistroCorreo();
+        this.servicioEnvio = new ServicioEnvioCorreo();
+        this.servicioEnvioAnalizoCorreo = new ServicioEnvioAnalizoCorreo();
+    }
+
+    public void enviar() {
+        // hard-code inicio
+        boolean debeAnalizar = true;
+        // hard-code fin
+
+        servicioRegistro.registrarCorreo();
+
+        if(debeAnalizar) {
+            servicioEnvioAnalizoCorreo.analizarCorreo();
+            servicioEnvio.enviarCorreo();
+        }else {
+            servicioEnvio.enviarCorreo();   
+        }
+    }
+}
+
+</code></pre>
+
+<p>Esto obtiene el mismo resultado; pero hemos separado más las responsabilidades. Esto por ahora no tiene sentido, pero el dejar las responsabilidades bien separadas es parte de lo que se necesita para reconocer la aplicación del patrón de inyección de dependencias.</p>
+<h2 id="ejemplo-001-di-servicio-de-correo-parte-4-aplicacion-del-patron">Ejemplo 001: DI servicio de correo parte 4 - aplicación del patrón.</h2>
+<p>Reconocemos que el análisis de correo, es un proceso que forma parte del envío de correo, es por esto que podría heredar del envío y así instanciamos un solo objeto y lo hacemos polimórfico.</p>
+<p>Lo otro que nos queda por hacer si queremos aplicar el patrón es estar seguros de sacar la lógica de elección del tipo de envío a ejecutar, es decir que el servicio de correo no tenga lógica de negocio, si no que solo despache al servicio correspondiente de algún objeto polimórfico.</p>
+<p><strong>Estructura</strong></p>
+<pre><code>cl.lherrera.di
+ ├── App.java
+ └── servicios
+     ├── ServicioCorreo.java
+     ├── ServicioEnvioAnalizoCorreo.java
+     ├── ServicioEnvioCorreo.java
+     └── ServicioRegistroCorreo.java
+</code></pre>
+
+<p><code>├── App.java</code></p>
+<p>Es acá donde manejamos la lógica que requiere la elección del correcto tipo que se le enviará al servicio principal.</p>
+<pre><code class="java">package cl.lherrera.di;
+
+import cl.lherrera.di.servicios.ServicioCorreo;
+import cl.lherrera.di.servicios.ServicioEnvioAnalizoCorreo;
+import cl.lherrera.di.servicios.ServicioEnvioCorreo;
+import cl.lherrera.di.servicios.ServicioRegistroCorreo;
+
+public class App 
+{
+    public static void main( String[] args )
+    {
+        logicaExtraida();
+    }
+
+    private static void logicaExtraida() {
+        // hard-code inicio
+        boolean debeAnalizar = false;
+        // hard-code fin
+        ServicioEnvioCorreo servicioEnvio = null;
+        ServicioRegistroCorreo servicioRegistro = new ServicioRegistroCorreo(); 
+        if(debeAnalizar) {
+            servicioEnvio = new ServicioEnvioAnalizoCorreo();
+        }else {
+            servicioEnvio = new ServicioEnvioCorreo();
+        }
+
+        // llamada inyectada, la lógica de elección del tipo, ya se aplicó
+        ServicioCorreo servicio= new ServicioCorreo(servicioEnvio, servicioRegistro);
+        // llamada &quot;polimórfica.
+        servicio.enviar();
+
+    }
+}
+</code></pre>
+
+<p><code>├── ServicioCorreo.java</code></p>
+<pre><code class="java">package cl.lherrera.di.servicios;
+
+public class ServicioCorreo {
+
+    private ServicioRegistroCorreo servicioRegistro;
+    private ServicioEnvioCorreo servicioEnvio;
+
+    // constructor inicia el estado con lo que se inyectó desde fuera
+    public ServicioCorreo(
+            ServicioEnvioCorreo servicioEnvio, 
+            ServicioRegistroCorreo servicioRegistro
+    ) {
+        this.servicioRegistro = servicioRegistro;
+        this.servicioEnvio = servicioEnvio;
+    }
+
+    public void enviar() {
+        servicioRegistro.registrarCorreo();
+        servicioEnvio.enviarCorreo();
+    }
+}
+
+</code></pre>
+
+<p><code>├── ServicioEnvioAnalizoCorreo.</code></p>
+<pre><code class="java">package cl.lherrera.di.servicios;
+
+public class ServicioEnvioAnalizoCorreo extends ServicioEnvioCorreo{
+
+
+
+    @Override
+    public void enviarCorreo() {
+        // personalización del método
+        System.out.println(&quot;Analizar - correo&quot;);
+
+        // llamado al método del padre.
+        super.enviarCorreo();
+    }
+
+}
+
+</code></pre>
+
+<p><code>├── ServicioEnvioCorreo.java</code></p>
+<pre><code class="java">package cl.lherrera.di.servicios;
+
+public class ServicioEnvioCorreo {
+    public void enviarCorreo() {
+        System.out.println(&quot;Enviar Correo&quot;);
+    }
+}
+
+</code></pre>
+
+<p><code>└── ServicioRegistroCorreo.java</code></p>
+<pre><code class="java">package cl.lherrera.di.servicios;
+
+public class ServicioRegistroCorreo {
+    public void registrarCorreo() {
+        System.out.println(&quot;Registrar correo&quot;);
+    }
+}
+</code></pre>
+
+<p>Esto se puede realizar con una interfaz que implementen varios tipos. Con esto se logra un mejor polimorfismo.</p>
+<hr />
+<h1 id="maven-y-manejo-de-dependencias">Maven y manejo de dependencias.</h1>
+<hr />
+<h2 id="introduccion">Introducción</h2>
+<p>Explicación de qué es maven, para qué sirve y se demostrará una inyección de dependencias usando maven.</p>
+<h2 id="11-que-es-maven">11-¿Qué es Maven?</h2>
+<p>(lectura) definición de maven y muestra las siete etapas en las que se basa.
+Se explica cada una de ellas: (Validar, Compilar, Probar, Empaquetar, Veriﬁcar, Instalar, Implementación)
+(lectura) qué cosas nos permite como integrar librerías de manera sencilla a nuestros proyectos.
+(lectura) gráfico del árbol de dependencias de un proyecto maven.
+(lectura) explicación de un artefacto.</p>
+<h2 id="13-concepto-de-artefacto">13-Concepto de Artefacto.</h2>
+<p>(lectura) Definición de un artefacto y sus partes
+(lectura) Definición del <code>pom.xml</code></p>
+<h2 id="14-creando-un-proyecto-maven">14-Creando un proyecto maven.</h2>
+<p>Crear un proyecto maven, de la forma rápida usual, se muestra en lectura los pasos y finalmente se analiza que cuando creamos el artefacto, revisamos el <code>pom.xml</code>, y tenemos lo siguiente:</p>
+<p>Se explica que significa <code>SNAPSHOT</code>, que es como una especie de beta; pero funcional.</p>
+<pre><code class="xml">&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;
+    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+    xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+    &lt;groupId&gt;com.maven.ejemplo&lt;/groupId&gt;
+    &lt;artifactId&gt;miProyecto&lt;/artifactId&gt;
+    &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
+&lt;/project&gt;
+</code></pre>
+
+<h2 id="19-ejemplo-de-inyeccion-de-dependencias">19-Ejemplo de inyección de dependencias.</h2>
+<p>En realidad el enunciado está mal redactado, es el uso de dependencias externas con maven, en este caso se usa de ejemplo J-Unit 4 para probar una funcionalidad.</p>
+<p>Estructura:</p>
+<pre><code>./
+├── pom.xml
+├── src
+    ├── main
+    │   ├── java
+    │   │   └── com.micalculadora
+    │   │        └── Calculadora.java
+    │   └── resources
+    └── test
+        ├── java
+            └── com.micalculadora.pruebas
+                 └── CalculadoraPrueba.java
+
+</code></pre>
+
+<p><code>├── pom.xml</code></p>
+<pre><code class="xml">&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;
+    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+    xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+    &lt;groupId&gt;com.calculadora&lt;/groupId&gt;
+    &lt;artifactId&gt;micalculadora&lt;/artifactId&gt;
+    &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
+    &lt;name&gt;calculadora&lt;/name&gt;
+
+    &lt;dependencies&gt;
+        &lt;!-- https://mvnrepository.com/artifact/junit/junit --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;junit&lt;/groupId&gt;
+            &lt;artifactId&gt;junit&lt;/artifactId&gt;
+            &lt;version&gt;4.11&lt;/version&gt;
+            &lt;scope&gt;test&lt;/scope&gt;
+        &lt;/dependency&gt;
+    &lt;/dependencies&gt;
+
+&lt;/project&gt;
+</code></pre>
+
+<p><code>└── Calculadora.java</code></p>
+<pre><code class="java">package com.micalculadora;
+
+public class Calculadora{
+
+    public static double suma (double a, double b) {
+        return (a+b);
+    }
+    public static double multiplica (double a, double b) {
+        return (a*b);
+    }
+    public static double resta (double a, double b) {
+        return (a-b);
+    }
+    public static double divide (double a, double b) {
+        return (a/b);
+    }
+    public static double resto (double a, double b) {
+        return (a%b);
+    }
+}
+
+</code></pre>
+
+<p><code>└── CalculadoraPrueba.java</code></p>
+<pre><code class="java">package com.micalculadora.pruebas;
+
+import org.junit.Test;
+
+import com.micalculadora.Calculadora;
+
+import static org.junit.Assert.*;
+
+public class CalculadoraPrueba {
+
+    @Test
+    public void prueba() {
+
+        assertEquals(4,Calculadora.suma(2,2),0);
+
+        assertEquals(4,Calculadora.multiplica(2,2),0);
+
+        assertEquals(0,Calculadora.resta(2,2),0);
+
+        assertEquals(1,Calculadora.divide(2,2),0);
+
+        assertEquals(0,Calculadora.resto(2,2),0);
+    }
+}
+</code></pre>
+
+<p>Al ejecutar el test de Eclipse (no usar otro), los test se pueden probar sin problemas, se pueden ir probando cambiando valores y viendo como fallan los test</p>
+<p>Si queremos usar <code>JUNIT 5</code> hacemos los siguientes cambios.</p>
+<p><code>/micalculadora/pom.xml</code></p>
+<pre><code class="xml">&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;
+    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+    xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+    &lt;groupId&gt;com.calculadora&lt;/groupId&gt;
+    &lt;artifactId&gt;micalculadora&lt;/artifactId&gt;
+    &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
+    &lt;name&gt;calculadora&lt;/name&gt;
+
+    &lt;properties&gt;
+        &lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt;
+    &lt;/properties&gt;
+
+    &lt;dependencies&gt;
+
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.mockito&lt;/groupId&gt;
+            &lt;artifactId&gt;mockito-core&lt;/artifactId&gt;
+            &lt;version&gt;2.28.2&lt;/version&gt;
+            &lt;scope&gt;test&lt;/scope&gt;
+        &lt;/dependency&gt;
+
+        &lt;!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.junit.jupiter&lt;/groupId&gt;
+            &lt;artifactId&gt;junit-jupiter-api&lt;/artifactId&gt;
+            &lt;version&gt;5.6.0&lt;/version&gt;
+            &lt;scope&gt;test&lt;/scope&gt;
+        &lt;/dependency&gt;
+
+        &lt;!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.junit.jupiter&lt;/groupId&gt;
+            &lt;artifactId&gt;junit-jupiter-engine&lt;/artifactId&gt;
+            &lt;version&gt;5.6.0&lt;/version&gt;
+            &lt;scope&gt;test&lt;/scope&gt;
+        &lt;/dependency&gt;
+
+        &lt;!-- https://mvnrepository.com/artifact/org.junit.platform/junit-platform-launcher --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.junit.platform&lt;/groupId&gt;
+            &lt;artifactId&gt;junit-platform-launcher&lt;/artifactId&gt;
+            &lt;version&gt;1.6.0&lt;/version&gt;
+            &lt;scope&gt;test&lt;/scope&gt;
+        &lt;/dependency&gt;
+
+    &lt;/dependencies&gt;
+
+&lt;/project&gt;
+</code></pre>
+
+<p><code>/micalculadora/src/test/java/com/micalculadora/pruebas/CalculadoraPrueba.java</code></p>
+<pre><code class="java">package com.micalculadora.pruebas;
+
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
+
+import com.micalculadora.Calculadora;
+
+
+public class CalculadoraPrueba {
+
+    @Test
+    public void prueba() {
+
+        assertEquals(4,Calculadora.suma(2,2),0);
+
+        assertEquals(4,Calculadora.multiplica(2,2),0);
+
+        assertEquals(0,Calculadora.resta(2,2),0);
+
+        assertEquals(1,Calculadora.divide(2,2),0);
+
+        assertEquals(0,Calculadora.resto(2,2),0);
+    }
+}
+</code></pre>
+
+<hr />
+<h2 id="propuesta-de-ejercicio">Propuesta de ejercicio.</h2>
+<hr />
+<p>Se necesita crear un sistema que simule un combate. Los jugadores serán entregados a una clase inyectada que controla la pelea. (Mayor explicación en la lectura).</p>
+<p>Estructura:</p>
+<pre><code>./
+├── pom.xml
+├── src
+    ├── main
+        ├── java
+            └── com.batalla
+                ├── IActividades.java
+                ├── IMovimiento.java
+                ├── Main.java
+                ├── Personaje.java
+                └── Torneo.java
+</code></pre>
+
+<p><code>pom.xml</code></p>
+<pre><code class="xml">&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;
+    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+    xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+    &lt;groupId&gt;com.batalla&lt;/groupId&gt;
+    &lt;artifactId&gt;batalla&lt;/artifactId&gt;
+    &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
+    &lt;name&gt;batalla&lt;/name&gt;
+
+    &lt;dependencies&gt;
+        &lt;!-- https://mvnrepository.com/artifact/org.apache.commons/commons-math3 --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.apache.commons&lt;/groupId&gt;
+            &lt;artifactId&gt;commons-math3&lt;/artifactId&gt;
+            &lt;version&gt;3.6.1&lt;/version&gt;
+        &lt;/dependency&gt;
+    &lt;/dependencies&gt;
+
+&lt;/project&gt;
+</code></pre>
+
+<pre><code>└── com.batalla
+    ├── IActividades.java
+    ├── IMovimiento.java
+    ├── Main.java
+    ├── Personaje.java
+    └── Torneo.java
+</code></pre>
+
+<p><code>├── IActividades.java</code></p>
+<pre><code class="java">package com.batalla;
+
+public interface IActividades {
+    void ataqueBasico();
+
+    void ataqueAvanzado();
+
+    void defenderAtaque();
+
+    void esquivarAtaque();
+}
+</code></pre>
+
+<p><code>├── IMovimiento.java</code></p>
+<pre><code class="java">package com.batalla;
+
+public interface IMovimiento {
+    void avanzar();
+
+    void derecha();
+
+    void izquierda();
+
+    void retroceder();
+}
+</code></pre>
+
+<p><code>├── Main.java</code></p>
+<pre><code class="java">package com.batalla;
+
+public class Main {
+    public static void main(String[] args) {
+
+        // Se crean los personajes (nombre, poder, energía)
+        Personaje goku = new Personaje(&quot;GOKÚ&quot;, 5, 10);
+        Personaje vegeta = new Personaje(&quot;VEGETA&quot;, 6, 9);
+
+        // se inicializa el torneo y se inyectan los dos peleadores
+        Torneo torneo = new Torneo(goku, vegeta);
+
+        // se muestran los peleadores inyectados
+        torneo.presentarContrincantes();
+
+        // inicia el conbate
+        torneo.pelea();
+    }
+}
+</code></pre>
+
+<p><code>├── Personaje.java</code></p>
+<pre><code class="java">package com.batalla;
+
+import org.apache.commons.math3.util.CombinatoricsUtils;
+
+public class Personaje implements IActividades, IMovimiento {
+    String nombre;
+    double energia;
+    double poder;
+    String ataque;
+
+    Personaje() {
+    }
+
+    Personaje(String nombre, int poder, int energia) {
+        this.nombre = nombre;
+        this.poder = CombinatoricsUtils.factorial(poder);
+        this.energia = CombinatoricsUtils.factorial(energia);
+    }
+
+    public String getNombre() {
+        return this.nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public double getEnergia() {
+        return this.energia;
+    }
+
+    public void setEnergia(double vida) {
+        this.energia = vida;
+    }
+
+    public double getPoder() {
+        return this.poder;
+    }
+
+    public void setPoder(double poder) {
+        this.poder = poder;
+    }
+
+    public void ataqueBasico() {
+        System.out.println(this.nombre + &quot;, ha pegado una patada!&quot;);
+    }
+
+    public void ataqueAvanzado() {
+        System.out.println(this.nombre + &quot;, ha lanzado un Kamehameha! de &quot; + this.poder + &quot; puntos de potencia&quot;);
+    }
+
+    public void defenderAtaque() {
+        System.out.println(this.nombre + &quot;, se ha defendido contra el ataque!&quot;);
+    }
+
+    public void esquivarAtaque() {
+        System.out.println(this.nombre + &quot;, lo ha esquivado!&quot;);
+    }
+
+    public String toString() {
+        return &quot;Hola, soy &quot; + this.nombre + &quot;, mi poder alcanza &quot; + this.poder + &quot; y mi energía no supera los &quot;
+                + this.energia;
+    }
+
+    public void avanzar() {
+        System.out.println(this.nombre + &quot;, avanzó hacia adelante&quot;);
+    }
+
+    public void derecha() {
+        System.out.println(this.nombre + &quot;, giró a la derecha&quot;);
+    }
+
+    public void izquierda() {
+        System.out.println(this.nombre + &quot;, giró a la izquierda&quot;);
+    }
+
+    public void retroceder() {
+        System.out.println(this.nombre + &quot;, retrocedió&quot;);
+    }
+}
+</code></pre>
+
+<p><code>└── Torneo.java</code></p>
+<pre><code class="java">package com.batalla;
+
+public class Torneo {
+
+    Personaje p1;
+    Personaje p2;
+
+    Torneo(Personaje p1, Personaje p2) {
+        this.p1 = p1;
+        this.p2 = p2;
+    }
+
+    public void pelea() {
+        p1.avanzar();
+        p1.izquierda();
+        p1.izquierda();
+        p2.avanzar();
+        p2.retroceder();
+        p2.ataqueBasico();
+        p1.esquivarAtaque();
+        p1.ataqueAvanzado();
+        p2.defenderAtaque();
+    }
+
+    public void presentarContrincantes() {
+        p1.toString();
+        p2.toString();
+    }
+}
+</code></pre>
+
+<p>Probar (como tarea) con otros personajes u otra lógica, quizás con un <code>delay</code> combinado con un <code>ramdom</code>.</p>
+<hr />
+<h1 id="extra">EXTRA</h1>
+<hr />
+<p>Esta prueba se ejecutó con éxito usando maven test y el test del IDE.</p>
+<p>EN Mac: </p>
+<pre><code>brew install maven
+</code></pre>
+
+<p>Luego...</p>
+<pre><code>➜  di mvn --version
+Apache Maven 3.6.3 (cecedd343002696d0abb50b32b541b8a6ba2883f)
+Maven home: /usr/local/Cellar/maven/3.6.3_1/libexec
+Java version: 13.0.2, vendor: N/A, runtime: /usr/local/Cellar/openjdk/13.0.2+8_2/libexec/openjdk.jdk/Contents/Home
+Default locale: es_CL, platform encoding: UTF-8
+OS name: &quot;mac os x&quot;, version: &quot;10.14.6&quot;, arch: &quot;x86_64&quot;, family: &quot;mac&quot;
+</code></pre>
+
+<p>Para probar el test usando maven: (Usar solamente el <code>ejecutador</code> de tests de eclipse), por ahora desde la consola es inestable o al menos no están todo los comandos claros. TODO (0002, 0003)</p>
+<p>La configuración que aceptó la instalación desde la consola usando maven:</p>
+<pre><code class="xml">&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;
+    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+    xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+    &lt;groupId&gt;com.calculadora&lt;/groupId&gt;
+    &lt;artifactId&gt;micalculadora&lt;/artifactId&gt;
+    &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
+    &lt;name&gt;calculadora&lt;/name&gt;
+
+    &lt;properties&gt;
+        &lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt;
+    &lt;/properties&gt;
+
+    &lt;dependencies&gt;
+        &lt;!-- https://mvnrepository.com/artifact/junit/junit --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;junit&lt;/groupId&gt;
+            &lt;artifactId&gt;junit&lt;/artifactId&gt;
+            &lt;version&gt;4.11&lt;/version&gt;
+            &lt;scope&gt;test&lt;/scope&gt;
+        &lt;/dependency&gt;
+
+        &lt;!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+            &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
+            &lt;version&gt;3.8.1&lt;/version&gt;
+            &lt;type&gt;maven-plugin&lt;/type&gt;
+        &lt;/dependency&gt;
+
+    &lt;/dependencies&gt;
+
+    &lt;build&gt;
+        &lt;plugins&gt;
+            &lt;plugin&gt;
+                &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+                &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
+                &lt;version&gt;3.8.1&lt;/version&gt;
+                &lt;configuration&gt;
+                    &lt;source&gt;1.8&lt;/source&gt;
+                    &lt;target&gt;1.8&lt;/target&gt;
+                &lt;/configuration&gt;
+            &lt;/plugin&gt;
+        &lt;/plugins&gt;
+    &lt;/build&gt;
+
+&lt;/project&gt;
+</code></pre>
+
+<hr />
+<h1 id="fin-extra">FIN - EXTRA</h1>
+<hr />
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../assets/javascripts/vendor.a0c4167b.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.fb26dd1d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../../assets/javascripts/worker/search.37585f48.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

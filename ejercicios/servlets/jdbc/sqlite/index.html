@@ -1,0 +1,2752 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.6">
+    
+    
+      
+        <title>Connexión JDBC - SQLITE - Java Full Stack Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.4b9ffd7b.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#connexion-jdbc-sqlite" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../../.." title="Java Full Stack Docs" class="md-header-nav__button md-logo" aria-label="Java Full Stack Docs">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Java Full Stack Docs
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Connexión JDBC - SQLITE
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Java Full Stack Docs" class="md-nav__button md-logo" aria-label="Java Full Stack Docs">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Java Full Stack Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../repaso/teoria/poo/herencia/" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="connexion-jdbc-sqlite">Connexión JDBC - SQLITE</h1>
+<p>Se asume que se tiene un cliente SQLITE como DBEaber, además de un archivo .bd o .sqlite. </p>
+<hr />
+<h1 id="ejemplo-1-consulta">Ejemplo 1: Consulta.</h1>
+<hr />
+<p>Usemos SQLITE, para conectar una app de java. Lo primero es disponer de una base de datos con una tabla personas hecha y un dato ingresado.</p>
+<h3 id="ddl">DDL</h3>
+<pre><code class="sql">-- creamos la tabla persona.
+CREATE TABLE persona (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nombre TEXT
+);
+
+-- agregamos un registro en la tabla.
+INSERT INTO persona (nombre) values ('luis');
+
+-- Comprobamos que exista un registro
+SELECT id, nombre FROM persona;
+</code></pre>
+
+<p>El objetivo es poder consultar este dato desde un programa en Java.</p>
+<p>Para resolver lo del Driver, creamos este proyecto como un proyecto Maven.</p>
+<p>Estructura:</p>
+<pre><code>├── pom.xml
+├── src
+    ├── main
+        ├── java
+            └── cl
+                └── lherrera
+                    └── jdbc
+                        └── sqlite
+                            └── Principal.java
+</code></pre>
+
+<p><code>/sqlite/pom.xml</code></p>
+<pre><code class="xml">&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+  &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+  &lt;groupId&gt;cl.lherrera.jdbc&lt;/groupId&gt;
+  &lt;artifactId&gt;sqlite&lt;/artifactId&gt;
+  &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
+
+
+  &lt;dependencies&gt;
+
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.xerial&lt;/groupId&gt;
+            &lt;artifactId&gt;sqlite-jdbc&lt;/artifactId&gt;
+            &lt;version&gt;3.30.1&lt;/version&gt;
+        &lt;/dependency&gt;
+
+  &lt;/dependencies&gt;
+
+&lt;/project&gt;
+</code></pre>
+
+<p><code>cl.lherrera.jdbc.sqlite.Principal</code></p>
+<pre><code class="java">package cl.lherrera.jdbc.sqlite;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.logging.Logger;
+
+public class Principal {
+    // dirección en la que se encuentra el archivo de la base de datos.
+    private static final String DATABASE_FILE_PATH = &quot;/Users/luisherrera/Desktop/TALENTO-PROS/bases/base001.db&quot;;
+    // url de la base de datos, necesaria para la conexión.
+    private static final String DB_URL = &quot;jdbc:sqlite:&quot; + DATABASE_FILE_PATH;
+    // logger 
+    private static Logger milog = Logger.getLogger(Principal.class.getName());
+
+    public static void main(String[] args) {
+        milog.info(&quot;Inicio de la aplicación&quot;);
+        try {
+            // cargamos el driver. (deja disponible la clase org.sqlite.JDBC en esta instancia)
+            Class.forName(&quot;org.sqlite.JDBC&quot;);
+            // se crea la conexión a la base de datos.
+            try (
+                Connection conexion = DriverManager.getConnection(DB_URL, &quot;admin&quot;, &quot;1234&quot;);
+                PreparedStatement ps = conexion.prepareStatement(&quot;SELECT id, nombre FROM persona&quot;);
+                ResultSet rs = ps.executeQuery();
+            ){
+                while(rs.next()) {
+                    milog.info(&quot;ID: &quot; + rs.getString(&quot;id&quot;));
+                    milog.info(&quot;NOMBRE: &quot; + rs.getString(&quot;nombre&quot;));
+                }
+
+            } catch (SQLException e) {
+                milog.severe(&quot;no se pudo establecer conexión con la base de datos&quot;);
+                milog.severe(e.getMessage());
+            }
+
+        } catch (ClassNotFoundException e) {
+            milog.severe(&quot;la clase no ha podido ser encontrada&quot;);
+            milog.severe(e.getMessage());
+        }
+    }
+}
+</code></pre>
+
+<hr />
+<h1 id="ejemplo-2-agregar-un-registro-y-consulta">Ejemplo 2: agregar un registro y consulta.</h1>
+<hr />
+<p>Al código anterior, agregamos la funcionalidad para poder ingresar un nuevo registro.</p>
+<p>Estructura:</p>
+<pre><code>├── pom.xml
+├── src
+    ├── main
+        ├── java
+            └── cl
+                └── lherrera
+                    └── jdbc
+                        └── sqlite
+                            └── Principal.java
+
+</code></pre>
+
+<p><code>/sqlite/pom.xml</code></p>
+<pre><code class="xml">&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+  &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+  &lt;groupId&gt;cl.lherrera.jdbc&lt;/groupId&gt;
+  &lt;artifactId&gt;sqlite&lt;/artifactId&gt;
+  &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
+
+
+  &lt;dependencies&gt;
+
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.xerial&lt;/groupId&gt;
+            &lt;artifactId&gt;sqlite-jdbc&lt;/artifactId&gt;
+            &lt;version&gt;3.30.1&lt;/version&gt;
+        &lt;/dependency&gt;
+
+  &lt;/dependencies&gt;
+
+&lt;/project&gt;
+</code></pre>
+
+<p><code>cl.lherrera.jdbc.sqlite.Principal</code></p>
+<pre><code class="java">package cl.lherrera.jdbc.sqlite;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.logging.Logger;
+
+public class Principal {
+    // dirección en la que se encuentra el archivo de la base de datos.
+    private static final String DATABASE_FILE_PATH = &quot;/Users/luisherrera/Desktop/TALENTO-PROS/bases/base001.db&quot;;
+    // url de la base de datos, necesaria para la conexión.
+    private static final String DB_URL = &quot;jdbc:sqlite:&quot; + DATABASE_FILE_PATH;
+    // logger 
+    private static Logger milog = Logger.getLogger(Principal.class.getName());
+
+    public static void main(String[] args) {
+        milog.info(&quot;Inicio de la aplicación&quot;);
+        try {
+            // cargamos el driver. (deja disponible la clase org.sqlite.JDBC en esta instancia)
+            Class.forName(&quot;org.sqlite.JDBC&quot;);
+
+            // insertamos el valor
+            try (
+                    Connection conexion = DriverManager.getConnection(DB_URL, &quot;admin&quot;, &quot;1234&quot;);
+                    // consulta a la tabla
+                    PreparedStatement ps = conexion.prepareStatement(&quot;INSERT INTO persona (nombre) values ('pedro')&quot;);
+                ){
+                    int columnasAfectadas = ps.executeUpdate(); 
+                    if(columnasAfectadas != 1)
+                        milog.severe(&quot;no se pudo ingresar ningún registro&quot;);
+
+                } catch (SQLException e) {
+                    milog.severe(&quot;no se pudo establecer conexión con la base de datos&quot;);
+                    milog.severe(e.getMessage());
+                }
+            // Lo consultamos
+            try (
+                Connection conexion = DriverManager.getConnection(DB_URL, &quot;admin&quot;, &quot;1234&quot;);
+                // consulta a la tabla
+                PreparedStatement ps = conexion.prepareStatement(&quot;SELECT id, nombre FROM persona&quot;);
+                ResultSet rs = ps.executeQuery();
+            ){
+                while(rs.next()) {
+                    milog.info(&quot;ID: &quot; + rs.getString(&quot;id&quot;));
+                    milog.info(&quot;NOMBRE: &quot; + rs.getString(&quot;nombre&quot;));
+                }
+
+            } catch (SQLException e) {
+                milog.severe(&quot;no se pudo establecer conexión con la base de datos&quot;);
+                milog.severe(e.getMessage());
+            }
+
+        } catch (ClassNotFoundException e) {
+            milog.severe(&quot;la clase no ha podido ser encontrada&quot;);
+            milog.severe(e.getMessage());
+        }
+    }
+}
+</code></pre>
+
+<p>Se puede ver que por cada consulta agregamos un <code>try</code>, esto se debe a que por cada consulta, la conexión debe volver a cerrar, es por eso que debe ir en <code>try(/*acá*/)</code>. No se debe mezclar con la consulta ya que la conexión ejecutará ambas tareas por separado.</p>
+<hr />
+<h1 id="ejercicio-3-otra-forma-de-formato-sql-text">Ejercicio 3: Otra forma de formáto sql-text.</h1>
+<hr />
+<p>Al momento de crear una consulta, posiblemente se deba ingresar algún valor variable, esto es común al momento de ingresar información. <code>PreparedStatement</code> posee la capacidad de asignar valores después indicar el texto de una consulta, es similar a <code>String.format</code>.</p>
+<p>Estructura:</p>
+<pre><code>├── pom.xml
+├── src
+    ├── main
+        ├── java
+            └── cl
+                └── lherrera
+                    └── jdbc
+                        └── sqlite
+                            └── Principal.java
+
+</code></pre>
+
+<p><code>/sqlite/pom.xml</code></p>
+<pre><code class="xml">&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+  &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+  &lt;groupId&gt;cl.lherrera.jdbc&lt;/groupId&gt;
+  &lt;artifactId&gt;sqlite&lt;/artifactId&gt;
+  &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
+
+
+  &lt;dependencies&gt;
+
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.xerial&lt;/groupId&gt;
+            &lt;artifactId&gt;sqlite-jdbc&lt;/artifactId&gt;
+            &lt;version&gt;3.30.1&lt;/version&gt;
+        &lt;/dependency&gt;
+
+  &lt;/dependencies&gt;
+
+&lt;/project&gt;
+</code></pre>
+
+<p><code>cl.lherrera.jdbc.sqlite.Principal</code></p>
+<pre><code class="java">package cl.lherrera.jdbc.sqlite;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.logging.Logger;
+
+public class Principal {
+    // dirección en la que se encuentra el archivo de la base de datos.
+    private static final String DATABASE_FILE_PATH = &quot;/Users/luisherrera/Desktop/TALENTO-PROS/bases/base001.db&quot;;
+    // url de la base de datos, necesaria para la conexión.
+    private static final String DB_URL = &quot;jdbc:sqlite:&quot; + DATABASE_FILE_PATH;
+    // logger 
+    private static Logger milog = Logger.getLogger(Principal.class.getName());
+
+    public static void main(String[] args) {
+        milog.info(&quot;Inicio de la aplicación&quot;);
+        try {
+            // cargamos el driver. (deja disponible la clase org.sqlite.JDBC en esta instancia)
+            Class.forName(&quot;org.sqlite.JDBC&quot;);
+
+            // insertamos el valor
+            try (
+                    Connection conexion = DriverManager.getConnection(DB_URL, &quot;admin&quot;, &quot;1234&quot;);
+                    // 👀 👀 👀 👀 👀 👀
+                    // los signos de interrogación, serán reemplazados con
+                    // ps.setString(1, &quot;juán&quot;);, se puede ver que
+                    // el index comienza en 1.
+                    PreparedStatement ps = conexion.prepareStatement(&quot;INSERT INTO persona (nombre) values (?)&quot;);
+                ){
+                    // completamos la consulta, 1 es el primer signo ?. En este caso hay sólo uno.
+                    ps.setString(1, &quot;juán&quot;);
+                    // continúa la ejecución
+                    int columnasAfectadas = ps.executeUpdate();
+                    if(columnasAfectadas != 1)
+                        milog.severe(&quot;no se pudo ingresar ningún registro&quot;);
+
+                } catch (SQLException e) {
+                    milog.severe(&quot;no se pudo establecer conexión con la base de datos&quot;);
+                    milog.severe(e.getMessage());
+                }
+
+            try (
+                // necesitan cerrar luego de ejecutar.
+                Connection conexion = DriverManager.getConnection(DB_URL, &quot;admin&quot;, &quot;1234&quot;);
+                // 👀 👀 👀 👀 👀 👀 👀
+                PreparedStatement ps = conexion.prepareStatement(&quot;SELECT id, nombre FROM persona WHERE id = ?&quot;);
+            ){
+                // pero esto no
+                ps.setInt(1, 1);
+                try(
+                    // rs, sí necesita cerrar, es por esto que necesita otro try().
+                    ResultSet rs = ps.executeQuery();
+                ){
+                    while(rs.next()) {
+                        milog.info(&quot;ID: &quot; + rs.getString(&quot;id&quot;));
+                        milog.info(&quot;NOMBRE: &quot; + rs.getString(&quot;nombre&quot;));
+                    }
+
+                }catch (SQLException e) {
+                    milog.severe(e.getMessage());
+                }
+
+            } catch (SQLException e) {
+                milog.severe(&quot;no se pudo establecer conexión con la base de datos&quot;);
+                milog.severe(e.getMessage());
+            }
+
+        } catch (ClassNotFoundException e) {
+            milog.severe(&quot;la clase no ha podido ser encontrada&quot;);
+            milog.severe(e.getMessage());
+        }
+    }
+}
+</code></pre>
+
+<hr />
+<h1 id="ejercicio-4-clase-conexion-singleton">Ejercicio 4: Clase conexión (Singletón).</h1>
+<p>Cuando ejecutamos consultas a una base de datos desde Java, abrimos una conexión para ejecutar la consulta y luego debemos cerrarla, para que otra instancia (ptra forma de llamar a un usuario en algún lugar usando la app 👾), pueda utilizar la base de datos, ya que el número de conexiones que ofrece el servidor de base de datos es limitado, aproximadamente (200) simultaneas (Ahora se entiende el por qué de las colas para comprar entradas online). Es por este motivo que optimizar el cierre de las conexiones cuando no la estemos utilizando es primordial. Si creamos una clase conexión y por error, se crea más de una instancia, porducimos una conexión por instancia y esto no es bueno cuando hablamos de aplicaciones con muchos usuarios. Esta producción de instancias debe ser controlada, asígnando un máximo de 1 instancia por usuario conectado. De esto se encarga el patrón Singletón.</p>
+<p>Estructura (maven)</p>
+<pre><code>├── pom.xml
+├── src
+    ├── main
+        ├── java
+            └── cl
+                └── lherrera
+                    └── jdbc
+                        └── sqlite
+                            ├── ManejaConexion.java
+                            └── Principal.java
+</code></pre>
+
+<p><code>/sqlite/pom.xml</code></p>
+<pre><code class="xml">&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+  &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+  &lt;groupId&gt;cl.lherrera.jdbc&lt;/groupId&gt;
+  &lt;artifactId&gt;sqlite&lt;/artifactId&gt;
+  &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
+
+  &lt;dependencies&gt;
+
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.xerial&lt;/groupId&gt;
+            &lt;artifactId&gt;sqlite-jdbc&lt;/artifactId&gt;
+            &lt;version&gt;3.30.1&lt;/version&gt;
+        &lt;/dependency&gt;
+
+  &lt;/dependencies&gt;
+
+&lt;/project&gt;
+</code></pre>
+
+<p><code>/sqlite/src/main/java/cl/lherrera/jdbc/sqlite/ManejaConexion.java</code>
+(Singleton pattern 🥋)</p>
+<pre><code class="java">package cl.lherrera.jdbc.sqlite;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.util.logging.Logger;
+
+
+public class ManejaConexion {
+
+    private static final String DATABASE_FILE_PATH = &quot;/Users/luisherrera/Desktop/TALENTO-PROS/bases/base001.db&quot;;
+    private static final String DB_URL = &quot;jdbc:sqlite:&quot; + DATABASE_FILE_PATH;
+    private static final Logger milog = Logger.getLogger(ManejaConexion.class.getName());
+
+    // variable de instancia para controlar sólo una.
+    private static ManejaConexion manejaConexion;
+
+    // única forma de instanciar esta clase es desde el interior.
+    private ManejaConexion() {}
+
+    /**
+     * Método estático, para poder acceder sin una instancia, así controlamos
+     * internamente que no se cree una nueva instancia si esta existe.
+     * @return
+     */
+    public static ManejaConexion obtenerManejo() {
+        if(manejaConexion != null) {
+            return manejaConexion;
+        }else {
+            return new ManejaConexion();
+        }
+    }
+
+    /**
+     * Obtiene una conexión, esta arroja la excepción, para poder desde donde sea llamada
+     * usar el try(), con ello poder crear una conexión por consulta y luego
+     * la cerrará.
+     * 
+     * @return
+     * @throws SQLException
+     */
+    public Connection obtenerConexion() throws SQLException {
+        Connection conexion = null;
+
+        try {
+            Class.forName(&quot;org.sqlite.JDBC&quot;);
+            conexion = DriverManager.getConnection(DB_URL, &quot;admin&quot;, &quot;1234&quot;);
+
+        } catch (ClassNotFoundException e) {
+            milog.severe(&quot;No se pudo cargar el driver.&quot;);
+            milog.severe(e.getMessage());
+        }
+
+        return conexion;
+    }
+}
+</code></pre>
+
+<p><code>/sqlite/src/main/java/cl/lherrera/jdbc/sqlite/Principal.java</code></p>
+<pre><code class="java">package cl.lherrera.jdbc.sqlite;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.logging.Logger;
+
+public class Principal {
+    private static final ManejaConexion manejaConexion = ManejaConexion.obtenerManejo();
+    private static Logger milog = Logger.getLogger(Principal.class.getName());
+
+    public static void main(String[] args) {
+        milog.info(&quot;Inicio de la aplicación&quot;);
+
+        // ingreso de dato
+        try(
+            Connection conexion = manejaConexion.obtenerConexion();
+            PreparedStatement ps = conexion.prepareStatement(&quot;INSERT INTO persona (nombre) values (?)&quot;);
+        ){
+            ps.setString(1, &quot;ana&quot;);
+            int columnasAfectadas = ps.executeUpdate();
+
+            if(columnasAfectadas != 1)
+                throw new SQLException(&quot;Error al insertar registro&quot;);
+
+        }catch (SQLException e) {
+            milog.severe(e.getMessage());
+        }
+
+        // ejecuta el select
+        try(
+            Connection conexion = manejaConexion.obtenerConexion();
+            PreparedStatement ps = conexion.prepareStatement(&quot;SELECT id, nombre FROM persona WHERE id = 1&quot;);
+            ResultSet rs = ps.executeQuery();
+        ){
+            while(rs.next()) {
+                milog.info(&quot;ID: &quot; + rs.getString(&quot;id&quot;));
+                milog.info(&quot;NOMBRE: &quot; + rs.getString(&quot;nombre&quot;));
+            }
+
+        }catch (SQLException e) {
+            milog.severe(e.getMessage());
+        }
+    }
+}
+</code></pre>
+
+<hr />
+<h1 id="ejercicio-5-uso-de-un-dto">Ejercicio 5: Uso de un DTO.</h1>
+<hr />
+<p>Java es un lenguaje que cumple muy bien con lo que determina el paradigma de orientación a objetos, entonces hay que sacar provecho de esto.</p>
+<p>Estructura:</p>
+<pre><code>./
+├── pom.xml
+├── src
+│   ├── main
+│       ├── java
+|            └── cl
+|                └── lherrera
+|                    └── jdbc
+|                        └── sqlite
+|                            ├── ManejaConexion.java
+|                            ├── Persona.java
+|                            └── Principal.java
+</code></pre>
+
+<p><code>/sqlite/pom.xml</code></p>
+<pre><code class="xml">&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+  &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+  &lt;groupId&gt;cl.lherrera.jdbc&lt;/groupId&gt;
+  &lt;artifactId&gt;sqlite&lt;/artifactId&gt;
+  &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
+
+  &lt;dependencies&gt;
+
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.xerial&lt;/groupId&gt;
+            &lt;artifactId&gt;sqlite-jdbc&lt;/artifactId&gt;
+            &lt;version&gt;3.30.1&lt;/version&gt;
+        &lt;/dependency&gt;
+
+  &lt;/dependencies&gt;
+
+&lt;/project&gt;
+</code></pre>
+
+<p><code>/sqlite/src/main/java/cl/lherrera/jdbc/sqlite/ManejaConexion.java</code>
+(Singleton pattern 🥋)</p>
+<pre><code class="java">package cl.lherrera.jdbc.sqlite;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.util.logging.Logger;
+
+
+public class ManejaConexion {
+
+    private static final String DATABASE_FILE_PATH = &quot;/Users/luisherrera/Desktop/TALENTO-PROS/bases/base001.db&quot;;
+    private static final String DB_URL = &quot;jdbc:sqlite:&quot; + DATABASE_FILE_PATH;
+    private static final Logger milog = Logger.getLogger(ManejaConexion.class.getName());
+
+    // variable de instancia para controlar sólo una.
+    private static ManejaConexion manejaConexion;
+
+    // única forma de instanciar esta clase es desde el interior.
+    private ManejaConexion() {}
+
+    /**
+     * Método estático, para poder acceder sin una instancia, así controlamos
+     * internamente que no se cree una nueva instancia si esta existe.
+     * @return
+     */
+    public static ManejaConexion obtenerManejo() {
+        if(manejaConexion != null) {
+            return manejaConexion;
+        }else {
+            return new ManejaConexion();
+        }
+    }
+
+    /**
+     * Obtiene una conexión, esta arroja la excepción, para poder desde donde sea llamada
+     * usar el try(), con ello poder crear una conexión por consulta y luego
+     * la cerrará.
+     * 
+     * @return
+     * @throws SQLException
+     */
+    public Connection obtenerConexion() throws SQLException {
+        Connection conexion = null;
+
+        try {
+            Class.forName(&quot;org.sqlite.JDBC&quot;);
+            conexion = DriverManager.getConnection(DB_URL, &quot;admin&quot;, &quot;1234&quot;);
+
+        } catch (ClassNotFoundException e) {
+            milog.severe(&quot;No se pudo cargar el driver.&quot;);
+            milog.severe(e.getMessage());
+        }
+
+        return conexion;
+    }
+}
+</code></pre>
+
+<p><code>/sqlite/src/main/java/cl/lherrera/jdbc/sqlite/Persona.java</code></p>
+<pre><code class="java">package cl.lherrera.jdbc.sqlite;
+
+public class Persona {
+    private Integer id;
+    private String nombre;
+
+    public Persona() {}
+
+    public Persona(Integer id, String nombre) {
+        this.id = id;
+        this.nombre = nombre;
+    }
+
+    public Persona(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    @Override
+    public String toString() {
+        return &quot;Persona [id=&quot; + id + &quot;, nombre=&quot; + nombre + &quot;]&quot;;
+    }
+}
+</code></pre>
+
+<p><code>/sqlite/src/main/java/cl/lherrera/jdbc/sqlite/Principal.java</code></p>
+<pre><code class="java">package cl.lherrera.jdbc.sqlite;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Logger;
+
+public class Principal {
+    private static final ManejaConexion manejaConexion = ManejaConexion.obtenerManejo();
+    private static Logger milog = Logger.getLogger(Principal.class.getName());
+
+    public static void main(String[] args) {
+        milog.info(&quot;Inicio de la aplicación&quot;);
+
+        // ingreso de dato
+        try(
+            Connection conexion = manejaConexion.obtenerConexion();
+            PreparedStatement ps = conexion.prepareStatement(&quot;INSERT INTO persona (nombre) values (?)&quot;);
+        ){
+            Persona persona = new Persona(&quot;Carla&quot;);
+
+            ps.setString(1, persona.getNombre());
+            int columnasAfectadas = ps.executeUpdate();
+
+            if(columnasAfectadas != 1)
+                throw new SQLException(&quot;Error al insertar registro&quot;);
+
+        }catch (SQLException e) {
+            milog.severe(e.getMessage());
+        }
+
+        // ejecuta el select
+        try(
+            Connection conexion = manejaConexion.obtenerConexion();
+            PreparedStatement ps = conexion.prepareStatement(&quot;SELECT id, nombre FROM persona&quot;);
+            ResultSet rs = ps.executeQuery();
+        ){
+            List&lt;Persona&gt; personas = new ArrayList&lt;&gt;();
+
+            while(rs.next()) {
+                personas.add(new Persona(rs.getInt(&quot;id&quot;), rs.getString(&quot;nombre&quot;)));
+            }
+
+            // imprimimos los resultados
+            for(Persona per: personas)
+                milog.info(per.toString());
+
+        }catch (SQLException e) {
+            milog.severe(e.getMessage());
+        }
+    }
+}
+</code></pre>
+
+<hr />
+<h1 id="ejercicio-6-separando-en-capas-modelos-daos-utils">Ejercicio 6: separando en capas (modelos, daos, utils)</h1>
+<hr />
+<p>Separamos en capas, cada una con alguna responsabilidad en particular. La idea es implementar un funcionamiento separado en tres capas, en una el modelo, la vista y el controlador; aunque MVC es enfocado a aplicaciónes de escritorio, se supone que MVC es casi una jerga e indica que tenemos tres capas; lo que podemos ver en el ejemplo es que las capas encargadas de los datos no podemos asignarlo solamente al modelo, ya que este necesita conectar y realizar tareas, por tanto el modelo para el caso de los proyectos en java, se divide en nuevas capas, en este caso los Daos (proporcionan el acceso más común, como obtener todos) y el mismo modelo, sin contar el Singletón conector.</p>
+<p>Estructura:</p>
+<pre><code>├── pom.xml
+├── src
+│   ├── main
+│       ├── java
+│           └── cl
+│               └── lherrera
+│                   └── jdbc
+│                       └── sqlite
+│                           ├── ManejaConexion.java
+│                           ├── Principal.java
+│                           ├── daos
+│                           │   └── PersonaDAO.java
+│                           └── modelos
+│                               └── Persona.java
+
+</code></pre>
+
+<p><code>/sqlite/pom.xml</code></p>
+<pre><code class="xml">&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+  &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+  &lt;groupId&gt;cl.lherrera.jdbc&lt;/groupId&gt;
+  &lt;artifactId&gt;sqlite&lt;/artifactId&gt;
+  &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
+
+
+  &lt;dependencies&gt;
+
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.xerial&lt;/groupId&gt;
+            &lt;artifactId&gt;sqlite-jdbc&lt;/artifactId&gt;
+            &lt;version&gt;3.30.1&lt;/version&gt;
+        &lt;/dependency&gt;
+
+  &lt;/dependencies&gt;
+
+&lt;/project&gt;
+</code></pre>
+
+<p><code>/sqlite/src/main/java/cl/lherrera/jdbc/sqlite/ManejaConexion.java</code></p>
+<pre><code class="java">package cl.lherrera.jdbc.sqlite.utils;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.util.Properties;
+import java.util.logging.Logger;
+
+
+public class ManejaConexion {
+    // cargamos las propiedades del proyecto
+    private static Propiedades propiedades = Propiedades.obtenerPropiedades();
+    private static Properties props = propiedades.getProps();
+
+    private static final String DB_URL = &quot;jdbc:sqlite:&quot; + props.getProperty(&quot;file_path&quot;);
+    private static final Logger milog = MiLog.obtenerLog();
+
+    private static ManejaConexion manejaConexion = new ManejaConexion();
+
+    private ManejaConexion() {
+        if (manejaConexion != null){
+            //Prevent Reflection
+            throw new IllegalStateException(&quot;No se puede crear una nueva instancia de ManejaConexion&quot;);
+        }
+    }
+
+    /**
+     * Método estático, para poder acceder sin una instancia, así controlamos
+     * internamente que no se cree una nueva instancia si esta existe.
+     * 
+     */
+    public static ManejaConexion obtenerManejo() {
+        return manejaConexion;
+    }
+
+    /**
+     * Obtiene una conexión.
+     * 
+     * @return Una conexión abierta, esto es importante ya que esta conexión debe ser cerrada.
+     * @throws &lt;i&gt;SQLException&lt;/i&gt;, al no controlar la exception acá, obligamos
+     * a tener que utilizar un {@code try()}, así cada vez que lo ocupemos
+     * estará dentro del try especial y nos aseguramos que la conexión
+     * cierre. Pero esta característica, se encuentra vulnerable al
+     * desarrollador si ocupa o no {@code try(){}catch(){}}. 
+     */
+    public Connection obtenerConexion() throws SQLException {
+        Connection conexion = null;
+
+        try {
+            Class.forName(&quot;org.sqlite.JDBC&quot;);
+            conexion = DriverManager.getConnection(
+                DB_URL, 
+                props.getProperty(&quot;usuario&quot;), 
+                props.getProperty(&quot;contrasenia&quot;)
+            );
+
+        } catch (ClassNotFoundException e) {
+            milog.severe(&quot;No se pudo cargar el driver.&quot;);
+            milog.severe(e.getMessage());
+        }
+
+        return conexion;
+    }
+
+}
+
+</code></pre>
+
+<p><code>/sqlite/src/main/java/cl/lherrera/jdbc/sqlite/modelos/Persona.java</code></p>
+<pre><code class="java">package cl.lherrera.jdbc.sqlite.modelos;
+
+public class Persona {
+    private Integer id;
+    private String nombre;
+
+    public Persona() {}
+
+    public Persona(Integer id, String nombre) {
+        this.id = id;
+        this.nombre = nombre;
+    }
+
+    public Persona(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    @Override
+    public String toString() {
+        return &quot;Persona [id=&quot; + id + &quot;, nombre=&quot; + nombre + &quot;]&quot;;
+    }
+}
+</code></pre>
+
+<p><code>/sqlite/src/main/java/cl/lherrera/jdbc/sqlite/daos/PersonaDAO.java</code></p>
+<pre><code class="java">package cl.lherrera.jdbc.sqlite.daos;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Logger;
+
+import cl.lherrera.jdbc.sqlite.ManejaConexion;
+import cl.lherrera.jdbc.sqlite.modelos.Persona;
+
+public class PersonaDAO {
+    private static final ManejaConexion manejaConexion = ManejaConexion.obtenerManejo();
+    private static Logger milog = Logger.getLogger(PersonaDAO.class.getName());
+
+    /**
+     * Método encargado de agregar una persona a la
+     * base de datos.
+     */
+    public int ingresar(Persona persona) {
+        String letra;
+        int filasAfectadas = 0;
+
+        try(
+            Connection conexion = manejaConexion.obtenerConexion();
+            PreparedStatement ps = conexion.prepareStatement(&quot;INSERT INTO persona (nombre) values (?)&quot;);
+        ){
+            ps.setString(1, persona.getNombre());
+            filasAfectadas = ps.executeUpdate();
+
+            if(filasAfectadas != 1)
+                throw new SQLException(&quot;Error al insertar registro&quot;);
+
+        }catch (SQLException e) {
+            milog.severe(e.getMessage());
+        }
+
+        return filasAfectadas;
+    }
+
+    /**
+     * Método encargado de retornar una lista de todas las personas
+     * que estén en la base de datos.
+     * 
+     * @return {@code List} lista poblada con las personas encontradas
+     * en la base de datos.
+     */
+    public List&lt;Persona&gt; obtenerTodos(){
+        List&lt;Persona&gt; personas = new ArrayList&lt;&gt;();
+
+        try(
+            Connection conexion = manejaConexion.obtenerConexion();
+            PreparedStatement ps = conexion.prepareStatement(&quot;SELECT id, nombre FROM persona&quot;);
+            ResultSet rs = ps.executeQuery();
+        ){
+
+            while(rs.next()) {
+                personas.add(new Persona(rs.getInt(&quot;id&quot;), rs.getString(&quot;nombre&quot;)));
+            }
+        }catch (SQLException e) {
+            milog.severe(e.getMessage());
+        }
+
+        return personas;
+    }
+}
+</code></pre>
+
+<p><code>/sqlite/src/main/java/cl/lherrera/jdbc/sqlite/Principal.java</code></p>
+<pre><code class="java">package cl.lherrera.jdbc.sqlite;
+
+import java.util.logging.Logger;
+
+import cl.lherrera.jdbc.sqlite.daos.PersonaDAO;
+import cl.lherrera.jdbc.sqlite.modelos.Persona;
+
+public class Principal {
+    private static final ManejaConexion manejaConexion = ManejaConexion.obtenerManejo();
+    private static Logger milog = Logger.getLogger(Principal.class.getName());
+
+    public static void main(String[] args) {
+        milog.info(&quot;Inicio de la aplicación&quot;);
+        PersonaDAO personaDao = new PersonaDAO();
+
+        // ingreso de dato
+        Persona persona = new Persona(&quot;Camilo&quot;);
+        personaDao.ingresar(persona);
+
+        // ejecuta el select
+        for(Persona per: personaDao.obtenerTodos())
+            milog.info(per.toString());
+    }
+}
+</code></pre>
+
+<hr />
+<h1 id="ejercicio-7-aplicacion-mantenedora-de-informacion">Ejercicio 7: aplicación mantenedora de información.</h1>
+<hr />
+<p>Con lo ejercitado, podemos entonces crear una aplicación que mantenga los datos de la base de datos de la tabla persona.</p>
+<p>Se desacopla el funcionamiento creando un archivo de propiedades, que servirá para direfenciar por ejemplo las propiedases del servidor y las del ambiente de desarrollo. Esto se debe a que en servidor, posee su propio archivo de propiedades, entonces posee sus propias credenciales de conexión o una url de los logs propias.</p>
+<p>Estructura</p>
+<pre><code>./
+├── logs
+│   ├── 2020_03_29.log
+│   └── 2020_03_29.log.lck
+├── pom.xml
+├── propiedades
+├── src
+│   ├── main
+│       ├── java
+│           └── cl
+│               └── lherrera
+│                   └── jdbc
+│                       └── sqlite
+│                           ├── app
+│                           │   └── Principal.java
+│                           ├── controlador
+│                           │   └── PersonaControlador.java
+│                           ├── dao
+│                           │   └── PersonaDAO.java
+│                           ├── modelo
+│                           │   └── Persona.java
+│                           ├── utils
+│                           │   ├── ManejaConexion.java
+│                           │   ├── MiLog.java
+│                           │   ├── Propiedades.java
+│                           │   └── administradorDeAplicacion.java
+│                           └── vista
+│                               ├── Accion.java
+│                               └── Dibuja.java
+
+</code></pre>
+
+<p>Para esta aplicación se definen tres clases del tipo Singletón, esto con la finalidad de hacer que cada una de estas clases posea una única instancia. Esto es necesario ya que estas clases no pueden tener más de una instancia, por que o cran un único archivo o se necesita una sola información de ellos. Con esto nos aseguramos que sea la misma instancia de cada una de las siguientes clases para toda la aplicación.</p>
+<p><code>/sqlite/src/main/java/cl/lherrera/jdbc/sqlite/utils/MiLog.java</code></p>
+<pre><code class="java">package cl.lherrera.jdbc.sqlite.utils;
+
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Properties;
+import java.util.logging.FileHandler;
+import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
+
+
+public class MiLog {
+    private Propiedades propiedades = Propiedades.obtenerPropiedades();
+    private Properties props = propiedades.getProps();
+    private static Logger logger = Logger.getLogger(MiLog.class.getName());
+
+    // cramos la instancia desde el inicio, ya que llamando a un método
+    // se corre el riesgo que más de un hilo crea que milog
+    // es null hasta que se ejecute el método que crea
+    // la instancia.
+    private static MiLog milog = new MiLog();
+
+    private MiLog() {
+
+        if (milog != null){
+            //Prevent Reflection
+            throw new IllegalStateException(&quot;No se puede crear una nueva instancia de Milog&quot;);
+        }
+        this.inicializaArchivo();
+    }
+
+    private void inicializaArchivo() {
+        SimpleDateFormat formatoSimple = new SimpleDateFormat(&quot;yyyy_MM_dd&quot;);
+        String fecha = formatoSimple.format(new Date());
+        try {
+            String directorioLogs = props.getProperty(&quot;directorioLogs&quot;);
+            boolean existeElDirectorio = verificaExistenciaDirecctorio(directorioLogs);
+
+            if(existeElDirectorio) {
+                String direccionArchivo = directorioLogs + fecha + &quot;.log&quot;;
+                FileHandler fh = new FileHandler(direccionArchivo);
+                logger.addHandler(fh);
+                SimpleFormatter formatter = new SimpleFormatter();  
+                fh.setFormatter(formatter);
+            } else {
+                throw new IOException(&quot;No se pudo crear el directorio: &quot; + directorioLogs);
+            }
+        } catch (SecurityException | IOException e) {
+            logger.severe(e.getMessage());
+        }
+    }
+
+    /**
+     * Toma la ruta y la intenta crear en caso que no exista 
+     */
+    private boolean verificaExistenciaDirecctorio(String directorioLogs) {
+        boolean existe = false;
+        File manejoDirectorio = new File(directorioLogs);
+
+        if(manejoDirectorio.exists()) {
+            existe = true;
+        }else {
+            existe = manejoDirectorio.mkdir();
+        }
+        return existe;
+    }
+
+    public static  Logger obtenerLog() {                
+
+        return logger;
+    }
+
+}
+
+</code></pre>
+
+<p><code>/sqlite/src/main/java/cl/lherrera/jdbc/sqlite/utils/administradorDeAplicacion.java</code></p>
+<pre><code class="java">package cl.lherrera.jdbc.sqlite.utils;
+
+import java.util.logging.Logger;
+
+import cl.lherrera.jdbc.sqlite.controlador.PersonaControlador;
+
+
+public class administradorDeAplicacion {
+    private static Logger milog = MiLog.obtenerLog();
+
+    private PersonaControlador controladorPersona = new PersonaControlador();
+    private boolean seguirEjecutando = true;
+
+    private static administradorDeAplicacion aplicacion = new administradorDeAplicacion();
+    private administradorDeAplicacion() {
+        if (aplicacion != null){
+            //Prevent Reflection
+            throw new IllegalStateException(&quot;No se puede crear una nueva instancia de AplicacionControlador&quot;);
+        }
+    }
+
+    /**
+     * Acceso a la instancia desde el exterior
+     * 
+     */
+    public static administradorDeAplicacion obtenerEjecucion() {        
+        return aplicacion; 
+    }
+
+    /**
+     * se encarga de finalizar la aplicación, para esto cambia
+     * el valor de la variable estática que posee el while
+     * principal.
+     * 
+     */
+    public void terminarAplicacion() {
+        seguirEjecutando = false;
+    }
+
+
+    /**
+     * Método principal, es el que mantiene la aplicación ejecutando el menú.
+     */
+    public void iniciaApp() {
+        milog.info(&quot;Aplicación iniciada.&quot;);
+        while(seguirEjecutando) {
+            controladorPersona.iniciaMantenedor();
+        }
+        milog.info(&quot;Aplicación finalizada.&quot;);
+    }
+
+}
+
+</code></pre>
+
+<p><code>/sqlite/src/main/java/cl/lherrera/jdbc/sqlite/utils/Propiedades.java</code></p>
+<pre><code class="java">package cl.lherrera.jdbc.sqlite.utils;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+import java.util.logging.Logger;
+
+public class Propiedades {
+    private Properties props;
+    private static Logger milog = MiLog.obtenerLog();
+    private static Propiedades propiedades = new Propiedades();
+
+    private Propiedades() {
+        if (propiedades != null){
+            //Prevent Reflection
+            throw new IllegalStateException(&quot;No se puede crear una nueva instancia de Propiedades&quot;);
+        }
+        this.iniciaProps();
+    }
+
+    public static Propiedades obtenerPropiedades() {
+        return propiedades;
+    }
+
+    private void iniciaProps() {
+        try {
+            props = new Properties();
+            props.load(new FileInputStream(&quot;propiedades&quot;));
+        } catch (FileNotFoundException e) {
+            milog.severe(&quot;El archivo no se ha encontrado&quot;);
+            milog.severe(e.getMessage());
+        } catch (IOException e) {
+            milog.severe(e.getMessage());
+        }
+    }
+
+    public Properties getProps() {
+        return props;
+    }
+
+}
+
+</code></pre>
+
+<p><code>/sqlite/src/main/java/cl/lherrera/jdbc/sqlite/utils/ManejaConexion.java</code></p>
+<pre><code class="java">package cl.lherrera.jdbc.sqlite.utils;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.util.Properties;
+import java.util.logging.Logger;
+
+
+public class ManejaConexion {
+    // cargamos las propiedades del proyecto
+    private static Propiedades propiedades = Propiedades.obtenerPropiedades();
+    private static Properties props = propiedades.getProps();
+
+    private static final String DB_URL = &quot;jdbc:sqlite:&quot; + props.getProperty(&quot;file_path&quot;);
+    private static final Logger milog = MiLog.obtenerLog();
+
+    private static ManejaConexion manejaConexion = new ManejaConexion();
+
+    private ManejaConexion() {
+        if (manejaConexion != null){
+            //Prevent Reflection
+            throw new IllegalStateException(&quot;No se puede crear una nueva instancia de ManejaConexion&quot;);
+        }
+    }
+
+    /**
+     * Método estático, para poder acceder sin una instancia, así controlamos
+     * internamente que no se cree una nueva instancia si esta existe.
+     * 
+     */
+    public static ManejaConexion obtenerManejo() {
+        return new ManejaConexion();
+    }
+
+    /**
+     * Obtiene una conexión.
+     * 
+     * @return Una conexión abierta, esto es importante ya que esta conexión debe ser cerrada.
+     * @throws &lt;i&gt;SQLException&lt;/i&gt;, al no controlar la exception acá, obligamos
+     * a tener que utilizar un {@code try()}, así cada vez que lo ocupemos
+     * estará dentro del try especial y nos aseguramos que la conexión
+     * cierre. Pero esta característica, se encuentra vulnerable al
+     * desarrollador si ocupa o no {@code try(){}catch(){}}. 
+     */
+    public Connection obtenerConexion() throws SQLException {
+        Connection conexion = null;
+
+        try {
+            Class.forName(&quot;org.sqlite.JDBC&quot;);
+            conexion = DriverManager.getConnection(
+                DB_URL, 
+                props.getProperty(&quot;usuario&quot;), 
+                props.getProperty(&quot;contrasenia&quot;)
+            );
+
+        } catch (ClassNotFoundException e) {
+            milog.severe(&quot;No se pudo cargar el driver.&quot;);
+            milog.severe(e.getMessage());
+        }
+
+
+        return conexion;
+    }
+}
+
+</code></pre>
+
+<p>El modelo está compuesto, por una sola clase, que se encargará de servir para almacenar los datos de las personas.</p>
+<p><code>/sqlite/src/main/java/cl/lherrera/jdbc/sqlite/modelo/Persona.java</code></p>
+<pre><code class="java">package cl.lherrera.jdbc.sqlite.modelo;
+
+public class Persona {
+    private Integer id;
+    private String nombre;
+
+    public Persona() {}
+
+    public Persona(Integer id, String nombre) {
+        this.id = id;
+        this.nombre = nombre;
+    }
+
+    public Persona(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    @Override
+    public String toString() {
+        return &quot;Persona [id=&quot; + id + &quot;, nombre=&quot; + nombre + &quot;]&quot;;
+    }
+}
+
+</code></pre>
+
+<p>Necesitamos una clase que realice las consultas más recurrentes sin poner propiedades de negocio en ella, como por ejemplo traer a todas las personas, pero si quisieramos agregar por ejemplo un nombre con especial formáto no le corresponde al DAO, el DAO solo realiza consultas, lo demás se trataría en un paquete especial de servicios; pero para este ejemplo no es necesario.</p>
+<p><code>/sqlite/src/main/java/cl/lherrera/jdbc/sqlite/dao/PersonaDAO.java</code></p>
+<pre><code class="java">package cl.lherrera.jdbc.sqlite.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Logger;
+
+import cl.lherrera.jdbc.sqlite.modelo.Persona;
+import cl.lherrera.jdbc.sqlite.utils.ManejaConexion;
+import cl.lherrera.jdbc.sqlite.utils.MiLog;
+
+public class PersonaDAO {
+    private static final ManejaConexion manejaConexion = ManejaConexion.obtenerManejo();
+    private static Logger milog = MiLog.obtenerLog();
+
+    /**
+     * Método encargado de agregar una persona a la
+     * base de datos.
+     */
+    public int ingresar(Persona persona) {
+        int filasAfectadas = 0;
+
+        try(
+            Connection conexion = manejaConexion.obtenerConexion();
+            PreparedStatement ps = conexion.prepareStatement(&quot;INSERT INTO persona (nombre) values (?)&quot;);
+        ){
+            ps.setString(1, persona.getNombre());
+            filasAfectadas = ps.executeUpdate();
+
+            if(filasAfectadas != 1)
+                throw new SQLException(&quot;Error al insertar registro&quot;);
+
+        }catch (SQLException e) {
+            milog.severe(e.getMessage());
+        }
+
+        return filasAfectadas;
+    }
+
+    /**
+     * Método encargado de retornar una lista de todas las personas
+     * que estén en la base de datos.
+     * 
+     * @return {@code List} lista poblada con las personas encontradas
+     * en la base de datos.
+     */
+    public List&lt;Persona&gt; obtenerTodos(){
+        List&lt;Persona&gt; personas = new ArrayList&lt;&gt;();
+
+        try(
+            Connection conexion = manejaConexion.obtenerConexion();
+            PreparedStatement ps = conexion.prepareStatement(&quot;SELECT id, nombre FROM persona&quot;);
+            ResultSet rs = ps.executeQuery();
+        ){
+
+            while(rs.next()) {
+                personas.add(new Persona(rs.getInt(&quot;id&quot;), rs.getString(&quot;nombre&quot;)));
+            }
+        }catch (SQLException e) {
+            milog.severe(e.getMessage());
+        }
+
+        return personas;
+    }
+
+
+    public Persona buscarPorId(int id) {
+        Persona persona = new Persona();
+
+        try(
+            Connection conexion = manejaConexion.obtenerConexion();
+            PreparedStatement ps = conexion.prepareStatement(&quot;SELECT id, nombre FROM persona where id = &quot; + id );
+            ResultSet rs = ps.executeQuery();
+        ){
+            if(rs.next()) {
+                persona.setNombre(rs.getString(&quot;nombre&quot;));
+                persona.setId(rs.getInt(&quot;id&quot;)); 
+            }else {
+                throw new SQLException(&quot;No se encuentra el registro en la base de datos&quot;);              
+            }
+
+        }catch (SQLException e) {
+            milog.severe(e.getMessage());
+        }
+
+        return persona;
+    }
+
+    public void actualizar(int id, Persona persona) {
+        try(
+            Connection conexion = manejaConexion.obtenerConexion();
+            PreparedStatement ps = conexion.prepareStatement(&quot;UPDATE persona SET nombre = ? WHERE id = ?&quot;);
+        ){
+            ps.setString(1, persona.getNombre());
+            ps.setInt(2, id);
+            int filasAfectadas = ps.executeUpdate();
+            if(filasAfectadas &lt;= 0)
+                throw new SQLException(&quot;No se actualizó ningún registro&quot;); 
+        }catch(SQLException e) {
+            milog.severe(&quot;Error al actualizar&quot;);
+            milog.severe(e.getMessage());
+        }
+
+    }
+
+    public void eliminar(int id) {
+        try(
+                Connection conexion = manejaConexion.obtenerConexion();
+                PreparedStatement ps = conexion.prepareStatement(&quot;DELETE FROM persona WHERE id = ?&quot;);
+            ){
+                ps.setInt(1, id);
+                int filasAfectadas = ps.executeUpdate();
+                if(filasAfectadas &lt;= 0)
+                    throw new SQLException(&quot;No se eliminó ningún registro&quot;); 
+            }catch(SQLException e) {
+                milog.severe(&quot;Error al eliminar&quot;);
+                milog.severe(e.getMessage());
+            }
+    }
+}
+
+</code></pre>
+
+<p>Cuando se requiera que se realice una acción que involucre la interacción entre la vista y la base de datos, tendremos a nuestro encargado. El controlador.</p>
+<p><code>/sqlite/src/main/java/cl/lherrera/jdbc/sqlite/controlador/PersonaControlador.java</code></p>
+<pre><code class="java">package cl.lherrera.jdbc.sqlite.controlador;
+
+import java.util.List;
+
+import cl.lherrera.jdbc.sqlite.dao.PersonaDAO;
+import cl.lherrera.jdbc.sqlite.modelo.Persona;
+import cl.lherrera.jdbc.sqlite.utils.administradorDeAplicacion;
+import cl.lherrera.jdbc.sqlite.vista.Accion;
+import cl.lherrera.jdbc.sqlite.vista.Dibuja;
+
+public class PersonaControlador {
+    private final PersonaDAO daopersona = new PersonaDAO();
+    private static final int LISTAR = 1;
+    private static final int INGRESAR = 2;
+    private static final int ACTUALIZAR = 3;
+    private static final int ELIMINAR = 4;
+
+    public void procesoIngresar() {
+        Persona persona = new Persona(Accion.solicitaNombre());
+        daopersona.ingresar(persona);
+        Accion.avisoAccionRealizada();
+    }
+
+    public void procesoListar() {
+        List&lt;Persona&gt; personas = daopersona.obtenerTodos();
+        Dibuja.listarTodos(personas);
+        Accion.avisoAccionRealizada();
+    }
+
+    public void procesoActualizar() {
+        int id = Accion.solicitaId();
+        Persona persona = daopersona.buscarPorId(id);
+        Dibuja.muestraDetallePersona(persona);
+        int opcion = Accion.retornaOpcionEntera();
+        if(opcion == 1) {
+            String nombre = Accion.solicitaNombre();
+            persona.setNombre(nombre);
+            daopersona.actualizar(id, persona);
+        }
+        Accion.avisoAccionRealizada();
+    }
+
+    public void procesoEliminar() {
+        int id = Accion.solicitaId();
+        Persona persona = daopersona.buscarPorId(id);
+        Dibuja.muestraDetallePersona(persona);
+        int opcion = Accion.retornaOpcionEntera();
+        if(opcion == 1)
+            daopersona.eliminar(id);
+
+        Accion.avisoAccionRealizada();
+    }
+
+    public void iniciaMantenedor() {
+        Dibuja.principal();
+        int opcion = Accion.retornaOpcionEntera();
+        switch (opcion) {
+        case LISTAR:
+            procesoListar();
+            break;
+        case INGRESAR:
+            procesoIngresar();
+            break;
+        case ACTUALIZAR:
+            procesoActualizar();
+            break;
+        case ELIMINAR:
+            procesoEliminar();
+            break;
+        default:
+            Accion.finalizaAccion();
+            administradorDeAplicacion aplicacion = administradorDeAplicacion.obtenerEjecucion();
+            aplicacion.terminarAplicacion();
+        }
+    }
+
+}
+
+</code></pre>
+
+<p>La parte visual será representada por salidas de consola, la siguiente capa, será la encargada de la representación de los datos para el usuario y sus interacciones.</p>
+<p><code>/sqlite/src/main/java/cl/lherrera/jdbc/sqlite/vista/Dibuja.java</code></p>
+<pre><code class="java">package cl.lherrera.jdbc.sqlite.vista;
+
+import java.util.List;
+
+import cl.lherrera.jdbc.sqlite.modelo.Persona;
+
+public class Dibuja {
+
+    public static void solicitaNombre() {
+        System.out.println(&quot;Ingrese el nombre de la persona&quot;);
+    }
+
+    public static void solicitaId() {
+        System.out.println(&quot;Ingrese el id de la persona&quot;);
+    }
+
+    public static void principal() {
+        limpiarPantalla();
+        String texto = &quot;&quot;
+            + &quot;Menú principal \n\n&quot;
+            + &quot;1 - Listar personas\n&quot;
+            + &quot;2 - Ingresar persona\n&quot;
+            + &quot;3 - Actuaizar persona\n&quot;
+            + &quot;4 - Eliminar persona\n&quot;
+            + &quot;5 - Salir\n&quot;;
+
+        System.out.println(texto);
+
+    }
+
+    public static void muestraDetallePersona(Persona persona) {
+        System.out.println(&quot;Persona a ejecutar acción:&quot;);
+        System.out.println(&quot;--------------------------&quot;);
+        System.out.println(&quot;- id: &quot; + persona.getId());
+        System.out.println(&quot;- nombre: &quot; + persona.getNombre());
+        System.out.println(&quot;--------------------------&quot;);
+        System.out.println(&quot;Desea ejecutar: 1-Si, 2-No&quot;);
+    }
+
+    public static void listarTodos(List&lt;Persona&gt; personas) {
+        System.out.println(&quot;Lista de personas:&quot;);
+        personas.forEach(System.out::println);
+    }
+
+    public static void confirmaSegir() {
+        System.out.println(&quot;\n\nAcción realizada para continuar presione 'ENTER'...&quot;);
+    }
+
+    private static void limpiarPantalla() {
+        for(int i = 0; i &lt; 10; i ++) {
+            System.out.println(&quot;\n&quot;);
+        }
+    }
+
+}
+
+</code></pre>
+
+<p><code>/sqlite/src/main/java/cl/lherrera/jdbc/sqlite/vista/Accion.java</code></p>
+<pre><code class="java">package cl.lherrera.jdbc.sqlite.vista;
+
+import java.util.Scanner;
+
+/**
+ * Clase encargada de gestionar las acciones del usuario.
+ * Todos sus métodos son estáticos.
+ * @author luisherrera
+ *
+ */
+public class Accion {
+    private static final Scanner SCAN = new Scanner(System.in);
+
+    private Accion() {}
+
+    public static int retornaOpcionEntera() {
+        return Integer.parseInt(SCAN.nextLine());
+    }
+
+    public static void avisoAccionRealizada() {
+        Dibuja.confirmaSegir();
+        SCAN.nextLine();
+
+    }
+
+    public static String retornaOpcion() {
+        return SCAN.nextLine();
+    }
+
+    public static int solicitaId() {
+        Dibuja.solicitaId();
+        return retornaOpcionEntera();
+    }
+
+    public static String solicitaNombre() {
+        Dibuja.solicitaNombre();
+        return retornaOpcion();
+    }
+
+    public static void finalizaAccion() {
+        SCAN.close();
+    }
+}
+
+</code></pre>
+
+<p><code>/sqlite/propiedades</code></p>
+<pre><code># datos de conexión
+file_path=/Users/luisherrera/Desktop/TALENTO-PROS/bases/base001.db
+usuario=admin
+contrasenia=1234
+directorioLogs=/Users/luisherrera/Desktop/TALENTO-PROS/servlets/sqlite/logs/
+
+</code></pre>
+
+<p><code>/sqlite/pom.xml</code></p>
+<pre><code class="xml">&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+  &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+  &lt;groupId&gt;cl.lherrera.jdbc&lt;/groupId&gt;
+  &lt;artifactId&gt;sqlite&lt;/artifactId&gt;
+  &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
+
+  &lt;dependencies&gt;
+
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.xerial&lt;/groupId&gt;
+            &lt;artifactId&gt;sqlite-jdbc&lt;/artifactId&gt;
+            &lt;version&gt;3.30.1&lt;/version&gt;
+        &lt;/dependency&gt;
+
+  &lt;/dependencies&gt;
+
+&lt;/project&gt;
+
+</code></pre>
+
+<hr />
+<h1 id="ejercicio-8-a-la-web">Ejercicio 8: A LA WEB 👾 🥋</h1>
+<hr />
+<p>Es momento de fusionar el conocimiento entre servlets y bases de datos, para poder interactuar con un usuario, pero ahora no desde la consola si no que ahora desde la web.</p>
+<p>El objetivo es el mismo, un mantenedor de personas, lo que antes hicimos en el escritorio, ahora lo realizaremos en la web.</p>
+<p>El diseño se enfoca en el backend, por lo que el Html del ejercicio es muy básico y es una buena forma de una vez terminado el ejercicio, poder mejorar la presentación y validaciones.</p>
+<p>Lo primero que necesitamos es crear un proyecto Maven o podemos continuar con el que dejamos hasta ahora, ya que está en maven, pero hay que ir a los facets y cambiarlo a un dynamic web module 4.0, luego agregar maven dependencies, java 8, agregar el servidor y todo lo necesario para que funcione en un entorno web.</p>
+<p>Estructura:</p>
+<p>En esta estructura, se puede ver que una vez que el proyecto completo compila, lleva las propiedades al target. se puede ver en <code>config/</code>. Con esto escondemos las propiedades del uso público y al agregarlo al git ignore, se tomará el de producción, sin tener que realizar alguna tarea manual, como lo sería cambiar el directorio absoluto de las propiedades, ya que esto no es automático.</p>
+<pre><code>./
+├── WebContent
+│   ├── META-INF
+│   │   └── MANIFEST.MF
+│   ├── WEB-INF
+│   │   ├── lib
+│   │   └── propiedades.properties
+│   ├── index.jsp
+│   └── mantenedor.jsp
+├── logs
+│   ├── 2020_03_30.log
+├── pom.xml
+├── src
+│   ├── main
+│   │   ├── java
+│   │   │   ├── cl
+│   │   │   │   └── lherrera
+│   │   │   │       └── webpersonas
+│   │   │   │           ├── dao
+│   │   │   │           │   └── PersonaDAO.java
+│   │   │   │           ├── modelo
+│   │   │   │           │   └── Persona.java
+│   │   │   │           ├── servlets
+│   │   │   │           │   ├── ActualizarPersona.java
+│   │   │   │           │   ├── EliminaPersona.java
+│   │   │   │           │   ├── IngresarPersona.java
+│   │   │   │           │   └── IniciaMantenedor.java
+│   │   │   │           └── utils
+│   │   │   │               ├── ManejaConexion.java
+│   │   │   │               ├── MiLog.java
+│   │   │   │               └── Propiedades.java
+│   │   │   └── config
+│   │   │       └── propiedades.properties
+│   │   └── resources
+│   └── test
+│       ├── java
+│       └── resources
+└── target
+    ├── classes
+    │   ├── META-INF
+    │   │   ├── MANIFEST.MF
+    │   │   └── maven
+    │   │       └── cl.lherrera
+    │   │           └── webpersonas
+    │   │               ├── pom.properties
+    │   │               └── pom.xml
+    │   ├── cl
+    │   │   └── lherrera
+    │   │       └── webpersonas
+    │   │           ├── dao
+    │   │           │   └── PersonaDAO.class
+    │   │           ├── modelo
+    │   │           │   └── Persona.class
+    │   │           ├── servlets
+    │   │           │   ├── ActualizarPersona.class
+    │   │           │   ├── EliminaPersona.class
+    │   │           │   ├── IngresarPersona.class
+    │   │           │   └── IniciaMantenedor.class
+    │   │           └── utils
+    │   │               ├── ManejaConexion.class
+    │   │               ├── MiLog.class
+    │   │               └── Propiedades.class
+    │   └── config
+    │       └── propiedades.properties
+    └── test-classes
+
+35 directories, 32 files
+
+</code></pre>
+
+<p><code>/webpersonas/pom.xml</code></p>
+<pre><code class="xml">&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+  &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+  &lt;groupId&gt;cl.lherrera&lt;/groupId&gt;
+  &lt;artifactId&gt;webpersonas&lt;/artifactId&gt;
+  &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
+
+    &lt;dependencies&gt;
+
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.xerial&lt;/groupId&gt;
+            &lt;artifactId&gt;sqlite-jdbc&lt;/artifactId&gt;
+            &lt;version&gt;3.30.1&lt;/version&gt;
+        &lt;/dependency&gt;
+
+  &lt;/dependencies&gt;
+&lt;/project&gt;
+</code></pre>
+
+<p>Definamos nuestro archivo de propiedades, para que este sea compilado y puesto en un lugar en que el servidor lo encuentre, lo dejamos en un paquete, así cuando se ejecute el build, se moverá a un contexto del servidor, de otra forma, deberíamos poner el path absoluto; pero esto trae problemas cuando pasamos a producción, donde las rutas abasolutas, no son iguales a las de nuestra máquina y el archivo de propiedades, necesariamente debe ser indicado en el código y esta es una forma muy limpia de hacerlo si estamos trabajando sin framwork.</p>
+<p><code>/webpersonas/src/main/java/config/propiedades.properties</code></p>
+<pre><code># datos de conexión
+file_path=/Users/luisherrera/Desktop/TALENTO-PROS/bases/base001.db
+usuario=admin
+contrasenia=1234
+directorioLogs=/Users/luisherrera/Desktop/TALENTO-PROS/servlets/webpersonas/logs/
+
+</code></pre>
+
+<p>Ahora queda definir las clases utilitarias que usaremos para este proyecto, la gran sorpresa es que reutilizaremos mucho de nuestra app pasada, ya que al ser un desarrollo en capas, es posible modificar completamente alguna de ellas, sin necesidad de afectar la estructura de otras, que auque parezca extraño, no tocaremos su implimentación y nos enfocaremos en desarrollar la interacción web.</p>
+<p>(Singleton)</p>
+<p><code>/webpersonas/src/main/java/cl/lherrera/webpersonas/utils/Propiedades.java</code></p>
+<pre><code class="java">package cl.lherrera.webpersonas.utils;
+
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
+import java.util.logging.Logger;
+
+public class Propiedades {
+    private Properties props;
+    private static Logger milog = MiLog.obtenerLog();
+    private static Propiedades propiedades = new Propiedades();
+    InputStream streamDeBytes = this.getClass().getResourceAsStream(&quot;/config/propiedades.properties&quot;);
+
+    private Propiedades() {
+        if (propiedades != null){
+            //Prevent Reflection
+            throw new IllegalStateException(&quot;No se puede crear una nueva instancia de Propiedades&quot;);
+        }
+        this.iniciaProps();
+    }
+
+    public static Propiedades obtenerPropiedades() {
+        return propiedades;
+    }
+
+    private void iniciaProps() {
+        try {
+            props = new Properties();
+            props.load(streamDeBytes);
+        } catch (FileNotFoundException e) {
+            milog.severe(&quot;El archivo:, no se ha encontrado&quot;);
+            milog.severe(e.getMessage());
+        } catch (IOException e) {
+            milog.severe(e.getMessage());
+        }
+    }
+
+    public Properties getProps() {
+        return props;
+    }
+}
+
+</code></pre>
+
+<p>Hay que recordar, que la conexión utiliza un driver que es externo a las librerías de java, para que fincione, debe estar cargado el driver en el proyecto, pero adiciional a esto, si no se trabaja con maven, estas librerías deben ir en WEB-INF/libs. Para no tener este problema con un proyecto maven, no hay que olvidar agregar las librerías de maven al deploy assembly además del proyecto, para que el servidor cuente también con estos drivers extras que estamos utilizando. (si lo hicimos mal, notaremos un error en la carga del driver en <code>Class.forName("org.sqlite.JDBC");</code>).</p>
+<p>(Singleton)</p>
+<p><code>/webpersonas/src/main/java/cl/lherrera/webpersonas/utils/ManejaConexion.java</code></p>
+<pre><code class="java">package cl.lherrera.webpersonas.utils;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.util.Properties;
+import java.util.logging.Logger;
+
+
+public class ManejaConexion {
+    // cargamos las propiedades del proyecto
+    private static Propiedades propiedades = Propiedades.obtenerPropiedades();
+    private static Properties props = propiedades.getProps();
+
+    private static final String DB_URL = &quot;jdbc:sqlite:&quot; + props.getProperty(&quot;file_path&quot;);
+    private static final Logger milog = MiLog.obtenerLog();
+
+    private static ManejaConexion manejaConexion = new ManejaConexion();
+
+    private ManejaConexion() {
+        if (manejaConexion != null){
+            //Prevent Reflection
+            throw new IllegalStateException(&quot;No se puede crear una nueva instancia de ManejaConexion&quot;);
+        }
+    }
+
+    /**
+     * Método estático, para poder acceder sin una instancia, así controlamos
+     * internamente que no se cree una nueva instancia si esta existe.
+     * 
+     */
+    public static ManejaConexion obtenerManejo() {
+        return manejaConexion;
+    }
+
+    /**
+     * Obtiene una conexión.
+     * 
+     * @return Una conexión abierta, esto es importante ya que esta conexión debe ser cerrada.
+     * @throws &lt;i&gt;SQLException&lt;/i&gt;, al no controlar la exception acá, obligamos
+     * a tener que utilizar un {@code try()}, así cada vez que lo ocupemos
+     * estará dentro del try especial y nos aseguramos que la conexión
+     * cierre. Pero esta característica, se encuentra vulnerable al
+     * desarrollador si ocupa o no {@code try(){}catch(){}}. 
+     */
+    public Connection obtenerConexion() throws SQLException {
+        Connection conexion = null;
+
+        try {
+            Class.forName(&quot;org.sqlite.JDBC&quot;);
+            conexion = DriverManager.getConnection(
+                DB_URL, 
+                props.getProperty(&quot;usuario&quot;), 
+                props.getProperty(&quot;contrasenia&quot;)
+            );
+
+        } catch (ClassNotFoundException e) {
+            milog.severe(&quot;No se pudo cargar el driver.&quot;);
+            milog.severe(e.getMessage());
+        }
+
+        return conexion;
+    }
+
+}
+
+</code></pre>
+
+<p>(Singleton)</p>
+<p><code>/webpersonas/src/main/java/cl/lherrera/webpersonas/utils/MiLog.java</code></p>
+<pre><code class="java">package cl.lherrera.webpersonas.utils;
+
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Properties;
+import java.util.logging.FileHandler;
+import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
+
+
+public class MiLog {
+    private Propiedades propiedades = Propiedades.obtenerPropiedades();
+    private Properties props = propiedades.getProps();
+    private static Logger logger = Logger.getLogger(MiLog.class.getName());
+
+    // cramos la instancia desde el inicio, ya que llamando a un método
+    // se corre el riesgo que más de un hilo crea que milog
+    // es null hasta que se ejecute el método que crea
+    // la instancia.
+    private static MiLog milog = new MiLog();
+
+    private MiLog() {
+
+        if (milog != null){
+            //Prevent Reflection
+            throw new IllegalStateException(&quot;No se puede crear una nueva instancia de Milog&quot;);
+        }
+        this.inicializaArchivo();
+    }
+
+    private void inicializaArchivo() {
+        SimpleDateFormat formatoSimple = new SimpleDateFormat(&quot;yyyy_MM_dd&quot;);
+        String fecha = formatoSimple.format(new Date());
+        try {
+            String directorioLogs = props.getProperty(&quot;directorioLogs&quot;);
+            boolean existeElDirectorio = verificaExistenciaDirecctorio(directorioLogs);
+
+            if(existeElDirectorio) {
+                String direccionArchivo = directorioLogs + fecha + &quot;.log&quot;;
+                FileHandler fh = new FileHandler(direccionArchivo);
+                logger.addHandler(fh);
+                SimpleFormatter formatter = new SimpleFormatter();  
+                fh.setFormatter(formatter);
+            } else {
+                throw new IOException(&quot;No se pudo crear el directorio: &quot; + directorioLogs);
+            }
+        } catch (SecurityException | IOException e) {
+            logger.severe(e.getMessage());
+        }
+    }
+
+    /**
+     * Toma la ruta y la intenta crear en caso que no exista 
+     */
+    private boolean verificaExistenciaDirecctorio(String directorioLogs) {
+        boolean existe = false;
+        File manejoDirectorio = new File(directorioLogs);
+
+        if(manejoDirectorio.exists()) {
+            existe = true;
+        }else {
+            existe = manejoDirectorio.mkdir();
+        }
+        return existe;
+    }
+
+    public static  Logger obtenerLog() {                
+        return logger;
+    }
+}
+
+</code></pre>
+
+<p>Usamos el mismo DTO o modelo.</p>
+<p><code>/webpersonas/src/main/java/cl/lherrera/webpersonas/modelo/Persona.java</code></p>
+<pre><code class="java">package cl.lherrera.webpersonas.modelo;
+
+public class Persona {
+    private Integer id;
+    private String nombre;
+
+    public Persona() {}
+
+    public Persona(Integer id, String nombre) {
+        this.id = id;
+        this.nombre = nombre;
+    }
+
+    public Persona(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    @Override
+    public String toString() {
+        return &quot;Persona [id=&quot; + id + &quot;, nombre=&quot; + nombre + &quot;]&quot;;
+    }
+}
+
+</code></pre>
+
+<p>Usamos el mismo DAO</p>
+<p><code>/webpersonas/src/main/java/cl/lherrera/webpersonas/dao/PersonaDAO.java</code></p>
+<pre><code class="java">package cl.lherrera.webpersonas.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Logger;
+
+import cl.lherrera.webpersonas.modelo.Persona;
+import cl.lherrera.webpersonas.utils.ManejaConexion;
+import cl.lherrera.webpersonas.utils.MiLog;
+
+public class PersonaDAO {
+    private static final ManejaConexion manejaConexion = ManejaConexion.obtenerManejo();
+    private static Logger milog = MiLog.obtenerLog();
+
+    /**
+     * Método encargado de agregar una persona a la
+     * base de datos.
+     */
+    public int ingresar(Persona persona) {
+        int filasAfectadas = 0;
+
+        try(
+            Connection conexion = manejaConexion.obtenerConexion();
+            PreparedStatement ps = conexion.prepareStatement(&quot;INSERT INTO persona (nombre) values (?)&quot;);
+        ){
+            ps.setString(1, persona.getNombre());
+            filasAfectadas = ps.executeUpdate();
+
+            if(filasAfectadas != 1)
+                throw new SQLException(&quot;Error al insertar registro&quot;);
+
+        }catch (SQLException e) {
+            milog.severe(e.getMessage());
+        }
+
+        return filasAfectadas;
+    }
+
+    /**
+     * Método encargado de retornar una lista de todas las personas
+     * que estén en la base de datos.
+     * 
+     * @return {@code List} lista poblada con las personas encontradas
+     * en la base de datos.
+     */
+    public List&lt;Persona&gt; obtenerTodos(){
+        List&lt;Persona&gt; personas = new ArrayList&lt;&gt;();
+
+        try(
+            Connection conexion = manejaConexion.obtenerConexion();
+            PreparedStatement ps = conexion.prepareStatement(&quot;SELECT id, nombre FROM persona&quot;);
+            ResultSet rs = ps.executeQuery();
+        ){
+
+            while(rs.next()) {
+                personas.add(new Persona(rs.getInt(&quot;id&quot;), rs.getString(&quot;nombre&quot;)));
+            }
+        }catch (SQLException e) {
+            milog.severe(e.getMessage());
+        }
+
+        return personas;
+    }
+
+
+    public Persona buscarPorId(int id) {
+        Persona persona = new Persona();
+
+        try(
+            Connection conexion = manejaConexion.obtenerConexion();
+            PreparedStatement ps = conexion.prepareStatement(&quot;SELECT id, nombre FROM persona where id = &quot; + id );
+            ResultSet rs = ps.executeQuery();
+        ){
+            if(rs.next()) {
+                persona.setNombre(rs.getString(&quot;nombre&quot;));
+                persona.setId(rs.getInt(&quot;id&quot;)); 
+            }else {
+                throw new SQLException(&quot;No se encuentra el registro en la base de datos&quot;);              
+            }
+
+        }catch (SQLException e) {
+            milog.severe(e.getMessage());
+        }
+
+        return persona;
+    }
+
+    public void actualizar(int id, Persona persona) {
+        try(
+            Connection conexion = manejaConexion.obtenerConexion();
+            PreparedStatement ps = conexion.prepareStatement(&quot;UPDATE persona SET nombre = ? WHERE id = ?&quot;);
+        ){
+            ps.setString(1, persona.getNombre());
+            ps.setInt(2, id);
+            int filasAfectadas = ps.executeUpdate();
+            if(filasAfectadas &lt;= 0)
+                throw new SQLException(&quot;No se actualizó ningún registro&quot;); 
+        }catch(SQLException e) {
+            milog.severe(&quot;Error al actualizar&quot;);
+            milog.severe(e.getMessage());
+        }
+
+    }
+
+    public void eliminar(int id) {
+        try(
+                Connection conexion = manejaConexion.obtenerConexion();
+                PreparedStatement ps = conexion.prepareStatement(&quot;DELETE FROM persona WHERE id = ?&quot;);
+            ){
+                ps.setInt(1, id);
+                int filasAfectadas = ps.executeUpdate();
+                if(filasAfectadas &lt;= 0)
+                    throw new SQLException(&quot;No se eliminó ningún registro&quot;); 
+            }catch(SQLException e) {
+                milog.severe(&quot;Error al eliminar&quot;);
+                milog.severe(e.getMessage());
+            }
+    }
+}
+
+</code></pre>
+
+<p>Las vistas necesarias:</p>
+<p><code>/webpersonas/WebContent/index.jsp</code></p>
+<pre><code class="html">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot; pageEncoding=&quot;UTF-8&quot;%&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Inicio&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;Inicio del sistema&lt;/h1&gt;
+    &lt;a href=&quot;mantenedor&quot;&gt;Inicia el mantenedor&lt;/a&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+
+<p><code>/webpersonas/WebContent/mantenedor.jsp</code></p>
+<p>Basado en scriptles, esta vista contiene todas las funcionalidades necesarias para realizar todas las tareas para mantener la información de la tabla personas.</p>
+<pre><code class="html">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;
+    pageEncoding=&quot;UTF-8&quot;%&gt;
+
+&lt;%@ page import=&quot;java.util.List&quot;%&gt;
+&lt;%@ page import=&quot;cl.lherrera.webpersonas.modelo.Persona&quot;%&gt;
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Ingreso de personas&lt;/title&gt;
+
+    &lt;style&gt;
+        .formularios {
+            float: left;
+            width: 345px;
+            border-right: 1px solid black;
+        }
+
+        .listaPersonas {
+            float: right;
+            width: 349px;
+        }
+
+        .contenedor {
+            width: 700px;
+        }
+    &lt;/style&gt;
+
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;%
+// variables del request
+String disabledInsert = (String) request.getAttribute(&quot;insertForm&quot;);
+String disabledUpdate = (String) request.getAttribute(&quot;updateForm&quot;);
+String disabledDelete = (String) request.getAttribute(&quot;deleteForm&quot;);
+
+List&lt;Persona&gt; personas = (List&lt;Persona&gt;) request.getAttribute(&quot;personas&quot;);
+
+Object nombreO = request.getAttribute(&quot;nombre&quot;);
+String nombre = (nombreO != null)? (String) nombreO : &quot;&quot; ;
+
+Object elNombreO = request.getAttribute(&quot;elNombre&quot;);String elNombre = (elNombreO != null)? (String) elNombreO : &quot;&quot; ;
+
+String personaId = (String) request.getAttribute(&quot;id&quot;);
+
+%&gt;
+
+    &lt;div class=&quot;contenedor&quot;&gt;
+        &lt;hr /&gt;
+        &lt;div class=&quot;formularios&quot;&gt;
+            &lt;!-- ingresar --&gt;
+            &lt;form action=&quot;ingresar&quot; method=&quot;post&quot;&gt;
+                &lt;fieldset&gt;
+                    &lt;legend&gt;Ingrese una nueva persona&lt;/legend&gt;
+                    &lt;label for=&quot;nombre&quot;&gt;Nombre&lt;/label&gt;
+
+                    &lt;input 
+                        type=&quot;text&quot; 
+                        name=&quot;nombre&quot; 
+                        &lt;%=disabledInsert%&gt; /&gt;
+
+                    &lt;button type=&quot;submit&quot; &lt;%=disabledInsert %&gt;&gt;Ingresar&lt;/button&gt;
+                &lt;/fieldset&gt;
+            &lt;/form&gt;
+            &lt;hr /&gt;
+            &lt;hr /&gt;
+            &lt;!-- ingresar #--&gt;
+
+            &lt;!-- actualizar --&gt;
+            &lt;form action=&quot;actualizar&quot; method=&quot;post&quot;&gt;
+                &lt;fieldset&gt;
+                &lt;input type=&quot;hidden&quot; name=&quot;id&quot; value=&quot;&lt;%=personaId %&gt;&quot; /&gt;
+                    &lt;legend&gt;Actualizar persona&lt;/legend&gt;
+                    &lt;label for=&quot;nombre&quot;&gt;Nombre&lt;/label&gt;
+                    &lt;input 
+                        type=&quot;text&quot; 
+                        name=&quot;nombre&quot; 
+                        id=&quot;nombre&quot;
+                        value=&quot;&lt;%=nombre %&gt;&quot; 
+                        &lt;%=disabledUpdate %&gt;  /&gt;
+
+                    &lt;button type=&quot;submit&quot; &lt;%=disabledUpdate %&gt; &gt;Actualizar&lt;/button&gt;
+                &lt;/fieldset&gt;
+            &lt;/form&gt;
+            &lt;hr /&gt;
+            &lt;hr /&gt;
+            &lt;!-- actualizar #--&gt;
+
+            &lt;!-- eliminar --&gt;
+
+            &lt;form action=&quot;eliminar&quot; method=&quot;post&quot;&gt;
+                &lt;fieldset&gt;
+                &lt;input type=&quot;hidden&quot; name=&quot;id&quot; value=&quot;&lt;%=personaId %&gt;&quot; /&gt;
+                    &lt;legend&gt;Eliminar a la persona&lt;/legend&gt;
+                    &lt;label for=&quot;nombre&quot;&gt;Nombre&lt;/label&gt;
+                    &lt;input 
+                        type=&quot;text&quot; 
+                        name=&quot;elNombre&quot;
+                        id=&quot;elNombre&quot; 
+                        value=&quot;&lt;%=elNombre %&gt;&quot;
+                        disabled /&gt;
+                    &lt;button type=&quot;submit&quot; &lt;%=disabledDelete %&gt;&gt;Eliminar&lt;/button&gt;
+                &lt;/fieldset&gt;
+            &lt;/form&gt;
+            &lt;hr /&gt;
+            &lt;hr /&gt;
+            &lt;!-- eliminar #--&gt;
+        &lt;/div&gt;
+&lt;!--  Listar personas --&gt;
+        &lt;div class=&quot;listaPersonas&quot;&gt;
+
+
+            &lt;h3&gt;Lista de personas&lt;/h3&gt;
+            &lt;table style=&quot;width: 350px; border: 1px solid;&quot;&gt;
+            &lt;caption&gt;Tabla de información&lt;/caption&gt;
+                &lt;thead&gt;
+                    &lt;tr&gt;
+                        &lt;th&gt;ID&lt;/th&gt;
+                        &lt;th&gt;NOMBRE&lt;/th&gt;
+                        &lt;th&gt;ACCION&lt;/th&gt;
+                    &lt;/tr&gt;
+
+                &lt;/thead&gt;
+                &lt;tbody&gt;
+                &lt;%if(personas.size() &lt;= 0) {%&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;Sin datos...&lt;/td&gt;
+                    &lt;/tr&gt;
+                &lt;%}else { %&gt;
+                    &lt;%for(Persona persona: personas) {%&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;&lt;%=persona.getId() %&gt;&lt;/td&gt;
+                            &lt;td&gt;&lt;%=persona.getNombre() %&gt;&lt;/td&gt;
+                            &lt;td&gt;
+                            &lt;a href=&quot;actualizar?id=&lt;%=persona.getId()%&gt;&amp;nombre=&lt;%=persona.getNombre()%&gt;&quot; &gt;actualizar&lt;/a&gt;  
+                            |
+                            &lt;a href=&quot;eliminar?id=&lt;%=persona.getId()%&gt;&amp;elNombre=&lt;%=persona.getNombre()%&gt;&quot; &gt;Eliminar&lt;/a&gt; 
+
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                     &lt;%}%&gt;
+                 &lt;%} %&gt;
+                &lt;/tbody&gt;
+
+            &lt;/table&gt;
+        &lt;/div&gt;
+        &lt;!--  Listar personas #--&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+
+<p>Finalmente el paquete que contendrá la lógica que maneja el servidor, donde cada petición URL será trabajada, es la capa que ejecuta el rol de controlador, ya que realiza la interacción entre la vista (web) y los datos. (Por ahora todo será get y post)</p>
+<p><code>/webpersonas/src/main/java/cl/lherrera/webpersonas/servlets/IniciaMantenedor.java</code></p>
+<pre><code class="java">package cl.lherrera.webpersonas.servlets;
+
+import java.io.IOException;
+import java.util.List;
+import java.util.logging.Logger;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import cl.lherrera.webpersonas.dao.PersonaDAO;
+import cl.lherrera.webpersonas.modelo.Persona;
+import cl.lherrera.webpersonas.utils.MiLog;
+
+
+@WebServlet(name = &quot;Mantenedor de Personas&quot;, urlPatterns = &quot;/mantenedor&quot;)
+public class IniciaMantenedor extends HttpServlet{
+    private static final Logger logger = MiLog.obtenerLog();
+    private static PersonaDAO daoPersona = new PersonaDAO();
+
+    private static final long serialVersionUID = -4282664097471786333L;
+
+    /**
+     * Procesa el request por referencia, modifica el mismo objeto req
+     * este objeto, irá al jsp para allí finalizar la entrega del
+     * response.
+     */
+    private void procesaGetRequest(HttpServletRequest req) {
+
+        // se llena la lista para la tabla
+        List&lt;Persona&gt; personas = daoPersona.obtenerTodos();
+        req.setAttribute(&quot;personas&quot;, personas);
+
+        // usado para bloquear elementos del formulario
+        req.setAttribute(&quot;insertForm&quot;, &quot;&quot;);
+        req.setAttribute(&quot;updateForm&quot;, &quot;disabled&quot;);
+        req.setAttribute(&quot;deleteForm&quot;, &quot;disabled&quot;);
+    }
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
+        procesaGetRequest(req);
+        try {
+            req.getRequestDispatcher(&quot;mantenedor.jsp&quot;).forward(req, resp);
+        } catch (ServletException | IOException e) {
+            logger.severe(e.getMessage());
+        }
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp){
+        // cuando un doPost solicita la carga mediante un forward...
+        doGet(req, resp);
+    }
+
+}
+</code></pre>
+
+<p><code>/webpersonas/src/main/java/cl/lherrera/webpersonas/servlets/IngresarPersona.java</code></p>
+<pre><code class="java">package cl.lherrera.webpersonas.servlets;
+
+import java.io.IOException;
+import java.util.logging.Logger;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import cl.lherrera.webpersonas.dao.PersonaDAO;
+import cl.lherrera.webpersonas.modelo.Persona;
+import cl.lherrera.webpersonas.utils.MiLog;
+
+
+@WebServlet(name = &quot;IIngresar Persona&quot;, urlPatterns = &quot;/ingresar&quot;)
+public class IngresarPersona extends HttpServlet{
+
+    private static final Logger logger = MiLog.obtenerLog();
+    private static final long serialVersionUID = 6755151974107090793L;
+    private static PersonaDAO daoPersona = new PersonaDAO();
+
+    private void procesaGetRequest(HttpServletRequest req) {
+        if(req.getParameter(&quot;nombre&quot;) != null) {
+            String nombre = req.getParameter(&quot;nombre&quot;);
+            daoPersona.ingresar(new Persona(nombre) );
+        }else {
+            logger.warning(&quot;El request no posee los datos necesarios&quot;);
+        }
+
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) {
+        procesaGetRequest(req);
+        try {
+            // el servlet que escucha esta url, se encarga de dejar el jsp
+            // en un estado consistente inicial.
+            req.getRequestDispatcher(&quot;mantenedor&quot;).forward(req, resp);
+        } catch (ServletException | IOException e) {
+            logger.severe(e.getMessage());
+        }
+
+    }
+}
+
+</code></pre>
+
+<p><code>/webpersonas/src/main/java/cl/lherrera/webpersonas/servlets/ActualizarPersona.java</code></p>
+<pre><code class="java">package cl.lherrera.webpersonas.servlets;
+
+import java.io.IOException;
+import java.util.List;
+import java.util.logging.Logger;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import cl.lherrera.webpersonas.dao.PersonaDAO;
+import cl.lherrera.webpersonas.modelo.Persona;
+import cl.lherrera.webpersonas.utils.MiLog;
+
+
+@WebServlet(name = &quot;Actualizar Persona&quot;, urlPatterns = &quot;/actualizar&quot;)
+public class ActualizarPersona extends HttpServlet{
+
+    private static final Logger logger = MiLog.obtenerLog();
+    private static final long serialVersionUID = 6755151974107090793L;
+    private static PersonaDAO daoPersona = new PersonaDAO();
+
+    private void procesaGetRequest(HttpServletRequest req) {
+        List&lt;Persona&gt; personas = daoPersona.obtenerTodos();
+        req.setAttribute(&quot;personas&quot;, personas);
+
+        // bloqueo de formularios
+        req.setAttribute(&quot;insertForm&quot;, &quot;disabled&quot;);
+        req.setAttribute(&quot;updateForm&quot;, &quot;&quot;);
+        req.setAttribute(&quot;deleteForm&quot;, &quot;disabled&quot;);
+
+        // parámetros para el formulario
+        req.setAttribute(&quot;id&quot;, req.getParameter(&quot;id&quot;) );
+        req.setAttribute(&quot;nombre&quot;, req.getParameter(&quot;nombre&quot;) );
+    }
+
+    private void procesaPostRequest(HttpServletRequest req) {
+        if(req.getParameter(&quot;id&quot;) != null) {
+            int idPersona = Integer.parseInt(req.getParameter(&quot;id&quot;));
+            String nombrePersona = req.getParameter(&quot;nombre&quot;);
+            Persona persona = new Persona(nombrePersona);
+            daoPersona.actualizar(idPersona, persona);
+        }else {
+            logger.warning(&quot;El request no posee los datos necesarios&quot;);
+        }
+    }
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
+        procesaGetRequest(req);
+        try {
+            req.getRequestDispatcher(&quot;mantenedor.jsp&quot;).forward(req, resp);
+        } catch (ServletException | IOException e) {
+            logger.severe(e.getMessage());
+        }
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) {
+        procesaPostRequest(req);
+        try {
+            // no llamamos directo al jsp. si no que al servlet que carga
+            // la ventana inicial
+            req.getRequestDispatcher(&quot;mantenedor&quot;).forward(req, resp);
+        } catch (ServletException | IOException e) {
+            logger.severe(e.getMessage());
+        }
+
+    }
+
+}
+
+</code></pre>
+
+<p><code>/webpersonas/src/main/java/cl/lherrera/webpersonas/servlets/EliminaPersona.java</code></p>
+<pre><code class="java">package cl.lherrera.webpersonas.servlets;
+
+import java.io.IOException;
+import java.util.List;
+import java.util.logging.Logger;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import cl.lherrera.webpersonas.dao.PersonaDAO;
+import cl.lherrera.webpersonas.modelo.Persona;
+import cl.lherrera.webpersonas.utils.MiLog;
+
+
+@WebServlet(name = &quot;Eliminar Persona&quot;, urlPatterns = &quot;/eliminar&quot;)
+public class EliminaPersona extends HttpServlet{
+    private static final Logger logger = MiLog.obtenerLog();
+    private static final long serialVersionUID = 6755151974107090793L;
+    private static PersonaDAO daoPersona = new PersonaDAO();
+
+    private void procesaGetRequest(HttpServletRequest req) {
+        List&lt;Persona&gt; personas = daoPersona.obtenerTodos();
+        req.setAttribute(&quot;personas&quot;, personas);
+
+        // bloqueo de formularios
+        req.setAttribute(&quot;insertForm&quot;, &quot;disabled&quot;);
+        req.setAttribute(&quot;updateForm&quot;, &quot;disabled&quot;);
+        req.setAttribute(&quot;deleteForm&quot;, &quot;&quot;);
+
+        // datos de los valores del formulario
+        if(req.getParameter(&quot;id&quot;) != null &amp;&amp; req.getParameter(&quot;elNombre&quot;) != null) {
+            req.setAttribute(&quot;id&quot;, req.getParameter(&quot;id&quot;) );
+            req.setAttribute(&quot;elNombre&quot;, req.getParameter(&quot;elNombre&quot;) );    
+        }else {
+            logger.warning(&quot;El request no posee los datos necesarios&quot;);
+        }
+    }
+
+    private void procesaPostRequest(HttpServletRequest req) {
+        if(req.getParameter(&quot;id&quot;) != null) {
+            int personaId = Integer.parseInt(req.getParameter(&quot;id&quot;) );
+            daoPersona.eliminar(personaId );    
+        }else {
+            logger.warning(&quot;El request no posee los datos necesarios&quot;);
+        }
+    }
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
+        procesaGetRequest(req);
+        try {
+            req.getRequestDispatcher(&quot;mantenedor.jsp&quot;).forward(req, resp);
+        } catch (ServletException | IOException e) {
+            logger.severe(e.getMessage());
+        }
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) {
+        procesaPostRequest(req);
+
+        try {
+            req.getRequestDispatcher(&quot;mantenedor&quot;).forward(req, resp);
+        } catch (ServletException | IOException e) {
+            logger.severe(e.getMessage());
+        }
+
+    }
+}
+
+</code></pre>
+
+<p>De esta manera tendremos nuestro proyecto terminado, solamente falta implementarlo y observar los resultados. 👨🏻‍🏫👍🏼.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../assets/javascripts/vendor.a0c4167b.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.fb26dd1d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../../assets/javascripts/worker/search.37585f48.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

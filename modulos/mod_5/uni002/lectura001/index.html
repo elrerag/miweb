@@ -1,0 +1,1281 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.6">
+    
+    
+      
+        <title>Lectura001 - Java Full Stack Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.4b9ffd7b.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#unidad-21-vista-controlador" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../../.." title="Java Full Stack Docs" class="md-header-nav__button md-logo" aria-label="Java Full Stack Docs">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Java Full Stack Docs
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Lectura001
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Java Full Stack Docs" class="md-nav__button md-logo" aria-label="Java Full Stack Docs">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Java Full Stack Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../ejercicios/repaso/teoria/poo/herencia/" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#211-seguimiento-de-lectura-con-paginas" class="md-nav__link">
+    2.1.1 Seguimiento de lectura (con páginas)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#212-implementacion-del-proyecto" class="md-nav__link">
+    2.1.2 Implementación del proyecto. 🥋
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1.2 Implementación del proyecto. 🥋">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estructura" class="md-nav__link">
+    Estructura
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#archivos-modificados" class="md-nav__link">
+    Archivos modificados
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#holamundospringmvcsrcmainjavacllherrera" class="md-nav__link">
+    /holamundospringmvc/src/main/java/cl/lherrera
+  </a>
+  
+    <nav class="md-nav" aria-label="/holamundospringmvc/src/main/java/cl/lherrera">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#controller" class="md-nav__link">
+    /controller/
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#holamundospringmvcsrcmainresources" class="md-nav__link">
+    /holamundospringmvc/src/main/resources
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#holamundospringmvcsrcmainwebappweb-inf" class="md-nav__link">
+    /holamundospringmvc/src/main/webapp/WEB-INF/
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#holamundospringmvcpomxml" class="md-nav__link">
+    /holamundospringmvc/pom.xml
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <blockquote>
+<h1 id="unidad-21-vista-controlador"><strong>Unidad 2.1 - Vista - Controlador</strong></h1>
+<blockquote>
+<ul>
+<li>Esta guía se sigue con la lectura.</li>
+</ul>
+</blockquote>
+</blockquote>
+<hr />
+<p><br /></p>
+<blockquote>
+<h2 id="211-seguimiento-de-lectura-con-paginas">2.1.1 Seguimiento de lectura (con páginas)</h2>
+</blockquote>
+<p><strong>Patrón de diseño MVC</strong></p>
+<p><strong>Introducción</strong> (1)</p>
+<p>(Lectura), agregar propio entendimiento.</p>
+<p><strong>MVC (Model View Controller)</strong> (2)</p>
+<p>(Lectura), agregar propio entendimiento.</p>
+<p><strong>Spring MVC</strong> (6)</p>
+<p><strong>Introducción</strong></p>
+<p>Se explica que Spring dispone nativa mente de esta arquitectura. Muestra algunas herramientas por capa (vista controlador).
+(Seguir lectura).</p>
+<p><strong>Características de Spring MVC</strong> (6)</p>
+<p>Se explican ventajas.</p>
+<p><strong>Front Controller</strong> (6).</p>
+<ul>
+<li>patrón diseño</li>
+<li>un solo controlador como punto de entrada a la aplicación.</li>
+<li>El Front Controller, necesita de un objeto <code>Dispatcher</code> (Despachador), el cual se encarga de <code>redireccionar</code> todas las peticiones de los usuarios, que ha aceptado el Front Controller, a los objetos controladores de Spring.
+(Seguir lectura)</li>
+</ul>
+<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;web-app metadata-complete=&quot;true&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+    xmlns=&quot;http://java.sun.com/xml/ns/javaee&quot; xmlns:web=&quot;http://java.sun.com/xml/ns/javaee&quot; xsi:schemaLocation=&quot;http://java.sun.com/xml/ns/javaee 
+http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd&quot; id=&quot;WebApp_ID&quot; version=&quot;3.0&quot;&gt;
+    &lt;display-name&gt;ContactManager&lt;/display-name&gt;
+    &lt;servlet&gt;
+        &lt;servlet-name&gt;spring&lt;/servlet-name&gt;
+        &lt;servlet-class&gt;
+            org.springframework.web.servlet.DispatcherServlet
+        &lt;/servlet-class&gt;
+        &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;
+    &lt;/servlet&gt;
+    &lt;servlet-mapping&gt;
+        &lt;servlet-name&gt;spring&lt;/servlet-name&gt;
+        &lt;url-pattern&gt;*.html&lt;/url-pattern&gt;
+    &lt;/servlet-mapping&gt;
+&lt;/web-app&gt;
+</code></pre>
+
+<p><strong>Herramientas proporcionadas para la Vista - JSTL</strong></p>
+<p><strong>Agregar JSTL a nuestro proyecto</strong> (9)</p>
+<pre><code class="xml">&lt;dependency&gt;
+    &lt;groupId&gt;javax.servlet&lt;/groupId&gt;
+    &lt;artifactId&gt;jstl&lt;/artifactId&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;javax.servlet&lt;/groupId&gt;
+    &lt;artifactId&gt;javax.servlet-api&lt;/artifactId&gt;
+&lt;/dependency&gt;
+</code></pre>
+
+<p><strong>Agregar JSTL a nuestra vista (<code>jsp</code>)</strong> (10)</p>
+<pre><code class="html">&lt;%@ taglib prefix=&quot;c&quot; uri=&quot;http://java.sun.com/jsp/jstl/core&quot; %&gt; 
+</code></pre>
+
+<p><strong>Funciones de JSTL</strong> (10)</p>
+<pre><code class="html">&lt;c:out value=&quot;${variable}&quot; /&gt; 
+</code></pre>
+
+<pre><code class="html">&lt;c:set var=&quot;edad&quot; value=&quot;${18}&quot;/&gt; 
+</code></pre>
+
+<pre><code class="html">&lt;c:set var=&quot;edad&quot; value=&quot;${18}&quot;/&gt; 
+&lt;c:if test = &quot;${edad &gt; 17}&quot;&gt; 
+    &lt;p&gt;Mayor de edad&lt;p&gt; 
+&lt;/c:if&gt;
+</code></pre>
+
+<pre><code class="html">&lt;c:if test = &quot;${edad &gt; 17}&quot; var = &quot;result&quot;&gt; 
+    &lt;p&gt;Mayor de edad&lt;p&gt; 
+&lt;/c:if&gt;
+</code></pre>
+
+<pre><code class="html">&lt;c:choose&gt; 
+&lt;c:when test=&quot;${condicion1}&quot;&gt; 
+    //Aquí van las líneas a ejecutarse en caso de que condicion1 se cumpla &lt;/c:when&gt; 
+&lt;c:when test=&quot;${condition2}&quot;&gt; 
+    //Aquí van las líneas a ejecutarse en caso de que condicion2 se cumpla &lt;/c:when&gt; 
+&lt;c:otherwise&gt; 
+    /*Si ninguna de las condiciones c:when anteriores se ha cumplido, se ejecutará esta fracción de código.*/ 
+&lt;/c:otherwise&gt; 
+&lt;/c:choose&gt;
+</code></pre>
+
+<pre><code class="html">&lt;c:forEach var=&quot;contador&quot; begin=&quot;0&quot; end=&quot;10&quot;&gt;     
+    //Esto hace un for, contando desde 0 hasta 10 
+&lt;/c:forEach&gt;
+</code></pre>
+
+<pre><code class="html">&lt;c:forEach items=&quot;${listaMensajes}&quot; var=&quot;mensaje&quot;&gt; 
+    &lt;c:out value=&quot;${mensaje}&quot; /&gt; 
+&lt;/c:forEach&gt;
+</code></pre>
+
+<p><strong>Spring MVC <code>Form</code></strong> (12)</p>
+<ul>
+<li>nos permite utilizar el modelo de Spring devuelto por el controlador.</li>
+</ul>
+<pre><code class="html">&lt;%@taglib prefix=&quot;form&quot; uri=&quot;http://www.springframework.org/tags/form&quot; %&gt;
+</code></pre>
+
+<pre><code class="html">&lt;form:form id=&quot;frmAcciones&quot; modelAttribute=&quot;contact&quot; action=&quot;/addContact&quot;&gt; 
+    &lt;!-- Aquí va el código html, jstl u otro que pinte en pantalla el formulario --&gt; 
+&lt;/form&gt;
+</code></pre>
+
+<pre><code class="html">&lt;form:form id=&quot;frmAcciones&quot; modelAttribute=&quot;contact&quot; action=&quot;/addContact&quot;&gt;
+    &lt;div&gt;
+        &lt;fieldset&gt;
+            &lt;legend&gt;Mantenedor de Contactos&lt;/legend&gt;
+            &lt;table border=&quot;1&quot;&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;Nombre: &lt;/td&gt;
+                    &lt;td&gt;&lt;input type=&quot;text&quot; id=&quot;idNombre&quot; name=&quot;nombre&quot; /&gt;&lt;/td&gt;
+                    &lt;td&gt;Apellido Paterno: &lt;/td&gt;
+                    &lt;td&gt;&lt;input type=&quot;text&quot; id=&quot;idApellidoPaterno&quot; name=&quot;apellidoPaterno&quot; /&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;Dirección: &lt;/td&gt;
+                    &lt;td&gt;&lt;input type=&quot;text&quot; id=&quot;idDireccion&quot; name=&quot;direccion&quot; /&gt;&lt;/td&gt;
+                    &lt;td&gt;Teléfono: &lt;/td&gt;
+                    &lt;td&gt;&lt;input type=&quot;text&quot; id=&quot;idTelefono&quot; name=&quot;telefono&quot; /&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+
+                &lt;tr&gt;
+                    &lt;td colspan=&quot;4&quot;&gt;
+                        &lt;input type=&quot;button&quot; value=&quot;Buscar&quot; /&gt;
+                        &lt;input type=&quot;button&quot; value=&quot;Agregar&quot;
+                            onclick=&quot;submitFormAction('/contactManager/addContact', 'post')&quot; /&gt;
+                        &lt;input type=&quot;button&quot; value=&quot;Eliminar&quot; /&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/table&gt;
+        &lt;/fieldset&gt;
+    &lt;/div&gt;
+&lt;/form:form&gt;
+</code></pre>
+
+<p><strong>Creación de un proyecto con Spring MVC</strong> (14)</p>
+<p>Se muestra como iniciar un proyecto Spring, esto ya lo hemos hecho nos podemos saltar esta parte.</p>
+<p><strong>Controlador y la anotación @Controller</strong> (27)</p>
+<p><strong>Introducción</strong> (27)</p>
+<p>(lectura)</p>
+<p><strong>@Controller</strong> (27)</p>
+<pre><code class="java">import org.springframework.stereotype.Controller; 
+@Controller 
+public class HelloController { . 
+. 
+. 
+} 
+</code></pre>
+
+<p><strong><code>@RequestMapping</code></strong> (28)</p>
+<pre><code class="java">@RequestMapping(value=&quot;/accionMetodo&quot;, method=RequestMethod.GET) 
+public String nombreMetodo(ModelMap model) { 
+    model.put(&quot;saludo&quot;, &quot;Hola Mundo Spring desde mi controlador&quot;); return &quot;hello&quot;; 
+}
+</code></pre>
+
+<p><strong><code>Dispatcher</code></strong> (29)</p>
+<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;web-app metadata-complete=&quot;true&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+    xmlns=&quot;http://java.sun.com/xml/ns/javaee&quot; xmlns:web=&quot;http://java.sun.com/xml/ns/javaee&quot; xsi:schemaLocation=&quot;http://java.sun.com/xml/ns/javaee 
+http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd&quot; id=&quot;WebApp_ID&quot; version=&quot;3.0&quot;&gt;
+    &lt;display-name&gt;holamundospringmvc&lt;/display-name&gt;
+    &lt;servlet&gt;
+        &lt;servlet-name&gt;spring&lt;/servlet-name&gt;
+        &lt;servlet-class&gt;
+            org.springframework.web.servlet.DispatcherServlet
+        &lt;/servlet-class&gt;
+        &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;
+    &lt;/servlet&gt;
+    &lt;servlet-mapping&gt;
+        &lt;servlet-name&gt;spring&lt;/servlet-name&gt;
+        &lt;url-pattern&gt;/*&lt;/url-pattern&gt;
+    &lt;/servlet-mapping&gt;
+&lt;/web-app&gt;
+</code></pre>
+
+<p><strong>Creando la vista</strong> (33)</p>
+<pre><code class="html">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=ISO-8859-1&quot; pageEncoding=&quot;ISO-8859-1&quot;%&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;ISO-8859-1&quot;&gt;
+    &lt;title&gt;Insert title here&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    Hola Mundo Spring MVC !!!
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+
+<p><strong><code>Conﬁgurando</code> la vista con MVC</strong> (34)</p>
+<p>Cuidado con los espacios</p>
+<pre><code>spring.mvc.view.prefix=/WEB-INF/
+spring.mvc.view.suffix=.jsp
+</code></pre>
+
+<p><strong>Creando el controlador</strong> (39)</p>
+<pre><code class="java">package cl.desafiolatam.holamundospringmvc.controller;
+
+import org.springframework.stereotype.Controller; 
+
+
+@Controller 
+public class HelloController { /** */} 
+</code></pre>
+
+<pre><code class="java">package cl.desafiolatam.holamundospringmvc.controller;
+
+import org.springframework.stereotype.Controller; 
+
+@Controller 
+public class HelloController { 
+
+    public String hello() { 
+        return &quot;hello&quot;; 
+    } 
+} 
+</code></pre>
+
+<pre><code class="java">package cl.desafiolatam.holamundospringmvc.controller; 
+
+import org.springframework.stereotype.Controller; 
+import org.springframework.web.bind.annotation.RequestMapping; 
+import org.springframework.web.bind.annotation.RequestMethod; 
+
+@Controller 
+public class HelloController {
+
+    @RequestMapping(method=RequestMethod.GET) 
+    public String hello() { 
+        return &quot;hello&quot;; 
+    } 
+} 
+</code></pre>
+
+<p>Iguales, pero la lectura la repite</p>
+<pre><code class="java">package cl.desafiolatam.holamundospringmvc.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+@Controller 
+public class HelloController { 
+    @RequestMapping(method=RequestMethod.GET) 
+    public String hello() { 
+        return &quot;hello&quot;; 
+    } 
+} 
+</code></pre>
+
+<p><strong>Creando el controlador - anotación <code>@RequestMapping</code></strong> (45)</p>
+<p><code>http://localhost:8080/hello</code></p>
+<pre><code class="java">@RequestMapping(method=RequestMethod.GET) 
+public String sayGoodbye() { 
+    return &quot;hello&quot;; 
+}
+</code></pre>
+
+<pre><code class="java">package cl.desafiolatam.holamundospringmvc.controller; 
+import org.springframework.stereotype.Controller; 
+import org.springframework.web.bind.annotation.RequestMapping; 
+import org.springframework.web.bind.annotation.RequestMethod; 
+
+@Controller 
+public class HelloController { 
+    @RequestMapping(value=&quot;sayhello&quot;, method=RequestMethod.GET) 
+    public String sayHello() { 
+        return &quot;hello&quot;; 
+    } 
+
+    @RequestMapping(value=&quot;saygoodbye&quot;, method=RequestMethod.GET) 
+    public String sayGoodbye() { 
+        return &quot;hello&quot;; 
+    } 
+} 
+</code></pre>
+
+<pre><code class="java">package cl.desafiolatam.holamundospringmvc.controller; 
+import org.springframework.stereotype.Controller; 
+import org.springframework.web.bind.annotation.RequestMapping; 
+import org.springframework.web.bind.annotation.RequestMethod; 
+
+@Controller 
+@RequestMapping(value=&quot;/saludos&quot;) 
+public class HelloController { 
+    @RequestMapping(value=&quot;/sayhello&quot;, method=RequestMethod.GET) 
+    public String sayHello() {
+        return &quot;hello&quot;;
+    }
+
+    @RequestMapping(value=&quot;/saygoodbye&quot;, method=RequestMethod.GET) 
+    public String sayGoodbye() { 
+        return &quot;hello&quot;; 
+    }
+}
+</code></pre>
+
+<p><strong>Entregar datos a la vista desde el controlador</strong> (52)</p>
+<p><strong>Objeto ModelMap</strong> (53)</p>
+<pre><code class="java">@RequestMapping(value=&quot;/sayhello&quot;, method=RequestMethod.GET) 
+public String sayHello(ModelMap model) { 
+    return &quot;hello&quot;; 
+} 
+
+@RequestMapping(value=&quot;/saygoodbye&quot;, method=RequestMethod.GET) 
+public String sayGoodbye(ModelMap model) { 
+    return &quot;hello&quot;; 
+}
+</code></pre>
+
+<pre><code class="java">@RequestMapping(value=&quot;/sayhello&quot;, method=RequestMethod.GET) 
+public String sayHello(ModelMap model) { 
+    model.put(&quot;saludo&quot;, &quot;Hola Mundo Spring desde mi controlador&quot;); return &quot;hello&quot;; 
+}
+</code></pre>
+
+<pre><code class="java">@RequestMapping(value=&quot;/saygoodbye&quot;, method=RequestMethod.GET) 
+public String sayGoodbye(ModelMap model) { 
+    model.put(&quot;saludo&quot;, &quot;Adios Mundo Spring desde mi controlador&quot;); return &quot;hello&quot;; 
+}
+</code></pre>
+
+<pre><code class="html">&lt;%@ taglib prefix=&quot;c&quot; uri=&quot;http://java.sun.com/jsp/jstl/core&quot;%&gt; 
+</code></pre>
+
+<pre><code class="xml">&lt;dependency&gt;
+    &lt;groupId&gt;javax.servlet&lt;/groupId&gt;
+    &lt;artifactId&gt;jstl&lt;/artifactId&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;javax.servlet&lt;/groupId&gt;
+    &lt;artifactId&gt;javax.servlet-api&lt;/artifactId&gt;
+&lt;/dependency&gt;
+</code></pre>
+
+<pre><code class="html">&lt;c:out value=&quot;${saludo}&quot; /&gt; 
+</code></pre>
+
+<pre><code class="java">@RequestMapping(value=&quot;/sayhello&quot;, method=RequestMethod.GET)
+public String sayHello(ModelMap model) {
+    model.put(&quot;saludo&quot;, &quot;Hola Mundo Spring desde mi controlador&quot;); return &quot;hello&quot;;
+}
+
+@RequestMapping(value=&quot;/saygoodbye&quot;, method=RequestMethod.GET) 
+public String sayGoodbye(ModelMap model) { 
+    model.put(&quot;saludo&quot;, &quot;Adios Mundo Spring desde mi controlador&quot;); return &quot;hello&quot;; 
+} 
+</code></pre>
+
+<pre><code class="java">package cl.desafiolatam.holamundospringmvc.controller; 
+
+import org.springframework.stereotype.Controller; 
+import org.springframework.ui.ModelMap; 
+import org.springframework.web.bind.annotation.RequestMapping; 
+import org.springframework.web.bind.annotation.RequestMethod; 
+
+
+@Controller 
+@RequestMapping(value=&quot;/saludos&quot;, method=RequestMethod.GET) 
+public class HelloController { 
+    @RequestMapping(value=&quot;/sayhello&quot;, method=RequestMethod.GET) 
+    public String sayHello(ModelMap model) { 
+        model.put(&quot;saludo&quot;, &quot;Hola Mundo Spring desde mi controlador&quot;); return &quot;hello&quot;; 
+    }
+
+    @RequestMapping(value=&quot;/saygoodbye&quot;, method=RequestMethod.GET) 
+    public String sayGoodbye(ModelMap model) { 
+        model.put(&quot;saludo&quot;, &quot;Adios Mundo Spring desde mi controlador&quot;); return &quot;hello&quot;; 
+    } 
+} 
+</code></pre>
+
+<pre><code class="html">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=ISO-8859-1&quot; pageEncoding=&quot;ISO-8859-1&quot;%&gt;
+&lt;%@ taglib prefix=&quot;c&quot; uri=&quot;http://java.sun.com/jsp/jstl/core&quot; %&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;ISO-8859-1&quot;&gt;
+    &lt;title&gt;Insert title here&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;c:out value=&quot;${saludo}&quot; /&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+
+<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+    xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 
+http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+    &lt;parent&gt;
+        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;
+        &lt;version&gt;2.1.6.RELEASE&lt;/version&gt;
+        &lt;relativePath /&gt; &lt;!-- lookup parent from repository --&gt;
+    &lt;/parent&gt;
+    &lt;groupId&gt;cl.desafiolatam&lt;/groupId&gt;
+    &lt;artifactId&gt;holamundospringmvc&lt;/artifactId&gt;
+    &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
+    &lt;packaging&gt;war&lt;/packaging&gt;
+    &lt;name&gt;HolaMundoSpringMVC&lt;/name&gt;
+    &lt;description&gt;Demo project for Spring Boot&lt;/description&gt;
+    &lt;properties&gt;
+        &lt;java.version&gt;1.8&lt;/java.version&gt;
+    &lt;/properties&gt;
+    &lt;dependencies&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-tomcat&lt;/artifactId&gt;
+            &lt;scope&gt;provided&lt;/scope&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;
+            &lt;scope&gt;test&lt;/scope&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.apache.tomcat.embed&lt;/groupId&gt;
+            &lt;artifactId&gt;tomcat-embed-jasper&lt;/artifactId&gt;
+            &lt;scope&gt;provided&lt;/scope&gt;
+        &lt;/dependency&gt;
+
+        &lt;dependency&gt;
+            &lt;groupId&gt;javax.servlet&lt;/groupId&gt;
+            &lt;artifactId&gt;jstl&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;javax.servlet&lt;/groupId&gt;
+            &lt;artifactId&gt;javax.servlet-api&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+    &lt;/dependencies&gt;
+    &lt;build&gt;
+        &lt;plugins&gt;
+            &lt;plugin&gt;
+                &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+                &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;
+            &lt;/plugin&gt;
+        &lt;/plugins&gt;
+    &lt;/build&gt;
+&lt;/project&gt;
+</code></pre>
+
+<p><strong>Recibir datos en el controlador</strong> (59)</p>
+<p><strong>Enviando datos al controlador</strong> (61)</p>
+<pre><code class="html">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=ISO-8859-1&quot;     pageEncoding=&quot;ISO-8859-1&quot;%&gt;
+&lt;%@ taglib prefix=&quot;c&quot; uri=&quot;http://java.sun.com/jsp/jstl/core&quot; %&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;ISO-8859-1&quot;&gt;
+    &lt;title&gt;Insert title here&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;form action=&quot;/saludos/sendData&quot; method=&quot;post&quot; id=&quot;frmSend&quot;&gt;
+        Dato a enviar: &lt;input type=&quot;text&quot; id=&quot;txtData&quot; name=&quot;data&quot; /&gt;
+        &lt;input type=&quot;submit&quot; id=&quot;btnSend&quot; value=&quot;Enviar dato&quot; /&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+
+<pre><code class="html">&lt;input type=&quot;text&quot; id=&quot;txtData&quot; name=&quot;data&quot;/&gt; 
+</code></pre>
+
+<pre><code class="java">@RequestMapping(value=&quot;/initSendData&quot;, method=RequestMethod.GET) 
+    public String initSendData(ModelMap model) { 
+        return &quot;sendData&quot;; 
+    } 
+</code></pre>
+
+<pre><code class="java">@RequestMapping(value=&quot;/sendData&quot;, method=RequestMethod.POST) 
+public String sendData(ModelMap model, @RequestParam(value=&quot;data&quot;, required = true) String dataReceived) { 
+    System.out.println(&quot;El dato recibido desde la vista sendData es: &quot; + dataReceived); 
+    return &quot;sendData&quot;; 
+} 
+</code></pre>
+
+<pre><code class="java">@Controller 
+@RequestMapping(value=&quot;/saludos&quot;, method=RequestMethod.GET) 
+public class HelloController { 
+    private List&lt;String&gt; listaMensajes; 
+    public HelloController() { 
+        // TODO Auto-generated constructor stub super(); 
+        listaMensajes = new ArrayList&lt;String&gt;(); 
+    } 
+. 
+. 
+. 
+</code></pre>
+
+<pre><code class="java">@RequestMapping(value=&quot;/addData&quot;, method=RequestMethod.GET) 
+public String saveData(ModelMap model, @RequestParam(value=&quot;data&quot;, required = false) String dataReceived) { 
+    if(dataReceived != null) { 
+        listaMensajes.add(dataReceived); 
+    } 
+    System.out.println(&quot;El dato recibido desde la vista sendData es: &quot; + dataReceived); 
+    model.put(&quot;listaMensajes&quot;, listaMensajes); 
+    return &quot;addData&quot;; 
+}
+</code></pre>
+
+<pre><code class="java">public String saveData(ModelMap model, @RequestParam(value=&quot;data&quot;, required = false)
+</code></pre>
+
+<pre><code class="java">if(dataReceived != null) { 
+    listaMensajes.add(dataReceived); 
+}
+</code></pre>
+
+<pre><code class="java">model.put(&quot;listaMensajes&quot;, listaMensajes); 
+</code></pre>
+
+<pre><code class="html">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=ISO-8859-1&quot; pageEncoding=&quot;ISO-8859-1&quot;%&gt;
+&lt;%@ taglib prefix=&quot;c&quot; uri=&quot;http://java.sun.com/jsp/jstl/core&quot; %&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;ISO-8859-1&quot;&gt;
+    &lt;title&gt;Insert title here&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;form action=&quot;/saludos/addData&quot; method=&quot;get&quot; id=&quot;frmAdd&quot;&gt;
+        Dato a enviar: &lt;input type=&quot;text&quot; id=&quot;txtData&quot; name=&quot;data&quot; /&gt;
+        &lt;input type=&quot;submit&quot; id=&quot;btnAdd&quot; value=&quot;Add dato&quot; /&gt;
+    &lt;/form&gt;
+    &lt;c:forEach items=&quot;${listaMensajes}&quot; var=&quot;mensaje&quot;&gt;
+        &lt;c:out value=&quot;${mensaje}&quot; /&gt;&lt;br /&gt;
+    &lt;/c:forEach&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+
+<pre><code class="html">&lt;c:forEach items=&quot;${listaMensajes}&quot; var=&quot;mensaje&quot;&gt; 
+    &lt;c:out value=&quot;${mensaje}&quot; /&gt;&lt;br /&gt; 
+&lt;/c:forEach&gt;
+</code></pre>
+
+<pre><code class="html">&lt;c:out value=&quot;${mensaje}&quot; /&gt;&lt;br /&gt; 
+</code></pre>
+
+<pre><code class="java">@Scope(&quot;request&quot;) 
+public class HelloController { 
+    private List&lt;String&gt; listaMensajes; 
+    . 
+    . 
+    . 
+</code></pre>
+
+<hr />
+<p><br /></p>
+<blockquote>
+<h2 id="212-implementacion-del-proyecto">2.1.2 Implementación del proyecto. 🥋</h2>
+</blockquote>
+<p>La lectura en general muestra secciones de código no funcionales en un ejemplo real. Es por eso que se implementa el proyecto expuesto, que posee las características Vista - Controlador. Asumo que se entiende de mala forma que el modelo es una base de datos, pero para la aplicación de la lectura está bien.</p>
+<h3 id="estructura"><strong>Estructura</strong></h3>
+<pre><code>./
+├── HELP.md
+├── mvnw
+├── mvnw.cmd
+├── pom.xml
+├── src
+│   ├── main
+│   │   ├── java
+│   │   │   └── cl
+│   │   │       └── lherrera
+│   │   │           ├── HolamundospringmvcApplication.java
+│   │   │           └── controller
+│   │   │               └── HelloController.java
+│   │   ├── resources
+│   │   │   ├── application.properties
+│   │   │   ├── static
+│   │   │   └── templates
+│   │   └── webapp
+│   │       └── WEB-INF
+│   │           ├── addData.jsp
+│   │           ├── hello.jsp
+│   │           ├── index.jsp
+│   │           ├── sendData.jsp
+│   │           └── web.xml
+│   └── test
+│       └── java
+│           └── cl
+│               └── lherrera
+│                   └── HolamundospringmvcApplicationTests.java
+└── target
+    ├── classes
+    │   ├── META-INF
+    │   │   ├── MANIFEST.MF
+    │   │   └── maven
+    │   │       └── cl.lherrera
+    │   │           └── holamundospringmvc
+    │   │               ├── pom.properties
+    │   │               └── pom.xml
+    │   ├── application.properties
+    │   └── cl
+    │       └── lherrera
+    │           ├── HolamundospringmvcApplication.class
+    │           └── controller
+    │               └── HelloController.class
+    └── test-classes
+        └── cl
+            └── lherrera
+                └── HolamundospringmvcApplicationTests.class
+
+27 directories, 20 files
+
+</code></pre>
+
+<h3 id="archivos-modificados"><strong>Archivos modificados</strong></h3>
+<ul>
+<li><code>/holamundospringmvc/src/main/java/cl/lherrera/controller/HelloController.java</code><ul>
+<li>Único controlador de la aplicación, se encarga de atender las peticiones del usuario.</li>
+</ul>
+</li>
+<li><code>/holamundospringmvc/src/main/resources/application.properties</code><ul>
+<li>Se indica a la aplicación, donde debe buscar los archivos <code>jsp</code>.</li>
+</ul>
+</li>
+<li><code>/holamundospringmvc/src/main/webapp/WEB-INF/addData.jsp</code><ul>
+<li>Vista con el formulario que envía datos.</li>
+</ul>
+</li>
+<li><code>/holamundospringmvc/src/main/webapp/WEB-INF/hello.jsp</code><ul>
+<li>Vista que se carga con: <code>sayhello</code>, <code>saygoodbye</code></li>
+</ul>
+</li>
+<li><code>/holamundospringmvc/src/main/webapp/WEB-INF/index.jsp</code><ul>
+<li>Vista encargada de ejecutar el inicio de la aplicación, no posee un controlador, se ejecuta por defecto en <code>/</code></li>
+</ul>
+</li>
+<li><code>/holamundospringmvc/src/main/webapp/WEB-INF/sendData.jsp</code><ul>
+<li>Vista que envía datos de <code>initSendData</code> a <code>sendData</code></li>
+</ul>
+</li>
+<li><code>/holamundospringmvc/src/main/webapp/WEB-INF/web.xml</code><ul>
+<li>Descriptor de despliegue, Solamente indicamos el <code>DispatcherServlet</code>.</li>
+</ul>
+</li>
+<li><code>/holamundospringmvc/pom.xml</code><ul>
+<li>Contendrá las dependencias necesarias para el soporte de <code>jsp</code> y <code>jstl</code>.</li>
+</ul>
+</li>
+</ul>
+<h3 id="holamundospringmvcsrcmainjavacllherrera"><strong><code>/holamundospringmvc/src/main/java/cl/lherrera</code></strong></h3>
+<h4 id="controller"><strong><code>/controller/</code></strong></h4>
+<p><code>/HelloController.java</code></p>
+<pre><code class="java">package cl.lherrera.controller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+//import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+
+@Controller
+//@Scope(&quot;request&quot;) // si queremos que no guarde los datos en la sesión, probar con addData
+// no funciona en el método, solamente a nivel de clase
+@RequestMapping(value = &quot;/saludos&quot;)
+public class HelloController {
+    private List&lt;String&gt; listaMensajes;
+    private Logger logger = LoggerFactory.getLogger(HelloController.class.getName());
+
+    public HelloController() {
+        listaMensajes = new ArrayList&lt;&gt;();
+    }
+
+    @RequestMapping(value = &quot;/sayhello&quot;, method = RequestMethod.GET)
+    public String sayHello(ModelMap model) {
+        model.put(&quot;saludo&quot;, &quot;Hola Mundo Spring desde mi controlador&quot;);
+        model.put(&quot;saluda&quot;, true);
+        return &quot;hello&quot;;
+    }
+
+    @RequestMapping(value = &quot;/saygoodbye&quot;, method = RequestMethod.GET)
+    public String sayGoodbye(ModelMap model) {
+        model.put(&quot;saludo&quot;, &quot;Adios Mundo Spring desde mi controlador&quot;);
+        model.put(&quot;despide&quot;, true);
+        return &quot;hello&quot;;
+    }
+
+    @RequestMapping(value = &quot;/initSendData&quot;, method = RequestMethod.GET)
+    public String initSendData(ModelMap model) {
+        return &quot;sendData&quot;;
+    }
+
+    @RequestMapping(value = &quot;/sendData&quot;, method = RequestMethod.POST)
+    public String sendData(ModelMap model, @RequestParam(value = &quot;data&quot;, required = true) String dataReceived) {
+
+        logger.info(&quot;El dato recibido desde la vista sendData es: &quot; + dataReceived);
+        return &quot;sendData&quot;;
+    }
+
+    @RequestMapping(value = &quot;/addData&quot;, method = RequestMethod.GET)
+    public String saveData(
+            ModelMap model, 
+            @RequestParam(value = &quot;data&quot;, required = false) String dataReceived) {
+
+        if (dataReceived != null) {
+            listaMensajes.add(dataReceived);
+        }
+        logger.info(&quot;El dato recibido desde la vista sendData es: &quot; + dataReceived);
+        model.put(&quot;listaMensajes&quot;, listaMensajes);
+        return &quot;addData&quot;;
+    }
+}
+
+</code></pre>
+
+<h3 id="holamundospringmvcsrcmainresources"><strong><code>/holamundospringmvc/src/main/resources</code></strong></h3>
+<p><code>/application.properties</code></p>
+<pre><code class="conf">spring.mvc.view.prefix=/WEB-INF/
+spring.mvc.view.suffix=.jsp
+</code></pre>
+
+<h3 id="holamundospringmvcsrcmainwebappweb-inf"><strong><code>/holamundospringmvc/src/main/webapp/WEB-INF/</code></strong></h3>
+<p><code>/addData.jsp</code></p>
+<pre><code class="jsp">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=ISO-8859-1&quot;
+    pageEncoding=&quot;ISO-8859-1&quot;%&gt;
+&lt;%@ taglib prefix=&quot;c&quot; uri=&quot;http://java.sun.com/jsp/jstl/core&quot;%&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;ISO-8859-1&quot;&gt;
+&lt;title&gt;Insert title here&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;form action=&quot;/saludos/addData&quot; method=&quot;get&quot; id=&quot;frmAdd&quot;&gt;
+        Dato a enviar: &lt;input type=&quot;text&quot; id=&quot;txtData&quot; name=&quot;data&quot; /&gt; &lt;input
+            type=&quot;submit&quot; id=&quot;btnAdd&quot; value=&quot;Add dato&quot; /&gt;
+    &lt;/form&gt;
+    &lt;c:forEach items=&quot;${listaMensajes}&quot; var=&quot;mensaje&quot;&gt;
+        &lt;c:out value=&quot;${mensaje}&quot; /&gt;
+        &lt;br /&gt;
+    &lt;/c:forEach&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p><code>/hello.jsp</code></p>
+<pre><code class="jsp">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=ISO-8859-1&quot;
+    pageEncoding=&quot;ISO-8859-1&quot;%&gt;
+&lt;%@ taglib uri=&quot;http://java.sun.com/jsp/jstl/core&quot; prefix=&quot;c&quot;%&gt;
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;ISO-8859-1&quot;&gt;
+&lt;title&gt;Insert title here&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;h1&gt;
+        &lt;c:out value=&quot;${saludo}&quot; /&gt;
+    &lt;/h1&gt;
+
+    Se muestra el resultado del
+
+    &lt;c:if test=&quot;${saluda}&quot;&gt;
+        &lt;pre&gt;
+            &lt;code&gt;model.put(&quot;saludo&quot;, &quot;Hola Mundo Spring desde mi controlador&quot;);&lt;/code&gt;
+        &lt;/pre&gt;
+    &lt;/c:if&gt;
+
+
+    &lt;c:if test=&quot;${despide}&quot;&gt;
+        &lt;pre&gt;
+            &lt;code&gt;model.put(&quot;saludo&quot;, &quot;Adios Mundo Spring desde mi controlador&quot;);&lt;/code&gt;
+        &lt;/pre&gt;
+    &lt;/c:if&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p><code>/index.jsp</code></p>
+<pre><code class="jsp">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;
+    pageEncoding=&quot;UTF-8&quot;%&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Insert title here&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;h1&gt;Soy el index, no necesito un controlador&lt;/h1&gt;
+
+    Ya que el las propiedades del proyecto se designó el direcctoirio de
+    los archivos jsp
+
+    &lt;code&gt;
+        &lt;pre&gt;
+spring.mvc.view.prefix=/WEB-INF/
+spring.mvc.view.suffix=.jsp
+&lt;/pre&gt;
+    &lt;/code&gt;
+
+    &lt;strong&gt;Necesita reniciar el servidor para ver los cambios&lt;/strong&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+
+<p><code>/sendData.jsp</code></p>
+<pre><code class="jsp">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=ISO-8859-1&quot; pageEncoding=&quot;ISO-8859-1&quot;%&gt;
+&lt;%@ taglib prefix=&quot;c&quot; uri=&quot;http://java.sun.com/jsp/jstl/core&quot;%&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;ISO-8859-1&quot;&gt;
+&lt;title&gt;Insert title here&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;form action=&quot;/saludos/sendData&quot; method=&quot;post&quot; id=&quot;frmSend&quot;&gt;
+        Dato a enviar: &lt;input type=&quot;text&quot; id=&quot;txtData&quot; name=&quot;data&quot; /&gt; &lt;input
+            type=&quot;submit&quot; id=&quot;btnSend&quot; value=&quot;Enviar dato&quot; /&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p><code>/web.xml</code></p>
+<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;web-app xmlns=&quot;http://xmlns.jcp.org/xml/ns/javaee&quot;
+         xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+         xsi:schemaLocation=&quot;http://xmlns.jcp.org/xml/ns/javaee
+         http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd&quot;
+         version=&quot;3.1&quot;&gt;
+
+    &lt;display-name&gt;Hello application&lt;/display-name&gt;
+
+    &lt;servlet&gt;
+        &lt;servlet-name&gt;spring&lt;/servlet-name&gt;
+        &lt;servlet-class&gt;
+            org.springframework.web.servlet.DispatcherServlet
+        &lt;/servlet-class&gt;
+        &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;
+    &lt;/servlet&gt;
+
+    &lt;servlet-mapping&gt;
+        &lt;servlet-name&gt;spring&lt;/servlet-name&gt;
+        &lt;url-pattern&gt;/*&lt;/url-pattern&gt;
+    &lt;/servlet-mapping&gt;
+
+&lt;/web-app&gt;
+</code></pre>
+
+<h3 id="holamundospringmvcpomxml"><strong><code>/holamundospringmvc/pom.xml</code></strong></h3>
+<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;
+    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+    xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+    &lt;parent&gt;
+        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;
+        &lt;version&gt;2.2.6.RELEASE&lt;/version&gt;
+        &lt;relativePath /&gt; &lt;!-- lookup parent from repository --&gt;
+    &lt;/parent&gt;
+    &lt;groupId&gt;cl.lherrera&lt;/groupId&gt;
+    &lt;artifactId&gt;holamundospringmvc&lt;/artifactId&gt;
+    &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
+    &lt;name&gt;holamundospringmvc&lt;/name&gt;
+    &lt;description&gt;ejemplo lectura spring mvc&lt;/description&gt;
+
+    &lt;properties&gt;
+        &lt;java.version&gt;1.8&lt;/java.version&gt;
+    &lt;/properties&gt;
+
+    &lt;dependencies&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;
+            &lt;scope&gt;test&lt;/scope&gt;
+            &lt;exclusions&gt;
+                &lt;exclusion&gt;
+                    &lt;groupId&gt;org.junit.vintage&lt;/groupId&gt;
+                    &lt;artifactId&gt;junit-vintage-engine&lt;/artifactId&gt;
+                &lt;/exclusion&gt;
+            &lt;/exclusions&gt;
+        &lt;/dependency&gt;
+
+        &lt;!-- SOPORTE ARCHIVOS JSP --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.apache.tomcat.embed&lt;/groupId&gt;
+            &lt;artifactId&gt;tomcat-embed-jasper&lt;/artifactId&gt;
+            &lt;scope&gt;provided&lt;/scope&gt;
+        &lt;/dependency&gt;
+        &lt;!-- SOPORTE ARCHIVOS JSP #--&gt;
+
+        &lt;!-- JSTL --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;javax.servlet&lt;/groupId&gt;
+            &lt;artifactId&gt;jstl&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;javax.servlet&lt;/groupId&gt;
+            &lt;artifactId&gt;javax.servlet-api&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;!-- JSTL #--&gt;
+
+    &lt;/dependencies&gt;
+
+    &lt;build&gt;
+        &lt;plugins&gt;
+            &lt;plugin&gt;
+                &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+                &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;
+            &lt;/plugin&gt;
+        &lt;/plugins&gt;
+    &lt;/build&gt;
+
+&lt;/project&gt;
+</code></pre>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../assets/javascripts/vendor.a0c4167b.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.fb26dd1d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../../assets/javascripts/worker/search.37585f48.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

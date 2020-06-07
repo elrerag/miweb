@@ -1,0 +1,910 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.6">
+    
+    
+      
+        <title>Lectura002 003 - Java Full Stack Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.4b9ffd7b.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#unidad-323-modelo" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../../.." title="Java Full Stack Docs" class="md-header-nav__button md-logo" aria-label="Java Full Stack Docs">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Java Full Stack Docs
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Lectura002 003
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Java Full Stack Docs" class="md-nav__button md-logo" aria-label="Java Full Stack Docs">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Java Full Stack Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../ejercicios/repaso/teoria/poo/herencia/" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#3231-crud-con-web" class="md-nav__link">
+    3.2.3.1 CRUD con web
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2.3.1 CRUD con web">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#archivos-modificados" class="md-nav__link">
+    Archivos modificados
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#srcmainjavacllherrerajpaspringcontrollers" class="md-nav__link">
+    src/main/java/cl/lherrera/jpaspring/controllers/
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#srcmainjavacllherrerajpaspringrepositories" class="md-nav__link">
+    src/main/java/cl/lherrera/jpaspring/repositories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#srcmainjavacllherrerajpaspringservices" class="md-nav__link">
+    src/main/java/cl/lherrera/jpaspring/services
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#srcmainwebappweb-inf" class="md-nav__link">
+    src/main/webapp/WEB-INF
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#srctestjavacllherrerajpaspringservices" class="md-nav__link">
+    src/test/java/cl/lherrera/jpaspring/services
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <blockquote>
+<h1 id="unidad-323-modelo"><strong>Unidad 3.2.3 - Modelo</strong></h1>
+<blockquote>
+<ul>
+<li>La siguiente aplicación será finalmente un mantenedor de personas, con un control de acceso de usuarios.</li>
+<li>La aplicación contendrá 5 Hitos.</li>
+<li>Hito 3: Creando la web del proyecto. El hito finaliza con la ejecución de la aplicación en el servidor y visto en un navegador web.</li>
+</ul>
+</blockquote>
+</blockquote>
+<hr />
+<p><br /></p>
+<blockquote>
+<h2 id="3231-crud-con-web"><strong>3.2.3.1 CRUD con web</strong></h2>
+</blockquote>
+<p>Los servicios que se implementaron, ahora tendrán forma en la web. Veremos como trabaja <code>Spring</code> la parte visual <strong>utilizando <code>jsp</code></strong>.</p>
+<h3 id="archivos-modificados"><strong>Archivos modificados</strong></h3>
+<pre><code>src/main/java/cl/lherrera/jpaspring/controllers/AplicationController.java
+src/main/java/cl/lherrera/jpaspring/controllers/PersonaController.java
+src/main/java/cl/lherrera/jpaspring/repositories/PersonaRepo.java
+src/main/java/cl/lherrera/jpaspring/services/PersonaServiceImpl.java
+src/main/resources/application.properties
+src/main/webapp/WEB-INF/index.jsp
+src/main/webapp/WEB-INF/pages/index.jsp
+src/main/webapp/WEB-INF/pages/htmlTemplates/footerTemplate.jsp
+src/main/webapp/WEB-INF/pages/htmlTemplates/headTemplate.jsp
+src/main/webapp/WEB-INF/pages/htmlTemplates/navTemplate.jsp
+src/main/webapp/WEB-INF/pages/personas/actualizar.jsp
+src/main/webapp/WEB-INF/pages/personas/eliminar.jsp
+src/main/webapp/WEB-INF/pages/personas/personas.jsp
+src/test/java/cl/lherrera/jpaspring/services/PersonaServiceTest.java
+</code></pre>
+
+<h3 id="srcmainjavacllherrerajpaspringcontrollers"><strong><code>src/main/java/cl/lherrera/jpaspring/controllers/</code></strong></h3>
+<p><code>/AplicationController.java</code></p>
+<pre><code class="java">package cl.lherrera.jpaspring.controllers;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+
+@Controller
+public class AplicationController {
+    private static final Logger logger = LoggerFactory.getLogger(AplicationController.class);
+
+    @GetMapping(&quot;/&quot;)
+    public String home() {
+        logger.info(&quot;llamada a : '/'&quot;);
+        return &quot;index&quot;;
+    }
+
+}
+
+</code></pre>
+
+<p><code>/PersonaController.java</code></p>
+<pre><code class="java">package cl.lherrera.jpaspring.controllers;
+
+import java.util.List;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import cl.lherrera.jpaspring.entities.Persona;
+import cl.lherrera.jpaspring.services.PersonaService;
+
+@Controller
+@RequestMapping(&quot;/personas&quot;)
+public class PersonaController {
+    private static final Logger logger = LoggerFactory.getLogger(PersonaController.class);
+
+    @Autowired
+    PersonaService servicio;
+
+    @GetMapping(&quot;/ingresar&quot;)
+    @ResponseStatus(code = HttpStatus.OK)
+    public String inicio(Model modelo) {
+        logger.info(&quot;Petición: /personas/&quot;);
+        List&lt;Persona&gt; personas = servicio.obtenerPersonas();
+
+        modelo.addAttribute(&quot;personas&quot;, personas);
+        return &quot;personas/personas&quot;;
+    }
+
+//  @ResponseStatus(code = HttpStatus.CREATED) // con esto no funciona el redirect
+    @PostMapping(&quot;/ingresar&quot;)
+    public String ingresar(
+            @ModelAttribute(&quot;foo&quot;) Persona persona,
+            @RequestParam String nombre, 
+            RedirectAttributes attributes) {
+        logger.info(&quot;Petición post /ingresar&quot;);
+
+        Persona respuesta = servicio.IngresarPersona(persona);
+
+        if(persona == null) 
+            logger.error(&quot;error en ingreso de persona&quot;);
+
+
+        return &quot;redirect:ingresar&quot;;
+    }
+
+    @GetMapping(&quot;/actualizar&quot;)
+    public String actualizar(
+            Model modelo, 
+            @RequestParam String id) {
+        logger.info(&quot;Petición-GET: /actualizar&quot;);
+
+        Persona persona = servicio.encontrarPersona(Integer.parseInt(id));
+        modelo.addAttribute(&quot;persona&quot;, persona);
+
+        return &quot;personas/actualizar&quot;;
+    }
+
+    // el formulario debe estar completo con los names, para que lo
+    // reconozca como la misma entidad y no una nueva
+    @PostMapping(&quot;/actualizar&quot;)
+    public String doActualizar(@ModelAttribute(&quot;foo&quot;) Persona persona) {
+        logger.info(&quot;Petición-POST: /actualizar&quot;);
+        servicio.actualizarPersona(persona);
+        return &quot;redirect:ingresar&quot;;
+    }
+
+    @GetMapping(&quot;/eliminar&quot;)
+    public String eliminar(
+            Model modelo, 
+            @RequestParam String id) {
+        logger.info(&quot;Petición-GET: /eliminar&quot;);
+        Persona persona = servicio.encontrarPersona(Integer.parseInt(id));
+        modelo.addAttribute(&quot;persona&quot;, persona);
+
+        return &quot;personas/eliminar&quot;;
+    }
+
+    @PostMapping(&quot;/eliminar&quot;)
+    public String doEliminar(
+            @ModelAttribute(&quot;foo&quot;) Persona persona,
+            @RequestParam String id) {
+        logger.info(&quot;Petición-POST: /eliminar&quot;);
+        Persona respuesta = servicio.eliminarPersona(persona);
+        if(respuesta == null)
+            logger.info(&quot;Petición-POST: /eliminar&quot;);    
+
+        return &quot;redirect:ingresar&quot;;
+    }
+
+}
+
+</code></pre>
+
+<h3 id="srcmainjavacllherrerajpaspringrepositories"><strong><code>src/main/java/cl/lherrera/jpaspring/repositories</code></strong></h3>
+<p><code>/PersonaRepo.java</code></p>
+<pre><code class="java">package cl.lherrera.jpaspring.repositories;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.CrudRepository;
+
+import cl.lherrera.jpaspring.entities.Persona;
+
+public interface PersonaRepo extends CrudRepository&lt;Persona, Integer&gt; {
+
+    /**
+     * Se puede parecer mucho a una consulta en la base de datos pero es una
+     * consulta al modelo, la respuesta es un @Entity. por eso la &quot;tabla&quot; está en
+     * mayúsculas.
+     * 
+     * Eso es debido a que no renemos un PersonaRepoImpl que maneje la
+     * personalización de esta consulta y como la original delete, retorna void no
+     * es muy buena para hacer test ya que no tenemos contra qué validar si
+     * simulamos la base de datos. 
+     * 
+     * En el fondo es solamente un deleteById(), pero se expone para su ejemplo
+     * Que podemos aplicar queries a las entidades.
+     * 
+     */
+    @Modifying
+    @Query(&quot;DELETE FROM Persona WHERE id = ?1&quot;)
+    Integer myDeleteById(Integer id);
+
+    // no posee un nombre personalizado, cumple con la nomenclatura find
+    // debe ir aunque siga la nomenclatura
+    List&lt;Persona&gt; findAllByNombre(String nombre);
+}
+
+</code></pre>
+
+<h3 id="srcmainjavacllherrerajpaspringservices"><code>src/main/java/cl/lherrera/jpaspring/services</code></h3>
+<p><code>/PersonaServiceImpl.java</code></p>
+<pre><code class="java">package cl.lherrera.jpaspring.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import cl.lherrera.jpaspring.entities.Persona;
+import cl.lherrera.jpaspring.repositories.PersonaRepo;
+
+@Service
+public class PersonaServiceImpl implements PersonaService{
+
+    @Autowired
+    PersonaRepo repo;
+
+    @Override
+    @Transactional(readOnly = true)
+    public List&lt;Persona&gt; obtenerPersonas() {
+        return (List&lt;Persona&gt;) repo.findAll();
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public List&lt;Persona&gt; obtenerPersonasPorNombre(String nombre) {
+
+        return repo.findAllByNombre(nombre);
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public Persona encontrarPersona(Integer id) {
+        // así nos evitamos un null pointer exception
+        return repo.findById(id).orElse(new Persona());
+    }
+
+    @Override
+    @Transactional
+    public Persona eliminarPersona(Persona persona) {
+        int numeroQueAunNoSeOcupa = repo.myDeleteById(persona.getId());
+        return persona;
+    }
+
+    @Override
+    @Transactional
+    public Persona actualizarPersona(Persona persona) {
+        return repo.save(persona);
+    }
+
+    @Override
+    @Transactional
+    public Persona IngresarPersona(Persona persona) {       
+        return repo.save(persona);
+    }
+
+
+}
+
+</code></pre>
+
+<h3 id="srcmainwebappweb-inf"><code>src/main/webapp/WEB-INF</code></h3>
+<p><code>/index.jsp</code></p>
+<pre><code class="html">Eliminado
+</code></pre>
+
+<p><code>/pages/index.jsp</code></p>
+<pre><code class="html">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot; pageEncoding=&quot;UTF-8&quot;%&gt;
+&lt;%@taglib uri=&quot;http://www.springframework.org/tags/form&quot; prefix=&quot;form&quot;%&gt;
+&lt;%@taglib uri=&quot;http://java.sun.com/jsp/jstl/core&quot; prefix=&quot;c&quot;%&gt;
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;jsp:include page=&quot;htmlTemplates/headTemplate.jsp&quot;&gt;&lt;/jsp:include&gt;
+
+&lt;body&gt;
+&lt;jsp:include page=&quot;htmlTemplates/navTemplate.jsp&quot;&gt;&lt;/jsp:include&gt;
+
+&lt;h1&gt;Inicio de la web&lt;/h1&gt;
+
+&lt;jsp:include page=&quot;htmlTemplates/footerTemplate.jsp&quot;&gt;&lt;/jsp:include&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p><code>/pages/htmlTemplates/footerTemplate.jsp</code></p>
+<pre><code class="html">&lt;footer&gt;
+    &lt;!-- bootstrap 4 --&gt;
+    &lt;script src=&quot;https://code.jquery.com/jquery-3.4.1.slim.min.js&quot;
+        integrity=&quot;sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n&quot;
+        crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js&quot;
+        integrity=&quot;sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo&quot;
+        crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js&quot;
+        integrity=&quot;sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6&quot;
+        crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+    &lt;!-- bootstrap #--&gt;
+&lt;/footer&gt;
+</code></pre>
+
+<p><code>/pages/htmlTemplates/headTemplate.jsp</code></p>
+<pre><code class="html">&lt;!-- Este template, está diseñado para mantener la cabecera del sitio --&gt;
+&lt;!-- unificada en una sola, ya que la comparten. --&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;FPA-EJEMPLO&lt;/title&gt;
+    &lt;!-- cdn bootstrap 4 --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css&quot;
+        integrity=&quot;sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh&quot; crossorigin=&quot;anonymous&quot;&gt;
+    &lt;!-- cdn bootstrap 4 #--&gt;
+&lt;/head&gt;
+
+</code></pre>
+
+<p><code>/pages/htmlTemplates/navTemplate.jsp</code></p>
+<pre><code class="html">&lt;nav class=&quot;navbar navbar-expand-lg navbar-light bg-light&quot;&gt;
+    &lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;JPA-EJEMPLO&lt;/a&gt;
+    &lt;button class=&quot;navbar-toggler&quot; type=&quot;button&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#navbarSupportedContent&quot;
+        aria-controls=&quot;navbarSupportedContent&quot; aria-expanded=&quot;false&quot; aria-label=&quot;Toggle navigation&quot;&gt;
+        &lt;span class=&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt;
+    &lt;/button&gt;
+
+    &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;navbarSupportedContent&quot;&gt;
+        &lt;ul class=&quot;navbar-nav mr-auto&quot;&gt;
+            &lt;!-- Home --&gt;
+            &lt;li class=&quot;nav-item active&quot;&gt;&lt;a class=&quot;nav-link&quot; href=&quot;/&quot;&gt;Home
+                    &lt;span class=&quot;sr-only&quot;&gt;(current)&lt;/span&gt;
+                &lt;/a&gt;&lt;/li&gt;
+            &lt;!-- Home #--&gt;
+            &lt;li class=&quot;nav-item dropdown&quot;&gt;
+                &lt;a class=&quot;nav-link dropdown-toggle&quot; href=&quot;#&quot; id=&quot;navbarDropdown&quot; role=&quot;button&quot; data-toggle=&quot;dropdown&quot;
+                    aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt; Mantenedor de personas &lt;/a&gt;
+                &lt;div class=&quot;dropdown-menu&quot; aria-labelledby=&quot;navbarDropdown&quot;&gt;
+                    &lt;a class=&quot;dropdown-item&quot; href=&quot;/personas/ingresar&quot;&gt;Ingresar&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;
+</code></pre>
+
+<p><code>/pages/personas/actualizar.jsp</code></p>
+<pre><code class="html">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;
+    pageEncoding=&quot;UTF-8&quot;%&gt;
+&lt;%@taglib uri=&quot;http://www.springframework.org/tags/form&quot; prefix=&quot;form&quot;%&gt;
+&lt;%@taglib uri=&quot;http://java.sun.com/jsp/jstl/core&quot; prefix=&quot;c&quot;%&gt;
+
+&lt;html&gt;
+&lt;jsp:include page=&quot;../htmlTemplates/headTemplate.jsp&quot;&gt;&lt;/jsp:include&gt;
+&lt;body&gt;
+    &lt;jsp:include page=&quot;../htmlTemplates/navTemplate.jsp&quot;&gt;&lt;/jsp:include&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;div class=&quot;row&quot;&gt;
+            &lt;div class=&quot;col&quot;&gt;
+
+                &lt;form:form class=&quot;form-horizontal&quot; method=&quot;post&quot;
+                    action=&quot;/personas/actualizar&quot; modelAttribute=&quot;Persona&quot;&gt;
+                    &lt;div class=&quot;form-group&quot;&gt;
+                        &lt;label for=&quot;nombre&quot;&gt;Nombre&lt;/label&gt; &lt;input type=&quot;hidden&quot; name=&quot;id&quot;
+                            value=&quot;${persona.getId()}&quot;&gt; &lt;input type=&quot;text&quot;
+                            class=&quot;form-control&quot; id=&quot;nombre&quot; name=&quot;nombre&quot;
+                            value=&quot;${persona.getNombre()}&quot;&gt;
+                    &lt;/div&gt;
+
+                    &lt;a href=&quot;/personas/ingresar&quot; class=&quot;btn btn-primary mb-2&quot;
+                        role=&quot;button&quot; aria-pressed=&quot;true&quot;&gt;Cancelar&lt;/a&gt;
+                    &lt;button type=&quot;submit&quot; class=&quot;btn btn-warning mb-2&quot;&gt;Actualizar&lt;/button&gt;
+                &lt;/form:form&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+    &lt;jsp:include page=&quot;../htmlTemplates/footerTemplate.jsp&quot;&gt;&lt;/jsp:include&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p><code>/pages/personas/eliminar.jsp</code></p>
+<pre><code class="html">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;
+    pageEncoding=&quot;UTF-8&quot;%&gt;
+&lt;%@taglib uri=&quot;http://www.springframework.org/tags/form&quot; prefix=&quot;form&quot;%&gt;
+&lt;%@taglib uri=&quot;http://java.sun.com/jsp/jstl/core&quot; prefix=&quot;c&quot;%&gt;
+
+&lt;html&gt;
+&lt;jsp:include page=&quot;../htmlTemplates/headTemplate.jsp&quot;&gt;&lt;/jsp:include&gt;
+&lt;body&gt;
+    &lt;jsp:include page=&quot;../htmlTemplates/navTemplate.jsp&quot;&gt;&lt;/jsp:include&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;div class=&quot;row&quot;&gt;
+            &lt;div class=&quot;col&quot;&gt;
+
+                &lt;form:form class=&quot;form-horizontal&quot; method=&quot;post&quot;
+                    action=&quot;/personas/eliminar&quot; modelAttribute=&quot;Persona&quot;&gt;
+                    &lt;div class=&quot;form-group&quot;&gt;
+                        &lt;label for=&quot;nombre&quot;&gt;Nombre&lt;/label&gt; &lt;input type=&quot;hidden&quot; name=&quot;id&quot;
+                            value=&quot;${persona.getId()}&quot;&gt; &lt;input type=&quot;text&quot;
+                            class=&quot;form-control&quot; id=&quot;nombre&quot; name=&quot;nombre&quot; disabled disabled
+                            value=&quot;${persona.getNombre()}&quot;&gt;
+
+                    &lt;/div&gt;
+
+                    &lt;a href=&quot;/personas/ingresar&quot; class=&quot;btn btn-primary mb-2&quot;
+                        role=&quot;button&quot; aria-pressed=&quot;true&quot;&gt;Cancelar&lt;/a&gt;
+
+                    &lt;button type=&quot;submit&quot; class=&quot;btn btn-danger mb-2&quot;&gt;Confirmar&lt;/button&gt;
+                &lt;/form:form&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+    &lt;jsp:include page=&quot;../htmlTemplates/footerTemplate.jsp&quot;&gt;&lt;/jsp:include&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p><code>/pages/personas/personas.jsp</code></p>
+<pre><code class="html">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot; pageEncoding=&quot;UTF-8&quot;%&gt;
+&lt;%@taglib uri=&quot;http://www.springframework.org/tags/form&quot; prefix=&quot;form&quot;%&gt;
+&lt;%@taglib uri=&quot;http://java.sun.com/jsp/jstl/core&quot; prefix=&quot;c&quot;%&gt;
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;jsp:include page=&quot;../htmlTemplates/headTemplate.jsp&quot;&gt;&lt;/jsp:include&gt;
+&lt;body&gt;
+&lt;jsp:include page=&quot;../htmlTemplates/navTemplate.jsp&quot;&gt;&lt;/jsp:include&gt;
+&lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col&quot;&gt;
+
+        &lt;form:form 
+            class=&quot;form-horizontal&quot; 
+            method=&quot;post&quot; 
+            action=&quot;/personas/ingresar&quot; 
+            modelAttribute=&quot;Persona&quot;&gt;
+
+            &lt;div class=&quot;form-group&quot;&gt;
+                &lt;label for=&quot;nombre&quot;&gt;Nombre&lt;/label&gt; 
+                &lt;input 
+                    type=&quot;text&quot; 
+                    class=&quot;form-control&quot; 
+                    id=&quot;nombre&quot; 
+                    name=&quot;nombre&quot;
+                    placeholder=&quot;Ingrese el nombre&quot;&gt;
+
+            &lt;/div&gt;
+
+            &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary mb-2&quot;&gt;Ingresar&lt;/button&gt;    
+
+        &lt;/form:form&gt;
+
+            &lt;div class=&quot;table-responsive&quot;&gt;
+                &lt;table class=&quot;table table-hover table-striped table-bordered&quot;&gt;
+                    &lt;tr&gt;
+                        &lt;th&gt;Id&lt;/th&gt;
+                        &lt;th&gt;Nombre&lt;/th&gt;
+                        &lt;th&gt;Acción&lt;/th&gt;
+                    &lt;/tr&gt;
+
+                    &lt;c:forEach items=&quot;${personas}&quot; var=&quot;persona&quot;&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;${persona.getId()}&lt;/td&gt;
+                            &lt;td&gt;${persona.getNombre()}&lt;/td&gt;
+                            &lt;td&gt;
+                            &lt;a href=&quot;/personas/actualizar?id=${persona.getId()}&quot;&gt;Actualizar&lt;/a&gt;
+                                | 
+                            &lt;a href=&quot;/personas/eliminar?id=${persona.getId()}&quot; &gt;Elimininar&lt;/a&gt;
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/c:forEach&gt;
+
+                &lt;/table&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;
+
+    &lt;jsp:include page=&quot;../htmlTemplates/footerTemplate.jsp&quot;&gt;&lt;/jsp:include&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h3 id="srctestjavacllherrerajpaspringservices"><code>src/test/java/cl/lherrera/jpaspring/services</code></h3>
+<p><code>/PersonaServiceTest.java</code></p>
+<pre><code class="java">package cl.lherrera.jpaspring.services;
+
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.Mockito.when;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+
+import cl.lherrera.jpaspring.entities.Persona;
+import cl.lherrera.jpaspring.repositories.PersonaRepo;
+
+@SpringBootTest
+public class PersonaServiceTest {
+
+    @Autowired
+    PersonaService servicio;
+
+    @MockBean
+    PersonaRepo mockRepo;
+
+    @Test
+    @DisplayName(&quot;Buscar personas por nombre&quot;)
+    public void prueba005() {
+        // crear la persona en la base mockdatos
+        List&lt;Persona&gt; personas = new ArrayList&lt;&gt;();
+        personas.add(new Persona(1, &quot;luis&quot;));
+        personas.add(new Persona(2, &quot;luis&quot;));
+
+        when(mockRepo.findAllByNombre(&quot;luis&quot;)).thenReturn(personas);
+
+
+        // comprobamos la persona
+        assertThat(personas).isEqualTo(servicio.obtenerPersonasPorNombre(&quot;luis&quot;));
+    }
+
+    @Test
+    @DisplayName(&quot;obtener una lista de las personas&quot;)
+    public void prueba004() {
+        // una lista de personas
+        List&lt;Persona&gt; personas = new ArrayList&lt;&gt;();
+        personas.add(new Persona(1, &quot;luis&quot;));
+        personas.add(new Persona(2, &quot;ana&quot;));
+        // simular petición en la base de datos
+        when((List&lt;Persona&gt;)mockRepo.findAll()).thenReturn(personas);
+
+        assertThat(personas).isEqualTo(servicio.obtenerPersonas());
+
+    }
+
+    @Test
+    @DisplayName(&quot;almacenar persona&quot;)
+    public void prueba001() {
+        // creamos el dato en memoria
+        Persona persona = new Persona(1, &quot;luis&quot;);
+        // simulación de dato en la base de datos
+        when(mockRepo.save(persona)).thenReturn(persona);
+        // funcionamiento del servicio. (se ejecuta el mockRepo y no
+        // el repo que está en su clase, el que llama a 
+        // la base datos así esta petición
+        // se simula sin escribir
+        // realmente en la BD
+        assertThat(servicio.IngresarPersona(persona)).isEqualTo(persona);
+    }
+
+    @Test
+    @DisplayName(&quot;actualizar una persona&quot;)
+    public void prueba002() {
+        // creamos la persona
+        Persona persona = new Persona(1, &quot;Luis&quot;);
+        // se simula persona encontrada
+        when(mockRepo.findById(1)).thenReturn(Optional.of(persona));
+        Persona personaUdt = servicio.encontrarPersona(1);
+        // se actualiza el valor. se puede ver que la primera simulación
+        // tuvo efecto, el mockRepo actuó como el repositorio
+        // oficial ya que usamos el servicio para traer
+        // la persona usando el servicio.
+        personaUdt.setNombre(&quot;Ana&quot;);
+
+        // simulación de actualización (es el repo el que simulamos y 
+        // save(cuando existe actualiza o crea)
+        when(mockRepo.save(personaUdt)).thenReturn(personaUdt);
+
+        assertThat(servicio.actualizarPersona(personaUdt).getNombre()).isEqualTo(&quot;Ana&quot;);
+
+    }
+
+
+    @Test
+    @DisplayName(&quot;eliminar persona&quot;)
+    public void prueba003() {
+        // encontrar la perosona para eliminarla ya que esta 
+        // debe existir en la base de datos.
+        when(mockRepo.findById(1))
+        .thenReturn(Optional.of(new Persona(1, &quot;luis&quot;)));
+        // con la base de datos simulada, utlizamos el servicio.
+        Persona persona = servicio.encontrarPersona(1);
+        // simulamos la interacción de la base de datos 
+        when(mockRepo.myDeleteById(1)).thenReturn(1);
+        // ocupamos el servicio
+        Persona personaEliminada = servicio.eliminarPersona(persona); 
+
+        assertThat(personaEliminada.getId()).isEqualTo(persona.getId());
+
+    }
+
+}
+
+</code></pre>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../assets/javascripts/vendor.a0c4167b.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.fb26dd1d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../../assets/javascripts/worker/search.37585f48.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

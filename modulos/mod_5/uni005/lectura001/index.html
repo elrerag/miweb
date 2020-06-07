@@ -1,0 +1,1400 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.6">
+    
+    
+      
+        <title>Lectura001 - Java Full Stack Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.4b9ffd7b.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#unidad-51-seguridad" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../../.." title="Java Full Stack Docs" class="md-header-nav__button md-logo" aria-label="Java Full Stack Docs">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Java Full Stack Docs
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Lectura001
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Java Full Stack Docs" class="md-nav__button md-logo" aria-label="Java Full Stack Docs">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Java Full Stack Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../ejercicios/repaso/teoria/poo/herencia/" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#511-comienzo-rapido" class="md-nav__link">
+    5.1.1 Comienzo rápido
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1.1 Comienzo rápido">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estructura-de-un-proyecto" class="md-nav__link">
+    Estructura de un proyecto.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#512-aplicacion-con-proteccion" class="md-nav__link">
+    5.1.2 Aplicación con protección
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1.2 Aplicación con protección">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dependencias" class="md-nav__link">
+    Dependencias
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estructura" class="md-nav__link">
+    Estructura
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#archivos-modificados" class="md-nav__link">
+    Archivos modificados
+  </a>
+  
+    <nav class="md-nav" aria-label="Archivos modificados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pomxml" class="md-nav__link">
+    pom.xml
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#srcmainjavacllherreragssscontrollerhomecontrollerjava" class="md-nav__link">
+    src/main/java/cl/lherrera/gsss/controller/HomeController.java
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#srcmainresourcestemplateshomehtml" class="md-nav__link">
+    src/main/resources/templates/home.html
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#513-proyecto-lectura-finalizado" class="md-nav__link">
+    5.1.3 Proyecto lectura finalizado
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1.3 Proyecto lectura finalizado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estructura_1" class="md-nav__link">
+    Estructura
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#archivos-modificados_1" class="md-nav__link">
+    Archivos modificados
+  </a>
+  
+    <nav class="md-nav" aria-label="Archivos modificados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cllherreragsss" class="md-nav__link">
+    cl.lherrera.gsss
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cllherreragsssconfig" class="md-nav__link">
+    cl.lherrera.gsss.config
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cllherreragssscontroller" class="md-nav__link">
+    cl.lherrera.gsss.controller
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cllherreragssscontrolleradmin" class="md-nav__link">
+    cl.lherrera.gsss.controller.admin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cllherreragssscontrolleruser" class="md-nav__link">
+    cl.lherrera.gsss.controller.user
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cllherreragssscontrollerdto" class="md-nav__link">
+    cl.lherrera.gsss.controller.dto
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resourcestemplatesadmin" class="md-nav__link">
+    resources/templates/admin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resourcestemplateserror" class="md-nav__link">
+    resources/templates/error
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resourcestemplatesuser" class="md-nav__link">
+    resources/templates/user
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resourcestemplates" class="md-nav__link">
+    resources/templates/
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pom" class="md-nav__link">
+    POM
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <blockquote>
+<h1 id="unidad-51-seguridad">Unidad 5.1 - Seguridad.</h1>
+<blockquote>
+<p>Muestra el funcionamiento de <code>Spring Security</code> dividido en etapas, partiendo desde la configuración mínima y se completa mediante proyectos ejemplificadores.</p>
+</blockquote>
+</blockquote>
+<hr />
+<h2 id="511-comienzo-rapido">5.1.1 Comienzo rápido</h2>
+<p>Ejemplo de aplicación básica, con las configuraciones de seguridad por defecto.</p>
+<p>Crear un proyecto <code>Spring</code> con los siguientes módulos:
++ <code>Spring web</code>
++ <code>Spring security</code></p>
+<p>Al momento de crear un proyecto, sin realizar absolutamente nada más que correr la aplicación, tendremos la seguridad ya puesta, puesto que al acceder a <code>http://localhost:8080/</code>, inmediatamente somos derivados a: <code>http://localhost:8080/login</code>.</p>
+<h3 id="estructura-de-un-proyecto">Estructura de un proyecto.</h3>
+<p>sin modificaciones</p>
+<pre><code>./
+├── HELP.md
+├── mvnw
+├── mvnw.cmd
+├── pom.xml
+├── src
+│   ├── main
+│   │   ├── java
+│   │   │   └── cl
+│   │   │       └── lherrera
+│   │   │           └── gsss
+│   │   │               ├── GsSpringSecurityApplication.java
+│   │   │               └── ServletInitializer.java
+│   │   ├── resources
+│   │   │   ├── application.properties
+│   │   │   ├── static
+│   │   │   └── templates
+│   │   └── webapp
+│   └── test
+│       └── java
+│           └── cl
+│               └── lherrera
+│                   └── gsss
+│                       └── GsSpringSecurityApplicationTests.java
+└── target
+    ├── classes
+    │   ├── application.properties
+    │   └── cl
+    │       └── lherrera
+    │           └── gsss
+    │               ├── GsSpringSecurityApplication.class
+    │               └── ServletInitializer.class
+    ├── generated-sources
+    │   └── annotations
+    ├── generated-test-sources
+    │   └── test-annotations
+    ├── m2e-wtp
+    │   └── web-resources
+    │       └── META-INF
+    │           ├── MANIFEST.MF
+    │           └── maven
+    │               └── cl.lherrera.thymeleaftTest
+    │                   └── gs-spring-security
+    │                       ├── pom.properties
+    │                       └── pom.xml
+    └── test-classes
+        └── cl
+            └── lherrera
+                └── gsss
+                    └── GsSpringSecurityApplicationTests.class
+
+34 directories, 15 files
+
+</code></pre>
+
+<p>No posee las vistas ni los controladores que estén dirigiendo nuestra petición, esto es por que Spring lo construye y luego es inyectado automáticamente.</p>
+<p>Lo que podemos realizar es una personalización de este comportamiento.</p>
+<p>Al lanzar la aplicación veremos lo siguiente:</p>
+<pre><code>  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.6.RELEASE)
+
+2020-05-04 13:30:28.476  INFO 93511 --- [           main] c.l.gsss.GsSpringSecurityApplication     : Starting GsSpringSecurityApplication on MacBook-Pro-de-Luis.local with PID 93511 (/Users/luisherrera/
+...
+
+...
+2020-05-04 13:30:29.900  INFO 93511 --- [           main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: ddc7804f-784d-48fb-8c00-ee60dac02a5e
+</code></pre>
+
+<p>Lo importante es que Spring genera un usuario y contraseña temporal. </p>
+<ul>
+<li>El usuario principal el : <code>user</code></li>
+<li>La contraseña se ve en consola y en este caso es: <code>ddc7804f-784d-48fb-8c00-ee60dac02a5e</code>, tal como se muestra en: <code>Using generated security password: ddc7804f-784d-48fb-8c00-ee60dac02a5e</code>, de los mensajes en la consola de la aplicación.</li>
+</ul>
+<p>Al ingresar los mensajes en los campos de usuario y contraseña de la aplicación, si estas están incorrectas veremos un mensaje de error, en caso contrario nos lleva a <code>path = "/"</code>, que en estos momentos no existe, lanzando un error <code>type=Not Found, status=404</code>.</p>
+<p>Podemos decir que al realizar un proyecto con <code>Spring security</code>, lo que pasa es que:</p>
+<ul>
+<li>Se restringe el acceso al sitio mediante una ventana de ingreso al sistema.</li>
+<li>La ventana y toda su funcionalidad no la programamos, esta acción es automática, y es capaz de comprobar si las credenciales son válidas.</li>
+<li>Las credenciales son generadas al momento de ejecutar la aplicación, las podremos ver en la consola.</li>
+<li>El usuario por defecto es <code>user</code>.
+</li>
+</ul>
+<hr />
+<h2 id="512-aplicacion-con-proteccion"><strong>5.1.2 Aplicación con protección</strong></h2>
+<h3 id="dependencias"><strong>Dependencias</strong></h3>
+<ul>
+<li><code>Spring web</code></li>
+<li><code>Spring security</code></li>
+<li><code>thymeleaf</code></li>
+<li><code>Spring devs tools</code></li>
+</ul>
+<p>La siguiente aplicación:</p>
+<ul>
+<li>Posee solamente una página <code>home</code> que no se puede acceder si no se ha iniciado sesión.</li>
+<li>No existe registro ni finalización de la sesión.</li>
+<li>Las credenciales ya están configuradas, solamente podemos utilizarlas.</li>
+</ul>
+<h3 id="estructura"><strong>Estructura</strong></h3>
+<pre><code>./
+├── HELP.md
+├── mvnw
+├── mvnw.cmd
+├── pom.xml
+└── src
+    ├── main
+    │   ├── java
+    │   │   └── cl
+    │   │       └── lherrera
+    │   │           └── gsss
+    │   │               ├── GsSpringSecurityApplication.java
+    │   │               ├── ServletInitializer.java
+    │   │               └── controller
+    │   │                   └── HomeController.java
+    │   ├── resources
+    │   │   ├── application.properties
+    │   │   ├── static
+    │   │   └── templates
+    │   │       └── home.html
+    │   └── webapp
+    └── test
+        └── java
+            └── cl
+                └── lherrera
+                    └── gsss
+                        └── GsSpringSecurityApplicationTests.java
+
+16 directories, 10 files
+
+</code></pre>
+
+<h3 id="archivos-modificados"><strong>Archivos modificados</strong></h3>
+<pre><code>pom.xml
+src/main/java/cl/lherrera/gsss/controller/HomeController.java
+src/main/resources/templates/home.html
+</code></pre>
+
+<h4 id="pomxml"><code>pom.xml</code></h4>
+<p>Solamente a modo de ejemplo, ya que las dependencias son agregadas desde el principio si se lo indicamos al inicializador.</p>
+<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;
+    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+    xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+    &lt;parent&gt;
+        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;
+        &lt;version&gt;2.2.6.RELEASE&lt;/version&gt;
+        &lt;relativePath /&gt; &lt;!-- lookup parent from repository --&gt;
+    &lt;/parent&gt;
+    &lt;groupId&gt;cl.lherrera.thymeleaftTest&lt;/groupId&gt;
+    &lt;artifactId&gt;gs-spring-security&lt;/artifactId&gt;
+    &lt;version&gt;20.0.0&lt;/version&gt;
+    &lt;packaging&gt;war&lt;/packaging&gt;
+    &lt;name&gt;gs-spring-security&lt;/name&gt;
+    &lt;description&gt;Pruebas de thymeleaf&lt;/description&gt;
+
+    &lt;properties&gt;
+        &lt;java.version&gt;1.8&lt;/java.version&gt;
+    &lt;/properties&gt;
+
+    &lt;dependencies&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-security&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-tomcat&lt;/artifactId&gt;
+            &lt;scope&gt;provided&lt;/scope&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;
+            &lt;scope&gt;test&lt;/scope&gt;
+            &lt;exclusions&gt;
+                &lt;exclusion&gt;
+                    &lt;groupId&gt;org.junit.vintage&lt;/groupId&gt;
+                    &lt;artifactId&gt;junit-vintage-engine&lt;/artifactId&gt;
+                &lt;/exclusion&gt;
+            &lt;/exclusions&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.security&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-security-test&lt;/artifactId&gt;
+            &lt;scope&gt;test&lt;/scope&gt;
+        &lt;/dependency&gt;
+
+        &lt;!-- thymeleaf --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-thymeleaf&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;!-- thymeleaf ## --&gt;
+
+        &lt;!-- DevsTools --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-devtools&lt;/artifactId&gt;
+            &lt;optional&gt;true&lt;/optional&gt;
+        &lt;/dependency&gt;
+        &lt;!-- DevsTools # --&gt;
+
+    &lt;/dependencies&gt;
+
+    &lt;build&gt;
+        &lt;plugins&gt;
+            &lt;plugin&gt;
+                &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+                &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;
+            &lt;/plugin&gt;
+        &lt;/plugins&gt;
+    &lt;/build&gt;
+
+&lt;/project&gt;
+
+</code></pre>
+
+<h4 id="srcmainjavacllherreragssscontrollerhomecontrollerjava"><code>src/main/java/cl/lherrera/gsss/controller/HomeController.java</code></h4>
+<pre><code class="java">package cl.lherrera.gsss.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class HomeController {
+
+    @GetMapping(path = { &quot;&quot;, &quot;/&quot; })
+    public String home() {
+        return &quot;home&quot;;
+    }
+}
+
+</code></pre>
+
+<h4 id="srcmainresourcestemplateshomehtml"><code>src/main/resources/templates/home.html</code></h4>
+<pre><code class="java">&lt;!DOCTYPE HTML&gt;
+&lt;html xmlns:th=&quot;http://www.thymeleaf.org&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Home&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h2&gt;Home page&lt;/h2&gt;
+    &lt;p&gt;Sitio protegido&lt;/p&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+
+<h2 id="513-proyecto-lectura-finalizado"><strong>5.1.3 Proyecto lectura finalizado</strong></h2>
+<hr />
+<p>En este proyecto mostramos la funcionalidad del control de acceso, <strong>sin utilizar una base de datos</strong>, el control de la información del usuario autenticado se realiza en memoria y dura lo que dura la instancia, el problema es que on tenemos una forma usable de registro de nuevos usuarios. Muestra la configuración de <code>WebSecurityConfig</code>, implementación con adaptador de <code>SecurityConfig&lt;O,B&gt;</code>.</p>
+<p>Para poder probar esta aplicación hay que ejecutarla como aplicación <code>Spring</code>. Y tratar de acceder a los servicios. Las credenciales se encuentran en el método sobre escrito <code>configure</code> que recibe como parámetro <code>AuthenticationManagerBuilder</code>. Es en este sector que cargamos al usuario.</p>
+<p>Hay que tener en cuenta que aunque tengamos la información de un usuario en la base de datos, <code>Spring Security</code>, posee su propia manera de almacenar la información de un usuario registrado y para construir ese objeto, la información que necesite del usuario será solicitada usando los propios servicios desarrollados por nosotros.</p>
+<p>Las divisiones del proyecto se encuentran en <code>GIT</code></p>
+<h3 id="estructura_1"><strong>Estructura</strong></h3>
+<pre><code>./
+├── HELP.md
+├── mvnw
+├── mvnw.cmd
+├── pom.xml
+└── src
+    ├── main
+    │   ├── java
+    │   │   └── cl
+    │   │       └── lherrera
+    │   │           └── gsss
+    │   │               ├── GsSpringSecurityApplication.java
+    │   │               ├── ServletInitializer.java
+    │   │               ├── config
+    │   │               │   └── WebSecurityConfig.java
+    │   │               ├── controller
+    │   │               │   ├── ErrorController.java
+    │   │               │   ├── HomeController.java
+    │   │               │   ├── LoginController.java
+    │   │               │   ├── admin
+    │   │               │   │   └── AdminController.java
+    │   │               │   └── user
+    │   │               │       └── UserController.java
+    │   │               └── dto
+    │   │                   └── DetalleDTO.java
+    │   ├── resources
+    │   │   ├── application.properties
+    │   │   ├── static
+    │   │   └── templates
+    │   │       ├── admin
+    │   │       │   └── homeAdmin.html
+    │   │       ├── error
+    │   │       │   └── 403.html
+    │   │       ├── home.html
+    │   │       ├── login.html
+    │   │       └── user
+    │   │           └── homeUser.html
+    │   └── webapp
+    └── test
+        └── java
+            └── cl
+                └── lherrera
+                    └── gsss
+                        └── GsSpringSecurityApplicationTests.java
+
+23 directories, 20 files
+
+</code></pre>
+
+<h3 id="archivos-modificados_1"><strong>Archivos modificados</strong></h3>
+<pre><code>/gs-spring-security/src/main/java/cl/lherrera/gsss/GsSpringSecurityApplication.java
+/gs-spring-security/src/main/java/cl/lherrera/gsss/ServletInitializer.java
+
+/gs-spring-security/src/main/java/cl/lherrera/gsss/config/WebSecurityConfig.java
+
+/gs-spring-security/src/main/java/cl/lherrera/gsss/controller/ErrorController.java
+/gs-spring-security/src/main/java/cl/lherrera/gsss/controller/HomeController.java
+/gs-spring-security/src/main/java/cl/lherrera/gsss/controller/LoginController.java
+
+/gs-spring-security/src/main/java/cl/lherrera/gsss/controller/admin/AdminController.java
+
+/gs-spring-security/src/main/java/cl/lherrera/gsss/controller/user/UserController.java
+
+/gs-spring-security/src/main/java/cl/lherrera/gsss/dto/DetalleDTO.java
+
+/gs-spring-security/src/main/resources/templates/admin/homeAdmin.html
+
+/gs-spring-security/src/main/resources/templates/error/403.html
+
+/gs-spring-security/src/main/resources/templates/user/homeUser.html
+
+/gs-spring-security/src/main/resources/templates/home.html
+/gs-spring-security/src/main/resources/templates/login.html
+
+/gs-spring-security/pom.xml
+</code></pre>
+
+<h4 id="cllherreragsss"><code>cl.lherrera.gsss</code></h4>
+<p><code>/gs-spring-security/src/main/java/cl/lherrera/gsss/GsSpringSecurityApplication.java</code></p>
+<pre><code class="java">package cl.lherrera.gsss;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class GsSpringSecurityApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(GsSpringSecurityApplication.class, args);
+    }
+
+}
+
+</code></pre>
+
+<p><code>/gs-spring-security/src/main/java/cl/lherrera/gsss/ServletInitializer.java</code></p>
+<h4 id="cllherreragsssconfig"><code>cl.lherrera.gsss.config</code></h4>
+<p><code>/gs-spring-security/src/main/java/cl/lherrera/gsss/config/WebSecurityConfig.java</code></p>
+<p>Si tenemos la experiencia de configurar el control de acceso a los usuarios mediante configuraciones en el servidor. Podemos ver que esta es la forma que ofrece <code>Spring security</code> para realizar un inicio de sesión usando formulario. Para este caso con el uso de usuarios en memoria, como sería configurarlos en el servidor en el archivo <code>config.xml</code>, pero en esta ocasión <code>Spring</code> utiliza una clase donde podemos aplicar estas configuraciones sin tocar la propia configuración del servidor.</p>
+<pre><code class="java">package cl.lherrera.gsss.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
+@EnableWebSecurity
+@Configuration
+public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+
+    /**
+     * Sobreescribir este método, permite habilitar 
+     * la autenticación en memoria, además de poder definir credenciales.
+     */
+    @Override
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        String usuario = &quot;mail@fake.dev&quot;;
+        String contrasenia =  passwordEncoder().encode(&quot;1234&quot;);
+        String rol = &quot;ADMIN&quot;;
+
+        String usuario2 = &quot;mail2@fake.dev&quot;;
+        String contrasenia2 =  passwordEncoder().encode(&quot;1234&quot;);
+        String rol2 = &quot;USER&quot;;
+
+        auth.inMemoryAuthentication()
+            .withUser(usuario)
+            .password(contrasenia)
+            .roles(rol)
+            .and()
+            .withUser(usuario2)
+            .password(contrasenia2)
+            .roles(rol2);
+    }
+
+    /**
+     * csrf : Adds CSRF support. This is activated by default when using.
+     * 
+     * disable: Desabilita la orden anterior.
+     * 
+     * authorizeRequests : Allows restricting access based upon the HttpServletRequest.
+     * 
+     * antMatchers : The mapping matches URLs using the following rules:
+     *      ? matches one character
+     *      * matches zero or more characters
+     *      ** matches zero or more directories in a path
+     *      {spring:[a-z]+} matches the regexp [a-z]+ as a path variable named &quot;spring&quot;
+     * 
+     * permitAll : Specify that URLs are allowed by anyone.
+     * 
+     * anyRequest : Maps any request.
+     * 
+     * authenticated : Specify that URLs are allowed by any authenticated user.
+     * 
+     * and : This is useful for method chaining.
+     * 
+     * formLogin : Specifies to support form based authentication. (no desde el config.xml)
+     * 
+     * loginPage : Specifies the URL to send users to if login is required.
+     * 
+     * failureUrl : The URL to send users if authentication fails. The default is &quot;/login?error&quot;.
+     * 
+     * usernameParameter : The HTTP parameter to look for the username when performing authentication. Default is &quot;username&quot;.
+     * 
+     * passwordParameter : The HTTP parameter to look for the password when performing authentication. Default is &quot;password&quot;.
+     * 
+     * defaultSuccessUrl : Specifies where users will be redirected after authenticating successfully if they have not visited a secured page prior to authenticating.
+     * 
+     */
+//  @Override
+//  public void configure(HttpSecurity http) throws Exception {
+//      // se desabilita el sistema de seguridad csrf (muy vulnerable)
+//      http.csrf().disable()
+//          // se configura la ruta login para ser accedida sin autenticacion
+//          .authorizeRequests().antMatchers(&quot;/login&quot;).permitAll()
+//          // para todos los Request se habilita para usuarios autentificados.
+//          .anyRequest().authenticated()
+//          // indicación que se unsará el manejo por formulario
+//          .and().formLogin()
+//          // se especifica la página para el login personalizado.
+//          .loginPage(&quot;/login&quot;)
+//          // se especifica la url para cuando la verificación de credenciales falle.
+//          .failureUrl(&quot;/login?error=true&quot;)
+//          // se especifica el nombre del atributo name para el usuario y la contraseña.
+//          .usernameParameter(&quot;email&quot;).passwordParameter(&quot;password&quot;)
+//          // redireccionamiento en caso de éxito.
+//          .defaultSuccessUrl(&quot;/user&quot;);
+//
+//  }
+
+    /*
+     * Dejamos la aplicación distribuídos en direcctorios para poder
+     * restringir por medio de estos direcctorios y le damos
+     * acceso según su rol.
+     */
+    @Override
+    public void configure(HttpSecurity http) throws Exception {
+        http.csrf().disable()
+            .authorizeRequests()
+            // para todo lo que esté dentro de admin (antMatch)
+            .antMatchers(&quot;/admin/**&quot;).hasRole(&quot;ADMIN&quot;)
+            // para todo lo que esté dentro de user (antMatch)
+            .antMatchers(&quot;/user/**&quot;).hasRole(&quot;USER&quot;)
+            // para esta URI se permite total acceso
+            .antMatchers(&quot;/login&quot;).permitAll()
+            // el usuario autentificado se le permite toda petición.
+            .anyRequest().authenticated()
+            // configuración de los formularios
+            .and().formLogin().loginPage(&quot;/login&quot;).failureUrl(&quot;/login?error=true&quot;)
+            // seteo de nombres representativos en los formularios.
+            .usernameParameter(&quot;email&quot;).passwordParameter(&quot;password&quot;)
+            // página por defecto en caso de éxito en el inicio de sesión.
+            .defaultSuccessUrl(&quot;/&quot;)
+            .and() 
+            .exceptionHandling().accessDeniedPage(&quot;/recurso-prohibido&quot;);
+    }
+
+    /**
+     * Así inicializamos el encoder.
+     */
+    @Bean
+    public BCryptPasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
+
+
+}
+
+</code></pre>
+
+<h4 id="cllherreragssscontroller"><code>cl.lherrera.gsss.controller</code></h4>
+<p><code>/gs-spring-security/src/main/java/cl/lherrera/gsss/controller/ErrorController.java</code></p>
+<pre><code class="java">package cl.lherrera.gsss.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class ErrorController {
+
+    @GetMapping(&quot;/recurso-prohibido&quot;)
+    public String recurso03() {
+        return &quot;error/403&quot;;
+    }
+
+}
+
+</code></pre>
+
+<p><code>/gs-spring-security/src/main/java/cl/lherrera/gsss/controller/HomeController.java</code></p>
+<pre><code class="java">package cl.lherrera.gsss.controller;
+
+import javax.servlet.http.HttpSession;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class HomeController {
+
+    @GetMapping(path = { &quot;&quot;, &quot;/&quot; })
+    public String home(HttpSession session) {
+        return &quot;home&quot;;
+    }
+}
+
+</code></pre>
+
+<p><code>/gs-spring-security/src/main/java/cl/lherrera/gsss/controller/LoginController.java</code></p>
+<pre><code class="java">package cl.lherrera.gsss.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class LoginController {
+
+    @GetMapping(&quot;/login&quot;)
+    public String login() {
+        return &quot;login&quot;;
+    }
+
+}
+
+</code></pre>
+
+<h4 id="cllherreragssscontrolleradmin"><code>cl.lherrera.gsss.controller.admin</code></h4>
+<p><code>/gs-spring-security/src/main/java/cl/lherrera/gsss/controller/admin/AdminController.java</code></p>
+<pre><code class="java">package cl.lherrera.gsss.controller.admin;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class AdminController {
+    @GetMapping(&quot;/admin&quot;)
+    public String home() {
+        return &quot;admin/homeAdmin&quot;;
+    }
+}
+
+</code></pre>
+
+<h4 id="cllherreragssscontrolleruser"><code>cl.lherrera.gsss.controller.user</code></h4>
+<p><code>/gs-spring-security/src/main/java/cl/lherrera/gsss/controller/user/UserController.java</code></p>
+<pre><code class="java">package cl.lherrera.gsss.controller.user;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.servlet.http.HttpSession;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.view.RedirectView;
+
+import cl.lherrera.gsss.dto.DetalleDTO;
+
+@Controller
+public class UserController {
+
+    @GetMapping(&quot;/user&quot;)
+    public ModelAndView home(HttpSession session) {
+        ModelAndView modelAndView = new ModelAndView(&quot;user/homeUser&quot;);
+        modelAndView.addObject(&quot;detalle&quot;, new DetalleDTO());
+        modelAndView.addObject(&quot;valores&quot;, session.getAttribute(&quot;valores&quot;));
+        return modelAndView;
+    }
+
+    @PostMapping(&quot;/users&quot;)
+    public RedirectView home(HttpSession session, @ModelAttribute DetalleDTO detalles) {
+        List&lt;DetalleDTO&gt; valores = new ArrayList&lt;&gt;();
+        // si los valores no vienen vacios se añaden a los valores.
+        if (session.getAttribute(&quot;valores&quot;) != null) {
+            List&lt;DetalleDTO&gt; valoresDeSesion = (List&lt;DetalleDTO&gt;) session.getAttribute(&quot;valores&quot;);
+            // agrega todos los valores a la lista existente.
+            valores.addAll(valoresDeSesion);
+        }
+
+        valores.add(detalles);
+        // se reemplaza el valor de valores en la sesión,
+        // se cambia por el nuevo valor de 
+        // valores.
+        session.setAttribute(&quot;valores&quot;, valores);
+        return new RedirectView(&quot;/user&quot;);
+    }
+}
+
+</code></pre>
+
+<h4 id="cllherreragssscontrollerdto"><code>cl.lherrera.gsss.controller.dto</code></h4>
+<p><code>/gs-spring-security/src/main/java/cl/lherrera/gsss/dto/DetalleDTO.java</code></p>
+<pre><code class="java">package cl.lherrera.gsss.dto;
+
+public class DetalleDTO {
+
+    private String clave;
+    private String valor;
+
+    public DetalleDTO() {
+        // TODO Auto-generated constructor stub
+    }
+
+    public DetalleDTO(String clave, String valor) {
+        super();
+        this.clave = clave;
+        this.valor = valor;
+    }
+
+    public String getClave() {
+        return clave;
+    }
+
+    public void setClave(String clave) {
+        this.clave = clave;
+    }
+
+    public String getValor() {
+        return valor;
+    }
+
+    public void setValor(String valor) {
+        this.valor = valor;
+    }
+
+    @Override
+    public String toString() {
+        return &quot;DetalleDTO [clave=&quot; + clave + &quot;, valor=&quot; + valor + &quot;]&quot;;
+    }
+}
+
+</code></pre>
+
+<h4 id="resourcestemplatesadmin"><code>resources/templates/admin</code></h4>
+<p><code>/gs-spring-security/src/main/resources/templates/admin/homeAdmin.html</code></p>
+<pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;
+    xmlns:th=&quot;http://www.thymeleaf.org&quot;&gt;
+&lt;head&gt;
+&lt;title&gt;Inicio Administrador&lt;/title&gt;
+&lt;link rel=&quot;stylesheet&quot;
+    href=&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css &quot;
+    integrity=&quot;sha384- 
+ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T&quot;
+    crossorigin=&quot;anonymous&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;ul class=&quot;nav justify-content-end&quot;&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link active&quot; href=&quot;#&quot;&gt;Administrador&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; th:href=&quot;@{/logout}&quot;&gt;Cerrar sesion&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;Bienvenido!&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+</code></pre>
+
+<h4 id="resourcestemplateserror"><code>resources/templates/error</code></h4>
+<p><code>/gs-spring-security/src/main/resources/templates/error/403.html</code></p>
+<pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xmlns:th=&quot;http://www.thymeleaf.org&quot;&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Recurso protegido&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css &quot; integrity=&quot;sha384- 
+ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;ul class=&quot;nav justify-content-end&quot;&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;
+            &lt;a class=&quot;nav-link&quot; th:href=&quot;@{/logout}&quot;&gt;Cerrar sesion&lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;h3&gt;Recurso no accesible&lt;/h3&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+
+<h4 id="resourcestemplatesuser"><code>resources/templates/user</code></h4>
+<p><code>/gs-spring-security/src/main/resources/templates/user/homeUser.html</code></p>
+<p>Acá es donde irá el formulario que llena los datos en la sesión.</p>
+<pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xmlns:th=&quot;http://www.thymeleaf.org&quot;&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Inicio Usuario&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css &quot; integrity=&quot;sha384- 
+ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;ul class=&quot;nav justify-content-end&quot;&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;
+            &lt;a class=&quot;nav-link active&quot; href=&quot;#&quot;&gt;Usuario&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;
+            &lt;a class=&quot;nav-link&quot; th:href=&quot;@{/logout}&quot;&gt;Cerrar sesión&lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;div class=&quot;col-sm-4&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;col-sm-4&quot;&gt;
+            &lt;form th:action=&quot;@{/users}&quot; method=&quot;post&quot; th:object=&quot;${detalle}&quot;&gt;
+                &lt;div class=&quot;form-group&quot;&gt;
+                    &lt;input type=&quot;text&quot; th:field=&quot;*{clave}&quot; class=&quot;form-control&quot; id=&quot;clave&quot; aria-describedby=&quot;claveHelp&quot;
+                        placeholder=&quot;Ingresa nombre de la clave&quot;&gt;
+                    &lt;small id=&quot;inClave&quot; class=&quot;form-text text-muted&quot;&gt;Nombre de la clave que se almacenará en sesión.&lt;/small&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;form-group&quot;&gt;
+                    &lt;input type=&quot;text&quot; th:field=&quot;*{valor}&quot; class=&quot;form-control&quot; id=&quot;valor&quot; aria-describedby=&quot;valorHelp&quot;
+                        placeholder=&quot;Ingresa el contenido&quot;&gt;
+                    &lt;small id=&quot;inValor&quot; class=&quot;form-text text-muted&quot;&gt;Contenido de la clave que se almacenará en sesión.&lt;/small&gt;
+                &lt;/div&gt;
+                &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Agregar&lt;/button&gt;
+            &lt;/form&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;col-sm-4&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;col-sm-12&quot;&gt;
+            &lt;table class=&quot;table&quot;&gt;
+                &lt;thead&gt;
+                    &lt;tr&gt;
+                        &lt;th scope=&quot;col&quot;&gt;clave&lt;/th&gt;
+                        &lt;th scope=&quot;col&quot;&gt;valor&lt;/th&gt;
+                    &lt;/tr&gt;
+                &lt;/thead&gt;
+                &lt;tbody&gt;
+                    &lt;tr th:each=&quot;detalle: ${valores}&quot;&gt;
+                        &lt;td th:text=&quot;${detalle.clave}&quot; /&gt;
+                        &lt;td th:text=&quot;${detalle.valor}&quot; /&gt;
+                    &lt;/tr&gt;
+                &lt;/tbody&gt;
+            &lt;/table&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+
+<h4 id="resourcestemplates"><code>resources/templates/</code></h4>
+<p><code>/gs-spring-security/src/main/resources/templates/home.html</code></p>
+<pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xmlns:th=&quot;http://www.thymeleaf.org&quot;&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Iniciar Sesión&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css
+&quot; integrity=&quot;sha384-
+ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;ul class=&quot;nav justify-content-end&quot;&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;
+            &lt;a class=&quot;nav-link active&quot; href=&quot;/user&quot;&gt;Usuario&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;
+            &lt;a class=&quot;nav-link active&quot; href=&quot;/admin&quot;&gt;Administrador&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;
+            &lt;a class=&quot;nav-link&quot; th:href=&quot;@{/logout}&quot;&gt;Cerrar sesión&lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;div class=&quot;row&quot;&gt;
+            &lt;div class=&quot;col-sm-4&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col-sm-4&quot;&gt;
+                &lt;h1&gt;Página principal&lt;/h1&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col-sm-4&quot;&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+
+<p><code>/gs-spring-security/src/main/resources/templates/login.html</code></p>
+<pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xmlns:th=&quot;http://www.thymeleaf.org&quot;&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Iniciar Sesión&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css
+&quot; integrity=&quot;sha384-
+ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;div class=&quot;row&quot;&gt;
+            &lt;div class=&quot;col-sm-4&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col-sm-4&quot;&gt;
+                &lt;form th:action=&quot;@{/login}&quot; method=&quot;post&quot; class=&quot;form-signin&quot;&gt;
+                    &lt;h3 class=&quot;form-signin-heading&quot; th:text=&quot;Credenciales&quot;&gt;&lt;/h3&gt;
+                    &lt;br /&gt;
+                    &lt;!-- el name debe ser: email --&gt;
+                    &lt;input type=&quot;text&quot; id=&quot;email&quot; name=&quot;email&quot; th:placeholder=&quot;Email&quot; class=&quot;form-control&quot; /&gt; &lt;br /&gt;
+                    &lt;!-- el name debe ser: password --&gt;
+                    &lt;input type=&quot;password&quot; th:placeholder=&quot;Password&quot; id=&quot;password&quot; name=&quot;password&quot;
+                        class=&quot;form-control&quot; /&gt;
+                    &lt;br /&gt;
+                    &lt;!-- param.error, se refiere a que no hubo éxito en el inicio de sesión --&gt;
+                    &lt;!-- en este caso param.error si falla viene con el valor de true --&gt;
+                    &lt;div align=&quot;center&quot; th:if=&quot;${param.error}&quot;&gt;
+                        &lt;p style=&quot;font-size: 20; color: #FF1C19;&quot;&gt;Verifica las credenciales.&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;button class=&quot;btn btn-lg btn-primary btn-block&quot; name=&quot;Submit&quot; value=&quot;Login&quot; type=&quot;Submit&quot;
+                        th:text=&quot;Login&quot;&gt;
+                    &lt;/button&gt;
+                &lt;/form&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col-sm-4&quot;&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+
+<h4 id="pom">POM</h4>
+<p><code>/gs-spring-security/pom.xml</code></p>
+<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;
+    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+    xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+    &lt;parent&gt;
+        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;
+        &lt;version&gt;2.2.6.RELEASE&lt;/version&gt;
+        &lt;relativePath /&gt; &lt;!-- lookup parent from repository --&gt;
+    &lt;/parent&gt;
+    &lt;groupId&gt;cl.lherrera.thymeleaftTest&lt;/groupId&gt;
+    &lt;artifactId&gt;gs-spring-security&lt;/artifactId&gt;
+    &lt;version&gt;20.0.0&lt;/version&gt;
+    &lt;packaging&gt;war&lt;/packaging&gt;
+    &lt;name&gt;gs-spring-security&lt;/name&gt;
+    &lt;description&gt;Pruebas de thymeleaf&lt;/description&gt;
+
+    &lt;properties&gt;
+        &lt;java.version&gt;1.8&lt;/java.version&gt;
+    &lt;/properties&gt;
+
+    &lt;dependencies&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-security&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-tomcat&lt;/artifactId&gt;
+            &lt;scope&gt;provided&lt;/scope&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;
+            &lt;scope&gt;test&lt;/scope&gt;
+            &lt;exclusions&gt;
+                &lt;exclusion&gt;
+                    &lt;groupId&gt;org.junit.vintage&lt;/groupId&gt;
+                    &lt;artifactId&gt;junit-vintage-engine&lt;/artifactId&gt;
+                &lt;/exclusion&gt;
+            &lt;/exclusions&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.security&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-security-test&lt;/artifactId&gt;
+            &lt;scope&gt;test&lt;/scope&gt;
+        &lt;/dependency&gt;
+
+        &lt;!-- thymeleaf --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-thymeleaf&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;!-- thymeleaf ## --&gt;
+
+        &lt;!-- DevsTools --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-devtools&lt;/artifactId&gt;
+            &lt;optional&gt;true&lt;/optional&gt;
+        &lt;/dependency&gt;
+        &lt;!-- DevsTools # --&gt;
+
+    &lt;/dependencies&gt;
+
+    &lt;build&gt;
+        &lt;plugins&gt;
+            &lt;plugin&gt;
+                &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+                &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;
+            &lt;/plugin&gt;
+        &lt;/plugins&gt;
+    &lt;/build&gt;
+
+&lt;/project&gt;
+
+</code></pre>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../assets/javascripts/vendor.a0c4167b.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.fb26dd1d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../../assets/javascripts/worker/search.37585f48.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,900 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.6">
+    
+    
+      
+        <title>Documentación JSP - Java Full Stack Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.4b9ffd7b.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#documentacion-jsp" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../.." title="Java Full Stack Docs" class="md-header-nav__button md-logo" aria-label="Java Full Stack Docs">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Java Full Stack Docs
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Documentación JSP
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Java Full Stack Docs" class="md-nav__button md-logo" aria-label="Java Full Stack Docs">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Java Full Stack Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../ejercicios/repaso/teoria/poo/herencia/" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#serializacion" class="md-nav__link">
+    Serialización
+  </a>
+  
+    <nav class="md-nav" aria-label="Serialización">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#serializacion-de-objetos" class="md-nav__link">
+    Serialización de objetos.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructura-de-una-url-uniform-resourse-locatiion" class="md-nav__link">
+    Estructura de una URL (Uniform Resourse Locatiion)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cgi-common-gateway-interface-vs-servlets" class="md-nav__link">
+    CGI (Common Gateway Interface) v/s Servlets
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructura-basica-de-un-servlet" class="md-nav__link">
+    Estructura básica de un Servlet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-sencillo-del-uso-de-servlets" class="md-nav__link">
+    Ejemplo sencillo del uso de Servlets
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bullet-points" class="md-nav__link">
+    BULLET POINTS !! 🎱
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-un-contenedor" class="md-nav__link">
+    ¿Qué es un contenedor?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-funciona-un-contenedor" class="md-nav__link">
+    ¿Cómo funciona un contenedor?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cargar-un-war-en-el-servidor" class="md-nav__link">
+    Cargar un WAR en el servidor 🥋
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="documentacion-jsp">Documentación JSP</h1>
+<hr />
+<h2 id="serializacion">Serialización</h2>
+<hr />
+<p>Es el proceso de enviar y recibir datos en serie (secuencias de bytes), a través de un flujo.</p>
+<p>Ya hemos trabajado con flujos:</p>
+<ul>
+<li>
+<p>Flujos de carácteres </p>
+<ul>
+<li>Lector: Reader</li>
+<li>Escrito: Writer</li>
+</ul>
+</li>
+<li>
+<p>Flujos de bytes</p>
+<ul>
+<li>Lector: InputStream </li>
+<li>Escritor: OutputStream</li>
+</ul>
+</li>
+</ul>
+<p>Dependiendo de lo que lean o escriban, llevarán prefijos
++ File: Acceso a ficheros
++ Piped:    Comunicación entre programas mediante tuberías (pipes)
++ String:   Acceso a una cadena en memoria (solo caracteres)
++ CharArray:    Acceso a un array de caracteres en memoria (solo caracteres)
++ ByteArray:    Acceso a un array de bytes en memoria (solo bytes)</p>
+<p>Por ejemplo:</p>
+<pre><code>FileReader, FileInputStream
+</code></pre>
+
+<h3 id="serializacion-de-objetos">Serialización de objetos.</h3>
+<p>Veamos como podemos escribir un objeto en ByteCode. Para eso debe ser entregado en un flujo de datos, un stream, es decir que el objeto debe ser serializado.
+El objeto que será serializado será el objeto <code>Persona</code>.</p>
+<p>Estructura</p>
+<pre><code>./
+├── archivo
+├── bin
+│   └── cl
+│       └── lherrera
+│           └── serializa
+│               ├── Persona.class
+│               └── Principal.class
+└── src
+    └── cl
+        └── lherrera
+            └── serializa
+                └── Principal.java
+</code></pre>
+
+<p>Es curioso ver en la estructura del proyecto, que existe una unidad de compilación y dos unidades de salida, esto se debe a que en una unidad de compilación hay dos clases.</p>
+<p>Principal.java</p>
+<pre><code class="java">package cl.lherrera.serializa;
+
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+import java.util.logging.Logger;
+
+public class Principal {
+    public static void main(String... args) {
+        Logger logger = Logger.getLogger(&quot;Principal&quot;);
+
+        try(
+            FileOutputStream fileOut = new FileOutputStream(&quot;archivo&quot;);
+        ){
+//          // prueba para saber si escribe
+//          fileOut.write(&quot;Hola&quot;.getBytes());
+
+            Persona persona = new Persona();
+            persona.setNombre(&quot;Hugo&quot;);
+            persona.setEdad(24);
+
+            ObjectOutputStream objeto = new ObjectOutputStream(fileOut);
+            objeto.writeObject(persona);
+
+        }catch(Exception e) {
+            e.printStackTrace();
+            logger.severe(e.getMessage());
+        }
+
+    }
+
+}
+
+class Persona implements Serializable {
+
+    /**
+     * 
+     */
+    private static final long serialVersionUID = 3554052124635461056L;
+
+    String nombre;
+    int edad;
+    public String getNombre() {
+        return nombre;
+    }
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+    public int getEdad() {
+        return edad;
+    }
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+}
+
+</code></pre>
+
+<p>Si el objeto que queremos enviar como <code>OutputSteam</code>, no implementa <code>Serializable</code>, entonces no lo podemos serializar, veamos el comportamiento usando el mismo objeto.</p>
+<pre><code class="java">package cl.lherrera.serializa;
+
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+import java.util.logging.Logger;
+
+public class Principal {
+    public static void main(String... args) {
+        Logger logger = Logger.getLogger(&quot;Principal&quot;);
+
+        try(
+            FileOutputStream fileOut = new FileOutputStream(&quot;archivo&quot;);
+        ){
+//          // prueba para saber si escribe
+//          fileOut.write(&quot;Hola&quot;.getBytes());
+
+            Persona persona = new Persona();
+            persona.setNombre(&quot;Hugo&quot;);
+            persona.setEdad(24);
+
+            ObjectOutputStream objeto = new ObjectOutputStream(fileOut);
+            objeto.writeObject(persona);
+
+        }catch(Exception e) {
+            e.printStackTrace();
+            logger.severe(e.getMessage());
+        }
+
+    }
+
+}
+
+class Persona {
+
+
+
+    String nombre;
+    int edad;
+    public String getNombre() {
+        return nombre;
+    }
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+    public int getEdad() {
+        return edad;
+    }
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+}
+</code></pre>
+
+<p>Arroja el siguiente error:</p>
+<pre><code>java.io.NotSerializableException: cl.lherrera.serializa.Persona
+    at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1184)
+    at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:348)
+    at cl.lherrera.serializa.Principal.main(Principal.java:23)
+mar 08, 2020 4:12:35 PM cl.lherrera.serializa.Principal main
+GRAVE: cl.lherrera.serializa.Persona
+
+</code></pre>
+
+<p>Los Servlets, extienden de <code>HttpServlet</code>, que a su vez extiende de <code>GenericServlet</code>. Esta última clase abstracta implementa serializable, por lo tanto, todos nuestros Servlets son serializables y necesitan <code>private static final long serialVersionUID</code>, para poder identificar el objeto cuado se envíe en forma de Bytes.</p>
+<hr />
+<h2 id="estructura-de-una-url-uniform-resourse-locatiion">Estructura de una URL (Uniform Resourse Locatiion)</h2>
+<hr />
+<p><img src="https://github.com/elrerag/pintamiweb/blob/master/jfst/m4u1/036.png?raw=true" alt="m4u1036.png"></p>
+<p>Recordar que opcionalmente, pude ir un <code>query string</code> con un "?" unido por "&amp;", donde el espacio en blanco es "%20", ejemplo:
+<code>www.miservicioGet.cl?nombre=Luis%20Herrera&amp;comuna=NuNoa</code>, posee dos argumentos y valores.</p>
+<p>El númeto total de puertos que soporta TCP-IP es de: 65536.</p>
+<p>Algunos de los puertos reservados por defecto para algún tipo de aplicaciónes son los siguientes:</p>
+<p><img src="https://github.com/elrerag/pintamiweb/blob/master/jfst/m4u1/037.png?raw=true" alt="m4u1037.png"></p>
+<hr />
+<h2 id="cgi-common-gateway-interface-vs-servlets">CGI (Common Gateway Interface) v/s Servlets</h2>
+<hr />
+<p>Servlet inspirado en <code>applet</code>, pero como funciona en el lado del servidor es <code>servlet</code>. Los CGI, son aplicaciones que ayudan al servidor a obtener la información dinámica, que no pueden realizar las páginas estáticas, como por ejemplo, obtener la hora del servidor. Estos CGI están desarrollados en lenguajes como Perl o PHP, entre otros.</p>
+<p>Java, posee su propio CGI llamado Servlet, y la ventaja (además de no tener que programar en otro lenguaje), es que además de ser una app Helper como CGI, un Servlet, puede ser un cliente J2EE, lo que permite utilizar todas las herramientas disponibles de J2EE, como utilizar sus servicios, procesar peticiones ETC. (Todo lo que puede hacer nuestro Apache Tomcat).</p>
+<hr />
+<h2 id="estructura-basica-de-un-servlet">Estructura básica de un Servlet</h2>
+<hr />
+<pre><code class="java">// import statements
+
+public class DatingServlet extends HttpServlet {
+
+  public void doGet(HttpServletRequest request,
+                 HttpServletResponse response)
+                 throws IOException {
+
+    // business logic goes here, depending
+    // on what this servlet is supposed to do
+    // (write to the database, do the query, etc.)
+
+    PrintWriter out = response.getWriter();
+
+    // compose the dynamic HTML page
+    out.println( &quot;something really ugly goes here&quot;);
+  }
+}
+</code></pre>
+
+<hr />
+<h2 id="ejemplo-sencillo-del-uso-de-servlets">Ejemplo sencillo del uso de <code>Servlets</code></h2>
+<hr />
+<p>En este ejemplo, se muestra, como implementar código HTML, desde java. Esta forma, permite verificar, la forma
+en que Java puede incluir Html y además como lo muestra.</p>
+<p>Estructura:</p>
+<pre><code>./
+├── WebContent
+│   ├── META-INF
+│   │   └── MANIFEST.MF
+│   └── WEB-INF
+│       └── lib
+├── build
+│   └── classes
+│       └── jsp001
+│           └── HolaHtml.class
+└── src
+    └── jsp001
+        └── HolaHtml.java
+
+</code></pre>
+
+<p>HolaHtml.java</p>
+<pre><code class="java">package jsp001;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.Serializable;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+@WebServlet(&quot;/&quot;)
+public class HolaHtml extends HttpServlet {
+
+    /**
+     * 
+     */
+    private static final long serialVersionUID = 1920949607610226958L;
+
+    public String miJsp(String nombre) {
+        StringBuilder htmlText = new StringBuilder();
+
+        htmlText.append(&quot;&lt;!DOCTYPE html&gt;&quot;);
+        htmlText.append(&quot;&lt;html lang=\&quot;es\&quot;&gt;&quot;);
+        htmlText.append(&quot;&lt;head&gt;&quot;);
+        htmlText.append(&quot;&lt;meta charset=\&quot;UTF-8\&quot;&gt;&quot;);
+        htmlText.append(&quot;&lt;meta name=\&quot;viewport\&quot; content=\&quot;width=device-width, initial-scale=1.0\&quot;&gt;&quot;);
+        htmlText.append(&quot;&lt;title&gt;Mi saludo&lt;/title&gt;&quot;);
+        htmlText.append(&quot;&lt;/head&gt;&quot;);
+        htmlText.append(&quot;&lt;body&gt;&quot;);
+        htmlText.append(&quot;&lt;h1&gt;Hola: &quot;).append(nombre).append(&quot; &lt;/h1&gt;&quot;);
+        htmlText.append(&quot;&lt;/body&gt;&quot;);
+        htmlText.append(&quot;&lt;/html&gt;&quot;);
+
+        return htmlText.toString();
+    }
+
+    @Override
+    protected void doGet(
+            HttpServletRequest request, 
+            HttpServletResponse response) throws ServletException, IOException {
+
+            PrintWriter escribeHtml = response.getWriter();
+            escribeHtml.println(miJsp(&quot;Luis&quot;));
+    }
+
+
+
+}
+
+</code></pre>
+
+<p>Llamada a: <code>http://localhost:8080/jsp001/</code></p>
+<p>Podemos pasar valores por parámetros en la URL.</p>
+<pre><code class="java">package jsp001;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.Serializable;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+@WebServlet(&quot;/&quot;)
+public class HolaHtml extends HttpServlet {
+
+    /**
+     * 
+     */
+    private static final long serialVersionUID = 1920949607610226958L;
+
+    public String miJsp(String nombre) {
+        StringBuilder htmlText = new StringBuilder();
+
+        htmlText.append(&quot;&lt;!DOCTYPE html&gt;&quot;);
+        htmlText.append(&quot;&lt;html lang=\&quot;es\&quot;&gt;&quot;);
+        htmlText.append(&quot;&lt;head&gt;&quot;);
+        htmlText.append(&quot;&lt;meta charset=\&quot;UTF-8\&quot;&gt;&quot;);
+        htmlText.append(&quot;&lt;meta name=\&quot;viewport\&quot; content=\&quot;width=device-width, initial-scale=1.0\&quot;&gt;&quot;);
+        htmlText.append(&quot;&lt;title&gt;Mi saludo&lt;/title&gt;&quot;);
+        htmlText.append(&quot;&lt;/head&gt;&quot;);
+        htmlText.append(&quot;&lt;body&gt;&quot;);
+        htmlText.append(&quot;&lt;h1&gt;Hola: &quot;).append(nombre).append(&quot; &lt;/h1&gt;&quot;);
+        htmlText.append(&quot;&lt;/body&gt;&quot;);
+        htmlText.append(&quot;&lt;/html&gt;&quot;);
+
+        return htmlText.toString();
+    }
+
+    @Override
+    protected void doGet(
+            HttpServletRequest request, 
+            HttpServletResponse response) throws ServletException, IOException {
+            String nombre = request.getParameter(&quot;nombre&quot;);
+
+            PrintWriter escribeHtml = response.getWriter();
+            escribeHtml.println(miJsp(nombre));
+    }   
+}
+</code></pre>
+
+<p>Llamada: <code>http://localhost:8080/jsp001/?nombre=Luis</code> o <code>http://localhost:8080/jsp001/?nombre=Luis%20Herrera</code></p>
+<p>Se puede ver que escribir código Html en un <code>println</code>, no es una muy elegante manera de hacer sistemas Web, utilizando Java.</p>
+<hr />
+<h2 id="bullet-points">BULLET POINTS !! 🎱</h2>
+<hr />
+<ul>
+<li>
+<p>HTTP significa (Protocolo de transferencia de hipertexto), y es el protocolo de red, utilizado en la Web. Se ejecuta sobre TCP/IP.(confirmación y reenvío de paquetes).</p>
+</li>
+<li>
+<p>HTTP, utiliza <code>request/response</code>, donde el cliente realiza un  <code>HTTP request</code> y el servidor entrega de vuelta un <code>HTTP response</code>, entonces el navegador luego, determina cómo manejar (según el tipo de contenido de la respuesta).</p>
+</li>
+<li>
+<p>Si la respuesta del servidor es una página HTML, el HTML se agrega al HTTP response.</p>
+</li>
+<li>
+<p>Un <code>HTTP request</code>, incluye:</p>
+<ul>
+<li>La URL de solicitud (el recurso al que el cliente está intentando acceder).</li>
+<li>El método HTTP (GET, POST, etc.).</li>
+<li>(Opcionalmente) los datos de los parámetros del formulario (también llamada “query string”). </li>
+</ul>
+</li>
+<li>
+<p>Una respuesta HTTP incluye un <code>status code</code>, el <code>content-type</code> (también conocido como <code>MIME type</code>) y el contenido real del <code>response</code>, (HTML, imagen, etc.).</p>
+</li>
+<li>
+<p>Un GET request, agrega los datos de un formulario, al final de la URL.</p>
+</li>
+<li>
+<p>Un POST request, incluye los datos de un formulario, en el <code>body</code> del request.</p>
+</li>
+<li>
+<p>Un <code>MIME type</code> (<code>content-type</code>), le dice al navegador, qué tipo de datos está a punto de recibir, para que el navegador sepa qué hacer con él (renderizar el HTML, mostrar el gráfico, reproducir la música, etc.).</p>
+</li>
+<li>
+<p>URL significa (Uniform Resource Locator), (Localizador uniforme de recursos). Cada recurso en la web tiene su propia dirección única en este formato. comienza con un protocolo(HTTP por ejemplo), seguido del nombre del servidor, un número de puerto opcional y, por lo general, una ruta específica y un nombre de recurso. También puede incluir una cadena de consulta (query string) opcional, si es un GET request.</p>
+</li>
+<li>
+<p>Los servidores web, son muy buenos sirviendo páginas HTML estáticas; pero si el sitio, necesita generar datos, de forma dinámica, (por ejemplo la hora actual del servidor), necesita algún tipo de aplicación auxiliar que pueda capturar esa hora. Una forma 'no-Java' de llamar a estas aplicaciones (La mayoría escritas con Perl) es CGI (Common Gateway Interface) (interfaz de puerta de enlace común).</p>
+</li>
+<li>
+<p>Poner código HTML dentro de un <code>println()</code>, es muy feo y propenso a errores. JSP, resuelve este problema, permitiendo poner dentro de una página HTML código Java y no código HTML dentro de Java.</p>
+</li>
+</ul>
+<hr />
+<h2 id="que-es-un-contenedor">¿Qué es un contenedor?</h2>
+<hr />
+<blockquote>
+<p>You get to focus all your energy on making a fabulous online bubble wrap store, and leave the underlying services like security and JSP processing up to the container.</p>
+</blockquote>
+<p>Los Servlets, no poseen un método <code>main()</code>. Ellos, están bajo el control de otra aplicación llamada <code>Container</code>. Por ejemplo (<code>Apache (server app) Tomcat (container app)</code>). Son ellos quienes utilizan a los servlet para mantener la comunicación entre el usuario y el servidor.</p>
+<p><img src="https://github.com/elrerag/pintamiweb/blob/master/jfst/m4u1/029.png?raw=true" alt="m4u1029.png"></p>
+<p>Si no existiera este contenedor, utilizando Sockets, tendríamos que desarrollar todas las tareas que realiza el contenedor, las cuales son siempre las mismas es por ello que lo mejor es utilizar estas herramientas que ya poseen lo necesario para mantener esta comunicación entre cliente y servidor de la forma en que lo conocemos hoy en día.</p>
+<p>Los contenedores traen servicios muy útiles para nuestras aplicaciones web. Tales como:
++ Soporte de comunicación.
++ Administración de los ciclos de vida.
++ Soporte múltiples hilos.
++ Seguridad declarativa. (sencillas opciones de seguridad).
++ Soporte para JSP.</p>
+<hr />
+<h2 id="como-funciona-un-contenedor">¿Cómo funciona un contenedor?</h2>
+<hr />
+<ul>
+<li>El usuario, utiliza un enlace con una solicitud dinámica, es decir, el código que se debe generar no será una web estática.</li>
+</ul>
+<p><img src="https://github.com/elrerag/pintamiweb/blob/master/jfst/m4u1/030.png?raw=true" alt="m4u1030.png"></p>
+<ul>
+<li>El servidor al notar que la solicitud va a ser atendida por un servlet, crea dos objetos <code>HttpServletRequest</code> y el <code>HttpServletResponse</code>.</li>
+</ul>
+<p><img src="https://github.com/elrerag/pintamiweb/blob/master/jfst/m4u1/031.png?raw=true" alt="m4u1031.png"></p>
+<ul>
+<li>Busca al servlet correcto que se encargue de la solicitud, basado en la URL en el request. Crea y coloca un hilo para esa solicitud y le pasa el request y response al servlet encontrado.</li>
+</ul>
+<p><img src="https://github.com/elrerag/pintamiweb/blob/master/jfst/m4u1/032.png?raw=true" alt="m4u1032.png"></p>
+<ul>
+<li>Dependiendo del tipo de solicitud, el contenedor llamará a alguno de los servicios (métodos) del servlet, por ejemplo (doGet() o doPost())</li>
+</ul>
+<p><img src="https://github.com/elrerag/pintamiweb/blob/master/jfst/m4u1/033.png?raw=true" alt="m4u1033.png"></p>
+<p><img src="https://github.com/elrerag/pintamiweb/blob/master/jfst/m4u1/034.png?raw=true" alt="m4u1034.png"></p>
+<ul>
+<li>El hilo se completa, el contenedor convierte el objeto response a HTTP response, lo envía de vuelta al cliente, luego, elimina los objetos <code>HttpServletRequest</code> y el <code>HttpServletResponse</code>.
+<img src="https://github.com/elrerag/pintamiweb/blob/master/jfst/m4u1/035.png?raw=true" alt="m4u1035.png"></li>
+</ul>
+<hr />
+<h2 id="cargar-un-war-en-el-servidor">Cargar un WAR en el servidor 🥋</h2>
+<hr />
+<p>Lo primero es crear un proyecto que contenga un Servlet.</p>
+<pre><code>./
+├── WebContent
+│   ├── META-INF
+│   │   └── MANIFEST.MF
+│   └── WEB-INF
+│       ├── lib
+│       └── web.xml
+├── build
+│   └── classes
+│       └── cl
+│           └── lherrera
+│               └── servlets
+│                   └── SaludaServlet.class
+└── src
+    └── cl
+        └── lherrera
+            └── servlets
+                └── SaludaServlet.java
+
+</code></pre>
+
+<p><code>/pruebaWar/src/cl/lherrera/servlets/SaludaServlet.java</code></p>
+<pre><code class="java">package cl.lherrera.servlets;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import java.util.logging.Logger;
+
+public class SaludaServlet extends HttpServlet{
+
+    final Logger logger = Logger.getLogger(this.getClass().getName());
+
+    /**
+     * 
+     */
+    private static final long serialVersionUID = -2176720027407455063L;
+
+    @Override
+    protected void doGet(
+            HttpServletRequest request, 
+            HttpServletResponse response) throws ServletException {
+
+        try {
+            PrintWriter escribe = response.getWriter();
+            escribe.println(&quot;&lt;h1&gt; Hola mundo !! &lt;/h1&gt;&quot;);
+
+        } catch (IOException e) {
+            logger.severe(e.getMessage());
+        }       
+    }
+}
+</code></pre>
+
+<p><code>/pruebaWar/WebContent/WEB-INF/web.xml</code></p>
+<p>Se indica la ubicación de la clase y cual será al servicio que responderá <code>url-pattern</code>.</p>
+<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;web-app xmlns=&quot;http://xmlns.jcp.org/xml/ns/javaee&quot;
+         xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+         xsi:schemaLocation=&quot;http://xmlns.jcp.org/xml/ns/javaee
+         http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd&quot;
+         version=&quot;3.1&quot;&gt;
+    &lt;servlet&gt;
+        &lt;servlet-name&gt;saluda servlet&lt;/servlet-name&gt;
+        &lt;servlet-class&gt;cl.lherrera.servlets.SaludaServlet&lt;/servlet-class&gt;
+    &lt;/servlet&gt;
+
+    &lt;servlet-mapping&gt;
+        &lt;servlet-name&gt;saluda servlet&lt;/servlet-name&gt;
+        &lt;url-pattern&gt;/saluda&lt;/url-pattern&gt;
+    &lt;/servlet-mapping&gt;
+&lt;/web-app&gt;
+</code></pre>
+
+<p>Luego hay que configurar Apache Tomcat para esta tarea:</p>
+<p>En:</p>
+<p><code>‎⁨Macintosh HD⁩/⁨Aplicaciones⁩/⁨contenedor⁩/⁨apache-tomcat-9.0.31⁩/⁨conf⁩</code></p>
+<p>Definimos las credenciales para poder ingresar al administrador de apache</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!--
+  Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements.  See the NOTICE file distributed with
+  this work for additional information regarding copyright ownership.
+  The ASF licenses this file to You under the Apache License, Version 2.0
+  (the &quot;License&quot;); you may not use this file except in compliance with
+  the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+--&gt;
+&lt;tomcat-users xmlns=&quot;http://tomcat.apache.org/xml&quot;
+              xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+              xsi:schemaLocation=&quot;http://tomcat.apache.org/xml tomcat-users.xsd&quot;
+              version=&quot;1.0&quot;&gt;
+&lt;!--
+  NOTE:  By default, no user is included in the &quot;manager-gui&quot; role required
+  to operate the &quot;/manager/html&quot; web application.  If you wish to use this app,
+  you must define such a user - the username and password are arbitrary. It is
+  strongly recommended that you do NOT use one of the users in the commented out
+  section below since they are intended for use with the examples web
+  application.
+--&gt;
+&lt;!--
+  NOTE:  The sample user and role entries below are intended for use with the
+  examples web application. They are wrapped in a comment and thus are ignored
+  when reading this file. If you wish to configure these users for use with the
+  examples web application, do not forget to remove the &lt;!.. ..&gt; that surrounds
+  them. You will also need to set the passwords to something appropriate.
+--&gt;
+&lt;!--
+  &lt;role rolename=&quot;tomcat&quot;/&gt;
+  &lt;role rolename=&quot;role1&quot;/&gt;
+  &lt;user username=&quot;tomcat&quot; password=&quot;&lt;must-be-changed&gt;&quot; roles=&quot;tomcat&quot;/&gt;
+  &lt;user username=&quot;both&quot; password=&quot;&lt;must-be-changed&gt;&quot; roles=&quot;tomcat,role1&quot;/&gt;
+  &lt;user username=&quot;role1&quot; password=&quot;&lt;must-be-changed&gt;&quot; roles=&quot;role1&quot;/&gt;
+--&gt;
+  &lt;!-- se agrega este para poder entrar en la administración --&gt;
+  &lt;role rolename=&quot;manager-gui&quot;/&gt;
+  &lt;user username=&quot;admin&quot; password=&quot;admin&quot; roles=&quot;manager-gui&quot;/&gt;
+
+&lt;/tomcat-users&gt;
+
+</code></pre>
+
+<p>Lo permitimos todo: <code>chmod -R 777 apache-tomcat-9.0.31</code></p>
+<p>Luego para evitar configurar el path, nos posicionamos en <code>/Applications/contenedor/apache-tomcat-9.0.31</code> y levantamos el servidor:</p>
+<pre><code>➜  apache-tomcat-9.0.31 source bin/startup.sh
+</code></pre>
+
+<p>Así desde <code>http://localhost:8080/</code> tendremos la ventana de administación de tomcat. Hay que ir a la opción <code>Manager App</code>, nos pedirá usuario y contraseña. Estas ya las hemos configurado y son. <code>admin/admin</code>.</p>
+<p>En esta ventana podremos "instalar" nuestra aplicación. Para esto, debemos exportar la aplicación como <code>WAR</code> y este se debe importar desde la administración de Apache Tomcat.</p>
+<p><img src="https://github.com/elrerag/pintamiweb/blob/master/jfst/m4u1/038.png?raw=true" alt="m4u1038.png"></p>
+<p>Luego llamamos a la app y al servicio que definimos en el <code>web.xml</code>.</p>
+<p><code>http://localhost:8080/pruebaWar/saluda</code>, debería imprimir el contenido del servlet en el navegador.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/vendor.a0c4167b.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.fb26dd1d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../assets/javascripts/worker/search.37585f48.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

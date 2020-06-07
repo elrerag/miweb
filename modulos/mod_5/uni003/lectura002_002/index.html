@@ -1,0 +1,594 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.6">
+    
+    
+      
+        <title>Lectura002 002 - Java Full Stack Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.4b9ffd7b.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#unidad-322-modelo" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../../.." title="Java Full Stack Docs" class="md-header-nav__button md-logo" aria-label="Java Full Stack Docs">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Java Full Stack Docs
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Lectura002 002
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Java Full Stack Docs" class="md-nav__button md-logo" aria-label="Java Full Stack Docs">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Java Full Stack Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../ejercicios/repaso/teoria/poo/herencia/" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#3221-creando-los-servicios-necesarios-para-la-aplicacion" class="md-nav__link">
+    3.2.2.1 Creando los servicios necesarios para la aplicación
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2.2.1 Creando los servicios necesarios para la aplicación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#archivos-modificados" class="md-nav__link">
+    Archivos modificados
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#srctestjavacllherrerajpaspringservices" class="md-nav__link">
+    /src/test/java/cl/lherrera/jpaspring/services
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#srcmainjavacllherrerajpaspringentities" class="md-nav__link">
+    /src/main/java/cl/lherrera/jpaspring/entities
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jpaspringsrcmainjavacllherrerajpaspringrepositories" class="md-nav__link">
+    /jpaspring/src/main/java/cl/lherrera/jpaspring/repositories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#srcmainjavacllherrerajpaspringservices" class="md-nav__link">
+    /src/main/java/cl/lherrera/jpaspring/services
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <blockquote>
+<h1 id="unidad-322-modelo"><strong>Unidad 3.2.2 - Modelo</strong></h1>
+<blockquote>
+<ul>
+<li>La siguiente aplicación será finalmente un mantenedor de personas, con un control de acceso de usuarios.</li>
+<li>La aplicación contendrá 5 Hitos.</li>
+<li>Hito 2: Se crean los servicios necesarios, para que funcionen los test (Uso real de <code>Mockito</code>).</li>
+</ul>
+</blockquote>
+</blockquote>
+<hr />
+<p><br /></p>
+<blockquote>
+<h2 id="3221-creando-los-servicios-necesarios-para-la-aplicacion"><strong>3.2.2.1 Creando los servicios necesarios para la aplicación</strong></h2>
+</blockquote>
+<p>En esta sección usaremos TDD para poder realizar los servicios con la utilización de <code>mockito</code>, simulamos la interacción con la base de datos. Esto no prueba realmente la base, si no que la simula, así que el correcto funcionamiento de la capa de acceso a datos no se prueba con esta técnica.</p>
+<h3 id="archivos-modificados"><strong>Archivos modificados</strong></h3>
+<pre><code>basedatos.db // no importa siempre se modifica.
+src/main/java/cl/lherrera/jpaspring/entities/Persona.java
+src/main/java/cl/lherrera/jpaspring/repositories/PersonaRepo.java
+src/main/java/cl/lherrera/jpaspring/services/PersonaService.java
+src/main/java/cl/lherrera/jpaspring/services/PersonaServiceImpl.java
+src/main/resources/application.properties // ya está el mejor puesto desde el principio
+src/test/java/cl/lherrera/jpaspring/services/PersonaServiceTest.java
+</code></pre>
+
+<h3 id="srctestjavacllherrerajpaspringservices"><strong><code>/src/test/java/cl/lherrera/jpaspring/services</code></strong></h3>
+<p><code>/PersonaServiceTest.java</code></p>
+<p>Primero lo primero, partimos especulando mediante el uso de los test. El <code>mock</code> del <code>DAO</code> permite que el el servicio no use nuestro <code>DAO</code>, si no que el del <code>mock</code>, donde le decimos exactamente que debe traer, con ello verificamos todo el funcionamiento que requiera una simulación del comportamiento de la base de datos. Si se quiere probar la persistencia, este tipo de test, no son útiles. Para eso hay que diseñar alguno que use realmente la base, con una base de datos de prueba.</p>
+<pre><code class="java">package cl.lherrera.jpaspring.services;
+
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.Mockito.when;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+
+import cl.lherrera.jpaspring.entities.Persona;
+import cl.lherrera.jpaspring.repositories.PersonaRepo;
+
+@SpringBootTest
+public class PersonaServiceTest {
+
+    @Autowired
+    PersonaService servicio;
+
+    @MockBean
+    PersonaRepo mockRepo;
+
+    @Test
+    @DisplayName(&quot;Buscar personas por nombre&quot;)
+    public void prueba005() {
+        // crear la persona en la base mockdatos
+        List&lt;Persona&gt; personas = new ArrayList&lt;&gt;();
+        personas.add(new Persona(1, &quot;luis&quot;));
+        personas.add(new Persona(2, &quot;luis&quot;));
+
+        when(mockRepo.findAllByNombre(&quot;luis&quot;)).thenReturn(personas);
+
+
+        // comprobamos la persona
+        assertThat(personas).isEqualTo(servicio.obtenerPersonasPorNombre(&quot;luis&quot;));
+    }
+
+    @Test
+    @DisplayName(&quot;obtener una lista de las personas&quot;)
+    public void prueba004() {
+        // una lista de personas
+        List&lt;Persona&gt; personas = new ArrayList&lt;&gt;();
+        personas.add(new Persona(1, &quot;luis&quot;));
+        personas.add(new Persona(2, &quot;ana&quot;));
+        // simular petición en la base de datos
+        when((List&lt;Persona&gt;)mockRepo.findAll()).thenReturn(personas);
+
+        assertThat(personas).isEqualTo(servicio.obtenerPersonas());
+
+    }
+
+    @Test
+    @DisplayName(&quot;almacenar persona&quot;)
+    public void prueba001() {
+        // creamos el dato en memoria
+        Persona persona = new Persona(1, &quot;luis&quot;);
+        // simulación de dato en la base de datos
+        when(mockRepo.save(persona)).thenReturn(persona);
+        // funcionamiento del servicio. (se ejecuta el mockRepo y no
+        // el repo que está en su clase, el que llama a 
+        // la base datos así esta petición
+        // se simula sin escribir
+        // realmente en la BD
+        assertThat(servicio.IngresarPersona(persona)).isEqualTo(persona);
+    }
+
+    @Test
+    @DisplayName(&quot;actualizar una persona&quot;)
+    public void prueba002() {
+        // creamos la persona
+        Persona persona = new Persona(1, &quot;Luis&quot;);
+        // se simula persona encontrada
+        when(mockRepo.findById(1)).thenReturn(Optional.of(persona));
+        Persona personaUdt = servicio.encontrarPersona(1);
+        // se actualiza el valor. se puede ver que la primera simulación
+        // tuvo efecto, el mockRepo actuó como el repositorio
+        // oficial ya que usamos el servicio para traer
+        // la persona usando el servicio.
+        personaUdt.setNombre(&quot;Ana&quot;);
+
+        // simulación de actualización (es el repo el que simulamos y 
+        // save(cuando existe actualiza o crea)
+        when(mockRepo.save(personaUdt)).thenReturn(personaUdt);
+
+        assertThat(servicio.actualizarPersona(personaUdt).getNombre()).isEqualTo(&quot;Ana&quot;);
+
+    }
+
+
+    @Test
+    @DisplayName(&quot;eliminar persona&quot;)
+    public void prueba003() {
+        // encontrar la perosona para eliminarla ya que esta 
+        // debe existir en la base de datos.
+        when(mockRepo.findById(1))
+        .thenReturn(Optional.of(new Persona(1, &quot;luis&quot;)));
+        // con la base de datos simulada, utlizamos el servicio.
+        Persona persona = servicio.encontrarPersona(1);
+        // simulamos la interacción de la base de datos 
+        when(mockRepo.myDeleteById(1)).thenReturn(Optional.of(persona));
+        // ocupamos el servicio
+        Persona personaEliminada = servicio.eliminarPersona(persona); 
+
+        assertThat(personaEliminada.getId()).isEqualTo(persona.getId());
+
+    }
+
+}
+
+</code></pre>
+
+<h3 id="srcmainjavacllherrerajpaspringentities"><strong><code>/src/main/java/cl/lherrera/jpaspring/entities</code></strong></h3>
+<p><code>/Persona.java</code></p>
+<p>Entidad encargada de llevar el registro de la base, además es la guía para la creación del <code>DDL</code>. </p>
+<pre><code class="java">package cl.lherrera.jpaspring.entities;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Persona {
+
+    @Id
+    @GeneratedValue(strategy=GenerationType.AUTO) // https://www.objectdb.com/java/jpa/entity/generated
+    private Integer id;
+    private String nombre;
+
+    public Persona() {}
+
+    public Persona(Integer id, String nombre) {
+        this.id = id;
+        this.nombre = nombre;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+}
+
+</code></pre>
+
+<h3 id="jpaspringsrcmainjavacllherrerajpaspringrepositories"><strong><code>/jpaspring/src/main/java/cl/lherrera/jpaspring/repositories</code></strong></h3>
+<p>Like a DAO.</p>
+<p><code>/PersonaRepo.java</code></p>
+<p>Esta es la magia de JPA. con solamente extender la interfaz <code>JpaRepository</code>, tenemos un <code>crud</code> armado, <code>PagingAndSortingRepository</code>, posibilita la paginación que veremos más adelante.</p>
+<p>No se necesita implementar, Spring se encarga de esto. Si necesitamos personalizar una consulta lo podemos hacer con una anotación en la misma interfaz. Esta interfaz es lo más parecido al <code>dao</code> que estábamos acostumbrados, de hecho, a veces lo veremos en los paquetes <code>dao</code>, lo cual no está incorrecto, por que esta es precisamente la capa de acceso a los datos.</p>
+<pre><code class="java">package cl.lherrera.jpaspring.repositories;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.CrudRepository;
+
+import cl.lherrera.jpaspring.entities.Persona;
+
+public interface PersonaRepo extends CrudRepository&lt;Persona, Integer&gt; {
+
+    /**
+     * Se puede parecer mucho a una consulta en la base de datos pero es una
+     * consulta al modelo, la respuesta es un @Entity. por eso la &quot;tabla&quot; está en
+     * mayúsculas.
+     * 
+     * Eso es debido a que no renemos un PersonaRepoImpl que maneje la
+     * personalización de esta consulta y como la original delete, retorna void no
+     * es muy buena para hacer test ya que no tenemos contra qué validar si
+     * simulamos la base de datos
+     * 
+     */
+    @Query(&quot;DELETE FROM Persona WHERE id = ?1&quot;)
+    Optional&lt;Persona&gt; myDeleteById(Integer id);
+
+    // no posee un nombre personalizado, cumple con la nomenclatura find
+    // debe ir aunque siga la nomenclatura
+    List&lt;Persona&gt; findAllByNombre(String nombre);
+}
+
+</code></pre>
+
+<h3 id="srcmainjavacllherrerajpaspringservices"><strong><code>/src/main/java/cl/lherrera/jpaspring/services</code></strong></h3>
+<p><code>/PersonaService.java</code></p>
+<p>Interfaz de los servicios que se desarrollarán.</p>
+<pre><code class="java">package cl.lherrera.jpaspring.services;
+
+import java.util.List;
+
+import cl.lherrera.jpaspring.entities.Persona;
+
+
+public interface PersonaService {
+
+    List&lt;Persona&gt; obtenerPersonas();
+    List&lt;Persona&gt; obtenerPersonasPorNombre(String nombre);
+    Persona IngresarPersona(Persona persona);
+    Persona encontrarPersona(Integer id);
+    Persona eliminarPersona(Persona persona);
+    Persona actualizarPersona(Persona persona);
+}
+</code></pre>
+
+<p><code>/PersonaServiceImpl.java</code></p>
+<p>Implementación de los servicios.</p>
+<pre><code class="java">package cl.lherrera.jpaspring.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import cl.lherrera.jpaspring.entities.Persona;
+import cl.lherrera.jpaspring.repositories.PersonaRepo;
+
+@Service
+public class PersonaServiceImpl implements PersonaService{
+
+    @Autowired
+    PersonaRepo repo;
+
+    @Override
+    public List&lt;Persona&gt; obtenerPersonas() {
+        return (List&lt;Persona&gt;) repo.findAll();
+    }
+
+    @Override
+    public List&lt;Persona&gt; obtenerPersonasPorNombre(String nombre) {
+
+        return repo.findAllByNombre(nombre);
+    }
+
+    @Override
+    public Persona encontrarPersona(Integer id) {
+        // así nos evitamos un null pointer exception
+        return repo.findById(id).orElse(new Persona());
+    }
+
+    @Override
+    public Persona eliminarPersona(Persona persona) {
+        return repo.myDeleteById(persona.getId()).orElse(new Persona());
+    }
+
+    @Override
+    public Persona actualizarPersona(Persona persona) {
+        return repo.save(persona);
+    }
+
+    @Override
+    public Persona IngresarPersona(Persona persona) {       
+        return repo.save(persona);
+    }
+}
+
+</code></pre>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../assets/javascripts/vendor.a0c4167b.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.fb26dd1d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../../assets/javascripts/worker/search.37585f48.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

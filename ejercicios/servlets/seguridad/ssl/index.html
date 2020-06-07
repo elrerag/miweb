@@ -1,0 +1,744 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.6">
+    
+    
+      
+        <title>Seguridad SSL. - Java Full Stack Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.4b9ffd7b.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#seguridad-ssl" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../../.." title="Java Full Stack Docs" class="md-header-nav__button md-logo" aria-label="Java Full Stack Docs">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Java Full Stack Docs
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Seguridad SSL.
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Java Full Stack Docs" class="md-nav__button md-logo" aria-label="Java Full Stack Docs">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Java Full Stack Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../repaso/teoria/poo/herencia/" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="seguridad-ssl">Seguridad SSL.</h1>
+<p>Fuente: <a href="https://www.sslmarket.es/ssl/help-trabajar-con-los-certificados-en-java-keystore/">https://www.sslmarket.es/ssl/help-trabajar-con-los-certificados-en-java-keystore/</a></p>
+<hr />
+<h1 id="ejemplo">Ejemplo</h1>
+<hr />
+<p>Crear un sitio web en <code>Java</code>, utilizando el servidor <code>Apache Tomcat</code>, que pueda ser accedido mediante el protocolo <code>https</code>.</p>
+<p>El servidor escucha mediante la configuración que existe en el archivo <code>server.xml</code>, este archivo está en el directorio <code>conf</code> del servidor apache que descargamos. Cuando agregamos el servidor a eclipse, se crea una copia para eclipse, así que debemos hacerlo desde el ide. En el explorador del IDE hay un directorio llamado <code>Servers</code> dentro está el servidor y el acceso a este archivo. Allí podremos ver su configuración.</p>
+<p>(depende la versión de Tomcat, puede que las opciones sean diferentes)</p>
+<pre><code class="xml">&lt;Connector connectionTimeout=&quot;20000&quot; port=&quot;8080&quot; protocol=&quot;HTTP/1.1&quot; redirectPort=&quot;8443&quot;/&gt;
+</code></pre>
+
+<p>Creamos la siguiente aplicación <code>maven</code> transformada mediante facets-module a web, con la siguiente estructura:</p>
+<pre><code>./
+├── WebContent
+│   ├── META-INF
+│   │   └── MANIFEST.MF
+│   ├── WEB-INF
+│   │   ├── lib
+│   │   └── web.xml
+│   └── index.jsp
+├── pom.xml
+├── src
+│   ├── main
+│   │   ├── java
+│   │   └── resources
+│   └── test
+│       ├── java
+│       └── resources
+└── target
+    ├── classes
+    │   └── META-INF
+    │       ├── MANIFEST.MF
+    │       └── maven
+    │           └── cl.lherrera
+    │               └── auth002
+    │                   ├── pom.properties
+    │                   └── pom.xml
+    └── test-classes
+
+18 directories, 7 files
+
+</code></pre>
+
+<p>Todo generado con la herramienta incluyendo el descriptor de despliegue <code>web.xml</code>. El único archivo generado es el <code>index.jsp</code></p>
+<p><code>/auth002/WebContent/index.jsp</code></p>
+<pre><code class="html">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;
+    pageEncoding=&quot;UTF-8&quot;%&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Insert title here&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;hola mundo
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+
+<p>Ejecutamos el servidor y accedemos mediante el siguiente enlace: <a href="http://localhost:8080/auth002/">http://localhost:8080/auth002/</a>. </p>
+<p>Si ahora intentamos acceder, pero usando un protocolo de comunicación segura de (Security Socket Layer) no podremos conectarnos debido a que no tenemos habilitado ese puerto en el servidor. Hay que activarlo; pero antes necesitamos un certificado ssl, estos los podemos comprar; pero existe una forma de crear uno propio aunque no sea validado por una entidad certificada, nos servirá para entender como configurar estas caracteristicas.</p>
+<p>Generamos entonces el contenedor de llaves que nos servirá como certificado de prueba.</p>
+<p><code>keytool</code> es la herramienta que realiza esta tarea, lo escribimos en la consola para confirmar su funcionamiento.</p>
+<pre><code>➜  auth002 keytool
+Herramienta de Gestión de Certificados y Claves
+
+Comandos:
+
+ -certreq            Genera una solicitud de certificado
+ -changealias        Cambia un alias de entrada
+ -delete             Suprime una entrada
+ -exportcert         Exporta el certificado
+ -genkeypair         Genera un par de claves
+ -genseckey          Genera un clave secreta
+ -gencert            Genera un certificado a partir de una solicitud de certificado
+ -importcert         Importa un certificado o una cadena de certificados
+ -importpass         Importa una contraseña
+ -importkeystore     Importa una o todas las entradas desde otro almacén de claves
+ -keypasswd          Cambia la contraseña de clave de una entrada
+ -list               Enumera las entradas de un almacén de claves
+ -printcert          Imprime el contenido de un certificado
+ -printcertreq       Imprime el contenido de una solicitud de certificado
+ -printcrl           Imprime el contenido de un archivo CRL
+ -storepasswd        Cambia la contraseña de almacén de un almacén de claves
+
+Utilice &quot;keytool -command_name -help&quot; para la sintaxis de nombre_comando
+</code></pre>
+
+<p>Si no, hay que usar la ruta absoluta <code>C:\Program Files\Java\jdk1.8.0_121\bin</code></p>
+<p>nos vamos a una carpeta donde querramos almacenar las llaves. </p>
+<p>En mi caso: <code>/Users/luisherrera/projects/certificadosSSL/talentoDigital</code></p>
+<p>Ejecutamos el siguiente comando:</p>
+<pre><code class="sh">keytool -genkey -alias test -keyalg RSA -keystore test.jks -keysize 2048
+</code></pre>
+
+<p>Donde el alias es el nombre del contenedor de llaves y el <code>keystore</code> es el nombre (en realidad la ruta) del archivo .jks, que es un formáto de una implementación JSSE para certificados, podemos transformarlo a una implementación del tipo web <code>PKCS12</code>, pero eso lo veremos más adelante.</p>
+<p>Es decir que con este comando, fabricaremos nuestro certificado llamado <code>test.jks</code> (si compramos uno, hay otro comando para importarlo que está en el link de la fuente).</p>
+<pre><code class="sh">➜  talentoDigital keytool -genkey -alias test -keyalg RSA -keystore test.jks -keysize 2048
+Introduzca la contraseña del almacén de claves:
+Volver a escribir la contraseña nueva:
+¿Cuáles son su nombre y su apellido?
+  [Unknown]:  luis herrera
+¿Cuál es el nombre de su unidad de organización?
+  [Unknown]:  aiep
+¿Cuál es el nombre de su organización?
+  [Unknown]:  aiep
+¿Cuál es el nombre de su ciudad o localidad?
+  [Unknown]:  santiao
+¿Cuál es el nombre de su estado o provincia?
+  [Unknown]:  nunoa
+¿Cuál es el código de país de dos letras de la unidad?
+  [Unknown]:  cl
+¿Es correcto CN=luis herrera, OU=aiep, O=aiep, L=santiao, ST=nunoa, C=cl?
+  [no]:  si
+
+Introduzca la contraseña de clave para &lt;test&gt;
+    (INTRO si es la misma contraseña que la del almacén de claves):
+Volver a escribir la contraseña nueva:
+
+Warning:
+El almacén de claves JKS utiliza un formato propietario. Se recomienda migrar a PKCS12, que es un formato estándar del sector que utiliza &quot;keytool -importkeystore -srckeystore test.jks -destkeystore test.jks -deststoretype pkcs12&quot;.
+
+</code></pre>
+
+<p>Migramos el estandar <code>PKCS12</code>, para quitar el warning.</p>
+<pre><code>➜  talentoDigital keytool -importkeystore -srckeystore test.jks -destkeystore test.jks -deststoretype pkcs12
+Introduzca la contraseña de almacén de claves de origen:
+La entrada del alias test se ha importado correctamente.
+Comando de importación completado: 1 entradas importadas correctamente, 0 entradas incorrectas o canceladas
+
+Warning:
+Se ha migrado &quot;test.jks&quot; a Non JKS/JCEKS. Se ha realizado la copia de seguridad del almacén de claves JKS como &quot;test.jks.old&quot;.
+➜  talentoDigital
+</code></pre>
+
+<p>La contraseña usada en todo es <code>changeit</code>, ya que es la contraseña por defecto que usa TOMCAT y para mantener el estandar lo dejamos tal cual. </p>
+<pre><code>./
+├── test.jks
+└── test.jks.old
+
+0 directories, 2 files
+</code></pre>
+
+<p>Luego debemos ir al directoriio <code>Servers</code> que está en eclipse (si es que añadimos el servidor anteriormente). y agregamos lo en <code>server.xml</code>.</p>
+<pre><code class="xml">&lt;Connector 
+    SSLEnabled=&quot;true&quot; 
+    maxThreads=&quot;150&quot; 
+    port=&quot;8443&quot; 
+    protocol=&quot;org.apache.coyote.http11.Http11NioProtocol&quot;&gt;
+
+    &lt;SSLHostConfig&gt;
+        &lt;Certificate 
+        certificateKeystoreFile=&quot;/Users/luisherrera/projects/certificadosSSL/talentoDigital/test.jks&quot; 
+        type=&quot;RSA&quot;/&gt;
+    &lt;/SSLHostConfig&gt;
+
+&lt;/Connector&gt;
+</code></pre>
+
+<p>Quedando el archivo de la siguiente forma: <code>server.xml</code>.</p>
+<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!--
+  Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements.  See the NOTICE file distributed with
+  this work for additional information regarding copyright ownership.
+  The ASF licenses this file to You under the Apache License, Version 2.0
+  (the &quot;License&quot;); you may not use this file except in compliance with
+  the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+--&gt;&lt;!-- Note:  A &quot;Server&quot; is not itself a &quot;Container&quot;, so you may not
+     define subcomponents such as &quot;Valves&quot; at this level.
+     Documentation at /docs/config/server.html
+ --&gt;&lt;Server port=&quot;8005&quot; shutdown=&quot;SHUTDOWN&quot;&gt;
+  &lt;Listener className=&quot;org.apache.catalina.startup.VersionLoggerListener&quot;/&gt;
+  &lt;!-- Security listener. Documentation at /docs/config/listeners.html
+  &lt;Listener className=&quot;org.apache.catalina.security.SecurityListener&quot; /&gt;
+  --&gt;
+  &lt;!--APR library loader. Documentation at /docs/apr.html --&gt;
+  &lt;Listener SSLEngine=&quot;on&quot; className=&quot;org.apache.catalina.core.AprLifecycleListener&quot;/&gt;
+  &lt;!-- Prevent memory leaks due to use of particular java/javax APIs--&gt;
+  &lt;Listener className=&quot;org.apache.catalina.core.JreMemoryLeakPreventionListener&quot;/&gt;
+  &lt;Listener className=&quot;org.apache.catalina.mbeans.GlobalResourcesLifecycleListener&quot;/&gt;
+  &lt;Listener className=&quot;org.apache.catalina.core.ThreadLocalLeakPreventionListener&quot;/&gt;
+
+  &lt;!-- Global JNDI resources
+       Documentation at /docs/jndi-resources-howto.html
+  --&gt;
+  &lt;GlobalNamingResources&gt;
+    &lt;!-- Editable user database that can also be used by
+         UserDatabaseRealm to authenticate users
+    --&gt;
+    &lt;Resource auth=&quot;Container&quot; description=&quot;User database that can be updated and saved&quot; factory=&quot;org.apache.catalina.users.MemoryUserDatabaseFactory&quot; name=&quot;UserDatabase&quot; pathname=&quot;conf/tomcat-users.xml&quot; type=&quot;org.apache.catalina.UserDatabase&quot;/&gt;
+  &lt;/GlobalNamingResources&gt;
+
+  &lt;!-- A &quot;Service&quot; is a collection of one or more &quot;Connectors&quot; that share
+       a single &quot;Container&quot; Note:  A &quot;Service&quot; is not itself a &quot;Container&quot;,
+       so you may not define subcomponents such as &quot;Valves&quot; at this level.
+       Documentation at /docs/config/service.html
+   --&gt;
+  &lt;Service name=&quot;Catalina&quot;&gt;
+
+    &lt;!--The connectors can use a shared executor, you can define one or more named thread pools--&gt;
+    &lt;!--
+    &lt;Executor name=&quot;tomcatThreadPool&quot; namePrefix=&quot;catalina-exec-&quot;
+        maxThreads=&quot;150&quot; minSpareThreads=&quot;4&quot;/&gt;
+    --&gt;
+
+
+    &lt;!-- A &quot;Connector&quot; represents an endpoint by which requests are received
+         and responses are returned. Documentation at :
+         Java HTTP Connector: /docs/config/http.html
+         Java AJP  Connector: /docs/config/ajp.html
+         APR (HTTP/AJP) Connector: /docs/apr.html
+         Define a non-SSL/TLS HTTP/1.1 Connector on port 8080
+    --&gt;
+    &lt;Connector connectionTimeout=&quot;20000&quot; port=&quot;8080&quot; protocol=&quot;HTTP/1.1&quot; redirectPort=&quot;8443&quot;/&gt;
+    &lt;!-- A &quot;Connector&quot; using the shared thread pool--&gt;
+    &lt;!--
+    &lt;Connector executor=&quot;tomcatThreadPool&quot;
+               port=&quot;8080&quot; protocol=&quot;HTTP/1.1&quot;
+               connectionTimeout=&quot;20000&quot;
+               redirectPort=&quot;8443&quot; /&gt;
+    --&gt;
+    &lt;!-- Define an SSL/TLS HTTP/1.1 Connector on port 8443
+         This connector uses the NIO implementation. The default
+         SSLImplementation will depend on the presence of the APR/native
+         library and the useOpenSSL attribute of the
+         AprLifecycleListener.
+         Either JSSE or OpenSSL style configuration may be used regardless of
+         the SSLImplementation selected. JSSE style configuration is used below.
+    --&gt;
+    &lt;!--
+    &lt;Connector port=&quot;8443&quot; protocol=&quot;org.apache.coyote.http11.Http11NioProtocol&quot;
+               maxThreads=&quot;150&quot; SSLEnabled=&quot;true&quot;&gt;
+        &lt;SSLHostConfig&gt;
+            &lt;Certificate certificateKeystoreFile=&quot;conf/localhost-rsa.jks&quot;
+                         type=&quot;RSA&quot; /&gt;
+        &lt;/SSLHostConfig&gt;
+    &lt;/Connector&gt;
+    --&gt;
+&lt;Connector 
+    SSLEnabled=&quot;true&quot; 
+    maxThreads=&quot;150&quot; 
+    port=&quot;8443&quot; 
+    protocol=&quot;org.apache.coyote.http11.Http11NioProtocol&quot;&gt;
+
+    &lt;SSLHostConfig&gt;
+        &lt;Certificate 
+        certificateKeystoreFile=&quot;/Users/luisherrera/projects/certificadosSSL/talentoDigital/test.jks&quot; 
+        type=&quot;RSA&quot;/&gt;
+    &lt;/SSLHostConfig&gt;
+
+&lt;/Connector&gt;
+    &lt;!-- Define an SSL/TLS HTTP/1.1 Connector on port 8443 with HTTP/2
+         This connector uses the APR/native implementation which always uses
+         OpenSSL for TLS.
+         Either JSSE or OpenSSL style configuration may be used. OpenSSL style
+         configuration is used below.
+    --&gt;
+    &lt;!--
+    &lt;Connector port=&quot;8443&quot; protocol=&quot;org.apache.coyote.http11.Http11AprProtocol&quot;
+               maxThreads=&quot;150&quot; SSLEnabled=&quot;true&quot; &gt;
+        &lt;UpgradeProtocol className=&quot;org.apache.coyote.http2.Http2Protocol&quot; /&gt;
+        &lt;SSLHostConfig&gt;
+            &lt;Certificate certificateKeyFile=&quot;conf/localhost-rsa-key.pem&quot;
+                         certificateFile=&quot;conf/localhost-rsa-cert.pem&quot;
+                         certificateChainFile=&quot;conf/localhost-rsa-chain.pem&quot;
+                         type=&quot;RSA&quot; /&gt;
+        &lt;/SSLHostConfig&gt;
+    &lt;/Connector&gt;
+    --&gt;
+
+&lt;!-- &lt;Connector  --&gt;
+&lt;!--    port=&quot;8443&quot;  --&gt;
+&lt;!--    maxHttpHeaderSize=&quot;8192&quot;  --&gt;
+&lt;!--    maxThreads=&quot;150&quot;  --&gt;
+&lt;!--    minSpareThreads=&quot;25&quot;  --&gt;
+&lt;!--    maxSpareThreads=&quot;75&quot;  --&gt;
+&lt;!--    enableLookups=&quot;false&quot;  --&gt;
+&lt;!--    disableUploadTimeout=&quot;true&quot;  --&gt;
+&lt;!--    acceptCount=&quot;100&quot;  --&gt;
+&lt;!--    scheme=&quot;https&quot;  --&gt;
+&lt;!--    secure=&quot;true&quot;  --&gt;
+&lt;!--    SSLEnabled=&quot;true&quot;  --&gt;
+&lt;!--    clientAuth=&quot;false&quot;  --&gt;
+&lt;!--    sslProtocol=&quot;TLS&quot;  --&gt;
+&lt;!--    keyAlias=&quot;server&quot;  --&gt;
+&lt;!--    keystoreFile=&quot;/Applications/contenedor/tomcat9/llaves/keys&quot;  --&gt;
+&lt;!--    keypass=&quot;luis123&quot; /&gt; --&gt;
+
+    &lt;!-- Define an AJP 1.3 Connector on port 8009 --&gt;
+    &lt;!--
+    &lt;Connector protocol=&quot;AJP/1.3&quot;
+               address=&quot;::1&quot;
+               port=&quot;8009&quot;
+               redirectPort=&quot;8443&quot; /&gt;
+    --&gt;
+
+    &lt;!-- An Engine represents the entry point (within Catalina) that processes
+         every request.  The Engine implementation for Tomcat stand alone
+         analyzes the HTTP headers included with the request, and passes them
+         on to the appropriate Host (virtual host).
+         Documentation at /docs/config/engine.html --&gt;
+
+    &lt;!-- You should set jvmRoute to support load-balancing via AJP ie :
+    &lt;Engine name=&quot;Catalina&quot; defaultHost=&quot;localhost&quot; jvmRoute=&quot;jvm1&quot;&gt;
+    --&gt;
+    &lt;Engine defaultHost=&quot;localhost&quot; name=&quot;Catalina&quot;&gt;
+
+      &lt;!--For clustering, please take a look at documentation at:
+          /docs/cluster-howto.html  (simple how to)
+          /docs/config/cluster.html (reference documentation) --&gt;
+      &lt;!--
+      &lt;Cluster className=&quot;org.apache.catalina.ha.tcp.SimpleTcpCluster&quot;/&gt;
+      --&gt;
+
+      &lt;!-- Use the LockOutRealm to prevent attempts to guess user passwords
+           via a brute-force attack --&gt;
+      &lt;Realm className=&quot;org.apache.catalina.realm.LockOutRealm&quot;&gt;
+        &lt;!-- This Realm uses the UserDatabase configured in the global JNDI
+             resources under the key &quot;UserDatabase&quot;.  Any edits
+             that are performed against this UserDatabase are immediately
+             available for use by the Realm.  --&gt;
+        &lt;Realm className=&quot;org.apache.catalina.realm.UserDatabaseRealm&quot; resourceName=&quot;UserDatabase&quot;/&gt;
+      &lt;/Realm&gt;
+
+      &lt;Host appBase=&quot;webapps&quot; autoDeploy=&quot;true&quot; name=&quot;localhost&quot; unpackWARs=&quot;true&quot;&gt;
+
+        &lt;!-- SingleSignOn valve, share authentication between web applications
+             Documentation at: /docs/config/valve.html --&gt;
+        &lt;!--
+        &lt;Valve className=&quot;org.apache.catalina.authenticator.SingleSignOn&quot; /&gt;
+        --&gt;
+
+        &lt;!-- Access log processes all example.
+             Documentation at: /docs/config/valve.html
+             Note: The pattern used is equivalent to using pattern=&quot;common&quot; --&gt;
+        &lt;Valve className=&quot;org.apache.catalina.valves.AccessLogValve&quot; directory=&quot;logs&quot; pattern=&quot;%h %l %u %t &amp;quot;%r&amp;quot; %s %b&quot; prefix=&quot;localhost_access_log&quot; suffix=&quot;.txt&quot;/&gt;
+
+      &lt;Context docBase=&quot;auth002&quot; path=&quot;/auth002&quot; reloadable=&quot;true&quot; source=&quot;org.eclipse.jst.jee.server:auth002&quot;/&gt;&lt;/Host&gt;
+    &lt;/Engine&gt;
+  &lt;/Service&gt;
+&lt;/Server&gt;
+</code></pre>
+
+<p>Al acceder a <a href="https://localhost:8443/auth002/">https://localhost:8443/auth002/</a>, esta vez, nos lanzará una advertencia (ya que nuestro certificado no está validado por un tercero), vamos a configuración avanzada, <code>Continuar a localhost (no seguro)</code> y estaremos dentro, pero ahora la información desde el servidor y el cliente, se encripta.</p>
+<hr />
+<h1 id="ejemplo-2-accesos-solo-por-ssl">Ejemplo 2: Accesos sólo por  <code>SSL</code></h1>
+<hr />
+<p>Utilizando Java, y la configuración del servidor que utilizamos anteriormente, Creamos un sitio con dos páginas, pero una de ellas, funcionará solamente mediante <code>ssl</code>.</p>
+<p>Estructura:</p>
+<pre><code>./
+├── WebContent
+│   ├── META-INF
+│   │   └── MANIFEST.MF
+│   ├── WEB-INF
+│   │   ├── lib
+│   │   └── web.xml
+│   ├── index.jsp
+│   └── protegido
+│       └── paginasegura.jsp
+├── pom.xml
+├── src
+│   ├── main
+│   │   ├── java
+│   │   │   └── cl
+│   │   │       └── lherrera
+│   │   │           └── auth002
+│   │   │               └── servlets
+│   │   │                   └── ManejaSensible.java
+│   │   └── resources
+│   └── test
+│       ├── java
+│       └── resources
+└── target
+    ├── classes
+    │   ├── META-INF
+    │   │   ├── MANIFEST.MF
+    │   │   └── maven
+    │   │       └── cl.lherrera
+    │   │           └── auth002
+    │   │               ├── pom.properties
+    │   │               └── pom.xml
+    │   └── cl
+    │       └── lherrera
+    │           └── auth002
+    │               └── servlets
+    │                   └── ManejaSensible.class
+    └── test-classes
+
+27 directories, 10 files
+
+</code></pre>
+
+<p>Servlet que simplente redirige.</p>
+<p><code>/auth002/src/main/java/cl/lherrera/auth002/servlets/ManejaSensible.java</code></p>
+<pre><code class="java">package cl.lherrera.auth002.servlets;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class ManejaSensible extends HttpServlet{
+
+    private static final long serialVersionUID = -8273382432698807110L;
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp){
+        try {
+            req.getRequestDispatcher(&quot;/protegido/paginasegura.jsp&quot;).forward(req, resp);
+        } catch (ServletException | IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+}
+
+</code></pre>
+
+<p>vistas del sitio:</p>
+<p><code>/auth002/WebContent/index.jsp</code></p>
+<pre><code class="html">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;
+    pageEncoding=&quot;UTF-8&quot;%&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Insert title here&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    hola mundo -&gt;
+    &lt;a href=&quot;protegido/sensible&quot;&gt;Hacia la seguridad...&lt;/a&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+
+<p><code>/auth002/WebContent/protegido/paginasegura.jsp</code></p>
+<pre><code class="html">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;
+    pageEncoding=&quot;UTF-8&quot;%&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Insert title here&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;Soy una página segura, con información sensible &lt;/h1&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+
+<p>El descriptor de despliegue, se encarga de realizar la tarea de restricción, en el elemento <code>security-constraint</code>.:</p>
+<p><code>/auth002/WebContent/WEB-INF/web.xml</code></p>
+<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;web-app xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://xmlns.jcp.org/xml/ns/javaee&quot; xsi:schemaLocation=&quot;http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd&quot; id=&quot;WebApp_ID&quot; version=&quot;4.0&quot;&gt;
+  &lt;display-name&gt;auth002&lt;/display-name&gt;
+
+  &lt;welcome-file-list&gt;
+    &lt;welcome-file&gt;index.html&lt;/welcome-file&gt;
+    &lt;welcome-file&gt;index.htm&lt;/welcome-file&gt;
+    &lt;welcome-file&gt;index.jsp&lt;/welcome-file&gt;
+    &lt;welcome-file&gt;default.html&lt;/welcome-file&gt;
+    &lt;welcome-file&gt;default.htm&lt;/welcome-file&gt;
+    &lt;welcome-file&gt;default.jsp&lt;/welcome-file&gt;
+  &lt;/welcome-file-list&gt;
+
+    &lt;servlet&gt;
+        &lt;servlet-name&gt;a lo sensible&lt;/servlet-name&gt;
+        &lt;servlet-class&gt;cl.lherrera.auth002.servlets.ManejaSensible&lt;/servlet-class&gt;
+    &lt;/servlet&gt;
+    &lt;servlet-mapping&gt;
+        &lt;servlet-name&gt;a lo sensible&lt;/servlet-name&gt;
+        &lt;url-pattern&gt;/protegido/sensible&lt;/url-pattern&gt;
+    &lt;/servlet-mapping&gt;
+
+    &lt;security-constraint&gt;
+        &lt;web-resource-collection&gt;
+            &lt;web-resource-name&gt;recursosSensibles&lt;/web-resource-name&gt;
+            &lt;url-pattern&gt;/protegido/*&lt;/url-pattern&gt;
+        &lt;/web-resource-collection&gt;
+
+        &lt;user-data-constraint&gt;
+            &lt;transport-guarantee&gt;CONFIDENTIAL&lt;/transport-guarantee&gt;
+        &lt;/user-data-constraint&gt;
+    &lt;/security-constraint&gt;
+
+&lt;/web-app&gt;
+</code></pre>
+
+<p>Queda como ejercicio, hacer que se protejan todas las URL del sitio. </p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../assets/javascripts/vendor.a0c4167b.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.fb26dd1d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../../assets/javascripts/worker/search.37585f48.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

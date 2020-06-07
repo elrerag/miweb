@@ -1,0 +1,939 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.6">
+    
+    
+      
+        <title>unoAuno - Java Full Stack Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.4b9ffd7b.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#relacion-de-uno-a-uno" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../../.." title="Java Full Stack Docs" class="md-header-nav__button md-logo" aria-label="Java Full Stack Docs">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Java Full Stack Docs
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              unoAuno
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Java Full Stack Docs" class="md-nav__button md-logo" aria-label="Java Full Stack Docs">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Java Full Stack Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../repaso/teoria/poo/herencia/" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-de-datos-sqlite" class="md-nav__link">
+    Modelo de datos (SQLITE)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ddl" class="md-nav__link">
+    DDL
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructura-del-proyecto" class="md-nav__link">
+    Estructura del proyecto
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pomxml" class="md-nav__link">
+    pom.xml
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clase-de-administracion-de-la-conexion-singlenton" class="md-nav__link">
+    Clase de administración de la conexión (Singlenton).
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test" class="md-nav__link">
+    Test
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#servicio-de-persona" class="md-nav__link">
+    Servicio de persona
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dto" class="md-nav__link">
+    DTO
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#daos" class="md-nav__link">
+    DAOS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo" class="md-nav__link">
+    Modelo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#todo" class="md-nav__link">
+    TODO
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <hr />
+<h1 id="relacion-de-uno-a-uno">Relación de uno a uno</h1>
+<hr />
+<p>Esta relación no es muy común, a menos que se tengan tablas muy grandes y que haya que dividirlas para asuntos de estandarización.</p>
+<p>La primera forma en que se aborda este problema es usando la misma llave primaria en todas las tablas, así podemos relacionar las tablas por que todas tienen el mismo id. Esto representa un problema cuando lo estamos programando, ya que insertar el mismo id en varias tablas, no es una tarea rápida y estable desde java, además nuestras llaves serán <code>auto-incremental</code>, peor aún.</p>
+<p>Por eso se usará una <code>clave foranea</code> única, para que la relación sea solo una, no nula para que sea obligatoria y si se borra la persona, que se borren los datos automáticamente, esto lo realizamos con un borrado en cascada.</p>
+<h2 id="modelo-de-datos-sqlite">Modelo de datos (<code>SQLITE</code>)</h2>
+<p><img src="https://github.com/elrerag/pintamiweb/blob/master/jfst/ejercicios/relaciones/002.png?raw=true" alt="relaciones002.png"></p>
+
+<h2 id="ddl">DDL</h2>
+<p>Lo primero después de la creación de la estructura, es una demostración de el comportamiento del borrado en cascada. Luego llenamos la tabla para probar la aplicación.</p>
+<pre><code class="sql">PRAGMA foreign_keys = ON
+
+DROP TABLE IF EXISTS dato_personal;
+
+DROP TABLE IF EXISTS persona;
+
+
+CREATE TABLE persona ( 
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nombre TEXT
+);
+
+CREATE TABLE dato_personal ( 
+    id integer PRIMARY KEY AUTOINCREMENT,
+    telefono TEXT,
+    email TEXT,
+    persona_id INTEGER UNIQUE,
+    FOREIGN KEY(persona_id) REFERENCES persona(id) ON DELETE CASCADE 
+);
+
+
+-- confirmamos la existencia de las tablas
+select * from persona;
+select * from dato_personal;
+
+-- ingresamos una persona y sus datos
+insert into persona (nombre) values (&quot;luis&quot;);
+insert into dato_personal (telefono, email, persona_id) values (&quot;54319341&quot;, &quot;mail@fake.dev&quot;, 1);
+
+-- confirmamos el ingreso de la información
+select * from persona;
+select * from dato_personal;
+
+-- ingresamos otro dato personal, y lo intentamos asignar a la misma persona
+-- esto debería fallar.
+insert into dato_personal (telefono, email, persona_id) values (&quot;76764276&quot;, &quot;mail2@fake.dev&quot;, 1);
+
+-- si eliminamos la persona, su referencia debe desaparecer en cascada.
+-- No muy recomendable, mejor desactivar para guardar historial.
+delete from persona where nombre = &quot;luis&quot;;
+
+-- confirmamos datos eliminados de ambas tablas
+select * from persona;
+select * from dato_personal;
+
+-- ahora ya podemos poblar con datos para dejar la base de datos lista
+-- para el ejemplo.
+insert into persona (nombre) values (&quot;luis&quot;);
+insert into persona (nombre) values (&quot;ana&quot;);
+
+insert into dato_personal (telefono, email, persona_id) values (&quot;65657674&quot;, &quot;luis@fake.dev&quot;, 2);
+insert into dato_personal (telefono, email, persona_id) values (&quot;76764276&quot;, &quot;ana@fake.dev&quot;, 3);
+
+
+-- para después del test.
+-- delete from persona where nombre = 'alejandra';
+
+</code></pre>
+
+<h2 id="estructura-del-proyecto">Estructura del proyecto</h2>
+<pre><code>./
+├── pom.xml
+├── src
+│   ├── main
+│   │   ├── java
+│   │   │   └── cl
+│   │   │       └── lherrera
+│   │   │           └── unoauno
+│   │   │               ├── dao
+│   │   │               │   ├── DatoPersonalDAO.java
+│   │   │               │   ├── ManejaConexion.java
+│   │   │               │   └── PersonaDAO.java
+│   │   │               ├── dto
+│   │   │               │   └── PersonaDTO.java
+│   │   │               ├── modelo
+│   │   │               │   ├── DatoPersonal.java
+│   │   │               │   └── Persona.java
+│   │   │               └── servicios
+│   │   │                   └── ServicioPersonas.java
+│   │   └── resources
+│   └── test
+│       ├── java
+│       │   └── cl
+│       │       └── lherrera
+│       │           └── unoauno
+│       │               └── servicios
+│       │                   └── ServicioPersonasTest.java
+│       └── resources
+├── target
+│   ├── classes
+│   │   ├── META-INF
+│   │   │   ├── MANIFEST.MF
+│   │   │   └── maven
+│   │   │       └── cl.lherrera
+│   │   │           └── unoauno
+│   │   │               ├── pom.properties
+│   │   │               └── pom.xml
+│   │   └── cl
+│   │       └── lherrera
+│   │           └── unoauno
+│   │               ├── dao
+│   │               │   ├── DatoPersonalDAO.class
+│   │               │   ├── ManejaConexion.class
+│   │               │   └── PersonaDAO.class
+│   │               ├── dto
+│   │               │   └── PersonaDTO.class
+│   │               ├── modelo
+│   │               │   ├── DatoPersonal.class
+│   │               │   └── Persona.class
+│   │               └── servicios
+│   │                   └── ServicioPersonas.class
+│   └── test-classes
+│       └── cl
+│           └── lherrera
+│               └── unoauno
+│                   └── servicios
+│                       └── ServicioPersonasTest.class
+└── unoauno.db
+
+36 directories, 21 files
+
+</code></pre>
+
+<h2 id="pomxml"><code>pom.xml</code></h2>
+<p><code>/unoauno/pom.xml</code></p>
+<pre><code class="xml">&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;
+    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+    xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+    &lt;groupId&gt;cl.lherrera&lt;/groupId&gt;
+    &lt;artifactId&gt;unoauno&lt;/artifactId&gt;
+    &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
+
+    &lt;dependencies&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.xerial&lt;/groupId&gt;
+            &lt;artifactId&gt;sqlite-jdbc&lt;/artifactId&gt;
+            &lt;version&gt;3.30.1&lt;/version&gt;
+        &lt;/dependency&gt;
+
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.mockito&lt;/groupId&gt;
+            &lt;artifactId&gt;mockito-core&lt;/artifactId&gt;
+            &lt;version&gt;2.28.2&lt;/version&gt;
+            &lt;scope&gt;test&lt;/scope&gt;
+        &lt;/dependency&gt;
+
+        &lt;!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.junit.jupiter&lt;/groupId&gt;
+            &lt;artifactId&gt;junit-jupiter-api&lt;/artifactId&gt;
+            &lt;version&gt;5.6.0&lt;/version&gt;
+            &lt;scope&gt;test&lt;/scope&gt;
+        &lt;/dependency&gt;
+
+        &lt;!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.junit.jupiter&lt;/groupId&gt;
+            &lt;artifactId&gt;junit-jupiter-engine&lt;/artifactId&gt;
+            &lt;version&gt;5.6.0&lt;/version&gt;
+            &lt;scope&gt;test&lt;/scope&gt;
+        &lt;/dependency&gt;
+
+        &lt;!-- https://mvnrepository.com/artifact/org.junit.platform/junit-platform-launcher --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.junit.platform&lt;/groupId&gt;
+            &lt;artifactId&gt;junit-platform-launcher&lt;/artifactId&gt;
+            &lt;version&gt;1.6.0&lt;/version&gt;
+            &lt;scope&gt;test&lt;/scope&gt;
+        &lt;/dependency&gt;
+
+    &lt;/dependencies&gt;
+
+&lt;/project&gt;
+</code></pre>
+
+<h2 id="clase-de-administracion-de-la-conexion-singlenton">Clase de administración de la conexión (<code>Singlenton</code>).</h2>
+<p><code>/unoauno/src/main/java/cl/lherrera/unoauno/dao/ManejaConexion.java</code></p>
+<pre><code class="java">package cl.lherrera.unoauno.dao;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.util.logging.Logger;
+
+
+public class ManejaConexion {
+    private static final String DB_URL = &quot;jdbc:sqlite:/Users/luisherrera/Desktop/TALENTO-PROS/servlets/relaciones/unoauno/unoauno.db&quot;;
+    private static final Logger milog = Logger.getLogger(ManejaConexion.class.getName());
+
+    private static ManejaConexion manejaConexion = new ManejaConexion();
+
+    private ManejaConexion() {
+        if (manejaConexion != null){
+            //Prevent Reflection
+            throw new IllegalStateException(&quot;No se puede crear una nueva instancia de ManejaConexion&quot;);
+        }
+    }
+
+    public static ManejaConexion obtenerManejo() {
+        return manejaConexion;
+    }
+
+
+    public Connection obtenerConexion() throws SQLException {
+        Connection conexion = null;
+
+        try {
+            Class.forName(&quot;org.sqlite.JDBC&quot;);
+            conexion = DriverManager.getConnection(DB_URL, &quot;admin&quot;, &quot;1234&quot;);
+
+        } catch (ClassNotFoundException e) {
+            milog.severe(&quot;No se pudo cargar el driver.&quot;);
+            milog.severe(e.getMessage());
+        }
+
+        return conexion;
+    }
+}
+</code></pre>
+
+<h2 id="test">Test</h2>
+<p>Lo primero que haremos antes de implementar lo que viene.</p>
+<p><code>/unoauno/src/test/java/cl/lherrera/unoauno/servicios/ServicioPersonasTest.java</code></p>
+<pre><code class="java">package cl.lherrera.unoauno.servicios;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import java.util.List;
+import java.util.logging.Logger;
+
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+
+import cl.lherrera.unoauno.dto.PersonaDTO;
+
+@DisplayName(&quot;pruebas de servicios personas&quot;)
+public class ServicioPersonasTest {
+    Logger logger = Logger.getLogger(ServicioPersonasTest.class.getName());
+    ServicioPersonas servicio = new ServicioPersonas();
+
+    @Test
+    @DisplayName(&quot;prueba listar personas&quot;)
+    void listarPersonas() {
+        // traer las personas desde el servicio
+        List&lt;PersonaDTO&gt; personas = servicio.obtenerPersonas();
+        // imprimirlas
+        personas.forEach(persona -&gt; logger.info(persona.toString()));
+        // hacer el assert
+        assertEquals(2, personas.size());
+    }
+
+    @Test
+    @DisplayName(&quot;probar el ingreso de la persona&quot;)
+    void servicioIngreso() {
+        // simular un ingreso desde la vista
+        PersonaDTO dtoPersona = new PersonaDTO(&quot;Alejandra&quot;, &quot;647874334&quot;, &quot;theAlexx@hotmail.com&quot;);
+        // llamar al servicio de ingreso
+        boolean ingresado = servicio.ingresarPersona(dtoPersona);
+        // listar las personas
+        List&lt;PersonaDTO&gt; personas = servicio.obtenerPersonas();
+        personas.forEach(persona -&gt; logger.info(persona.toString()));
+        // hacer el assert
+        assertEquals(true, ingresado);
+    }
+}
+</code></pre>
+
+<h2 id="servicio-de-persona">Servicio de persona</h2>
+<p>Se puede observar que el servicio se encarga de formar los datos que el negocio requiere, es como quién diseña los informes para los gerentes, el servicio de personas es la entidad que contiene la lógica que el negocio necesita, este servicio es consumidor de alguna fuente de datos, que en esta ocasión se encuentra dentro del mismo proyecto, pero el servicio es quien verá como adapta la información con las fuentes de datos que tenga a disposición.</p>
+<p><code>/unoauno/src/main/java/cl/lherrera/unoauno/servicios/ServicioPersonas.java</code></p>
+<pre><code class="java">package cl.lherrera.unoauno.servicios;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import cl.lherrera.unoauno.dao.DatoPersonalDAO;
+import cl.lherrera.unoauno.dao.PersonaDAO;
+import cl.lherrera.unoauno.dto.PersonaDTO;
+import cl.lherrera.unoauno.modelo.DatoPersonal;
+import cl.lherrera.unoauno.modelo.Persona;
+
+public class ServicioPersonas {
+    DatoPersonalDAO daodatospersonales = new DatoPersonalDAO();
+    PersonaDAO daoPersona = new PersonaDAO();
+    DatoPersonalDAO daoDatoPersonal = new DatoPersonalDAO();
+
+    public List&lt;PersonaDTO&gt; obtenerPersonas(){
+        List&lt;PersonaDTO&gt; personasDTO = new ArrayList&lt;&gt;();
+        List&lt;DatoPersonal&gt; datosPersonales = daodatospersonales.obtenerTodos();
+
+        datosPersonales.forEach(datoPersonal -&gt; {
+            PersonaDTO dtoPersona = new PersonaDTO();
+            dtoPersona.setNombre(datoPersonal.getPersona().getNombre());
+            dtoPersona.setTelefono(datoPersonal.getTelefono());
+            dtoPersona.setEmail(datoPersonal.getEmail());
+
+            personasDTO.add(dtoPersona);
+        });
+
+        return personasDTO;
+    }
+
+    public boolean ingresarPersona(PersonaDTO dtoPersona) {
+        boolean ingresado = false;
+        Persona persona = new Persona();
+        DatoPersonal datosPersonal = new DatoPersonal();
+
+        // ingresar persona
+        persona.setNombre(dtoPersona.getNombre());
+        int idPersona = daoPersona.ingresar(persona);
+        // ya sabemos el id de la persona nueva y lo seteamos
+        // para que viaje a ser insertado en sus datos personales.
+        persona.setId(idPersona); 
+
+        // ingresar datos personales
+        datosPersonal.setTelefono(dtoPersona.getTelefono());
+        datosPersonal.setEmail(dtoPersona.getEmail());
+        datosPersonal.setPersona(persona);
+
+        int idDatoPersonal = daoDatoPersonal.ingresar(datosPersonal);
+
+        ingresado = idPersona != 0 &amp;&amp; idDatoPersonal != 0;
+
+        return ingresado;
+    }
+}
+
+</code></pre>
+
+<h2 id="dto">DTO</h2>
+<p>El presente proyecto posee una presentación especial, con más datos que los que contiene la tabla personas, es por esta razón que necesitamos un DTO para que tenga los datos que necesita el negocio. </p>
+<p>En un proyecto que comienza, es bueno dejar el modelo de datos especialmente diseñado para nuestro negocio, pero no siempre dispondremos de una fuente de datos identica a todas las entidades del negocio en nuestra aplicación, por eso los DTO son buenos elementos para adaptar esta información a las vistas.</p>
+<p><code>cl.lherrera.unoauno.dto.PersonaDTO</code></p>
+<pre><code class="java">package cl.lherrera.unoauno.dto;
+
+import java.io.Serializable;
+
+public class PersonaDTO implements Serializable{    
+    private static final long serialVersionUID = -9126621171518423226L;
+
+    private String nombre;
+    private String telefono;
+    private String email;
+
+    public PersonaDTO() {}
+
+    public PersonaDTO(String nombre, String telefono, String email) {
+        this.nombre = nombre;
+        this.telefono = telefono;
+        this.email = email;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    @Override
+    public String toString() {
+        return &quot;PersonaDTO [nombre=&quot; + nombre + &quot;, telefono=&quot; + telefono + &quot;, email=&quot; + email + &quot;]&quot;;
+    }
+}
+
+</code></pre>
+
+<h2 id="daos">DAOS</h2>
+<p><code>/unoauno/src/main/java/cl/lherrera/unoauno/dao/PersonaDAO.java</code></p>
+<pre><code class="java">package cl.lherrera.unoauno.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Logger;
+
+import cl.lherrera.unoauno.modelo.Persona;
+
+public class PersonaDAO {
+    private static Logger logger = Logger.getLogger(PersonaDAO.class.getName());
+    private static ManejaConexion mc = ManejaConexion.obtenerManejo();
+
+    public Persona obtenerPorId(int id) {
+        Persona persona = new Persona();
+        String sqlTxt = &quot;select id, nombre from persona where id = &quot; + id;
+
+        try(
+            Connection conexion = mc.obtenerConexion();
+            PreparedStatement ps = conexion.prepareStatement(sqlTxt);
+            ResultSet rs = ps.executeQuery();
+        ){
+            if(rs.next()) {
+                persona.setId(rs.getInt(&quot;id&quot;));
+                persona.setNombre(rs.getString(&quot;nombre&quot;));
+            }
+        }catch(SQLException e) {
+            logger.severe(e.getMessage());
+        }
+
+        return persona;
+    }
+
+    public int ingresar(Persona persona) {
+        String sqlTxt = &quot;insert into persona (nombre) values (?)&quot;;
+        int idIngresado = 0;
+
+        try(
+            Connection conexion = mc.obtenerConexion();
+            PreparedStatement ps = conexion.prepareStatement(sqlTxt, Statement.RETURN_GENERATED_KEYS);
+
+        ){
+            ps.setString(1, persona.getNombre() );
+            int filasAfectadas = ps.executeUpdate();
+
+            ResultSet rs = ps.getGeneratedKeys();
+            if(rs.next()) {
+                idIngresado = rs.getInt(1);
+            }           
+
+            if(filasAfectadas == 0) {
+                throw new SQLException(&quot;No se pudo ingresar el registro&quot;);
+            }
+
+        }catch(SQLException e) {logger.severe(e.getMessage());}
+
+        return idIngresado;
+    }
+}
+
+</code></pre>
+
+<p><code>/unoauno/src/main/java/cl/lherrera/unoauno/dao/DatoPersonalDAO.java</code></p>
+<pre><code class="java">package cl.lherrera.unoauno.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Logger;
+
+import cl.lherrera.unoauno.modelo.DatoPersonal;
+import cl.lherrera.unoauno.modelo.Persona;
+
+public class DatoPersonalDAO {
+    private Logger logger = Logger.getLogger(DatoPersonalDAO.class.getName());
+
+    private static ManejaConexion manejaDB = ManejaConexion.obtenerManejo();
+
+    public List&lt;DatoPersonal&gt; obtenerTodos() {
+        List&lt;DatoPersonal&gt; datospersonales = new ArrayList&lt;&gt;();
+
+        String sqlTxt = &quot;select id, telefono, email, persona_id from dato_personal&quot;;
+
+        try(
+            Connection conexion = manejaDB.obtenerConexion();   
+            PreparedStatement ps = conexion.prepareStatement(sqlTxt);
+            ResultSet rs = ps.executeQuery();
+        ){
+            while(rs.next()) {
+                DatoPersonal datoPersonal = new DatoPersonal();
+                // llenamos la persona con el id que tenemos
+                Persona persona = (new PersonaDAO()).obtenerPorId(rs.getInt(&quot;id&quot;));
+
+                datoPersonal.setId(rs.getInt(&quot;id&quot;));
+                datoPersonal.setTelefono(rs.getString(&quot;telefono&quot;));
+                datoPersonal.setEmail(rs.getString(&quot;email&quot;));
+                datoPersonal.setPersona(persona);
+
+                // lo dejamos en la lista
+                datospersonales.add(datoPersonal);
+            }
+        }catch(SQLException e){
+            logger.info(e.getMessage());
+        }
+
+        return datospersonales;
+    }
+
+    public int ingresar(DatoPersonal datoPersonal) {
+        String sqlTxt = &quot;insert into dato_personal (telefono, email, persona_id) values (?, ?, ?)&quot;;
+        int idIngresado = 0;
+
+        int filasAfectadas = 0;
+
+        try(
+            Connection conexion = manejaDB.obtenerConexion();
+            PreparedStatement ps = conexion.prepareStatement(sqlTxt, Statement.RETURN_GENERATED_KEYS);
+        ){
+            ps.setString(1, datoPersonal.getTelefono());
+            ps.setString(2, datoPersonal.getEmail());
+            ps.setInt(3, datoPersonal.getPersona().getId() );
+            filasAfectadas = ps.executeUpdate();
+
+            ResultSet rs = ps.getGeneratedKeys();
+            if(rs.next()) {
+                idIngresado = rs.getInt(1);
+            }
+
+            if(filasAfectadas == 0) {
+                throw new SQLException(&quot;No se pudo ingresar el registro&quot;);
+            }
+
+        }catch(SQLException e) {logger.severe(e.getMessage());}
+
+        return idIngresado;
+    }
+}
+</code></pre>
+
+<h2 id="modelo">Modelo</h2>
+<p><code>/unoauno/src/main/java/cl/lherrera/unoauno/modelo/Persona.java</code></p>
+<pre><code class="java">package cl.lherrera.unoauno.modelo;
+
+public class Persona {
+    private int id;
+    private String nombre;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+}
+
+</code></pre>
+
+<p><code>/unoauno/src/main/java/cl/lherrera/unoauno/modelo/DatoPersonal.java</code></p>
+<pre><code class="java">package cl.lherrera.unoauno.modelo;
+
+public class DatoPersonal {
+    private int id;
+    private String telefono;
+    private String email;
+    private Persona persona;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public Persona getPersona() {
+        return persona;
+    }
+
+    public void setPersona(Persona persona) {
+        this.persona = persona;
+    }
+}
+</code></pre>
+
+<h2 id="todo">TODO</h2>
+<p>Crear los demás servicios de CRUD, además de hacerlo web. </p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../assets/javascripts/vendor.a0c4167b.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.fb26dd1d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../../assets/javascripts/worker/search.37585f48.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
