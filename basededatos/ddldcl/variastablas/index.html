@@ -1,0 +1,1418 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.6">
+    
+    
+      
+        <title>Ejemplos en más de una tabla - JFS - 2020</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.4b9ffd7b.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ejemplos-con-varias-tablas" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../.." title="JFS - 2020" class="md-header-nav__button md-logo" aria-label="JFS - 2020">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            JFS - 2020
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Ejemplos en más de una tabla
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="JFS - 2020" class="md-nav__button md-logo" aria-label="JFS - 2020">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    JFS - 2020
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+    
+    <label class="md-nav__link" for="nav-1">
+      Base de datos...
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Base de datos..." data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Base de datos...
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tipodedatos/" title="Tipos de datos" class="md-nav__link">
+      Tipos de datos
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../usuarios/" title="Usuarios" class="md-nav__link">
+      Usuarios
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3" type="checkbox" id="nav-1-3" checked>
+    
+    <label class="md-nav__link" for="nav-1-3">
+      DDL (estructura) y DCL (Manipulación)...
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="DDL (estructura) y DCL (Manipulación)..." data-md-level="2">
+      <label class="md-nav__title" for="nav-1-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        DDL (estructura) y DCL (Manipulación)...
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ejemplosdeunatabla/" title="Ejemplos de una tabla" class="md-nav__link">
+      Ejemplos de una tabla
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Ejemplos en más de una tabla
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Ejemplos en más de una tabla" class="md-nav__link md-nav__link--active">
+      Ejemplos en más de una tabla
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#definicion-de-la-estructura" class="md-nav__link">
+    Definición de la estructura.
+  </a>
+  
+    <nav class="md-nav" aria-label="Definición de la estructura.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modelo-de-datos" class="md-nav__link">
+    Modelo de datos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ddl-estructura" class="md-nav__link">
+    DDL. (Estructura)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datos-a-ingresar" class="md-nav__link">
+    Datos a ingresar
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comprobar-datos-ingresados" class="md-nav__link">
+    Comprobar datos ingresados.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dcl-manipulacion" class="md-nav__link">
+    DCL (Manipulación) 🥋
+  </a>
+  
+    <nav class="md-nav" aria-label="DCL (Manipulación) 🥋">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interseccion-inner-join" class="md-nav__link">
+    Intersección (inner join)
+  </a>
+  
+    <nav class="md-nav" aria-label="Intersección (inner join)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#direcciones-de-alumnos" class="md-nav__link">
+    Direcciones de alumnos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alumnos-y-cursos" class="md-nav__link">
+    Alumnos y cursos.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#definicion-de-la-estructura" class="md-nav__link">
+    Definición de la estructura.
+  </a>
+  
+    <nav class="md-nav" aria-label="Definición de la estructura.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modelo-de-datos" class="md-nav__link">
+    Modelo de datos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ddl-estructura" class="md-nav__link">
+    DDL. (Estructura)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datos-a-ingresar" class="md-nav__link">
+    Datos a ingresar
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comprobar-datos-ingresados" class="md-nav__link">
+    Comprobar datos ingresados.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dcl-manipulacion" class="md-nav__link">
+    DCL (Manipulación) 🥋
+  </a>
+  
+    <nav class="md-nav" aria-label="DCL (Manipulación) 🥋">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interseccion-inner-join" class="md-nav__link">
+    Intersección (inner join)
+  </a>
+  
+    <nav class="md-nav" aria-label="Intersección (inner join)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#direcciones-de-alumnos" class="md-nav__link">
+    Direcciones de alumnos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alumnos-y-cursos" class="md-nav__link">
+    Alumnos y cursos.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <!-- https://superpatanegra.com/texto/index.php -->
+
+<h1 id="ejemplos-con-varias-tablas">Ejemplos con varias tablas.</h1>
+<ul>
+<li>Se explican las consultas y se muestran los <code>ddl</code>, pero el camino a seguir para poder llegar al modelo, se encuentra detallado en las lecturas.</li>
+<li>No son tratados temas de modelado ni de niveles de normalidad.</li>
+</ul>
+<h2 id="definicion-de-la-estructura">Definición de la estructura.</h2>
+<ul>
+<li>
+<p>Problema:</p>
+<ul>
+<li>Se necesita crear una base de datos que pueda contener la siguiente estructura:<ul>
+<li>Alumnos: Nombre, apellido, dirección (calle, ciudad y región), </li>
+<li>Curso: Descripción.</li>
+<li>Desafíos: Detalle, datos del alumno, datos del curso, calificación y fecha.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Listamos las tablas involucradas en la solución.</p>
+</li>
+</ul>
+<h3 id="modelo-de-datos">Modelo de datos</h3>
+<ul>
+<li>El siguiente modelo, representa la estructura del modelo de la base de datos a utilizar.</li>
+</ul>
+<p><img src="https://github.com/elrerag/pintamiweb/blob/master/jfst/repaso/010.png?raw=true" alt="repaso010.png"></p>
+
+<h3 id="ddl-estructura">DDL. (Estructura)</h3>
+<ul>
+<li>A continuación la definición de cada una de las tablas que componen la estructura del modelo de datos.</li>
+<li>Se ejecuta sin problemas, si es que poseen los permisos correspondientes.</li>
+<li>En el caso que se deseen eliminar estas tablas, hay que ejecutar el <code>drop</code> en orden inverso, para no tener problemas con las restricciones.</li>
+</ul>
+<pre><code class="sql">CREATE TABLE direccion 
+  ( 
+     id     NUMBER NOT NULL, 
+     calle  VARCHAR2(200), 
+     ciudad VARCHAR2(200), 
+     region VARCHAR2(200), 
+     CONSTRAINT pk_direccion PRIMARY KEY (id) 
+  );
+
+CREATE TABLE alumno 
+  ( 
+     id           NUMBER NOT NULL, 
+     rut          VARCHAR2(200), 
+     nombre       VARCHAR2(200), 
+     apellido     VARCHAR2(200), 
+     correo       VARCHAR2(200), 
+     id_direccion NUMBER NOT NULL, 
+     CONSTRAINT pk_alumno -- restricción de clave primaria 
+     PRIMARY KEY (id), 
+     CONSTRAINT fk_direccion_alumno -- restricción de clave foránea  
+     FOREIGN KEY (id_direccion) REFERENCES direccion(id) 
+  ); 
+
+CREATE TABLE curso 
+  ( 
+     id          NUMBER NOT NULL, 
+     descripcion VARCHAR2(200), 
+     CONSTRAINT pk_curso PRIMARY KEY (id) 
+  ); 
+
+CREATE TABLE desafio 
+  ( 
+     id_curso     NUMBER NOT NULL, 
+     id_alumno    NUMBER NOT NULL, 
+     calificacion NUMBER, 
+     detalle      VARCHAR2(200), 
+     fecha        DATE,
+     CONSTRAINT pk_desafio PRIMARY KEY (id_curso, id_alumno), 
+     CONSTRAINT fk_curso_desafio FOREIGN KEY (id_curso) REFERENCES curso(id), 
+     CONSTRAINT fk_alumno_desafio FOREIGN KEY (id_alumno) REFERENCES alumno(id) 
+  );
+
+  COMMIT;
+
+</code></pre>
+
+<h3 id="datos-a-ingresar">Datos a ingresar</h3>
+<ul>
+<li>Ates de poder ejecutar el siguiente <code>script</code>, debemos tener la estructura lista, en caso contrario, no se podrán ingresar datos, a una estructura que se encuentre incompleta.</li>
+</ul>
+<pre><code class="sql">-- dirección
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (1,'4208 Non, C/','Parral','Maule');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (2,'Apartado núm.: 852, 6101 Neque C.','Penco','Biobío');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (3,'Apartado núm.: 733, 3089 Malesuada Avda.','Huechuraba','Metropolitana de Santiago');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (4,'Apdo.:421-6141 At Avda.','Recoleta','Metropolitana de Santiago');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (5,'1449 Odio. ','Retiro','Maule');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (6,'8574 Cursus Ctra.','Estación Central','Metropolitana de Santiago');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (7,'Apartado núm.: 552, 3282 Non, C.','Pedro Aguirre Cerda','Metropolitana de Santiago');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (8,'Apartado núm.: 816, 3374 Ac Ctra.','Pozo Almonte','I');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (9,'3394 Risus, C.','San Miguel','RM');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (10,'5497 Vestibulum Avenida','La Reina','Metropolitana de Santiago');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (11,'8224 Ante. C.','Pencahue','Maule');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (12,'Apdo.:518-3987 Aliquam Avenida','Los Vilos','IV');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (13,'268-5320 Cras Calle','Santiago','Metropolitana de Santiago');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (14,'Apdo.:745-8483 Dui. ','La Cruz','Valparaíso');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (15,'Apdo.:917-8861 A Av.','Los Andes','Valparaíso');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (16,'9630 Purus, Avenida','Cartagena','Valparaíso');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (17,'9281 Nibh C/','El Bosque','Metropolitana de Santiago');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (18,'Apartado núm.: 151, 4092 Sollicitudin Avda.','Maipú','RM');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (19,'182-7520 Libero ','Melipilla','Metropolitana de Santiago');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (20,'Apartado núm.: 788, 9025 Nec Ctra.','Casablanca','Valparaíso');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (21,'Apartado núm.: 947, 8078 Ipsum Carretera','Pudahuel','RM');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (22,'518 Pellentesque Ctra.','Graneros','O''Higgins');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (23,'589-2499 Ante, Avenida','Río Bueno','Los Ríos');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (24,'707-5601 Dictum ','Talagante','Metropolitana de Santiago');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (25,'Apartado núm.: 865, 8492 Arcu. C.','La Ligua','V');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (26,'Apartado núm.: 505, 825 Praesent Ctra.','Pucón','IX');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (27,'5706 Ornare. Carretera','Graneros','VI');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (28,'1666 A ','Quinta de Tilcoco','O''Higgins');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (29,'772-7537 Nisl Avenida','Teodoro Schmidt','IX');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (30,'1692 Ac Calle','Rauco','VII');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (31,'622-7351 Velit Ctra.','Pirque','Metropolitana de Santiago');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (32,'127-7239 Eu Av.','San Ramón','RM');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (33,'319-500 Mauris Calle','San Pedro de la Paz','VII');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (34,'Apartado núm.: 113, 1991 Mus. Avda.','Victoria','Araucanía');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (35,'637-1656 Eleifend Ctra.','Teno','Maule');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (36,'4787 Nunc Av.','Calera de Tango','Metropolitana de Santiago');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (37,'Apartado núm.: 191, 8386 Morbi Avda.','Independencia','RM');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (38,'Apartado núm.: 845, 4811 Felis. Calle','Calera de Tango','Metropolitana de Santiago');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (39,'Apdo.:511-4529 Posuere, ','Quilpué','V');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (40,'403-1939 Sed Calle','Recoleta','Metropolitana de Santiago');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (41,'Apartado núm.: 316, 9394 Interdum. ','Tierra Amarilla','Atacama');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (42,'Apartado núm.: 262, 2350 Enim ','Quellón','X');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (43,'2985 Orci Ctra.','La Granja','Metropolitana de Santiago');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (44,'Apdo.:979-9760 Feugiat C/','Lota','Biobío');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (45,'Apdo.:267-5083 Phasellus Avenida','Antuco','VII');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (46,'219-8706 Vulputate, Avda.','Pucón','Araucanía');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (47,'328-6045 Interdum. C.','Victoria','IX');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (48,'866 Quis, Calle','Huechuraba','RM');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (49,'3479 Sem Carretera','Illapel','Coquimbo');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (50,'958-1336 Tempor Calle','Curacaví','Metropolitana de Santiago');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (51,'Apartado núm.: 969, 1905 Consectetuer ','La Granja','RM');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (52,'717-3309 Neque. Avenida','Puerto Octay','Los Lagos');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (53,'Apartado núm.: 933, 6848 Lorem C/','Coquimbo','Coquimbo');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (54,'Apartado núm.: 414, 9660 Aliquam ','Viña del Mar','V');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (55,'378-6190 Porttitor ','Melipilla','RM');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (56,'344-9821 Elementum C.','Padre Hurtado','Metropolitana de Santiago');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (57,'Apdo.:343-838 Vivamus C/','Portezuelo','Biobío');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (58,'Apdo.:243-4069 Odio. C.','Palmilla','O''Higgins');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (59,'Apdo.:158-6909 Et C.','La Cruz','V');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (60,'6330 Massa ','Renca','Metropolitana de Santiago');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (61,'6533 Iaculis ','La Pintana','RM');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (62,'Apdo.:384-2455 Vivamus Avda.','Río Claro','Maule');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (63,'Apartado núm.: 203, 6833 Ut Avenida','San Vicente','O''Higgins');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (64,'Apdo.:154-1638 Nam ','Recoleta','RM');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (65,'2726 Rutrum, Ctra.','Punta Arenas','XII');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (66,'Apartado núm.: 663, 7268 Lobortis Avenida','Puente Alto','Metropolitana de Santiago');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (67,'Apdo.:829-1018 A, Ctra.','Macul','Metropolitana de Santiago');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (68,'Apdo.:418-4650 Interdum Avenida','Isla de Pascua','V');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (69,'472-2823 Eget ','Castro','Los Lagos');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (70,'Apartado núm.: 968, 4015 Nec C.','Valdivia','XIV');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (71,'Apartado núm.: 342, 662 Sem Carretera','San José de Maipo','RM');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (72,'Apartado núm.: 891, 1449 Risus. Av.','Bulnes','VII');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (73,'Apdo.:992-3562 Laoreet Carretera','Diego de Almagro','Atacama');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (74,'Apdo.:819-8127 Risus Carretera','Contulmo','VII');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (75,'Apartado núm.: 132, 2243 Amet, C/','Pinto','Biobío');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (76,'Apdo.:820-9680 A, Av.','Independencia','RM');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (77,'Apdo.:935-6209 Hendrerit C/','Macul','Metropolitana de Santiago');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (78,'Apartado núm.: 149, 986 Vel Av.','Florida','Biobío');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (79,'Apartado núm.: 123, 6117 Nunc. Calle','Andacollo','IV');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (80,'4464 Nibh Avda.','Paine','RM');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (81,'635-3787 Class Ctra.','Lo Prado','RM');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (82,'3891 Et Av.','Mulchén','Biobío');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (83,'Apdo.:995-6696 Sapien. Av.','Canela','Coquimbo');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (84,'6565 Quis Calle','Lo Barnechea','Metropolitana de Santiago');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (85,'Apartado núm.: 281, 138 Sit Carretera','Tortel','Aisén');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (86,'2869 Fames Avenida','Gorbea','Araucanía');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (87,'6782 Massa. Carretera','Tucapel','Biobío');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (88,'Apdo.:763-7725 Non Carretera','Empedrado','Maule');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (89,'9667 Auctor ','Independencia','RM');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (90,'Apartado núm.: 144, 8231 Diam. Carretera','Mejillones','II');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (91,'Apartado núm.: 831, 6549 Augue Calle','San Bernardo','Metropolitana de Santiago');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (92,'Apartado núm.: 225, 6888 Mauris ','Chanco','Maule');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (93,'Apdo.:951-8460 Aliquam Avenida','La Granja','RM');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (94,'Apdo.:737-6562 Nunc Calle','Curepto','Maule');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (95,'Apdo.:364-1897 Nunc Calle','Panguipulli','Los Ríos');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (96,'Apdo.:186-6696 Ut Av.','Huechuraba','Metropolitana de Santiago');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (97,'1267 Lobortis Carretera','Angol','Araucanía');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (98,'Apdo.:830-8620 Massa. ','Coinco','O''Higgins');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (99,'9525 Vestibulum Calle','San Javier','Maule');
+INSERT INTO direccion (id,calle,ciudad,region) VALUES (100,'Apartado núm.: 957, 2756 Bibendum Avenida','Las Condes','RM');
+-- alumnos
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (1,'15067082-9','John','Petersen','bibendum.Donec@ligulaelitpretium.co.uk',1);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (2,'29478235-4','Josephine','Lawson','neque.et@ad.co.uk',2);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (3,'32358344-7','Jason','Lane','pharetra@non.ca',3);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (4,'38442638-7','Shannon','Herrera','dolor@est.net',4);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (5,'45810119-1','Hilel','Shields','dictum.Proin@nascetur.net',5);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (6,'21543451-6','Karly','Bush','elit.pharetra.ut@Phasellus.org',6);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (7,'27421507-0','Channing','Moran','Fusce.diam.nunc@ac.net',7);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (8,'10323649-5','Gretchen','Snow','dapibus.ligula@veliteget.ca',8);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (9,'38923383-8','Joy','Hays','Donec.egestas.Duis@Phasellus.ca',9);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (10,'42066018-9','Kaitlin','Mosley','enim@pellentesquetellus.net',10);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (11,'29078376-3','Inga','Pope','ullamcorper@duinec.net',11);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (12,'32170529-4','Kelly','Weeks','et.magnis.dis@nec.net',12);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (13,'12906934-1','Abigail','Robles','porttitor.scelerisque@sed.co.uk',13);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (14,'50738344-0','Jordan','Tucker','arcu.imperdiet.ullamcorper@risusNulla.org',14);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (15,'24257003-0','Berk','Hendrix','Proin@amet.com',15);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (16,'23409721-0','Sacha','Bentley','massa.Integer.vitae@cursusdiamat.edu',16);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (17,'35776801-2','Lavinia','Mcmillan','mauris.Integer@Maurisvestibulumneque.net',17);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (18,'17606503-6','Madonna','Sawyer','sodales@iderat.edu',18);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (19,'6147056-5','Ebony','Hays','Mauris.vel@consectetuer.com',19);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (20,'9310089-1','John','Ramos','Sed.auctor.odio@necanteblandit.com',20);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (21,'24172970-2','Marsden','Buck','volutpat.Nulla.facilisis@nonummyFusce.com',21);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (22,'49143177-6','Montana','Mcintyre','arcu.Aliquam.ultrices@lacusvestibulum.ca',22);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (23,'44552711-4','Ramona','Deleon','fermentum@estMauriseu.com',23);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (24,'40432802-6','Dai','Hull','neque@aliquetvel.org',24);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (25,'21121668-9','Hyacinth','Chandler','fringilla.ornare@nullamagna.org',25);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (26,'9469491-4','Wilma','Barrett','nulla.at@scelerisquenequesed.org',26);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (27,'30937922-5','Laith','Munoz','semper@dui.ca',27);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (28,'45510920-5','Sylvia','Stein','nisl.elementum@ornareegestas.net',28);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (29,'44982892-5','Karyn','Ortega','Proin@vulputatelacus.co.uk',29);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (30,'42862897-7','Guy','Knight','egestas.Aliquam@loremeumetus.co.uk',30);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (31,'34731931-7','Dakota','Aguirre','Nunc@Vestibulum.com',31);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (32,'22930220-5','Kylie','Lawson','faucibus@nibh.net',32);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (33,'18549570-1','Porter','Rocha','Sed.eu@non.org',33);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (34,'30970860-1','Cruz','Glass','risus.quis@Morbi.co.uk',34);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (35,'18530285-7','Idola','Lindsay','Fusce.aliquet.magna@Phasellus.net',35);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (36,'16125231-K','Upton','Tanner','amet.nulla.Donec@Integereu.ca',36);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (37,'26309692-4','Elmo','Henry','ut.nisi.a@nuncestmollis.edu',37);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (38,'10895354-3','Kyla','Carroll','nascetur.ridiculus.mus@necleo.edu',38);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (39,'34534586-8','Medge','Carney','libero.dui@Uttinciduntvehicula.ca',39);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (40,'29322036-0','Kibo','Booth','dui@nullaDonec.net',40);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (41,'11755964-5','Stone','Bowen','venenatis@idmagna.com',41);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (42,'43898568-9','Steel','Nixon','enim.Etiam@eget.org',42);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (43,'26668296-4','Ria','Nash','enim.Sed.nulla@porttitortellusnon.com',43);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (44,'34999646-4','Benedict','Allen','et.rutrum@justo.ca',44);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (45,'44491627-3','Myra','Sims','Suspendisse.tristique.neque@Donec.co.uk',45);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (46,'21236617-K','Montana','Campos','nunc.Quisque@dolorDonecfringilla.edu',46);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (47,'36433164-9','Lev','Britt','molestie.arcu@aliquet.co.uk',47);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (48,'15754759-3','Kenyon','English','vel@est.net',48);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (49,'10462345-K','Kareem','Jimenez','accumsan@lectusquismassa.edu',49);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (50,'24895634-8','Elmo','Medina','porttitor@dolorelitpellentesque.net',50);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (51,'10649980-2','Deacon','Calderon','nulla@vitae.com',51);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (52,'47860659-1','Burke','Mcbride','pharetra@massaVestibulumaccumsan.edu',52);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (53,'49646911-9','Nissim','Justice','Fusce.dolor@sed.com',53);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (54,'48557043-8','Isaiah','Oconnor','massa.Suspendisse@bibendumullamcorper.ca',54);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (55,'11007607-K','Alden','Knox','tincidunt@acmattis.edu',55);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (56,'40434836-1','Jasmine','Stanton','et.netus@eutempor.edu',56);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (57,'33234353-K','Kamal','Logan','Quisque.nonummy@tacitisociosqu.ca',57);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (58,'24940802-6','Carlos','Frazier','Ut.tincidunt@loremluctus.ca',58);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (59,'47845945-9','Deacon','Blanchard','amet.risus@Aeneanegetmagna.edu',59);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (60,'34669263-4','Liberty','Bender','Donec.at@etnetus.co.uk',60);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (61,'5323035-0','Rhonda','Henderson','vulputate.eu@orci.edu',61);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (62,'27385603-K','Rafael','Patton','blandit.at@Nullamvitaediam.edu',62);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (63,'43717025-8','Ray','Burton','dis@Nunclectuspede.co.uk',63);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (64,'26009259-6','Shelly','Osborne','augue@neque.net',64);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (65,'43842576-4','Valentine','Rosa','Donec.tempus@sitametorci.org',65);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (66,'41601648-8','Bevis','Cooke','In@adipiscinglacusUt.co.uk',66);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (67,'23559642-3','Orlando','Chapman','suscipit@quam.ca',67);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (68,'6176958-7','Kristen','Mays','adipiscing.elit.Curabitur@variusNam.org',68);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (69,'17484266-3','Asher','Fry','quis.pede@dui.ca',69);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (70,'48849457-0','Hedwig','Welch','orci.Donec.nibh@etmalesuada.org',70);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (71,'45258091-8','Constance','Whitley','fringilla.euismod.enim@Donecsollicitudinadipiscing.edu',71);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (72,'17117599-2','Cassandra','Griffith','a.felis.ullamcorper@utodio.com',72);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (73,'17246760-1','Ali','Reese','vehicula.Pellentesque@Proindolor.edu',73);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (74,'34655619-6','Samson','Beasley','sollicitudin.adipiscing.ligula@pedeac.co.uk',74);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (75,'26663711-K','Yetta','Hopkins','Curabitur.massa.Vestibulum@mauris.com',75);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (76,'5050341-0','Germane','Estes','Integer@tristique.ca',76);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (77,'33653325-2','Delilah','Anderson','in.dolor.Fusce@nullaat.com',77);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (78,'43694492-6','Latifah','Dodson','in.consequat.enim@Sedidrisus.co.uk',78);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (79,'20520886-0','Talon','Carson','cursus.in@vitae.org',79);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (80,'28448737-0','Erasmus','Knox','neque.et@nonummyultriciesornare.ca',80);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (81,'28174882-3','Ocean','Freeman','velit@elitsed.ca',81);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (82,'32092787-0','Dominic','Mcdaniel','ac.eleifend@habitantmorbitristique.org',82);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (83,'29730560-3','Jacqueline','Fitzgerald','scelerisque@necante.co.uk',83);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (84,'36000452-K','Stone','Watson','sagittis.placerat.Cras@aliquamarcuAliquam.com',84);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (85,'38927252-3','Charles','Frost','natoque.penatibus@ultricessitamet.org',85);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (86,'26223237-9','Elmo','Forbes','elit@posuere.com',86);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (87,'20080071-0','Eric','Holmes','Nunc@diamSed.org',87);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (88,'33833791-4','Keith','Golden','risus.quis@at.ca',88);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (89,'11926278-K','Zorita','Hart','dignissim.lacus@semperrutrumFusce.ca',89);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (90,'49831596-8','Leonard','Boone','Nulla@molestietellusAenean.edu',90);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (91,'6969075-0','Yardley','Mccarthy','ut@facilisisfacilisismagna.org',91);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (92,'21524393-1','Jordan','Baker','venenatis@fermentummetusAenean.com',92);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (93,'15859785-3','Alice','Porter','sit.amet@erosNamconsequat.co.uk',93);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (94,'7755698-2','Magee','Rios','turpis.egestas@loremac.edu',94);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (95,'8570254-8','Rigel','Burch','rhoncus@amet.com',95);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (96,'32918740-3','Harper','Clarke','non.arcu@Phaselluslibero.com',96);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (97,'35577644-1','Oleg','Ayers','Morbi.accumsan.laoreet@nisl.org',97);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (98,'6254465-1','Lev','Albert','eu@et.edu',98);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (99,'37297864-3','Nichole','Rivas','sit.amet.consectetuer@Craseu.edu',99);
+INSERT INTO alumno (id,rut,nombre,apellido,correo,id_direccion) VALUES (100,'31096614-2','Cade','Miranda','aliquet@viverra.edu',100);
+-- Curso
+INSERT INTO curso (id,descripcion) VALUES (1,'Java full stack');
+INSERT INTO curso (id,descripcion) VALUES (2,'Node js');
+INSERT INTO curso (id,descripcion) VALUES (3,'Gitflow');
+INSERT INTO curso (id,descripcion) VALUES (4,'Android');
+INSERT INTO curso (id,descripcion) VALUES (5,'Django');
+INSERT INTO curso (id,descripcion) VALUES (6,'Diseño UX/UI');
+INSERT INTO curso (id,descripcion) VALUES (7,'Python');
+INSERT INTO curso (id,descripcion) VALUES (8,'Vue js');
+INSERT INTO curso (id,descripcion) VALUES (9,'React js');
+INSERT INTO curso (id,descripcion) VALUES (10,'Docker');
+-- Desafio
+
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (7,73,64,'mauris',TO_DATE('2020/01/01', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (6,13,48,'magna. Ut',TO_DATE('2020/06/15', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (8,15,56,'lacus pede',TO_DATE('2020/11/11', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (4,25,74,'ullamcorper, velit in',TO_DATE('2020/07/08', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (4,19,78,'mattis ornare, lectus',TO_DATE('2020/03/22', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (9,44,71,'semper',TO_DATE('2020/01/01', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (1,31,94,'dolor.',TO_DATE('2020/03/21', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (5,56,71,'imperdiet nec,',TO_DATE('2020/03/29', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (9,57,66,'Proin velit. Sed',TO_DATE('2020/03/23', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (1,67,72,'accumsan',TO_DATE('2020/09/09', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (2,12,90,'adipiscing',TO_DATE('2020/04/04', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (3,63,100,'ipsum sodales purus,',TO_DATE('2020/10/10', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (5,93,47,'risus.',TO_DATE('2020/12/16', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (7,40,51,'sem egestas blandit.',TO_DATE('2020/03/23', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (10,06,52,'lorem vitae odio',TO_DATE('2020/02/28', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (3,84,32,'eget,',TO_DATE('2020/03/03', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (8,52,43,'sapien, gravida',TO_DATE('2020/03/21', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (1,21,75,'tortor.',TO_DATE('2020/12/12', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (4,40,73,'turpis egestas.',TO_DATE('2020/04/30', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (9,80,83,'placerat',TO_DATE('2020/03/20', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (1,24,69,'velit',TO_DATE('2020/10/10', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (9,1,91,'enim non nisi.',TO_DATE('2020/01/01', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (9,18,35,'erat neque non',TO_DATE('2020/03/28', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (4,9,68,'vitae nibh.',TO_DATE('2020/10/10', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (8,79,53,'lectus, a sollicitudin',TO_DATE('2020/04/30', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (5,23,60,'velit dui, semper',TO_DATE('2020/05/05', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (10,23,80,'et arcu imperdiet',TO_DATE('2020/07/19', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (10,73,77,'litora',TO_DATE('2020/11/11', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (2,17,85,'dolor elit, pellentesque',TO_DATE('2020/04/04', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (7,61,61,'elit,',TO_DATE('2020/05/05', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (9,74,45,'velit. Pellentesque ultricies',TO_DATE('2020/06/29', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (9,27,52,'quis',TO_DATE('2020/09/19', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (6,87,56,'eros turpis',TO_DATE('2020/04/04', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (10,21,97,'Aliquam adipiscing lobortis',TO_DATE('2020/09/09', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (9,32,54,'ipsum porta',TO_DATE('2020/09/19', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (3,68,40,'eu, euismod ac,',TO_DATE('2020/10/10', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (2,32,34,'mauris a nunc.',TO_DATE('2020/04/04', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (3,23,88,'massa.',TO_DATE('2020/01/31', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (5,26,100,'et',TO_DATE('2020/03/23', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (10,51,96,'rutrum. Fusce dolor',TO_DATE('2020/11/11', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (9,19,85,'blandit mattis.',TO_DATE('2020/08/08', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (2,25,76,'eget massa. Suspendisse',TO_DATE('2020/02/27', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (5,72,73,'sodales',TO_DATE('2020/05/05', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (6,60,43,'in consectetuer',TO_DATE('2020/04/14', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (2,19,40,'In tincidunt congue',TO_DATE('2020/07/07', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (2,30,30,'turpis egestas.',TO_DATE('2020/03/13', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (5,49,59,'nonummy ac, feugiat',TO_DATE('2020/03/03', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (5,12,45,'Phasellus at',TO_DATE('2020/01/31', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (2,81,36,'risus',TO_DATE('2020/08/08', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (10,38,82,'Mauris molestie pharetra',TO_DATE('2020/02/02', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (9,61,93,'mollis.',TO_DATE('2020/08/18', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (1,45,90,'justo',TO_DATE('2020/03/25', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (10,70,48,'Phasellus ornare.',TO_DATE('2020/05/05', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (5,35,84,'semper erat, in',TO_DATE('2020/03/27', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (2,13,74,'sed',TO_DATE('2020/09/09', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (1,11,32,'adipiscing. Mauris',TO_DATE('2020/03/24', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (9,12,78,'nisi. Aenean',TO_DATE('2020/03/24', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (1,57,73,'et netus',TO_DATE('2020/01/01', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (4,7,50,'Proin mi.',TO_DATE('2020/07/07', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (10,45,30,'elementum at,',TO_DATE('2020/01/31', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (10,44,30,'feugiat nec, diam.',TO_DATE('2020/07/07', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (3,15,37,'vulputate ullamcorper magna.',TO_DATE('2020/03/29', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (8,87,59,'Morbi quis urna.',TO_DATE('2020/02/02', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (10,87,39,'lectus',TO_DATE('2020/07/07', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (8,39,99,'odio semper',TO_DATE('2020/03/25', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (4,30,50,'risus quis',TO_DATE('2020/08/18', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (5,25,91,'eu sem.',TO_DATE('2020/05/15', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (4,55,44,'sem. Pellentesque',TO_DATE('2020/08/08', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (1,39,44,'Quisque',TO_DATE('2020/03/24', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (9,100,89,'eget, ipsum. Donec',TO_DATE('2020/06/13', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (4,56,90,'Donec',TO_DATE('2020/05/15', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (10,24,99,'cursus vestibulum.',TO_DATE('2020/03/20', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (9,45,74,'elit sed',TO_DATE('2020/04/14', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (3,95,54,'cursus non, egestas',TO_DATE('2020/05/05', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (8,66,99,'pulvinar',TO_DATE('2020/03/27', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (2,77,56,'Sed',TO_DATE('2020/03/24', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (6,32,63,'in molestie',TO_DATE('2020/07/06', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (9,5,92,'massa. Mauris vestibulum,',TO_DATE('2020/12/18', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (6,38,80,'ut, nulla. Cras',TO_DATE('2020/06/06', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (6,23,70,'tincidunt',TO_DATE('2020/09/09', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (7,14,80,'nascetur ridiculus',TO_DATE('2020/03/27', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (8,44,99,'odio',TO_DATE('2020/09/09', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (9,53,34,'consectetuer,',TO_DATE('2020/03/23', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (9,7,49,'molestie orci tincidunt',TO_DATE('2020/03/22', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (9,63,90,'Quisque nonummy ipsum',TO_DATE('2020/05/05', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (4,33,59,'lorem',TO_DATE('2020/12/15', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (4,50,86,'blandit at,',TO_DATE('2020/07/07', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (1,99,36,'vitae, sodales',TO_DATE('2020/05/30', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (5,2,42,'ac,',TO_DATE('2020/03/03', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (9,54,58,'magnis',TO_DATE('2020/07/07', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (9,66,74,'velit',TO_DATE('2020/04/04', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (4,18,71,'Aliquam',TO_DATE('2020/08/08', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (2,92,36,'eget ipsum.',TO_DATE('2020/09/09', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (2,79,51,'sit amet risus.',TO_DATE('2020/12/13', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (6,20,48,'lorem eu metus.',TO_DATE('2020/03/29', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (5,1,31,'eu neque',TO_DATE('2020/03/21', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (5,5,93,'pede, nonummy',TO_DATE('2020/12/16', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (3,67,37,'et magnis dis',TO_DATE('2020/03/21', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (6,53,30,'arcu.',TO_DATE('2020/03/29', 'YYYY-MM-DD'));
+INSERT INTO desafio (id_curso,id_alumno,calificacion,detalle,fecha) VALUES (8,31,79,'Cras interdum.',TO_DATE('2020/11/16', 'YYYY-MM-DD'));
+
+</code></pre>
+
+<h3 id="comprobar-datos-ingresados">Comprobar datos ingresados.</h3>
+<p><code>Tabla: Dirección.</code></p>
+<pre><code class="sql">SELECT id, 
+       calle, 
+       ciudad, 
+       region 
+FROM   direccion;
+</code></pre>
+
+<ul>
+<li>
+<p>Recordar que podemos usar alias, para poder identificar la tabla, no es muy útil en esta situación de una tabla; pero cuando están más tablas en juego, habrá una gran diferencia entre usar un alias o no.</p>
+</li>
+<li>
+<p>La siguiente consulta produce el mismo resultado.</p>
+</li>
+</ul>
+<pre><code class="sql">SELECT d.id, 
+       d.calle, 
+       d.ciudad, 
+       d.region 
+FROM   direccion d;
+</code></pre>
+
+<pre><code>Output:
+
+ID |CALLE                                      |CIUDAD             |REGION                   |
+---|-------------------------------------------|-------------------|-------------------------|
+  1|4208 Non, C/                               |Parral             |Maule                    |
+  2|Apartado núm.: 852, 6101 Neque C.          |Penco              |Biobío                   |
+  3|Apartado núm.: 733, 3089 Malesuada Avda.   |Huechuraba         |Metropolitana de Santiago|
+  4|Apdo.:421-6141 At Avda.                    |Recoleta           |Metropolitana de Santiago|
+  5|1449 Odio.                                 |Retiro             |Maule                    |
+
+  ...
+
+ 95|Apdo.:364-1897 Nunc Calle                  |Panguipulli        |Los Ríos                 |
+ 96|Apdo.:186-6696 Ut Av.                      |Huechuraba         |Metropolitana de Santiago|
+ 97|1267 Lobortis Carretera                    |Angol              |Araucanía                |
+ 98|Apdo.:830-8620 Massa.                      |Coinco             |O'Higgins                |
+ 99|9525 Vestibulum Calle                      |San Javier         |Maule                    |
+100|Apartado núm.: 957, 2756 Bibendum Avenida  |Las Condes         |RM                       |
+</code></pre>
+
+<p><code>Tabla: Alumno.</code></p>
+<pre><code class="sql">SELECT a.id, 
+       a.rut, 
+       a.nombre, 
+       a.apellido, 
+       a.correo, 
+       a.id_direccion 
+FROM   alumno a; 
+</code></pre>
+
+<pre><code>Output:
+
+ID |RUT       |NOMBRE    |APELLIDO  |CORREO                                                |ID_DIRECCION|
+---|----------|----------|----------|------------------------------------------------------|------------|
+  1|15067082-9|John      |Petersen  |bibendum.Donec@ligulaelitpretium.co.uk                |           1|
+  2|29478235-4|Josephine |Lawson    |neque.et@ad.co.uk                                     |           2|
+  3|32358344-7|Jason     |Lane      |pharetra@non.ca                                       |           3|
+  4|38442638-7|Shannon   |Herrera   |dolor@est.net                                         |           4|
+
+...
+
+ 97|35577644-1|Oleg      |Ayers     |Morbi.accumsan.laoreet@nisl.org                       |          97|
+ 98|6254465-1 |Lev       |Albert    |eu@et.edu                                             |          98|
+ 99|37297864-3|Nichole   |Rivas     |sit.amet.consectetuer@Craseu.edu                      |          99|
+100|31096614-2|Cade      |Miranda   |aliquet@viverra.edu                                   |         100|
+</code></pre>
+
+<p><code>Tabla: Curso.</code></p>
+<pre><code class="sql">SELECT c.id, 
+       c.descripcion 
+FROM   curso c; 
+</code></pre>
+
+<pre><code>Output:
+
+ID|DESCRIPCION    |
+--|---------------|
+ 1|Java full stack|
+ 2|Node js        |
+ 3|Gitflow        |
+ 4|Android        |
+ 5|Django         |
+ 6|Diseño UX/UI   |
+ 7|Python         |
+ 8|Vue js         |
+ 9|React js       |
+10|Docker         |
+</code></pre>
+
+<p><code>Tabla: Desafío.</code></p>
+<pre><code class="sql">SELECT d2.id_curso, 
+       d2.id_alumno, 
+       d2.calificacion, 
+       d2.detalle, 
+       d2.fecha 
+FROM   desafio d2;
+</code></pre>
+
+<pre><code>Output: 100 filas
+
+ID_CURSO|ID_ALUMNO|CALIFICACION|DETALLE                      |FECHA              |
+--------|---------|------------|-----------------------------|-------------------|
+       7|       73|          64|mauris                       |2020-01-01 00:00:00|
+       6|       13|          48|magna. Ut                    |2020-06-15 00:00:00|
+       8|       15|          56|lacus pede                   |2020-11-11 00:00:00|
+       4|       25|          74|ullamcorper, velit in        |2020-07-08 00:00:00|
+       4|       19|          78|mattis ornare, lectus        |2020-03-22 00:00:00|
+
+...
+
+       5|        1|          31|eu neque                     |2020-03-21 00:00:00|
+       5|        5|          93|pede, nonummy                |2020-12-16 00:00:00|
+       3|       67|          37|et magnis dis                |2020-03-21 00:00:00|
+       6|       53|          30|arcu.                        |2020-03-29 00:00:00|
+       8|       31|          79|Cras interdum.               |2020-11-16 00:00:00|
+</code></pre>
+
+<h2 id="dcl-manipulacion">DCL (Manipulación) 🥋</h2>
+<ul>
+<li>Antes de comenzar a aplicar todos estas técnicas de búsqueda, no debemos confundir lo siguiente:<ul>
+<li>🎱 Cuando ingresamos un dato, lo hacemos a una tabla, secuencialmente. Es decir que no se ingresan datos en varias tablas.</li>
+<li>🎱 Lo mismo ocurre para una actualización.</li>
+<li>🎱 Es por eso que cuando trabajamos con varias tablas, estamos hablando de consultas, sin perjuicio de lo que hagamos justo después de una consulta a varias tablas, sea un ingreso de información; pero nuevamente, este ingreso lo realizará a una sola tabla, que debe contener exactamente los mismos campos que el resultado de la consulta a varias tablas (<code>select ... insert</code>).</li>
+</ul>
+</li>
+</ul>
+<h3 id="interseccion-inner-join">Intersección (<code>inner join</code>)</h3>
+<ul>
+<li>Cuando tengamos una relación entre dos o más tablas, podemos llenar un resultado final, compuesto de una o más tablas.</li>
+<li>La forma de interceptar la información de las tablas, es identificando referencias de una tabla a otra, es decir que si la tabla posee un <code>FOREIGN KEY</code>, podemos aplicar un <code>inner join</code> a esa tabla referenciada utilizando en su filtro <code>on</code> la condición de esta referencia.</li>
+</ul>
+<h4 id="direcciones-de-alumnos">Direcciones de alumnos</h4>
+<ul>
+<li>Se necesita saber las direcciones de los alumnos. (nombre y dirección)</li>
+<li>Debemos saber donde se encuentra esta información, es por eso que antes de realizar una buena consulta, hay que saber la información que contiene cada tabla de nuestra base de datos. Así cuando nos pidan información que se pueda extraer de los datos con los que disponemos, debemos saber como poder reunir datos de nuestra fuente de datos y a través de una consulta, convertirla en la información que se solicita.</li>
+<li>Los datos que sirven para esta consulta están en las tablas <code>alumno</code> y <code>direccion</code>, el <code>FOREIGN KEY</code> que los enlaza es <code>id_direccion</code> y referencia al <code>id</code> de la tabla <code>direccion</code>, por lo que este será el enlace para conectar estas dos tablas.</li>
+<li>Seleccionamos tres columnas:<ul>
+<li><code>a.id AS identificador</code>: El <code>id</code> de la tabla <code>alumno</code>, es por eso que se referencia con el alias <code>a</code>, pueden llamar al alias como se estime conveniente, para este ejemplo, dejo el que auto-completa <code>DBeaver</code>.</li>
+<li><code>Concat (Concat(a.nombre, ' '), a.apellido) AS NOMBRE</code>, es el nombre que se presentará en la tabla de resultados. Utiliza la función <code>concat</code>, que solamente une cadenas. El problema es que <code>11g</code>, recibe 2 parámetros y es por eso que la anidamos con otro <code>Concat</code> interno.<ul>
+<li>En palabras simples, estamos uniendo <code>a.nombre + ' ' + a.apellido</code>, lo que en los resultados se traduce a <code>John Petersen</code>, que sería:<ul>
+<li><code>John</code> + <code>' '</code> +  <code>Petersen</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>Concat (Concat(d.calle, ' '), d.ciudad)</code>: De la misma forma, preparamos el resultado de una concatenación de la información que obtenemos de la tabla <code>direccion</code>.</li>
+</ul>
+</li>
+</ul>
+<pre><code class="sql">SELECT a.id                                       AS identificador, 
+       Concat (Concat(a.nombre, ' '), a.apellido) AS NOMBRE, 
+       Concat (Concat(d.calle, ' '), d.ciudad)    AS direccion 
+FROM   alumno a 
+       INNER JOIN direccion d 
+               ON a.id_direccion = d.id;
+</code></pre>
+
+<pre><code>Output: 100 filas
+
+IDENTIFICADOR|NOMBRE               |DIRECCION                                              |
+-------------|---------------------|-------------------------------------------------------|
+            1|John Petersen        |4208 Non, C/ Parral                                    |
+            2|Josephine Lawson     |Apartado núm.: 852, 6101 Neque C. Penco                |
+            3|Jason Lane           |Apartado núm.: 733, 3089 Malesuada Avda. Huechuraba    |
+            4|Shannon Herrera      |Apdo.:421-6141 At Avda. Recoleta                       |
+            5|Hilel Shields        |1449 Odio.  Retiro                                     |
+
+... 
+
+           96|Harper Clarke        |Apdo.:186-6696 Ut Av. Huechuraba                       |
+           97|Oleg Ayers           |1267 Lobortis Carretera Angol                          |
+           98|Lev Albert           |Apdo.:830-8620 Massa.  Coinco                          |
+           99|Nichole Rivas        |9525 Vestibulum Calle San Javier                       |
+          100|Cade Miranda         |Apartado núm.: 957, 2756 Bibendum Avenida Las Condes   |
+</code></pre>
+
+<p><strong>Ejercicio: Incluir la columna rut, y la región a la columna dirección.</strong></p>
+<!-- Solución: -->
+
+<!-- 
+YGBgIHNxbA0KU0VMRUNUDQphLmlkIEFTIGlkZW50aWZpY2Fkb3IsDQphLlJVVCwNCkNPTkNBVCAoQ09OQ0FUKGEuTk9NQlJFLCAnICcpLCBhLkFQRUxMSURPKSBBUyBOT01CUkUsDQpjb25jYXQoQ09OQ0FUIChDT05DQVQoZC5DQUxMRSAsICcgJyksIENPTkNBVChkLkNJVURBRCAsICcgJykpLCBkLlJFR0lPTikgQVMgZGlyZWNjaW9uDQpGUk9NDQoJQUxVTU5PIGENCklOTkVSIEpPSU4gRElSRUNDSU9OIGQgDQoJT04gYS5JRF9ESVJFQ0NJT04gPSBkLklEOw0KYGBgIA==
+-->
+
+<p>Salida esperada:</p>
+<pre><code>Output:
+
+IDENTIFICADOR|RUT       |NOMBRE               |DIRECCION                                                                      |
+-------------|----------|---------------------|-------------------------------------------------------------------------------|
+            1|15067082-9|John Petersen        |4208 Non, C/ Parral Maule                                                      |
+            2|29478235-4|Josephine Lawson     |Apartado núm.: 852, 6101 Neque C. Penco Biobío                                 |
+            3|32358344-7|Jason Lane           |Apartado núm.: 733, 3089 Malesuada Avda. Huechuraba Metropolitana de Santiago  |
+            4|38442638-7|Shannon Herrera      |Apdo.:421-6141 At Avda. Recoleta Metropolitana de Santiago                     |
+... más filas
+</code></pre>
+
+<p><strong>Ejercicio: Obtener una columna, con toda la información de las dos tablas</strong></p>
+<!-- Solución: -->
+
+<!-- 
+YGBgIHNxbA0KU0VMRUNUDQoJKg0KRlJPTQ0KCUFMVU1OTyBhDQpJTk5FUiBKT0lOIERJUkVDQ0lPTiBkIE9ODQoJYS5JRF9ESVJFQ0NJT04gPSBkLklEOw0KDQotLSBvIGVzdG8NCg0KU0VMRUNUDQoJYS4qLCBkLioNCkZST00NCglBTFVNTk8gYQ0KSU5ORVIgSk9JTiBESVJFQ0NJT04gZCBPTg0KCWEuSURfRElSRUNDSU9OID0gZC5JRDsNCg0KLS0gUGVybyBtdWNobyBtZWpvciBlc3RvDQoNClNFTEVDVA0KCWEuSUQsDQoJYS5OT01CUkUsDQoJYS5BUEVMTElETywNCglhLkNPUlJFTywNCglhLklEX0RJUkVDQ0lPTiwNCglkLklELA0KCWQuQ0FMTEUsDQoJZC5DSVVEQUQsDQoJZC5SRUdJT04NCkZST00NCglBTFVNTk8gYQ0KSU5ORVIgSk9JTiBESVJFQ0NJT04gZCBPTg0KCWEuSURfRElSRUNDSU9OID0gZC5JRDsNCmBgYA==
+-->
+
+<p>Salida esperada:</p>
+<pre><code>Output:
+
+ID |NOMBRE    |APELLIDO  |CORREO                                                |ID_DIRECCION|ID |CALLE                                      |CIUDAD             |REGION                   |
+---|----------|----------|------------------------------------------------------|------------|---|-------------------------------------------|-------------------|-------------------------|
+  1|John      |Petersen  |bibendum.Donec@ligulaelitpretium.co.uk                |           1|  1|4208 Non, C/                               |Parral             |Maule                    |
+  2|Josephine |Lawson    |neque.et@ad.co.uk                                     |           2|  2|Apartado núm.: 852, 6101 Neque C.          |Penco              |Biobío                   |
+  3|Jason     |Lane      |pharetra@non.ca                                       |           3|  3|Apartado núm.: 733, 3089 Malesuada Avda.   |Huechuraba         |Metropolitana de Santiago|
+
+... más columnas
+</code></pre>
+
+<p><strong>Ejercicio: Alumnos por región</strong></p>
+<ul>
+<li>Se necesita listar la información de la cantidad de alumnos que posee cada región.</li>
+<li>Se excluye del informe a la región del <code>Maule</code>.</li>
+<li><code>TIP:</code> Se puede anidar una condición <code>and</code> al <code>on del inner join</code>, para un mejor filtrado.</li>
+<li>Estos resultados deben ser presentados de mayor a menor.</li>
+</ul>
+<!-- Solución: -->
+
+<!--
+YGBgIHNxbA0KU0VMRUNUIGQyLnJlZ2lvbiAgIEFTIFJFR0lPTiwgDQogICAgICAgQ291bnQoYS5pZCkgQVMgYWx1bW5vc1hyZWdpb24gDQpGUk9NICAgZGlyZWNjaW9uIGQyIA0KICAgICAgIElOTkVSIEpPSU4gYWx1bW5vIGEgDQogICAgICAgICAgICAgICBPTiBhLmlkX2RpcmVjY2lvbiA9IGQyLmlkIA0KICAgICAgICAgICAgICAgQU5EIGQyLnJlZ2lvbiAhPSAnTWF1bGUnDQpHUk9VUCAgQlkgcmVnaW9uIA0KT1JERVIgIEJZIGFsdW1ub3N4cmVnaW9uIERFU0M7DQpgYGA=
+-->
+
+<p>Salida esperada:</p>
+<pre><code>Output:
+
+REGION                   |ALUMNOSXREGION|
+-------------------------|--------------|
+Metropolitana de Santiago|            23|
+RM                       |            17|
+Biobío                   |             7|
+O'Higgins                |             5|
+V                        |             5|
+VII                      |             5|
+Araucanía                |             4|
+Valparaíso               |             4|
+IX                       |             3|
+Coquimbo                 |             3|
+Los Lagos                |             2|
+Los Ríos                 |             2|
+Atacama                  |             2|
+IV                       |             2|
+X                        |             1|
+XIV                      |             1|
+XII                      |             1|
+VI                       |             1|
+I                        |             1|
+Aisén                    |             1|
+II                       |             1|
+</code></pre>
+
+<h4 id="alumnos-y-cursos">Alumnos y cursos.</h4>
+<ul>
+<li>
+<p>Las tablas <code>alumno &amp; curso</code>, no parecen estar relacionadas, ya que en ninguna tabla tenemos un <code>FOREIGN KEY</code> en <code>alumno</code> que haga referencia directa a <code>curso</code>, lo que se repite en <code>curso</code>.</p>
+<ul>
+<li>Dicho esto, debemos buscar una forma de relacionar a estas dos tablas para poder extraer sus datos.</li>
+<li>No disponemos de una tabla de matrículas desde donde podríamos obtener la información de las tablas.</li>
+<li>La tabla <code>desafio</code>, resulta ser nuestra única opción de obtener una relación entre <code>alumno &amp; curso</code>, no es lo más optimo, pero no tenemos más opción.</li>
+<li>Entonces para obtener el total de alumnos matriculados por curso, utilizando una tercera tabla que servirá de enlace entre las dos que necesitamos.</li>
+</ul>
+</li>
+<li>
+<p><strong>Determinamos la cantidad de alumnos por curso</strong></p>
+</li>
+</ul>
+<pre><code class="sql">SELECT c.descripcion AS curso, 
+       Count(a.id)   AS cantidadAlumnos 
+FROM   alumno a 
+       INNER JOIN desafio d 
+               ON d.id_alumno = a.id 
+       INNER JOIN curso c 
+               ON c.id = d.id_curso 
+GROUP  BY c.descripcion;
+</code></pre>
+
+<pre><code>Output:
+
+CURSO          |CANTIDADALUMNOS|
+---------------|---------------|
+Node js        |             11|
+Diseño UX/UI   |              8|
+Java full stack|              9|
+Android        |             11|
+Django         |             12|
+Gitflow        |              7|
+Vue js         |              8|
+Python         |              4|
+React js       |             19|
+Docker         |             11|
+</code></pre>
+
+<p><strong>Ejercicio: Determinar el curso con más estudiantes</strong></p>
+<!-- Solución -->
+
+<!--  
+YGBgIHNxbA0KU0VMRUNUDQoJY3Vyc28sDQoJY2FudGlkYWRBbHVtbm9zIEFTIG51bV9hbHVtbm9zDQoJDQpGUk9NDQoJKA0KCVNFTEVDVA0KCQljLmRlc2NyaXBjaW9uIEFTIGN1cnNvLCBDb3VudChhLmlkKSBBUyBjYW50aWRhZEFsdW1ub3MNCglGUk9NDQoJCWFsdW1ubyBhDQoJSU5ORVIgSk9JTiBkZXNhZmlvIGQgT04NCgkJZC5pZF9hbHVtbm8gPSBhLmlkDQoJSU5ORVIgSk9JTiBjdXJzbyBjIE9ODQoJCWMuaWQgPSBkLmlkX2N1cnNvDQoJR1JPVVAgQlkNCgkJYy5kZXNjcmlwY2lvbg0KCQlPUkRFUiBCWSBjYW50aWRhZEFsdW1ub3MgREVTQyANCgkNCg0KKSB0ZW1wDQpXSEVSRSByb3dudW0gPD0gMTsNCmBgYA==
+-->
+
+<p>Salida esperada:</p>
+<ul>
+<li>Nota, probar una consulta ordenada inversa y obtener el primer elemento.</li>
+<li>Investigar funciones <code>count()</code> y <code>max()</code></li>
+</ul>
+<pre><code>Output:
+
+CURSO   |NUM_ALUMNOS|
+--------|-----------|
+React js|         19|
+</code></pre>
+
+<p><strong>Ejercicio: Obtener el Rut y nombre por curso, de todos los alumnos que cursen algo relacionado con <code>javascript</code></strong></p>
+<ul>
+<li>Investigar el uso del <a href="https://orlandoolguin.wordpress.com/2009/03/31/uso-de-like-en-consultas/">LIKE</a>, para resolver este ejemplo.</li>
+<li>Hay que recordar que disponemos de una única fuente de datos, y la información que se obtenga, puede ser mejor respaldada, pero en nuestra base, solamente disponemos de nombres que llevan el <code>js</code> en sus descripciones, por lo tanto, es nuestra única fuente y la debemos utilizar.</li>
+<li>La información que nos solicitan, no tiene que estar explicita a como se pide en nuestra base de datos, es tarea nuestra, extraer la información usando el lenguaje de manipulación de datos.</li>
+</ul>
+<!-- Solución -->
+
+<!-- 
+YGBgIHNxbA0KU0VMRUNUIGMuZGVzY3JpcGNpb24gICAgICAgICAgICAgICAgICAgICAgICAgICAgIEFTIGN1cnNvLCANCiAgICAgICBhLnJ1dCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBBUyBydXQsIA0KICAgICAgIENvbmNhdChDb25jYXQoYS5ub21icmUsICcgJyksIGEuYXBlbGxpZG8pIEFTIG5vbWJyZSANCkZST00gICBhbHVtbm8gYSANCiAgICAgICBJTk5FUiBKT0lOIGRlc2FmaW8gZCANCiAgICAgICAgICAgICAgIE9OIGQuaWRfYWx1bW5vID0gYS5pZCANCiAgICAgICBJTk5FUiBKT0lOIGN1cnNvIGMgDQogICAgICAgICAgICAgICBPTiBjLmlkID0gZC5pZF9jdXJzbyANCiAgICAgICAgICAgICAgICAgIEFORCBjLmRlc2NyaXBjaW9uIExJS0UgJyVqcyUnIA0KT1JERVIgIEJZIGN1cnNvOyANCmBgYA==
+-->
+
+<p>Salida esperada:</p>
+<pre><code>Output:
+
+CURSO   |RUT       |NOMBRE           |
+--------|----------|-----------------|
+Node js |32170529-4|Kelly Weeks      |
+Node js |12906934-1|Abigail Robles   |
+Node js |35776801-2|Lavinia Mcmillan |
+Node js |6147056-5 |Ebony Hays       |
+Node js |21121668-9|Hyacinth Chandler|
+Node js |21524393-1|Jordan Baker     |
+Node js |22930220-5|Kylie Lawson     |
+Node js |33653325-2|Delilah Anderson |
+Node js |20520886-0|Talon Carson     |
+Node js |28174882-3|Ocean Freeman    |
+Node js |42862897-7|Guy Knight       |
+React js|28448737-0|Erasmus Knox     |
+React js|31096614-2|Cade Miranda     |
+React js|34655619-6|Samson Beasley   |
+React js|41601648-8|Bevis Cooke      |
+React js|43717025-8|Ray Burton       |
+React js|5323035-0 |Rhonda Henderson |
+React js|33234353-K|Kamal Logan      |
+React js|48557043-8|Isaiah Oconnor   |
+React js|15067082-9|John Petersen    |
+React js|45810119-1|Hilel Shields    |
+React js|27421507-0|Channing Moran   |
+React js|32170529-4|Kelly Weeks      |
+React js|17606503-6|Madonna Sawyer   |
+React js|6147056-5 |Ebony Hays       |
+React js|30937922-5|Laith Munoz      |
+React js|22930220-5|Kylie Lawson     |
+React js|34999646-4|Benedict Allen   |
+React js|44491627-3|Myra Sims        |
+React js|49646911-9|Nissim Justice   |
+Vue js  |20080071-0|Eric Holmes      |
+Vue js  |20520886-0|Talon Carson     |
+Vue js  |41601648-8|Bevis Cooke      |
+Vue js  |47860659-1|Burke Mcbride    |
+Vue js  |34999646-4|Benedict Allen   |
+Vue js  |34534586-8|Medge Carney     |
+Vue js  |34731931-7|Dakota Aguirre   |
+Vue js  |24257003-0|Berk Hendrix     |
+</code></pre>
+
+<p><strong>Ejercicio: Obtener el ranking de notas para el curso de <code>Java full stack</code> </strong></p>
+<!-- Solución -->
+
+<!-- 
+YGBgIHNxbA0KU0VMRUNUDQoJQ29uY2F0KENvbmNhdChhLm5vbWJyZSwgJyAnKSwgYS5hcGVsbGlkbykgQVMgbm9tYnJlLA0KCWMuZGVzY3JpcGNpb24gQVMgY3Vyc28sDQoJYS5ydXQgQVMgcnV0LA0KCWQuY2FsaWZpY2FjaW9uIEFTIHB1bnRhamVfb2J0ZW5pZG8NCkZST00NCglhbHVtbm8gYQ0KSU5ORVIgSk9JTiBkZXNhZmlvIGQgT04NCglkLmlkX2FsdW1ubyA9IGEuaWQNCklOTkVSIEpPSU4gY3Vyc28gYyBPTg0KCWMuaWQgPSBkLmlkX2N1cnNvDQoJQU5EIGMuSUQgPSAxDQpPUkRFUiBCWQ0KCXB1bnRhamVfb2J0ZW5pZG8gREVTQzsNCmBgYA==
+ -->
+
+<p>Salida esperada</p>
+<pre><code>Output:
+
+NOMBRE         |CURSO          |RUT       |PUNTAJE_OBTENIDO|
+---------------|---------------|----------|----------------|
+Dakota Aguirre |Java full stack|34731931-7|              94|
+Myra Sims      |Java full stack|44491627-3|              90|
+Marsden Buck   |Java full stack|24172970-2|              75|
+Kamal Logan    |Java full stack|33234353-K|              73|
+Orlando Chapman|Java full stack|23559642-3|              72|
+Dai Hull       |Java full stack|40432802-6|              69|
+Medge Carney   |Java full stack|34534586-8|              44|
+Nichole Rivas  |Java full stack|37297864-3|              36|
+Inga Pope      |Java full stack|29078376-3|              32|
+</code></pre>
+
+<p><strong>Ejercicio: El porcentaje de aprobación es del 60%.</strong></p>
+<ul>
+<li>Obtener a todos los alumnos aprobados del curso de <code>Diseño UX/UI</code>.</li>
+<li>Los resultados estarán ordenados de mayor a menor.</li>
+</ul>
+<!-- Solución -->
+
+<!-- 
+YGBgIHNxbA0KU0VMRUNUDQoJQ29uY2F0KENvbmNhdChhLm5vbWJyZSwgJyAnKSwgYS5hcGVsbGlkbykgQVMgbm9tYnJlLA0KCWMuZGVzY3JpcGNpb24gQVMgY3Vyc28sDQoJYS5ydXQgQVMgcnV0LA0KCWQuY2FsaWZpY2FjaW9uIEFTIHB1bnRhamVfb2J0ZW5pZG8NCkZST00NCglhbHVtbm8gYQ0KSU5ORVIgSk9JTiBkZXNhZmlvIGQgT04NCglkLmlkX2FsdW1ubyA9IGEuaWQNCglBTkQgZC5jYWxpZmljYWNpb24gPj0gNjANCklOTkVSIEpPSU4gY3Vyc28gYyBPTg0KCWMuaWQgPSBkLmlkX2N1cnNvDQoJQU5EIGMuSUQgPSA2DQpPUkRFUiBCWQ0KCXB1bnRhamVfb2J0ZW5pZG8gREVTQzsNCmBgYA==
+ -->
+
+<p>Salida esperada</p>
+<pre><code>Output:
+
+NOMBRE       |CURSO       |RUT       |PUNTAJE_OBTENIDO|
+-------------|------------|----------|----------------|
+Kyla Carroll |Diseño UX/UI|10895354-3|              80|
+Ramona Deleon|Diseño UX/UI|44552711-4|              70|
+Kylie Lawson |Diseño UX/UI|22930220-5|              63|
+</code></pre>
+
+<p><strong>Ejercicio: Promedio de notas</strong></p>
+<ul>
+<li>Imprimir el promedio de puntajes obtenidos en los desafíos.</li>
+<li>Los resultados estarán agrupados por curso.</li>
+<li>Solamente deberán estar los desafíos ejecutados en el mes de marzo.<ul>
+<li>Para esto investigar sobre <a href="https://docs.oracle.com/cd/E11882_01/server.112/e41084/conditions011.htm#SQLRF52164"><code>BETWEEN</code></a>, ya que será necesario para la resolución del presente ejercicio.</li>
+</ul>
+</li>
+</ul>
+<!-- Solución -->
+
+<!-- 
+YGBgIHNxbA0KU0VMRUNUDQoJYy5ERVNDUklQQ0lPTiBBUyBDVVJTTywNCglUUlVOQyhBVkcoZC5DQUxJRklDQUNJT04gKSwgMikgQVMgcHJvbWVkaW8gDQpGUk9NDQoJYWx1bW5vIGENCklOTkVSIEpPSU4gZGVzYWZpbyBkIE9ODQoJZC5pZF9hbHVtbm8gPSBhLmlkDQoJQU5EIGQuRkVDSEEgQkVUV0VFTiB0b19kYXRlKCcyMDIwLzAzLzAxJywgJ1lZWVkvbW0vZGQnKSBhbmQgdG9fZGF0ZSgnMjAyMC8wMy8zMScsICdZWVlZL21tL2RkJykNCklOTkVSIEpPSU4gY3Vyc28gYyBPTg0KCWMuaWQgPSBkLmlkX2N1cnNvDQpHUk9VUCBCWSBjLkRFU0NSSVBDSU9OOw0KYGBg
+ -->
+
+<pre><code>Output:
+
+CURSO          |PROMEDIO|
+---------------|--------|
+Node js        |      43|
+Java full stack|      65|
+Diseño UX/UI   |      39|
+Android        |      78|
+Django         |    64.5|
+Gitflow        |   35.33|
+Vue js         |   80.33|
+React js       |    57.5|
+Python         |    65.5|
+Docker         |      99|
+</code></pre>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../ejemplosdeunatabla/" title="Ejemplos de una tabla" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Ejemplos de una tabla
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/vendor.a0c4167b.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.fb26dd1d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../assets/javascripts/worker/search.37585f48.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

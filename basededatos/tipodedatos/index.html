@@ -1,0 +1,758 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.6">
+    
+    
+      
+        <title>Tipos de datos - JFS - 2020</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4b9ffd7b.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#oracle-11g-tipos-de-datos" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="JFS - 2020" class="md-header-nav__button md-logo" aria-label="JFS - 2020">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            JFS - 2020
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Tipos de datos
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="JFS - 2020" class="md-nav__button md-logo" aria-label="JFS - 2020">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    JFS - 2020
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+    
+    <label class="md-nav__link" for="nav-1">
+      Base de datos...
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Base de datos..." data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Base de datos...
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Tipos de datos
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Tipos de datos" class="md-nav__link md-nav__link--active">
+      Tipos de datos
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tipos-comunes" class="md-nav__link">
+    Tipos comunes.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#otros-tipos" class="md-nav__link">
+    Otros tipos
+  </a>
+  
+    <nav class="md-nav" aria-label="Otros tipos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipo-texto" class="md-nav__link">
+    Tipo texto.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipo-numericos" class="md-nav__link">
+    Tipo numéricos.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipo-fechas" class="md-nav__link">
+    Tipo fechas.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#otros-tipos_1" class="md-nav__link">
+    Otros tipos.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen" class="md-nav__link">
+    Resumen.
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../usuarios/" title="Usuarios" class="md-nav__link">
+      Usuarios
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3" type="checkbox" id="nav-1-3">
+    
+    <label class="md-nav__link" for="nav-1-3">
+      DDL (estructura) y DCL (Manipulación)...
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="DDL (estructura) y DCL (Manipulación)..." data-md-level="2">
+      <label class="md-nav__title" for="nav-1-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        DDL (estructura) y DCL (Manipulación)...
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ddldcl/ejemplosdeunatabla/" title="Ejemplos de una tabla" class="md-nav__link">
+      Ejemplos de una tabla
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ddldcl/variastablas/" title="Ejemplos en más de una tabla" class="md-nav__link">
+      Ejemplos en más de una tabla
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tipos-comunes" class="md-nav__link">
+    Tipos comunes.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#otros-tipos" class="md-nav__link">
+    Otros tipos
+  </a>
+  
+    <nav class="md-nav" aria-label="Otros tipos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipo-texto" class="md-nav__link">
+    Tipo texto.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipo-numericos" class="md-nav__link">
+    Tipo numéricos.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipo-fechas" class="md-nav__link">
+    Tipo fechas.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#otros-tipos_1" class="md-nav__link">
+    Otros tipos.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen" class="md-nav__link">
+    Resumen.
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="oracle-11g-tipos-de-datos">Oracle 11g - <strong>Tipos de datos</strong></h1>
+<h2 id="tipos-comunes">Tipos comunes.</h2>
+<ul>
+<li>
+<p><strong><code>VARCHAR2</code></strong></p>
+<ul>
+<li>Para guardar los tipo <code>String</code></li>
+<li>Debemos indicar el largo, ejemplo: <code>nombre VARCHAR2(200)</code>.</li>
+<li>Cadena de caracteres de longitud variable.</li>
+<li>Entre 1 y 4000 bytes como máximo. El tamaño del campo dependerá del valor que contenga, es de longitud variable.</li>
+</ul>
+</li>
+<li>
+<p><strong><code>NUMBER</code></strong></p>
+<ul>
+<li>Almacena números fijos y en punto flotante.</li>
+<li>Se admiten hasta 38 dígitos de precisión y son portables a cualquier entre los diversos sistemas en que funcione Oracle.</li>
+<li>Para declarar un tipo de datos NUMBER en un CREATE ó UPDATE es suficiente con: <code>nombre_columna NUMBER</code><ul>
+<li>Ejemplo: <code>edad Number</code></li>
+</ul>
+</li>
+<li><strong>Opcionalmente</strong> se le puede indicar la precisión (número total de dígitos) y la escala (número de dígitos a la derecha de la coma, decimales, los cogerá de la precisión indicada): <code>nombre_columna NUMBER (precision, escala)</code><ul>
+<li>Ejemplo: <code>area Number(4, 2)</code>, indica que el número total de dígitos es 4, incluyendo los dos decimales, es decir que, admite dos dígitos enteros y dos dígitos decimales.<ul>
+<li>Serían admitidos: <code>2</code>, <code>2.2</code>, <code>22,22</code></li>
+<li>No serían admitidos: <code>222</code>, <code>222.2</code>, <code>222,22</code></li>
+</ul>
+</li>
+<li>Si no se indica la precisión se tomará en función del número a guardar, si no se indica la escala se tomará escala cero.</li>
+<li>Para no indicar la precisión y sí la escala podemos utilizar: nombre_columna NUMBER (*, escala).</li>
+<li>Para introducir números que no estén el el formato estándar de Oracle se puede utilizar la función TO_NUMBER.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong><code>DATE</code></strong></p>
+<ul>
+<li>Almacena un punto en el tiempo (fecha y hora).</li>
+<li>El tipo de datos DATE almacena el año (incluyendo el siglo), <strong>el mes, el día, las horas, los minutos y los segundos (después de medianoche).</strong></li>
+<li>Oracle utiliza su propio formato interno para almacenar fechas.</li>
+<li>Los tipos de datos DATE se almacenan en campos de longitud fija de siete octetos cada uno, correspondiendo al siglo, año, mes, día, hora, minuto, y al segundo.</li>
+<li>Para entrada/salida de fechas, Oracle utiliza <strong>por defecto el formato DD-MM-AA</strong>. Para cambiar este formato de fecha por defecto se utiliza el parámetro NLS_DATE_FORMAT.</li>
+<li>Para insertar fechas que no estén en el mismo formato de fecha estándar de Oracle, se puede utilizar la función TO_DATE con una máscara del formato: TO_DATE (el “13 de noviembre de 1992”, “DD del MES, YYYY”).</li>
+</ul>
+</li>
+</ul>
+<h2 id="otros-tipos">Otros tipos</h2>
+<h3 id="tipo-texto">Tipo texto.</h3>
+<ul>
+<li>
+<p><strong><code>CHAR</code></strong> </p>
+<ul>
+<li>Cadena de caracteres (alfanuméricos) de longitud fija.</li>
+<li>Entre 1 y 2000 bytes como máximo. </li>
+<li>Aunque se introduzca un valor más corto que el indicado en el tamaño, se rellenará al tamaño indicado. </li>
+<li>Es de longitud fija, siempre ocupará lo mismo, independientemente del valor que contenga.</li>
+</ul>
+</li>
+<li>
+<p><strong><code>VARCHAR</code></strong></p>
+<ul>
+<li>Cadena de caracteres de longitud variable.</li>
+<li>En desuso, se utiliza <code>VARCHAR2</code> en su lugar.</li>
+</ul>
+</li>
+<li>
+<p><strong><code>NCHAR</code></strong></p>
+<ul>
+<li>Cadena de caracteres de longitud fija que sólo almacena caracteres Unicode.</li>
+<li>Entre 1 y 2000 bytes como máximo. El juego de caracteres del tipo de datos (<code>datatype</code>) NCHAR sólo puede ser AL16UTF16 ó UTF8. El juego de caracteres se especifica cuando se crea la base de datos Oracle.</li>
+</ul>
+</li>
+<li>
+<p><strong><code>NVARCHAR2</code></strong></p>
+<ul>
+<li>Cadena de caracteres de longitud variable que sólo almacena caracteres Unicode.</li>
+<li>Entre <strong>1 y 4000</strong> bytes como máximo. El juego de caracteres del tipo de datos (<code>datatype</code>) NCHAR sólo puede ser AL16UTF16 ó UTF8. El juego de caracteres se especifica cuando se crea la base de datos Oracle.</li>
+</ul>
+</li>
+</ul>
+<h3 id="tipo-numericos">Tipo numéricos.</h3>
+<ul>
+<li>
+<p><strong><code>LONG</code></strong></p>
+<ul>
+<li>Cadena de caracteres de longitud variable.</li>
+<li>Como máximo admite hasta 2 GB (2000 MB). Los datos LONG deberán ser convertidos apropiadamente al moverse entre diversos sistemas.</li>
+<li>Este tipo de datos está obsoleto (en desuso), en su lugar se utilizan los datos de tipo LOB (CLOB,NCLOB). Oracle recomienda que se convierta el tipo de datos LONG a alguno LOB si aún se está utilizando.</li>
+<li>No se puede utilizar en cláusulas <code>WHERE</code>, <code>GROUP BY</code>, <code>ORDER BY</code>, <code>CONNECT BY</code> ni <code>DISTINCT</code>.</li>
+<li>Una tabla sólo puede contener una columna de tipo LONG. Sólo soporta acceso en secuencias.</li>
+</ul>
+</li>
+<li>
+<p><strong><code>LONG RAW</code></strong></p>
+<ul>
+<li>Almacenan cadenas binarias de ancho variable.</li>
+<li>Hasta 2 GB.</li>
+<li>En desuso, se sustituye por los tipos LOB.</li>
+</ul>
+</li>
+<li>
+<p><strong><code>FLOAT</code></strong></p>
+<ul>
+<li>Almacena tipos de datos numéricos en punto flotante.</li>
+<li>Es un tipo NUMBER que sólo almacena números en punto flotante.</li>
+</ul>
+</li>
+</ul>
+<h3 id="tipo-fechas">Tipo fechas.</h3>
+<ul>
+<li>
+<p><strong><code>TIMESTAMP</code></strong></p>
+<ul>
+<li>Almacena datos de tipo hora, fraccionando los segundos.</li>
+</ul>
+</li>
+<li>
+<p><strong><code>TIMESTAMP WITH TIME ZONE</code></strong></p>
+<ul>
+<li>Almacena datos de tipo hora incluyendo la zona horaria (explícita), fraccionando los segundos.</li>
+</ul>
+</li>
+<li>
+<p><strong><code>TIMESTAMP WITH LOCAL TIME ZONE</code></strong></p>
+<ul>
+<li>Almacena datos de tipo hora incluyendo la zona horaria local (relativa), fraccionando los segundos.</li>
+<li>Cuando se usa un SELECT para mostrar los datos de este tipo, el valor de la hora será ajustado a la zona horaria de la sesión actual.</li>
+</ul>
+</li>
+</ul>
+<h3 id="otros-tipos_1">Otros tipos.</h3>
+<ul>
+<li>
+<p><strong><code>RAW</code></strong></p>
+<ul>
+<li>Almacenan cadenas binarias de ancho variable.</li>
+<li>Hasta 32767 bytes.</li>
+<li>En desuso, se sustituye por los tipos LOB.</li>
+</ul>
+</li>
+<li>
+<p><strong><code>LOB (BLOG, CLOB, NCLOB, BFILE)</code></strong></p>
+<ul>
+<li>Permiten almacenar y manipular bloques grandes de datos no estructurados (tales como texto, imágenes, videos, sonidos, etc) en formato binario o del carácter.</li>
+<li>Admiten hasta 8 terabytes (8000 GB).</li>
+<li>Una tabla puede contener varias columnas de tipo LOB.</li>
+<li>Soportan acceso aleatorio.</li>
+<li>Las tablas con columnas de tipo LOB no pueden ser replicadas.</li>
+</ul>
+</li>
+<li>
+<p><strong><code>BLOB</code></strong></p>
+<ul>
+<li>Permite almacenar datos binarios no estructurados.</li>
+<li>Admiten hasta 8 terabytes.</li>
+</ul>
+</li>
+<li>
+<p><strong><code>CLOB</code></strong></p>
+<ul>
+<li>Almacena datos de tipo carácter.</li>
+<li>Admiten hasta 8 terabytes.</li>
+</ul>
+</li>
+<li>
+<p><strong><code>NCLOB</code></strong></p>
+<ul>
+<li>Almacena datos de tipo carácter.</li>
+<li>Admiten hasta 8 terabytes.</li>
+<li>Guarda los datos según el juego de caracteres Unicode nacional.</li>
+</ul>
+</li>
+<li>
+<p><strong><code>BFILE</code></strong></p>
+<ul>
+<li>Almacena datos binarios no estructurados en archivos del sistema operativo, fuera de la base de datos. </li>
+<li>Una columna BFILE almacena un <code>localizador</code> del archivo a uno externo que contiene los datos.</li>
+<li>Admiten hasta 8 terabytes.</li>
+<li>El administrador de la base de datos debe asegurarse de que exista el archivo en disco y de que los procesos de Oracle tengan permisos de lectura para el archivo.</li>
+</ul>
+</li>
+<li>
+<p><strong><code>BFILEROWID</code></strong></p>
+<ul>
+<li>Almacenar la dirección única de cada fila de la tabla de la base de datos.</li>
+<li>ROWID físico almacena la dirección de fila en las tablas, las tablas en clúster, los índices, excepto en las índices- organizados (IOT).</li>
+<li>ROWID lógico almacena la dirección de fila en tablas de índice-organizado (IOT).</li>
+<li>Un ejemplo del valor de un campo ROWID podría ser: <code>AAAIugAAJAAC4AhAAI</code>. El formato es el siguiente:<ul>
+<li>Para <code>OOOOOOFFFBBBBBBRRR</code>, donde: <ul>
+<li>OOOOOO: segmento de la base de datos (<code>AAAIug</code> en el ejemplo). Todos los objetos que estén en el mismo esquema y en el mismo segmento tendrán el mismo valor. </li>
+<li>FFF: el número de fichero del <code>tablespace</code> relativo que contiene la fila (fichero AAJ en el ejemplo).</li>
+<li>BBBBBB: el bloque de datos que contiene a la fila (bloque AAC4Ah en el ejemplo). El número de bloque es relativo a su fichero de datos, no al <code>tablespace</code>. Por lo tanto, dos filas con números de bloque iguales podrían residir en diferentes <code>datafiles</code> del mismo <code>tablespace</code>.</li>
+<li>RRR: el número de fila en el bloque (fila AAI en el ejemplo).</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Este tipo de campo no aparece en los SELECT ni se puede modificar en los UPDATE, ni en los INSERT. Tampoco se puede utilizar en los CREATE. Es un tipo de datos utilizado exclusivamente por Oracle. Sólo se puede ver su valor utilizando la palabra reservada ROWID, por ejemplo:
+        + <code>select rowid, nombre, apellidos from clientes</code></p>
+<ul>
+<li>
+<p>Ejemplo 2:</p>
+<pre><code>```
+SELECT ROWID, SUBSTR(ROWID,15,4) "Fichero", SUBSTR(ROWID,1,8) "Bloque",  
+SUBSTR(ROWID,10,4) "Fila" FROM proveedores
+```
+</code></pre>
+</li>
+<li>
+<p>Ejemplo 3: una forma de saber en cuántos ficheros de datos está alojada una tabla.</p>
+<pre><code>```
+SELECT COUNT(DISTINCT(SUBSTR(ROWID,7,3))) 
+"Numero ficheros " FROM facturacion 
+```
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong><code>UROWID</code></strong></p>
+<ul>
+<li>ROWID universal.</li>
+<li>Admite ROWID a tablas que no sean de Oracle, tablas externas. Admite tanto ROWID lógicos como físicos.</li>
+</ul>
+</li>
+<li>
+<p><strong><code>XMLType</code></strong></p>
+<ul>
+<li>Tipo de datos abstracto. En realidad se trata de un CLOB.</li>
+<li>Se asocia a un esquema XML para la definición de su estructura.</li>
+</ul>
+</li>
+</ul>
+<h2 id="resumen">Resumen.</h2>
+<ul>
+<li>De los tipos anteriores, los comúnmente utilizados son: <ul>
+<li><code>VARCHAR2</code> (cadenas de texto no muy grandes), </li>
+<li><code>DATE</code> (fechas, horas), </li>
+<li><code>NUMBER</code> (números), </li>
+<li><code>BLOB</code> (<code>ficheros de tipo word, excel, access, video, sonido, imágenes, etc</code>) y </li>
+<li><code>CLOB</code> (cadenas de texto muy grandes).</li>
+</ul>
+</li>
+<li>Los que se utilizarán en el curso JFS, <code>VARCHAR2</code>, <code>DATE</code>, <code>NUMBER</code>.</li>
+</ul>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+        
+          <a href="../usuarios/" title="Usuarios" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Usuarios
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.a0c4167b.min.js"></script>
+      <script src="../../assets/javascripts/bundle.fb26dd1d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.37585f48.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
